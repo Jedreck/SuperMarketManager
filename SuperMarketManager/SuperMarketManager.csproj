@@ -79,7 +79,6 @@
     <Content Include="Global.asax" />
     <Content Include="Views\Index\Index.aspx" />
     <Content Include="Views\Login\Login.aspx" />
-    <Content Include="Views\TestMySql.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -107,13 +106,6 @@
     </Compile>
     <Compile Include="Views\Login\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\TestMySql.aspx.cs">
-      <DependentUpon>TestMySql.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\TestMySql.aspx.designer.cs">
-      <DependentUpon>TestMySql.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
