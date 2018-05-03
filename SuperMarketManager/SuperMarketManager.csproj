@@ -88,6 +88,8 @@
   <ItemGroup>
     <Compile Include="Controllers\DBManager\DBManager.cs" />
     <Compile Include="Controllers\Login\Employee_C.cs" />
+    <Compile Include="Controllers\Statistic\StatisticDay_C.cs" />
+    <Compile Include="Controllers\Statistic\StatisticGoods_C.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -135,6 +137,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\" />
+    <Folder Include="fonts\" />
+    <Folder Include="Scripts\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
