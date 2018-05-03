@@ -1,4 +1,4 @@
-﻿using SuperMarketManager.Controllers.Login;
+﻿using SuperMarketManager.Controllers;
 using SuperMarketManager.Models;
 using System;
 using System.Collections.Generic;
@@ -23,7 +23,7 @@ namespace SuperMarketManager.Views.Login
              string pwd = password.Value.ToString();        
              Session.Add("id", id);
              Session.Add("pwd", pwd);
-             Employee employee = Employee_C.Login(id, pwd);
+             Employee employee = Login_C.Login(id, pwd);
              if (employee != null)
              {
                  Session["employee"] = employee;

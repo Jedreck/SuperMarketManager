@@ -17,6 +17,22 @@ namespace SuperMarketManager.Models
         public string Email { get; set; }
         public int Position { get; set; }
         public string PassWord { get; set; }
+
+        public Employee() { }
+
+        public Employee(string name, string sex, string phone, string birth,
+             int position, string password = "", string bankAccount="",string email="")
+        {
+            Name = name;
+            Sex = sex;
+            Phone = phone;
+            Birth = DateTime.Parse(birth);
+            Position = position;
+            PassWord = password;
+            BankAccount = bankAccount;
+            Email = email;
+        }
+
         public static List<Employee> getList(OdbcDataReader reader)
         {
             List<Employee> list = new List<Employee>();

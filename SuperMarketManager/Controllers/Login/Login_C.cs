@@ -6,13 +6,17 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 
-namespace SuperMarketManager.Controllers.Login
+namespace SuperMarketManager.Controllers
 {
-    public class Employee_C
+    public class Login_C
     {
+        public Login_C()
+        {
+        }
+
         public static Employee Login(string id, string pwd)
         {
-            OdbcConnection sqlConnection1 = DBManager.DBManager.GetOdbcConnection();
+            OdbcConnection sqlConnection1 = DBManager.GetOdbcConnection();
             sqlConnection1.Open();
             OdbcCommand odbcCommand = new OdbcCommand("select * from employee where E_ID='" + id + "' and E_Password='" + pwd + "'", sqlConnection1);
             OdbcDataReader odbcDataReader = odbcCommand.ExecuteReader();

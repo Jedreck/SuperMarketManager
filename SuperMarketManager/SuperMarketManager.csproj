@@ -93,9 +93,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\DBManager\DBManager.cs" />
-    <Compile Include="Controllers\Login\Employee_C.cs" />
+    <Compile Include="Controllers\Employee\Employee_C.cs" />
+    <Compile Include="Controllers\Login\Login_C.cs" />
     <Compile Include="Controllers\Statistic\StatisticDay_C.cs" />
     <Compile Include="Controllers\Statistic\StatisticGoods_C.cs" />
+    <Compile Include="Controllers\Tool\IDFormat.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
