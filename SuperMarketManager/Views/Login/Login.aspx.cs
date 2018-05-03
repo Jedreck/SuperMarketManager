@@ -18,18 +18,20 @@ namespace SuperMarketManager.Views.Login
 
         protected void login_button_Click(object sender, EventArgs e)
         {
-            string id = this.id.Text.Trim();
-            string pwd = this.pwd.Text.Trim();
-            //Session.Add("id", id);
-            //Session.Add("pwd", pwd);
-            Employee employee = Employee_C.Login(id, pwd);
-            if (employee != null)
-            {
-                Session["employee"] = employee;
-                Response.Redirect("/Views/Index/Index.aspx");
-            }
-            else
-                Response.Write("登录失败！！");
+
+             string id = userid.Value.ToString();
+             string pwd = password.Value.ToString();        
+             Session.Add("id", id);
+             Session.Add("pwd", pwd);
+             Employee employee = Employee_C.Login(id, pwd);
+             if (employee != null)
+             {
+                 Session["employee"] = employee;
+                 Response.Redirect("/Views/Index/Index.aspx");
+             }
+             else
+                 Response.Write("登录失败！！");
+            
         }
     }
 }

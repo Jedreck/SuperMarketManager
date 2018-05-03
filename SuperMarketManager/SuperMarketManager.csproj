@@ -76,6 +76,12 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\css\style.css" />
+    <Content Include="Content\images\adm.png" />
+    <Content Include="Content\images\bg1.jpg" />
+    <Content Include="Content\images\close.png" />
+    <Content Include="Content\images\key.png" />
+    <Content Include="Content\images\pass.png" />
     <Content Include="Controllers\DBManager\这里写自己连接数据库的ODBC.txt" />
     <Content Include="Global.asax" />
     <Content Include="Views\Index\Index.aspx" />
@@ -145,7 +151,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\" />
     <Folder Include="fonts\" />
     <Folder Include="Scripts\" />
   </ItemGroup>
