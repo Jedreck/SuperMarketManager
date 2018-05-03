@@ -24,7 +24,7 @@ img{max-width:100%;}
 /*end reset*/
 /****-----start-body----****/
 body{
-	background: url(../images/bg1.jpg) no-repeat 0px 0px;
+	background: url(../../Content/images/bg1.jpg) no-repeat 0px 0px;
 	font-family: 'Open Sans', sans-serif;
 	background-size:cover;
 	-webkit-background-size:cover;
@@ -44,7 +44,7 @@ body a,form li,input[type="submit"],input[type="text"],.sixth-login input[type="
 }
 /*--close--*/
 .close{
-background: url('../images/close.png') no-repeat 0px 0px;
+background: url('../../Content/images/close.png') no-repeat 0px 0px;
   cursor: pointer;
   width: 20px;
   height: 20px;

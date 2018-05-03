@@ -27,7 +27,7 @@ namespace SuperMarketManager.Views.Login
              if (employee != null)
              {
                  Session["employee"] = employee;
-                 Response.Redirect("/Views/Index/Index.aspx");
+                 Response.Redirect("/Views/Index/Manager_Index.aspx");
              }
              else
                 Response.Write("<script language=javascript>window.alert('账号或密码错误，请重新输入！');</script>");

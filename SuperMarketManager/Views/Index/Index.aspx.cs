@@ -12,7 +12,7 @@ namespace SuperMarketManager.Views.Index
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //Response.Write("id:" + Session["id"]);
+            Response.Write("id:" + Session["id"]);
             //Response.Write("<br/>")
             //Response.Write("pwd:" + Session["pwd"]);
             Employee employee = (Employee)Session["employee"];
@@ -21,10 +21,10 @@ namespace SuperMarketManager.Views.Index
                 Response.Write("<script language=javascript>window.alert('请先登录！');window.location.href('/Views/Login/Login.aspx');</script>");
                 return;
             }
-            id.Text = employee.ID;
+            /*id.Text = employee.ID;
             name.Text = employee.Name;
             Birth.Text = employee.Birth.ToString("yyyy-MM-dd");
-            position.Text = employee.Position.ToString();
+            position.Text = employee.Position.ToString();*/
         }
     }
 }
