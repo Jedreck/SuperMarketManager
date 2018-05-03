@@ -88,9 +88,17 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Discount.cs" />
     <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\Goods.cs" />
+    <Compile Include="Models\Goodsclass.cs" />
+    <Compile Include="Models\GoodsIn.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\Orderlist.cs" />
+    <Compile Include="Models\Position.cs" />
     <Compile Include="Models\StaticGoods.cs" />
     <Compile Include="Models\StatisticDay.cs" />
+    <Compile Include="Models\Storelist.cs" />
     <Compile Include="Models\Supplier.cs" />
     <Compile Include="Models\Supplylist.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
