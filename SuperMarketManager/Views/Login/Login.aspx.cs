@@ -18,18 +18,20 @@ namespace SuperMarketManager.Views.Login
 
         protected void login_button_Click(object sender, EventArgs e)
         {
-
-             string id = userid.Value.ToString();
-             string pwd = password.Value.ToString();        
-             Session.Add("id", id);
-             Session.Add("pwd", pwd);
-             Employee employee = Login_C.Login(id, pwd);
-             if (employee != null)
-             {
-                 Session["employee"] = employee;
-                 Response.Redirect("/Views/Index/Manager_Index.aspx");
-             }
-             else
+            string id = userid.Value.ToString();
+            string pwd = password.Value.ToString();
+            Session.Add("id", id);
+            Session.Add("pwd", pwd);
+            Employee employee = Login_C.Login(id, pwd);
+            if (employee != null)
+            {
+                Session["employee"] = employee;
+                if (employee.Position == 1)//管理员跳转的网页
+                    Response.Redirect("/Views/Index/Manager_Index.aspx");
+                else if (employee.Position == 2)//
+                    Response.Redirect("/Views/Index/Index.aspx");
+            }
+            else
                 Response.Write("<script language=javascript>window.alert('账号或密码错误，请重新输入！');</script>");
 
         }
