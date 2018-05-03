@@ -1,12 +1,10 @@
-﻿using SuperMarketManager.Controllers.DBManager;
-using SuperMarketManager.Models;
+﻿using SuperMarketManager.Models;
 using System;
 using System.Collections.Generic;
 using System.Data.Odbc;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
-using TestMysql.Models;
 
 namespace SuperMarketManager.Controllers.Login
 {

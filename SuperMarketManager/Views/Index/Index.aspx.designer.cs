@@ -7,7 +7,7 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace TestMysql.Views.Index {
+namespace SuperMarketManager.Views.Index {
     
     
     public partial class Index {
