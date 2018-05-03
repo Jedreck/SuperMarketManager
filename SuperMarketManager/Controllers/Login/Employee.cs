@@ -1,4 +1,5 @@
 ﻿using SuperMarketManager.Controllers.DBManager;
+using SuperMarketManager.Models;
 using System;
 using System.Collections.Generic;
 using System.Data.Odbc;
