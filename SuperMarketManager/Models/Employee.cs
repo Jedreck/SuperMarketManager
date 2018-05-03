@@ -4,7 +4,7 @@ using System.Data.Odbc;
 using System.Linq;
 using System.Web;
 
-namespace TestMysql.Models
+namespace SuperMarketManager.Models
 {
     public class Employee
     {
