@@ -27,7 +27,7 @@ namespace SuperMarketManager.Views.Login
              if (employee != null)
              {
                  Session["employee"] = employee;
-                 Response.Redirect("/Views/Index/Index.aspx");
+                 Response.Redirect("/Views/Index/Manager_Index.aspx");
              }
              else
                  Response.Write("登录失败！！");

@@ -10,11 +10,8 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:TextBox ID="id" runat="server"></asp:TextBox>
-            <asp:TextBox ID="name" runat="server"></asp:TextBox>
-            <asp:TextBox ID="Birth" runat="server"></asp:TextBox>
-            <asp:TextBox ID="position" runat="server"></asp:TextBox>
         </div>
     </form>
 </body>
 </html>
+
