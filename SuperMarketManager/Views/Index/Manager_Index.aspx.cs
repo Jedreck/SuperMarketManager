@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SuperMarketManager.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +12,12 @@ namespace SuperMarketManager.Views.Index
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Employee employee = (Employee)Session["employee"];
+            if (employee == null)
+            {
+                Response.Write("<script language=javascript>window.alert('请先登录！');window.location.href('/Views/Login/Login.aspx');</script>");
+                return;
+            }
         }
     }
 }
