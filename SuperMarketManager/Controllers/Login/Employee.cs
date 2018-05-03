@@ -1,5 +1,4 @@
-﻿using SuperMarketManager.Controllers.DBManager;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data.Odbc;
 using System.Data.SqlClient;
@@ -13,7 +12,7 @@ namespace TestMysql.Controllers.Login
     {
         public static Employee Login(string id, string pwd)
         {
-            OdbcConnection sqlConnection1 = DBManager.GetOdbcConnection();
+            OdbcConnection sqlConnection1 = Controllers.DBManager.DBManager.GetOdbcConnection();
             sqlConnection1.Open();
             OdbcCommand odbcCommand = new OdbcCommand("select * from employee where E_ID='" + id + "' and E_Password='" + pwd + "'", sqlConnection1);
             OdbcDataReader odbcDataReader = odbcCommand.ExecuteReader();
