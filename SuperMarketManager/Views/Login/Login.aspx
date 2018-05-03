@@ -21,19 +21,19 @@
     <!--SIGN UP-->
     <h1>超市管理系统</h1>
     <div class="login-form">
-        <div class="close"></div>
+        <%--<div class="close"></div>--%>
         <div class="head-info">
-            <label class="lbl-1"></label>
+          <%--  <label class="lbl-1"></label>
             <label class="lbl-2"></label>
-            <label class="lbl-3"></label>
+            <label class="lbl-3"></label>--%>
         </div>
         <div class="clear"></div>
         <div class="avtar">
         </div>
         <form runat="server">
-            <input type="text" id="userid" class="text" runat="server" pattern="[0-9]{8}" placeholder="请输入8位数工号">
+            <input type="text" id="userid" class="text" runat="server" placeholder="请输入8位数工号" pattern="[0-9]{8}" title="请输入8位数工号">
             <div class="key">
-                <input type="password" id="password" placeholder="请输入密码" runat="server">
+                <input type="password" id="password" runat="server" placeholder="请输入密码">
             </div>
             <div class="signin">
                 <asp:Button ID="Button1" runat="server" Text="登录" OnClick="login_button_Click" />
