@@ -7,7 +7,7 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace TestMysql.Views.Login {
+namespace SuperMarketManager.Views.Login {
     
     
     public partial class Login {
