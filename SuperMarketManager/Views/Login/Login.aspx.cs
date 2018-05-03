@@ -4,8 +4,6 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using TestMysql.Controllers.Login;
-using TestMysql.Models;
 
 namespace TestMysql.Views.Login
 {
