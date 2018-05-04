@@ -15,9 +15,11 @@ namespace SuperMarketManager.Controllers
         {
             OdbcConnection odbcConnection = DBManager.GetOdbcConnection();
             odbcConnection.Open();
-            string sql = "SELECT * FROM `marketmanage`.`supplier` " +
-                "WHERE CONCAT(`S_ID`,`S_Name`,`S_Phone`,`S_Region`) " +
-                "LIKE '%" + info + "%'";
+            string sql = "SELECT * FROM `marketmanage`.`supplier` "
+                + "WHERE `S_ID` Like '%" + info + "%'"
+                + "OR `S_Name` LIKE '%" + info + "%'"
+                + "OR `S_Phone` LIKE '%" + info + "%'"
+                + "OR `S_Region` LIKE '%" + info + "%'";
             OdbcCommand odbcCommand = new OdbcCommand(sql, odbcConnection);
             OdbcDataReader odbcDataReader = odbcCommand.ExecuteReader(CommandBehavior.CloseConnection);
             if (odbcDataReader.HasRows)

@@ -21,7 +21,7 @@ namespace SuperMarketManager.Models
         public Employee() { }
 
         public Employee(string name, string sex, string phone, string birth,
-             int position, string password = "", string bankAccount="",string email="")
+             int position, string bankAccount = "", string email = "", string password = "")
         {
             Name = name;
             Sex = sex;
