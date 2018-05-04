@@ -83,7 +83,16 @@ namespace SuperMarketManager.Controllers
         {
             OdbcConnection odbcConnection = DBManager.GetOdbcConnection();
             odbcConnection.Open();
-            OdbcCommand odbcCommand = new OdbcCommand("SELECT * FROM employee WHERE CONCAT(`E_ID`,`E_Name`,`E_Sex`,`E_Phone`,`E_Birth`,`E_BankAccount`,`E_Email`,`E_Position`) LIKE '%"+info+"%'", odbcConnection);
+            string sql = "SELECT * FROM employee "
+                + "WHERE `E_ID` LIKE '%" + info + "%'"
+                + "OR `E_Name` LIKE '%" + info + "%'"
+                + "OR `E_Sex` LIKE '%" + info + "%'"
+                + "OR `E_Phone` LIKE '%" + info + "%'"
+                + "OR `E_Birth` LIKE '%" + info + "%'"
+                + "OR `E_BankAccount` LIKE '%" + info + "%'"
+                + "OR `E_Email` LIKE '%" + info + "%'"
+                + "OR `E_Position` LIKE '%" + info + "%'";
+            OdbcCommand odbcCommand = new OdbcCommand(sql, odbcConnection);
             OdbcDataReader odbcDataReader = odbcCommand.ExecuteReader(CommandBehavior.CloseConnection);
 
             if (odbcDataReader.HasRows)
