@@ -286,6 +286,7 @@
   <ItemGroup>
     <Compile Include="Controllers\DBManager\DBManager.cs" />
     <Compile Include="Controllers\Employee\Employee_C.cs" />
+    <Compile Include="Controllers\Goods\Goods_C.cs" />
     <Compile Include="Controllers\Login\Login_C.cs" />
     <Compile Include="Controllers\Statistic\StatisticDay_C.cs" />
     <Compile Include="Controllers\Statistic\StatisticGoods_C.cs" />
