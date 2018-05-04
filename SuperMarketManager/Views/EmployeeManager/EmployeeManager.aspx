@@ -26,20 +26,7 @@
     <link type="text/css" rel="stylesheet" href="../../Content/styles/jquery.news-ticker.css">
 </head>
 <body>
-    <div>
-        <!--BEGIN THEME SETTING-->
-        <div id="theme-setting">
-            <a href="#" data-toggle="dropdown" data-step="1" data-intro="&lt;b&gt;Many styles&lt;/b&gt; and &lt;b&gt;colors&lt;/b&gt; be created for you. Let choose one and enjoy it!"
-                data-position="left" class="btn-theme-setting"><i class="fa fa-cog"></i></a>
-            <div class="content-theme-setting">
-                <select id="list-style" class="form-control">
-                    <option value="style1">Flat Squared style</option>
-                    <option value="style2">Flat Rounded style</option>
-                    <option value="style3" selected="selected">Flat Border style</option>
-                </select>
-            </div>
-        </div>
-        <!--END THEME SETTING-->
+    <div>       
         <!--BEGIN BACK TO TOP-->
         <a id="totop" href="#"><i class="fa fa-angle-up"></i></a>
         <!--END BACK TO TOP-->
@@ -90,38 +77,6 @@
                     </ul>
                 </div>
             </nav>
-            <!--BEGIN MODAL CONFIG PORTLET-->
-            <div id="modal-config" class="modal fade">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" data-dismiss="modal" aria-hidden="true" class="close">
-                                &times;</button>
-                            <h4 class="modal-title">Modal title</h4>
-                        </div>
-                        <div class="modal-body">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend et nisl eget
-                                porta. Curabitur elementum sem molestie nisl varius, eget tempus odio molestie.
-                                Nunc vehicula sem arcu, eu pulvinar neque cursus ac. Aliquam ultricies lobortis
-                                magna et aliquam. Vestibulum egestas eu urna sed ultricies. Nullam pulvinar dolor
-                                vitae quam dictum condimentum. Integer a sodales elit, eu pulvinar leo. Nunc nec
-                                aliquam nisi, a mollis neque. Ut vel felis quis tellus hendrerit placerat. Vivamus
-                                vel nisl non magna feugiat dignissim sed ut nibh. Nulla elementum, est a pretium
-                                hendrerit, arcu risus luctus augue, mattis aliquet orci ligula eget massa. Sed ut
-                                ultricies felis.
-                            </p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" data-dismiss="modal" class="btn btn-default">
-                                Close</button>
-                            <button type="button" class="btn btn-primary">
-                                Save changes</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--END MODAL CONFIG PORTLET-->
         </div>
         <!--END TOPBAR-->
         <div id="wrapper">
@@ -150,21 +105,32 @@
                         </li>
                         <li><a href="Forms.html"><i class="fa fa-edit fa-fw">
                             <div class="icon-bg bg-violet"></div>
-                        </i><span class="menu-title">商品销售与库存</span></a>
+                        </i><span class="menu-title">商品销售</span></a>
 
                         </li>
                         <li><a href="Tables.html"><i class="fa fa-th-list fa-fw">
                             <div class="icon-bg bg-blue"></div>
-                        </i><span class="menu-title">营业统计</span></a>
+                        </i><span class="menu-title">商品信息与库存</span></a>
 
                         </li>
                         <li><a href="DataGrid.html"><i class="fa fa-database fa-fw">
                             <div class="icon-bg bg-red"></div>
+                        </i><span class="menu-title">折扣管理</span></a>
+
+                         </li>
+                        <li><a href="Pages.html"><i class="fa fa-file-o fa-fw">
+                            <div class="icon-bg bg-yellow"></div>
+                        </i><span class="menu-title">营业统计</span></a>
+
+                        </li>
+                        <li><a href="Extras.html"><i class="fa fa-gift fa-fw">
+                            <div class="icon-bg bg-grey"></div>
                         </i><span class="menu-title">个人信息</span></a>
 
-                        <li><a href="../../Views/Login/Login.aspx"><i class="fa fa-slack fa-fw">
-                        <div class="icon-bg bg-green"></div>
-                        </i><span class="menu-title">退出</span></a></li>
+                        </li>
+                        <li><a href="../../Views/Login/Manager_Index.aspx"><i class="fa fa-sitemap fa-fw">
+                            <div class="icon-bg bg-dark"></div>
+                        </i><span class="menu-title">退出</span></a>
                     </ul>
                 </div>
             </nav>
@@ -200,42 +166,53 @@
                             </div>
                             <div>
                                 <form runat="server">
-                                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="false" DataKeyNames="employeeid">
+                                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="false" DataKeyNames="E_ID">
                                         <HeaderStyle BackColor="Yellow" BorderStyle="Double" Font-Size="Large" />
                                         <RowStyle BorderWidth="10px" BorderStyle="Double" Height="60px" Width="160px" />
                                         <Columns>
-                                            <asp:BoundField DataField="id" Visible="true" HeaderText="工号" />
-                                            <asp:BoundField DataField="name" HeaderText="姓名" />
-                                            <asp:BoundField DataField="id" HeaderText="性别" />
-                                            <asp:BoundField DataField="id" HeaderText="出生年月" />
-                                            <asp:BoundField DataField="id" HeaderText="身份证号" />
-                                            <asp:BoundField DataField="id" HeaderText="联系方式" />
-                                            <asp:BoundField DataField="id" HeaderText="职位" />
+                                            <asp:BoundField DataField="E_ID" Visible="true" HeaderText="工号" />
+                                            <asp:BoundField DataField="E_Name" HeaderText="姓名" />
+                                            <asp:BoundField DataField="E_Sex" HeaderText="性别" />
+                                            <asp:BoundField DataField="E_Phone" HeaderText="联系方式" />
+                                            <asp:BoundField DataField="E_Birth" HeaderText="出生年月" />
+                                            <asp:BoundField DataField="E_BankAccount" HeaderText="工资" />
+                                            <asp:BoundField DataField="E_Email" HeaderText="邮箱" />
+                                            <asp:BoundField DataField="E_Position" HeaderText="位置" />
                                         </Columns>
                                     </asp:GridView>
                                 </form>
                             </div>
                             <div class="col-lg-12">
                                 <div class="row">
-                                    <div class="col-lg-6">
+                                    <div class="col-lg-12">
                                         <div class="panel panel-yellow">
-                                            <div class="panel-heading">员工信息表</div>
+                                            <div class="panel-heading"> 员工信息表</div>
                                             <div class="panel-body">
                                                 <table class="table table-hover">
                                                     <thead>
                                                         <tr>
                                                             <th>#</th>
-                                                            <th>Username</th>
-                                                            <th>Age</th>
-                                                            <th>Status</th>
+                                                            <th>工 号  </th>
+                                                            <th>姓 名  </th>
+                                                            <th>性 别  </th>
+                                                            <th>联 系 方 式  </th>
+                                                            <th>出 生 年 月  </th>
+                                                            <th>银 行 卡 号  </th>
+                                                            <th>邮 箱   </th>
+                                                            <th>位 置   </th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
                                                         <tr>
                                                             <td>1</td>
-                                                            <td>Henry</td>
-                                                            <td>23</td>
-                                                            <td><span class="label label-sm label-success">Approved</span></td>
+                                                            <td><%=ID %></td>
+                                                            <td><%=Name %></td>
+                                                            <td><%=Sex %></td>
+                                                            <td><%=Phone %></td>
+                                                            <td><%=Birth %></td>
+                                                            <td><%=BankAccount %></td>
+                                                            <td><%=Email %></td>
+                                                            <td><%=Position %></td>
                                                         </tr>
                                                         <tr>
                                                             <td>2</td>

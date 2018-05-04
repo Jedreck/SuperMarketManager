@@ -69,39 +69,7 @@
                     <li id="topbar-chat" class="hidden-xs"><a href="javascript:void(0)" data-step="4" data-intro="&lt;b&gt;Form chat&lt;/b&gt; keep you connecting with other coworker" data-position="left" class="btn-chat"><i class="fa fa-comments"></i><span class="badge badge-info">3</span></a></li>
                 </ul>
             </div>
-        </nav>
-            <!--BEGIN MODAL CONFIG PORTLET-->
-            <div id="modal-config" class="modal fade">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" data-dismiss="modal" aria-hidden="true" class="close">
-                                &times;</button>
-                            <h4 class="modal-title">
-                                Modal title</h4>
-                        </div>
-                        <div class="modal-body">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend et nisl eget
-                                porta. Curabitur elementum sem molestie nisl varius, eget tempus odio molestie.
-                                Nunc vehicula sem arcu, eu pulvinar neque cursus ac. Aliquam ultricies lobortis
-                                magna et aliquam. Vestibulum egestas eu urna sed ultricies. Nullam pulvinar dolor
-                                vitae quam dictum condimentum. Integer a sodales elit, eu pulvinar leo. Nunc nec
-                                aliquam nisi, a mollis neque. Ut vel felis quis tellus hendrerit placerat. Vivamus
-                                vel nisl non magna feugiat dignissim sed ut nibh. Nulla elementum, est a pretium
-                                hendrerit, arcu risus luctus augue, mattis aliquet orci ligula eget massa. Sed ut
-                                ultricies felis.</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" data-dismiss="modal" class="btn btn-default">
-                                Close</button>
-                            <button type="button" class="btn btn-primary">
-                                Save changes</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--END MODAL CONFIG PORTLET-->
+        </nav>           
         </div>
         <!--END TOPBAR-->
         <div id="wrapper">
@@ -125,24 +93,35 @@
                         <div class="icon-bg bg-green"></div>
                     </i><span class="menu-title">供应商管理</span></a>
                        
-                    </li>
-                    <li><a href="Forms.html"><i class="fa fa-edit fa-fw">
-                        <div class="icon-bg bg-violet"></div>
-                    </i><span class="menu-title">商品销售与库存</span></a>
-                      
-                    </li>
-                    <li><a href="Tables.html"><i class="fa fa-th-list fa-fw">
-                        <div class="icon-bg bg-blue"></div>
-                    </i><span class="menu-title">营业统计</span></a>
-                          
-                    </li>
-                    <li><a href="DataGrid.html"><i class="fa fa-database fa-fw">
-                        <div class="icon-bg bg-red"></div>
-                    </i><span class="menu-title">个人信息</span></a>
-					
-					<li><a href="../../Views/Login/Login.aspx"><i class="fa fa-slack fa-fw">
-                        <div class="icon-bg bg-green"></div>
-                    </i><span class="menu-title">退出</span></a></li>
+                   </li>
+                        <li><a href="Forms.html"><i class="fa fa-edit fa-fw">
+                            <div class="icon-bg bg-violet"></div>
+                        </i><span class="menu-title">商品销售</span></a>
+
+                        </li>
+                        <li><a href="Tables.html"><i class="fa fa-th-list fa-fw">
+                            <div class="icon-bg bg-blue"></div>
+                        </i><span class="menu-title">商品信息与库存</span></a>
+
+                        </li>
+                        <li><a href="DataGrid.html"><i class="fa fa-database fa-fw">
+                            <div class="icon-bg bg-red"></div>
+                        </i><span class="menu-title">折扣管理</span></a>
+
+                        </li>
+                        <li><a href="Pages.html"><i class="fa fa-file-o fa-fw">
+                            <div class="icon-bg bg-yellow"></div>
+                        </i><span class="menu-title">营业统计</span></a>
+
+                        </li>
+                        <li><a href="Extras.html"><i class="fa fa-gift fa-fw">
+                            <div class="icon-bg bg-grey"></div>
+                        </i><span class="menu-title">个人信息</span></a>
+
+                        </li>
+                        <li><a href="../../Views/Login/Manager_Index.aspx"><i class="fa fa-sitemap fa-fw">
+                            <div class="icon-bg bg-dark"></div>
+                        </i><span class="menu-title">退出</span></a>
                 </ul>
             </div>
         </nav>
