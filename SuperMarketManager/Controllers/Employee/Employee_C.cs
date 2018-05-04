@@ -81,19 +81,19 @@ namespace SuperMarketManager.Controllers
         //查
         public static List<Employee> SelectFuzzy(string info)
         {
-            OdbcConnection sqlConnection1 = DBManager.GetOdbcConnection();
-            sqlConnection1.Open();
-            OdbcCommand odbcCommand = new OdbcCommand("SELECT * FROM employee WHERE CONCAT(`E_ID`,`E_Name`,`E_Sex`,`E_Phone`,`E_Birth`,`E_BankAccount`,`E_Email`,`E_Position`) LIKE '%"+info+"%'", sqlConnection1);
-            OdbcDataReader odbcDataReader = odbcCommand.ExecuteReader();
+            OdbcConnection odbcConnection = DBManager.GetOdbcConnection();
+            odbcConnection.Open();
+            OdbcCommand odbcCommand = new OdbcCommand("SELECT * FROM employee WHERE CONCAT(`E_ID`,`E_Name`,`E_Sex`,`E_Phone`,`E_Birth`,`E_BankAccount`,`E_Email`,`E_Position`) LIKE '%"+info+"%'", odbcConnection);
+            OdbcDataReader odbcDataReader = odbcCommand.ExecuteReader(CommandBehavior.CloseConnection);
 
             if (odbcDataReader.HasRows)
             {
                 List<Employee> list = Employee.getList(odbcDataReader);
-                sqlConnection1.Close();
+                odbcConnection.Close();
                 return list;
             }
             else
-                sqlConnection1.Close();
+                odbcConnection.Close();
             return null;
         }
     }

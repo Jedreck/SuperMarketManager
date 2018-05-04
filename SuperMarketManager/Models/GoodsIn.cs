@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Odbc;
 using System.Linq;
 using System.Web;
 
@@ -14,5 +15,24 @@ namespace SuperMarketManager.Models
         public double Num { set; get; }
         public DateTime Date { set; get; }
         public string OriginPlace { set; get; }
+
+        public static List<GoodsIn> getList(OdbcDataReader reader)
+        {
+            List<GoodsIn> list = new List<GoodsIn>();
+            GoodsIn s;
+            while (reader.Read())
+            {
+                s = new GoodsIn();
+                s.GI_ID = reader.GetString(0);
+                s.G_ID = reader.GetString(1);
+                s.S_ID = reader.GetInt32(2);
+                s.PriceIn = reader.GetDouble(3);
+                s.Num = reader.GetDouble(4);
+                s.Date = reader.GetDate(5);
+                s.OriginPlace = reader.GetString(6);
+                list.Add(s);
+            }
+            return list;
+        }
     }
 }
