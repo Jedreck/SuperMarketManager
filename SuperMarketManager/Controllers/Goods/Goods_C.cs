@@ -33,7 +33,7 @@ namespace SuperMarketManager.Controllers
             odbcDataReader.Close();
             odbcConnection.Close();
             odbcConnection.Open();
-            String insertSql = String.Format("insert into `marketmanage`.`goods`  (`G_ID`, `G_Name','G_Class','G_Unit','G_ExpirationDate','G_Price','G_Store') " +
+            String insertSql = String.Format("insert into `marketmanage`.`goods`  (`G_ID`, `G_Name`,`G_Class`,`G_Unit`,`G_ExpirationDate`,`G_Price`,`G_Store`) " +
                 "values ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}')"
                 , goods.ID,goods.Name,goods.Category,goods.Unit,goods.ExpirationDate,goods.Price,goods.Store);
             odbcCommand.CommandText = insertSql;
