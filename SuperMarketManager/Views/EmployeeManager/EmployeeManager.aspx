@@ -26,7 +26,7 @@
     <link type="text/css" rel="stylesheet" href="../../Content/styles/jquery.news-ticker.css">
 </head>
 <body>
-    <div>       
+    <div>
         <!--BEGIN BACK TO TOP-->
         <a id="totop" href="#"><i class="fa fa-angle-up"></i></a>
         <!--END BACK TO TOP-->
@@ -117,7 +117,7 @@
                             <div class="icon-bg bg-red"></div>
                         </i><span class="menu-title">折扣管理</span></a>
 
-                         </li>
+                        </li>
                         <li><a href="Pages.html"><i class="fa fa-file-o fa-fw">
                             <div class="icon-bg bg-yellow"></div>
                         </i><span class="menu-title">营业统计</span></a>
@@ -163,30 +163,12 @@
                                     <div id="area-chart-spline" style="width: 100%; height: 300px; display: none;">
                                     </div>
                                 </div>
-                            </div>
-                            <div>
-                                <form runat="server">
-                                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="false" DataKeyNames="E_ID">
-                                        <HeaderStyle BackColor="Yellow" BorderStyle="Double" Font-Size="Large" />
-                                        <RowStyle BorderWidth="10px" BorderStyle="Double" Height="60px" Width="160px" />
-                                        <Columns>
-                                            <asp:BoundField DataField="E_ID" Visible="true" HeaderText="工号" />
-                                            <asp:BoundField DataField="E_Name" HeaderText="姓名" />
-                                            <asp:BoundField DataField="E_Sex" HeaderText="性别" />
-                                            <asp:BoundField DataField="E_Phone" HeaderText="联系方式" />
-                                            <asp:BoundField DataField="E_Birth" HeaderText="出生年月" />
-                                            <asp:BoundField DataField="E_BankAccount" HeaderText="工资" />
-                                            <asp:BoundField DataField="E_Email" HeaderText="邮箱" />
-                                            <asp:BoundField DataField="E_Position" HeaderText="位置" />
-                                        </Columns>
-                                    </asp:GridView>
-                                </form>
-                            </div>
+                            </div>                          
                             <div class="col-lg-12">
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <div class="panel panel-yellow">
-                                            <div class="panel-heading"> 员工信息表</div>
+                                            <div class="panel-heading">员工信息表</div>
                                             <div class="panel-body">
                                                 <table class="table table-hover">
                                                     <thead>
@@ -202,41 +184,29 @@
                                                             <th>位 置   </th>
                                                         </tr>
                                                     </thead>
-                                                    <tbody>
+                                                    <tbody>                                                       
+                                                        <%for (int i = 0; i < employees.Count ; i++)
+                                                            { %>
                                                         <tr>
-                                                            <td>1</td>
-                                                            <td><%=ID %></td>
-                                                            <td><%=Name %></td>
-                                                            <td><%=Sex %></td>
-                                                            <td><%=Phone %></td>
-                                                            <td><%=Birth %></td>
-                                                            <td><%=BankAccount %></td>
-                                                            <td><%=Email %></td>
-                                                            <td><%=Position %></td>
+                                                            <td><%=i+1 %></td>
+                                                            <td><%=employees[i].ID %></td>
+                                                            <td><%=employees[i].Name %></td>
+                                                            <td><%=employees[i].Sex %></td>
+                                                            <td><%=employees[i].Phone %></td>
+                                                            <td><%=employees[i].Birth %></td>
+                                                            <td><%=employees[i].BankAccount %></td>
+                                                            <td><%=employees[i].Email %></td>
+                                                            <td><%=employees[i].Position %></td>
                                                         </tr>
-                                                        <tr>
-                                                            <td>2</td>
-                                                            <td>John</td>
-                                                            <td>45</td>
-                                                            <td><span class="label label-sm label-info">Pending</span></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>3</td>
-                                                            <td>Larry</td>
-                                                            <td>30</td>
-                                                            <td><span class="label label-sm label-warning">Suspended</span></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>4</td>
-                                                            <td>Lahm</td>
-                                                            <td>15</td>
-                                                            <td><span class="label label-sm label-danger">Blocked</span></td>
-                                                        </tr>
+                                                        <%} %>                                                       
                                                     </tbody>
                                                 </table>
+                                                <form runat="server">
+                                                    <asp:Button ID="Button1" runat="server" Text="查询测试按钮" OnClick="Button1_Click" />
+                                                </form>
                                             </div>
                                         </div>
-                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

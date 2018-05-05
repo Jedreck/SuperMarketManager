@@ -12,31 +12,23 @@ namespace SuperMarketManager.Views.EmployeeManager
     public partial class EmployeeManager : System.Web.UI.Page
     {
         protected int count;
-        protected String ID;
-        protected String Name;
-        protected String Sex;
-        protected String Phone;
-        protected DateTime Birth;
-        protected String BankAccount;
-        protected String Email;
-        protected int Position;
-        protected String PassWord;
+        protected String[] id;
+        protected String[] name;
+        protected String[] sex;
+        protected String[] phone;
+        protected DateTime[] birth;
+        protected String[] bankaccount;
+        protected String[] email;
+        protected int[] position;
+        protected List<Employee> employees; 
         protected void Page_Load(object sender, EventArgs e)
         {
-            List<Employee> employees = Employee_C.SelectFuzzy("11");
-            int count = employees.Count;            
-            for(int i = 0; i < count; i++)
-            {
-                ID = employees[i].ID;
-                Name = employees[i].Name;
-                Sex = employees[i].Sex;
-                Phone = employees[i].Phone;
-                Birth = employees[i].Birth;
-                BankAccount = employees[i].BankAccount;
-                Email = employees[i].Email;
-                Position = employees[i].Position;
-                PassWord = employees[i].PassWord;
-            }                      
+            employees = Employee_C.SelectFuzzy("");
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            employees = Employee_C.SelectFuzzy("1122");
         }
     }
 }
