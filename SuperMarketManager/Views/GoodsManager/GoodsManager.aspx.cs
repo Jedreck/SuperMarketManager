@@ -12,6 +12,7 @@ namespace SuperMarketManager.Views
     public partial class GoodsManager : System.Web.UI.Page
     {
         protected List<Goods> goods;
+        public int i;
         protected void Page_Load(object sender, EventArgs e)
         {
             goods = Goods_C.SelectFuzzy("");
@@ -25,7 +26,7 @@ namespace SuperMarketManager.Views
 
         protected void Button2_Click(object sender, EventArgs e)
         {
-
+            
         }
     }
 }
