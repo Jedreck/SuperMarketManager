@@ -11,15 +11,6 @@ namespace SuperMarketManager.Views.EmployeeManager
 {   
     public partial class EmployeeManager : System.Web.UI.Page
     {
-        protected int count;
-        protected String[] id;
-        protected String[] name;
-        protected String[] sex;
-        protected String[] phone;
-        protected DateTime[] birth;
-        protected String[] bankaccount;
-        protected String[] email;
-        protected int[] position;
         protected List<Employee> employees=null; 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -54,6 +45,10 @@ namespace SuperMarketManager.Views.EmployeeManager
         protected void Addto_Click(object sender, EventArgs e)
         {
             Response.Redirect("/Views/EmployeeManager/Employee_add.aspx");
+        }
+        protected void Updateto_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("/Views/EmployeeManager/Employee_update.aspx");
         }
     }
 }
