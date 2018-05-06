@@ -12,31 +12,48 @@ namespace SuperMarketManager.Views.EmployeeManager
     public partial class EmployeeManager : System.Web.UI.Page
     {
         protected int count;
-        protected String ID;
-        protected String Name;
-        protected String Sex;
-        protected String Phone;
-        protected DateTime Birth;
-        protected String BankAccount;
-        protected String Email;
-        protected int Position;
-        protected String PassWord;
+        protected String[] id;
+        protected String[] name;
+        protected String[] sex;
+        protected String[] phone;
+        protected DateTime[] birth;
+        protected String[] bankaccount;
+        protected String[] email;
+        protected int[] position;
+        protected List<Employee> employees=null; 
         protected void Page_Load(object sender, EventArgs e)
         {
-            List<Employee> employees = Employee_C.SelectFuzzy("11");
-            int count = employees.Count;            
-            for(int i = 0; i < count; i++)
+            employees = Employee_C.SelectFuzzy("");
+        }
+
+        protected void Search_Click(object sender, EventArgs e)
+        {
+            String content = search_content.Value.ToString();
+            employees = Employee_C.SelectFuzzy(content);
+        }
+        protected void Delete_Click(object sender, EventArgs e)
+        {
+            String content = search_content.Value.ToString();
+            if (content.Length != 8)
             {
-                ID = employees[i].ID;
-                Name = employees[i].Name;
-                Sex = employees[i].Sex;
-                Phone = employees[i].Phone;
-                Birth = employees[i].Birth;
-                BankAccount = employees[i].BankAccount;
-                Email = employees[i].Email;
-                Position = employees[i].Position;
-                PassWord = employees[i].PassWord;
-            }                      
+                Response.Write("<script language=javascript>window.alert('请输入完整工号！');</script>");
+            }
+            else {
+                Boolean del_result = Employee_C.DeleteByID(content);
+                if (del_result)
+                {
+                    Response.Write("<script language=javascript>window.alert('删除成功！');</script>");
+                    employees = Employee_C.SelectFuzzy("");
+                }
+                else
+                {
+                    Response.Write("<script language=javascript>window.alert('删除失败！');</script>");
+                }
+            }
+        }
+        protected void Addto_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("/Views/EmployeeManager/Employee_add.aspx");
         }
     }
 }

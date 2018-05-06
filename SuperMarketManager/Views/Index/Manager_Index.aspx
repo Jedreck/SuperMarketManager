@@ -41,8 +41,10 @@
                     <a id="menu-toggle" href="#" class="hidden-xs"><i class="fa fa-bars"></i></a>
 
                     <form id="topbar-search" class="hidden-sm hidden-xs">
-                        <div class="input-icon right text-white"><a href="#"><i class="fa fa-search"></i></a>
-                            <input type="text" placeholder="Search here..." class="form-control text-white" /></div>
+                        <div class="input-icon right text-white">
+                            <a href="#"><i class="fa fa-search"></i></a>
+                            <input type="text" placeholder="Search here..." class="form-control text-white" />
+                        </div>
                     </form>
                     <div class="news-update-box hidden-xs">
                         <span class="text-uppercase mrm pull-left text-white">News:</span>
@@ -619,7 +621,8 @@
                                                 <h4 class="timeline-title">Daily Feeds</h4>
 
                                                 <p>
-                                                    <img src="http://lorempixel.com/45/45/nature/3/" alt="" class="timeline-img pull-left" />Parsley amaranth tigernut silver beet maize fennel spinach ricebean black-eyed. Tolerably earnestly middleton extremely distrusts she boy now not. Add and offered prepare how cordial.</p>
+                                                    <img src="http://lorempixel.com/45/45/nature/3/" alt="" class="timeline-img pull-left" />Parsley amaranth tigernut silver beet maize fennel spinach ricebean black-eyed. Tolerably earnestly middleton extremely distrusts she boy now not. Add and offered prepare how cordial.
+                                                </p>
                                             </div>
                                         </div>
                                         <div class="timeline-entry-inner">
