@@ -55,11 +55,19 @@ namespace SuperMarketManager.Controllers
             return (deleted > 0) ? true : false;
         }
 
-        ////改
-        //public static bool AlterByID(Employee employee)
-        //{
-
-        //}
+        //改
+        public static bool AlterByID(string id,string price)
+        {
+            double Price = Convert.ToDouble(price);
+            int update = 0;
+            string sql = "update goods set G_Price="+Price+" where G_ID='"+id+"'";
+            OdbcConnection odbcConnection = DBManager.GetOdbcConnection();
+            odbcConnection.Open();
+            OdbcCommand odbcCommand = new OdbcCommand(sql,odbcConnection);
+            update = odbcCommand.ExecuteNonQuery();
+            odbcConnection.Close();
+            return (update > 0) ? true:false ;
+        }
 
         //查
         public static List<Goods> SelectFuzzy(string info)

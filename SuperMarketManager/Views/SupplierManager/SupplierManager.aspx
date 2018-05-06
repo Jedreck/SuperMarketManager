@@ -127,7 +127,7 @@
                         </i><span class="menu-title">个人信息</span></a>
 
                         </li>
-                        <li><a href="../../Views/Login/Manager_Index.aspx"><i class="fa fa-sitemap fa-fw">
+                        <li><a href="../../Views/Login/Login.aspx"><i class="fa fa-sitemap fa-fw">
                             <div class="icon-bg bg-dark"></div>
                         </i><span class="menu-title">退出</span></a>
                     </ul>
