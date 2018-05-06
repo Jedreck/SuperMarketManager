@@ -192,8 +192,8 @@
                                                 <div class="col-sm-9 controls">
                                                     <div class="row">
                                                         <div class="col-xs-9">
-                                                            <asp:RadioButton ID="sex_male" runat="server" Text="男"  />
-                                                            <asp:RadioButton ID="sex_female" runat="server" Text="女"  />                                                      
+                                                            <asp:RadioButton ID="sex_male"  groupname="sex" runat="server" Text="男"  />
+                                                            <asp:RadioButton ID="sex_female" groupname="sex" runat="server" Text="女"  />                                                      
                                                         </div>
                                                     </div>
                                                 </div>

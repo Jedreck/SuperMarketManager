@@ -175,7 +175,7 @@
                                                     <div id="grid-layout-table-1" class="box jplist">
                                                         <div class="jplist-ios-button"><i class="fa fa-sort"></i>jPList Actions</div>
                                                         <div class="jplist-panel box panel-top">
-                                                            <button type="button" data-control-type="reset" data-control-name="reset" data-control-action="reset" class="jplist-reset-btn btn btn-default">Reset<i class="fa fa-share mls"></i></button>
+                                                            <button type="button" style="height:35px;" data-control-type="reset" data-control-name="reset" data-control-action="reset" class="jplist-reset-btn btn btn-default">重置<i class="fa fa-share mls"></i></button>
                                                             <div data-control-type="drop-down" data-control-name="paging" data-control-action="paging" class="jplist-drop-down form-control">
                                                                 <ul class="dropdown-menu">
                                                                     <li><span data-number="3">3 per page</span></li>
@@ -186,11 +186,8 @@
                                                             </div>
                                                             <div data-control-type="drop-down" data-control-name="sort" data-control-action="sort" data-datetime-format="{month}/{day}/{year}" class="jplist-drop-down form-control">
                                                                 <ul class="dropdown-menu">
-                                                                    <li><span data-path="default">排序方式</span></li>
                                                                     <li><span data-path=".title" data-order="asc" data-type="text">供应商 A-Z</span></li>
-                                                                    <li><span data-path=".title" data-order="desc" data-type="text">供应商 Z-A</span></li>
-                                                                    <li><span data-path=".desc" data-order="asc" data-type="text">Description A-Z</span></li>
-                                                                    <li><span data-path=".desc" data-order="desc" data-type="text">Description Z-A</span></li>
+                                                                    <li><span data-path=".title" data-order="desc" data-type="text">供应商 Z-A</span></li>                                                               
                                                                     <li><span data-path=".like" data-order="asc" data-type="number" data-default="true">报价升序</span></li>
                                                                     <li><span data-path=".like" data-order="desc" data-type="number">报价降序</span></li>
                                                                 </ul>
@@ -215,14 +212,13 @@
                                                                     <!--<img/>-->
                                                                     
                                                                     <!--<data></data>-->
-                                                                    <td class="td-block">S_ID`,`S_Name`,`G_ID`,`G_Name`,`SL_Price`,`G_Price`,`G_Store` "                                                                   
+                                                                    <td class="td-block">                                                                  
+                                                                        <p class="title"><a href="/Views/SupplierManager/Supplier_detail.aspx"><%=supplierlist[i].S_Name%></a></p>
 
-                                                                        <p class="title"><%=supplierlist[i].S_Name%> </p>
-
-                                                                        <p class="desc">供应商信息：<%=supplierlist[i].S_ID %>&nbsp&nbsp&nbsp<%=supplierlist[i].S_Name %><br />
-                                                                                        商品信息：<%=supplierlist[i].G_ID %>&nbsp&nbsp&nbsp<%=supplierlist[i].G_Name %>
+                                                                        <p class="desc">供应商信息：供应商id:<%=supplierlist[i].S_ID %>&nbsp&nbsp&nbsp供应商名称：<%=supplierlist[i].S_Name %><br />
+                                                                                        商品信息：商品id：<%=supplierlist[i].G_ID %>&nbsp&nbsp&nbsp商品名称：<%=supplierlist[i].G_Name %>
                                                                         </p>
-                                                                        <p class="like"><%=supplierlist[i].SL_Price %></p> 
+                                                                        <p class="like">供应商报价：<%=supplierlist[i].SL_Price %></p> 
                                                                     </td>
                                                                 </tr>
                                                                 <%} %>
@@ -244,15 +240,11 @@
                                                             </div>
                                                             <div data-control-type="drop-down" data-control-name="sort" data-control-action="sort" data-control-animate-to-top="true" data-datetime-format="{month}/{day}/{year}" class="jplist-drop-down form-control">
                                                                 <ul class="dropdown-menu">
-                                                                    <li><span data-path="default">Sort by</span></li>
-                                                                    <li><span data-path=".title" data-order="asc" data-type="text">Title A-Z</span></li>
-                                                                    <li><span data-path=".title" data-order="desc" data-type="text">Title Z-A</span></li>
-                                                                    <li><span data-path=".desc" data-order="asc" data-type="text">Description A-Z</span></li>
-                                                                    <li><span data-path=".desc" data-order="desc" data-type="text">Description Z-A</span></li>
-                                                                    <li><span data-path=".like" data-order="asc" data-type="number" data-default="true">Likes asc</span></li>
-                                                                    <li><span data-path=".like" data-order="desc" data-type="number">Likes desc</span></li>
-                                                                    <li><span data-path=".date" data-order="asc" data-type="datetime">Date asc</span></li>
-                                                                    <li><span data-path=".date" data-order="desc" data-type="datetime">Date desc</span></li>
+                                                                    <li><span data-path="default">默认排序</span></li>
+                                                                    <li><span data-path=".title" data-order="asc" data-type="text">供应商 A-Z</span></li>
+                                                                    <li><span data-path=".title" data-order="desc" data-type="text">供应商 Z-A</span></li>                                                               
+                                                                    <li><span data-path=".like" data-order="asc" data-type="number" data-default="true">报价升序</span></li>
+                                                                    <li><span data-path=".like" data-order="desc" data-type="number">报价降序</span></li>
                                                                 </ul>
                                                             </div>
                                                             <div data-type="{start} - {end} of {all}" data-control-type="pagination-info" data-control-name="paging" data-control-action="paging" class="jplist-label btn btn-default"></div>
@@ -311,7 +303,7 @@
     <script src="../../Scripts/charts-highchart-more.js"></script>
     <script src="../../Scripts/modernizr.min.js"></script>
     <script src="../../Scripts/jplist.min.js"></script>
-    <script src="../../Scripts/jplist.js"></script>
+    <script src="../../Scripts/jplist.js"></script>-->
 
     <!--CORE JAVASCRIPT-->
     <script src="../../Scripts/main.js"></script>
