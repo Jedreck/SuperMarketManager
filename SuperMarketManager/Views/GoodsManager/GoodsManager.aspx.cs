@@ -26,7 +26,7 @@ namespace SuperMarketManager.Views
 
         protected void Button2_Click(object sender, EventArgs e)
         {
-            TextBox1.Text = ;
+            
         }
     }
 }
