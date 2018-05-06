@@ -241,20 +241,20 @@
                                                         <span style="width: 100px; display: inline-block;" class="name">单价</span>
                                                          <span style="width: 100px; display: inline-block;" class="name">库存</span>
                                                             </a>
-                                                        <%for (int i = 0; i < goods.Count ; i++)
+                                                        
+                                                        <%for ( i = 0; i < goods.Count ; i++)
                                                             { %>
                                                         <a href="#" class="list-group-item">
-                                                        <span style="width: 100px; display: inline-block;" class="name"><%=goods[i].ID %></span>
+                                                        <span style="width: 100px; display: inline-block;" class="name" ><%=goods[i].ID %></span>
                                                         <span style="width: 100px; display: inline-block;" class="name"><%=goods[i].Name %></span>
-                                                        <span style="width: 100px; display: inline-block;" class="name"><%=goods[i].Category %></span>
+                                                        <span style="width: 100px; display: inline-block;" class="name"><%=goods[i].GC_Name %></span>
                                                             <span style="width: 100px; display: inline-block;" class="name"><%=goods[i].Unit %></span>
                                                             <span style="width: 100px; display: inline-block;" class="name"><%=goods[i].ExpirationDate %></span>
                                                             <span style="width: 100px; display: inline-block;" class="name"><%=goods[i].Price %></span>
                                                              <span style="width: 100px; display: inline-block;" class="name"><%=goods[i].Store %></span>
                                                             <asp:Button ID="Button2" runat="server" Text="修改单价" OnClick="Button2_Click"/>
                                                             </a>
-                                                        <%} %>   
-                                                    
+                                                        <%} %>  
                                                 </div>
                                             </div>
                                         </div>
