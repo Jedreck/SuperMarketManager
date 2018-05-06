@@ -276,6 +276,7 @@
     <Content Include="Scripts\zabuto_calendar.min.js" />
     <Content Include="Views\EmployeeManager\EmployeeManager.aspx" />
     <Content Include="Views\EmployeeManager\Employee_add.aspx" />
+    <Content Include="Views\EmployeeManager\Employee_update.aspx" />
     <Content Include="Views\Index\Index.aspx" />
     <Content Include="Views\Index\Manager_Index.aspx" />
     <Content Include="Views\Login\Login.aspx" />
@@ -286,6 +287,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\DBManager\DBManager.cs" />
+    <Compile Include="Controllers\Discount\Discount_C.cs" />
     <Compile Include="Controllers\Employee\Employee_C.cs" />
     <Compile Include="Controllers\Goods\Goods_C.cs" />
     <Compile Include="Controllers\Login\Login_C.cs" />
@@ -294,6 +296,7 @@
     <Compile Include="Controllers\StoreList\StoreList_C.cs" />
     <Compile Include="Controllers\SupplierList\SupplierList_C.cs" />
     <Compile Include="Controllers\Supplier\Supplier_C.cs" />
+    <Compile Include="Controllers\Tool\ExecuteSQL.cs" />
     <Compile Include="Controllers\Tool\IDFormat.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -326,6 +329,13 @@
     </Compile>
     <Compile Include="Views\EmployeeManager\Employee_add.aspx.designer.cs">
       <DependentUpon>Employee_add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EmployeeManager\Employee_update.aspx.cs">
+      <DependentUpon>Employee_update.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\EmployeeManager\Employee_update.aspx.designer.cs">
+      <DependentUpon>Employee_update.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Index\Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>

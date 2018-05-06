@@ -64,11 +64,11 @@ namespace SuperMarketManager.Controllers
             if (S_ID == "" && G_ID == "")//两个为空，直接返回false
                 return false;
             else if (S_ID == "" && G_ID != "")//只有S_ID为空
-                sql = "DELETE `marketmanage`.`supplylist` WHERE `G_ID`='"+G_ID+"'";
+                sql = "DELETE FROM `marketmanage`.`supplylist` WHERE `G_ID`='"+G_ID+"'";
             else if (G_ID == "" && S_ID != "")//只有G_ID为空
-                sql = "DELETE `marketmanage`.`supplylist` WHERE `S_ID`="+S_ID;
+                sql = "DELETE FROM `marketmanage`.`supplylist` WHERE `S_ID`=" + S_ID;
             else
-                sql = "DELETE `marketmanage`.`supplylist` WHERE `G_ID`='"+G_ID+" AND `S_ID`="+S_ID;
+                sql = "DELETE FROM `marketmanage`.`supplylist` WHERE `G_ID`='" + G_ID+" AND `S_ID`="+S_ID;
             OdbcConnection odbcConnection = DBManager.GetOdbcConnection();
             odbcConnection.Open();
             OdbcCommand odbcCommand = new OdbcCommand(sql, odbcConnection);
