@@ -83,7 +83,9 @@ namespace SuperMarketManager.Controllers
                 + " ,`E_Birth`= '" + employee.Birth + "'"
                 + " ,`E_BankAccount`= '" + employee.BankAccount + "'"
                 + " ,`E_Position`=" + employee.Position
-                + " ,`E_Password`= '" + employee.PassWord + "'";
+                + " ,`E_Password`= '" + employee.PassWord + "'"
+                + "WHERE"
+                +"`D_ID`= '"+employee.ID+"'";
             OdbcConnection connection = DBManager.GetOdbcConnection();
             connection.Open();
             OdbcCommand cammand = new OdbcCommand(sql, connection);
@@ -95,8 +97,6 @@ namespace SuperMarketManager.Controllers
         //查
         public static List<Employee> SelectFuzzy(string info)
         {
-            OdbcConnection odbcConnection = DBManager.GetOdbcConnection();
-            odbcConnection.Open();
             string sql = "SELECT * FROM employee "
                 + "WHERE `E_ID` LIKE '%" + info + "%'"
                 + "OR `E_Name` LIKE '%" + info + "%'"
@@ -106,9 +106,10 @@ namespace SuperMarketManager.Controllers
                 + "OR `E_BankAccount` LIKE '%" + info + "%'"
                 + "OR `E_Email` LIKE '%" + info + "%'"
                 + "OR `E_Position` LIKE '%" + info + "%'";
+            OdbcConnection odbcConnection = DBManager.GetOdbcConnection();
+            odbcConnection.Open();
             OdbcCommand odbcCommand = new OdbcCommand(sql, odbcConnection);
             OdbcDataReader odbcDataReader = odbcCommand.ExecuteReader(CommandBehavior.CloseConnection);
-
             if (odbcDataReader.HasRows)
             {
                 List<Employee> list = Employee.getList(odbcDataReader);

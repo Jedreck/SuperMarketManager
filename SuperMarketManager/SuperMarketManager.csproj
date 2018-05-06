@@ -287,13 +287,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\DBManager\DBManager.cs" />
+    <Compile Include="Controllers\Discount\Discount_C.cs" />
     <Compile Include="Controllers\Employee\Employee_C.cs" />
+    <Compile Include="Controllers\GoodsIn\GoodsIn_C.cs" />
     <Compile Include="Controllers\Goods\Goods_C.cs" />
     <Compile Include="Controllers\Login\Login_C.cs" />
+    <Compile Include="Controllers\OrderList\OrderList_C.cs" />
+    <Compile Include="Controllers\Order\Order_C.cs" />
     <Compile Include="Controllers\Statistic\StatisticDay_C.cs" />
     <Compile Include="Controllers\Statistic\StatisticGoods_C.cs" />
+    <Compile Include="Controllers\StoreList\StoreList_C.cs" />
     <Compile Include="Controllers\SupplierList\SupplierList_C.cs" />
     <Compile Include="Controllers\Supplier\Supplier_C.cs" />
+    <Compile Include="Controllers\Tool\ExecuteSQL.cs" />
     <Compile Include="Controllers\Tool\IDFormat.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
