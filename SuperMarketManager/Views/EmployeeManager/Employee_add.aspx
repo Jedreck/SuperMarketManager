@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="EmployeeManager.aspx.cs" Inherits="SuperMarketManager.Views.EmployeeManager.EmployeeManager" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Employee_add.aspx.cs" Inherits="SuperMarketManager.Views.EmployeeManager.Employee_add" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -141,13 +141,13 @@
                 <div id="title-breadcrumb-option-demo" class="page-title-breadcrumb">
                     <div class="page-header pull-left">
                         <div class="page-title">
-                            员工管理
+                            员工管理-添加员工
                         </div>
                     </div>
                     <ol class="breadcrumb page-breadcrumb pull-right">
                         <li><i class="fa fa-home"></i>&nbsp;<a href="../../Views/Index/Manager_Index.aspx">Home</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
-                        <li class="hidden"><a href="#">员工管理</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
-                        <li class="active">员工管理</li>
+                        <li class="hidden"><a href="#">员工管理-添加员工</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
+                        <li class="active">员工管理-添加员工</li>
                     </ol>
                     <div class="clearfix">
                     </div>
@@ -166,68 +166,102 @@
                             </div>
                             <div class="col-lg-12">
                                 <div class="row">
-                                    <div class="col-lg-12">
+                                    <div class="col-lg-10">
+                                       <form action="#" class="form-horizontal" runat="server">
 
-                                        <nav role="navigation" class="navbar navbar-default">
-                                            <div class="container-fluid">
-                                                <div class="navbar-header">
-                                                    <button type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-                                                    <a href="#" class="navbar-brand">超库</a>
-                                                </div>
-                                                <div id="bs-example-navbar-collapse-2" class="collapse navbar-collapse">
-                                                    <form role="search" class="navbar-form navbar-left" runat="server">
-                                                        <div class="form-group">
-                                                            <input type="text" id="search_content" placeholder="search" class="form-control" runat="server" /></div>
-                                                        &nbsp;
-                                                       
-                                                            <asp:Button ID="search" runat="server" Width="42" Height="30" BorderStyle="Dashed" ForeColor="#ffffff" BackColor=" #488c6c" BorderColor="#458567" Font-Size="12px" Text="查询" OnClick="Search_Click" />
-                                                            <asp:Button ID="delete" runat="server" Width="42" Height="30" BorderStyle="Dashed" ForeColor="#ffffff" BackColor=" #488c6c" BorderColor="#458567" Font-Size="12px" Text="删除" OnClick="Delete_Click" />
-                                                            <asp:Button ID="add" runat="server" Width="42" Height="30" BorderStyle="Dashed" ForeColor="#ffffff" BackColor=" #488c6c" BorderColor="#458567" Font-Size="12px" Text="增加" OnClick="Addto_Click" />
+                                           <h3>员工基本信息</h3>
 
-                                                    </form>
+                                            <div class="form-group"><label class="col-sm-3 control-label">工号</label>
+
+                                                <div class="col-sm-9 controls">
+                                                    <div class="row">
+                                                        <div class="col-xs-9"><input type="text" id="id" runat="server" placeholder="自动编号" readonly="readonly" class="form-control"/></div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </nav>
+                                            <div class="form-group"><label class="col-sm-3 control-label">员工姓名</label>
 
-                                        <div class="panel panel-yellow">
-                                            <div class="panel-heading">员工信息表</div>
-                                            <div class="panel-body">
-                                                <table class="table table-hover">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>#</th>
-                                                            <th>工 号  </th>
-                                                            <th>姓 名  </th>
-                                                            <th>性 别  </th>
-                                                            <th>联 系 方 式  </th>
-                                                            <th>出 生 年 月  </th>
-                                                            <th>银 行 卡 号  </th>
-                                                            <th>邮 箱   </th>
-                                                            <th>位 置   </th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <%if (employees!=null)
-                                                            { %>
-                                                        <%for (int i = 0; i < employees.Count; i++)
-                                                            { %>
-                                                        <tr>
-                                                            <td><%=i + 1 %></td>
-                                                            <td><%=employees[i].ID %></td>
-                                                            <td><%=employees[i].Name %></td>
-                                                            <td><%=employees[i].Sex %></td>
-                                                            <td><%=employees[i].Phone %></td>
-                                                            <td><%=employees[i].Birth %></td>
-                                                            <td><%=employees[i].BankAccount %></td>
-                                                            <td><%=employees[i].Email %></td>
-                                                            <td><%=employees[i].Position %></td>
-                                                        </tr>
-                                                        <%} %>
-                                                        <%} %>
-                                                    </tbody>
-                                                </table>
+                                                <div class="col-sm-9 controls">
+                                                    <div class="row">
+                                                        <div class="col-xs-9"><input id="name" runat="server" type="text" placeholder="姓名" class="form-control"/></div>
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
+                                            <div class="form-group"><label class="col-sm-3 control-label">性别</label>
+                                                <div class="col-sm-9 controls">
+                                                    <div class="row">
+                                                        <div class="col-xs-9">
+                                                            <asp:RadioButton ID="sex_male" runat="server" Text="男"  />
+                                                            <asp:RadioButton ID="sex_female" runat="server" Text="女"  />                                                      
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group"><label class="col-sm-3 control-label">出生日期</label>
+
+                                                <div class="col-sm-9 controls">
+                                                    <div class="row">
+                                                        <div class="col-xs-4"><input type="password"  runat="server" id="birth" placeholder="年月日分秒" class="form-control"/></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                           <div class="form-group"><label class="col-sm-3 control-label">密码</label>
+
+                                                <div class="col-sm-9 controls">
+                                                    <div class="row">
+                                                        <div class="col-xs-4"><input type="password" runat="server" id="password" readonly="readonly"  placeholder="初始密码:000000" class="form-control"/></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr/>
+                                            <h3>联系方式</h3>
+
+                                            <div class="form-group"><label class="col-sm-3 control-label">邮箱</label>
+
+                                                <div class="col-sm-9 controls">
+                                                    <div class="row">
+                                                        <div class="col-xs-9"><input type="email" runat="server" id="email" placeholder="email" class="form-control"/></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group"><label class="col-sm-3 control-label">手机号码</label>
+
+                                                <div class="col-sm-9 controls">
+                                                    <div class="row">
+                                                        <div class="col-xs-9"><input type="text" placeholder="手机号" runat="server" id="phone" class="form-control"/></div>
+                                                    </div>
+                                                </div>
+                                            </div>                                                                                                                                         
+                                            <hr/>
+                                            <h3>工作情况</h3>
+                                            <div class="form-group"><label class="col-sm-3 control-label">职位</label>
+
+                                                <div class="col-sm-9 controls">
+                                                    <div class="row">
+
+                                                        <div class="col-xs-4"><select class="form-control" runat="server" id="position">
+                                                            <option>CEO</option>
+                                                            <option>Director</option>
+                                                            <option>Manager</option>
+                                                            <option>Staff</option>
+                                                            <option>Office Boy</option>
+                                                        </select></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group"><label class="col-sm-3 control-label">银行卡号</label>
+
+                                                <div class="col-sm-9 controls">
+                                                    <div class="row">
+                                                        <div class="col-xs-9"><input type="text" runat="server" id="bankaccount" placeholder="银行卡号" class="form-control"/></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr/>
+                                           <asp:Button ID="add" runat="server" Text="添加" class="btn-green" BorderStyle="Dashed"  Height="30px" Width="90px" OnClick="Add_Click" />
+                                           <asp:Button ID="back" runat="server" Text="返回" class="btn-green" BorderStyle="Dashed" Height="30px" Width="90px" OnClick="Back_Click" />
+                                        </form>
+
                                     </div>
                                 </div>
                             </div>
@@ -275,4 +309,5 @@
         <script src="../../Scripts/main.js"></script>
 </body>
 </html>
+
 
