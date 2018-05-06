@@ -10,14 +10,14 @@ namespace SuperMarketManager.Controllers
 {
     public class Goods_C
     {
-        public static Goods AddGoods(string id, string name, int category, string unit, int expirationdate,
+        public static bool AddGoods(string id, string name, int category, string unit, int expirationdate,
             double price, int store)
         {
             return AddGoods(new Goods(id, name, category, unit, expirationdate, price, store));
         }
-        public static Goods AddGoods(Goods goods)
+        public static bool AddGoods(Goods goods)
         {
-            OdbcConnection odbcConnection = DBManager.GetOdbcConnection();
+            /*OdbcConnection odbcConnection = DBManager.GetOdbcConnection();
             odbcConnection.Open();
             OdbcCommand odbcCommand = new OdbcCommand();
             OdbcDataReader odbcDataReader = null;
@@ -32,14 +32,15 @@ namespace SuperMarketManager.Controllers
             }
             odbcDataReader.Close();
             odbcConnection.Close();
-            odbcConnection.Open();
-            String insertSql = String.Format("insert into `marketmanage`.`goods`  (`G_ID`, `G_Name`,`G_Class`,`G_Unit`,`G_ExpirationDate`,`G_Price`,`G_Store`) " +
+            odbcConnection.Open();*/
+            String sql = String.Format("insert into `marketmanage`.`goods`  (`G_ID`, `G_Name`,`G_Class`,`G_Unit`,`G_ExpirationDate`,`G_Price`,`G_Store`) " +
                 "values ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}')"
                 , goods.ID,goods.Name,goods.Category,goods.Unit,goods.ExpirationDate,goods.Price,goods.Store);
-            odbcCommand.CommandText = insertSql;
+            return ExecuteSQL.ExecuteNonQuerySQL_GetBool(sql);
+            /*odbcCommand.CommandText = insertSql;
             int i = odbcCommand.ExecuteNonQuery();
             odbcConnection.Close();
-            return (i > 0) ? goods : null;//插入成功返回goods，失败返回null
+            return (i > 0) ? goods : null;//插入成功返回goods，失败返回null*/
         }
 
         //删
