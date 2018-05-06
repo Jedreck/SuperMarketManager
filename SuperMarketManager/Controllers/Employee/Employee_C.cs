@@ -72,11 +72,25 @@ namespace SuperMarketManager.Controllers
             return (deleted > 0) ? true : false;
         }
 
-        ////改
-        //public static bool AlterByID(Employee employee)
-        //{
-
-        //}
+        //改
+        public static bool AlterByID(Employee employee)
+        {
+            String sql = "UPDATE `marketmanage`.`employee` "
+                + " SET "
+                + " `E_Name`= '" + employee.Name + "'"
+                + " ,`E_Sex`= '" + employee.Sex + "'"
+                + " ,`E_Phone`= '" + employee.Phone + "'"
+                + " ,`E_Birth`= '" + employee.Birth + "'"
+                + " ,`E_BankAccount`= '" + employee.BankAccount + "'"
+                + " ,`E_Position`=" + employee.Position
+                + " ,`E_Password`= '" + employee.PassWord + "'";
+            OdbcConnection connection = DBManager.GetOdbcConnection();
+            connection.Open();
+            OdbcCommand cammand = new OdbcCommand(sql, connection);
+            int i = cammand.ExecuteNonQuery();
+            connection.Close();
+            return (i > 0) ? true : false;
+        }
 
         //查
         public static List<Employee> SelectFuzzy(string info)
