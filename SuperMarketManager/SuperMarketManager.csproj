@@ -276,6 +276,7 @@
     <Content Include="Scripts\zabuto_calendar.min.js" />
     <Content Include="Views\EmployeeManager\EmployeeManager.aspx" />
     <Content Include="Views\EmployeeManager\Employee_add.aspx" />
+    <Content Include="Views\EmployeeManager\Employee_update.aspx" />
     <Content Include="Views\Index\Index.aspx" />
     <Content Include="Views\Index\Manager_Index.aspx" />
     <Content Include="Views\Login\Login.aspx" />
@@ -325,6 +326,13 @@
     </Compile>
     <Compile Include="Views\EmployeeManager\Employee_add.aspx.designer.cs">
       <DependentUpon>Employee_add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EmployeeManager\Employee_update.aspx.cs">
+      <DependentUpon>Employee_update.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\EmployeeManager\Employee_update.aspx.designer.cs">
+      <DependentUpon>Employee_update.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Index\Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
