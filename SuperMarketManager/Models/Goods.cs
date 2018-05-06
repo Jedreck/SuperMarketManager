@@ -60,7 +60,7 @@ namespace SuperMarketManager.Models
             if (odbcDataReader.HasRows)
             {
                 odbcDataReader.Read();
-                return Convert.ToString(odbcDataReader[2]);
+                return Convert.ToString(odbcDataReader[1]);
             }
             return null;
         }
