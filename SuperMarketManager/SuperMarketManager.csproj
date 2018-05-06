@@ -275,6 +275,7 @@
     <Content Include="Scripts\ui-nestable-list.js" />
     <Content Include="Scripts\zabuto_calendar.min.js" />
     <Content Include="Views\EmployeeManager\EmployeeManager.aspx" />
+    <Content Include="Views\EmployeeManager\Employee_add.aspx" />
     <Content Include="Views\Index\Index.aspx" />
     <Content Include="Views\Index\Manager_Index.aspx" />
     <Content Include="Views\Login\Login.aspx" />
@@ -286,6 +287,7 @@
   <ItemGroup>
     <Compile Include="Controllers\DBManager\DBManager.cs" />
     <Compile Include="Controllers\Employee\Employee_C.cs" />
+    <Compile Include="Controllers\Goods\Goods_C.cs" />
     <Compile Include="Controllers\Login\Login_C.cs" />
     <Compile Include="Controllers\Statistic\StatisticDay_C.cs" />
     <Compile Include="Controllers\Statistic\StatisticGoods_C.cs" />
@@ -316,6 +318,13 @@
     </Compile>
     <Compile Include="Views\EmployeeManager\EmployeeManager.aspx.designer.cs">
       <DependentUpon>EmployeeManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EmployeeManager\Employee_add.aspx.cs">
+      <DependentUpon>Employee_add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\EmployeeManager\Employee_add.aspx.designer.cs">
+      <DependentUpon>Employee_add.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Index\Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
