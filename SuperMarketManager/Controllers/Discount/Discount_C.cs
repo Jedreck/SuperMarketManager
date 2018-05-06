@@ -14,7 +14,7 @@ namespace SuperMarketManager.Controllers
         {
             dis.ID = IDFormat.getID_Date16();
             string sql = "INSERT INTO `discount`(`D_ID`,`G_ID`,`D_Discount`,`D_Start`,`D_End`)" +
-                " VALUES('" + dis.ID + "','"+dis.G_ID+"',"+dis.DDiscount+ ",'" + dis.Start + "','" + dis.End + "')";
+                " VALUES('" + dis.ID + "','" + dis.G_ID + "'," + dis.DDiscount + ",'" + dis.Start + "','" + dis.End + "')";
             return ExecuteSQL.ExecuteNonQuerySQL_GetBool(sql);
         }
         //Delete
@@ -24,11 +24,18 @@ namespace SuperMarketManager.Controllers
             return ExecuteSQL.ExecuteNonQuerySQL_GetBool(sql);
         }
 
-        ////Alter
-        //public static bool AlterByD_ID(string D_ID)
-        //{
-        //    string sql = ""
-        //}
+        //Alter
+        public static bool AlterByD_ID(Discount ds)
+        {
+            string sql = "UPDATE `marketmanage`.`discount`"
+                + "SET"
+                + "`D_Discount`=" + ds.DDiscount.ToString()
+                + " ,`D_Start`='" + ds.Start.ToString("yyyy-MM-dd") + "'"
+                + " ,`D_End`='" + ds.End.ToString("yyyy-MM-dd") + "'"
+                + "WHERE"
+                + "`D_ID`='" + ds.ID + "'";
+            return ExecuteSQL.ExecuteNonQuerySQL_GetBool(sql);
+        }
 
         //Select
         public static List<Discount> SelectDiscountByG_ID(string G_ID)
@@ -37,7 +44,13 @@ namespace SuperMarketManager.Controllers
             return getList(sql);
         }
 
-        public static List<Discount> SelectDiscountByDate(string startDate="",string endDate="")
+        public static List<Discount> SelectAll()
+        {
+            string sql = "SELECT * FROM `discount`";
+            return getList(sql);
+        }
+
+        public static List<Discount> SelectDiscountByDate(string startDate = "", string endDate = "")
         {
             string sql = "";
             if (startDate == "" && endDate == "")
@@ -47,7 +60,7 @@ namespace SuperMarketManager.Controllers
             else if (startDate != "" && endDate == "")
                 sql = "SELECT* FROM `discount` WHERE `D_Start`= '" + startDate + "'";
             else
-                sql = "SELECT * FROM `discount` WHERE `D_Start`='"+startDate+"' AND `D_End`='"+endDate+"'";
+                sql = "SELECT * FROM `discount` WHERE `D_Start`='" + startDate + "' AND `D_End`='" + endDate + "'";
             return getList(sql);
         }
 
