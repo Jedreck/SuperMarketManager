@@ -70,10 +70,10 @@ namespace SuperMarketManager.Controllers
                 + "WHERE `G_ID` LIKE '%" + info + "%'"
                 + "OR `G_Name` LIKE '%" + info + "%'"
                 + "OR `G_Class` LIKE '%" + info + "%'"
-                + "OR `Unit` LIKE '%" + info + "%'"
-                + "OR `ExpirationDate` LIKE '%" + info + "%'"
-                + "OR `Price` LIKE '%" + info + "%'"
-                + "OR `Store` LIKE '%" + info + "%'";
+                + "OR `G_Unit` LIKE '%" + info + "%'"
+                + "OR `G_ExpirationDate` LIKE '%" + info + "%'"
+                + "OR `G_Price` LIKE '%" + info + "%'"
+                + "OR `G_Store` LIKE '%" + info + "%'";
             OdbcCommand odbcCommand = new OdbcCommand(sql, odbcConnection);
             OdbcDataReader odbcDataReader = odbcCommand.ExecuteReader(CommandBehavior.CloseConnection);
 
@@ -88,5 +88,4 @@ namespace SuperMarketManager.Controllers
             return null;
         }
     }
-}
 }

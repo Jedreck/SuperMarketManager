@@ -28,6 +28,7 @@ namespace SuperMarketManager.Views.EmployeeManager
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+            
             employees = Employee_C.SelectFuzzy("1122");
         }
     }
