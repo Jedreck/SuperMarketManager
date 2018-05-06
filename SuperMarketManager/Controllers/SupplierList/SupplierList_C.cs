@@ -39,8 +39,8 @@ namespace SuperMarketManager.Controllers
 
         public static List<Supplier_List_Goods> GetSupplylistsByS_Name(string S_Name = "")
         {
-            string sql = "select `S_ID`,`S_Name`,`G_ID`,`G_Name`,`SL_Price`,`G_Price`,`G_Store` "
-                +"from `supplier`,`supplylist`,`goods` "
+            string sql = "select `supplylist`.`S_ID`,`supplier`.`S_Name`,`supplylist`.`G_ID`,`goods`.`G_Name`,`supplylist`.`SL_Price`,`goods`.`G_Price`,`goods`.`G_Store` "
+                + "from `supplier`,`supplylist`,`goods` "
                 +"where `supplier`.`S_Name` like '%"+S_Name+"%'"
                 +"and `supplier`.`S_ID`=`supplylist`.`S_ID`"
                 +"and `supplylist`.`G_ID`=`goods`.`G_ID`";

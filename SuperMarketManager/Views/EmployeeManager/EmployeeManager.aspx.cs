@@ -11,15 +11,6 @@ namespace SuperMarketManager.Views.EmployeeManager
 {   
     public partial class EmployeeManager : System.Web.UI.Page
     {
-        protected int count;
-        protected String[] id;
-        protected String[] name;
-        protected String[] sex;
-        protected String[] phone;
-        protected DateTime[] birth;
-        protected String[] bankaccount;
-        protected String[] email;
-        protected int[] position;
         protected List<Employee> employees=null; 
         protected void Page_Load(object sender, EventArgs e)
         {
