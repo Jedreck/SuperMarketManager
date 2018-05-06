@@ -55,11 +55,19 @@ namespace SuperMarketManager.Controllers
             return (deleted > 0) ? true : false;
         }
 
-        ////改
-        //public static bool AlterByID(Employee employee)
-        //{
-
-        //}
+        //改
+        public static bool AlterByID(string id,string price)
+        {
+            double Price = Convert.ToDouble(price);
+            int update = 0;
+            string sql = "update goods set G_Price="+Price+" where G_ID='"+id+"'";
+            OdbcConnection odbcConnection = DBManager.GetOdbcConnection();
+            odbcConnection.Open();
+            OdbcCommand odbcCommand = new OdbcCommand(sql,odbcConnection);
+            update = odbcCommand.ExecuteNonQuery();
+            odbcConnection.Close();
+            return (update > 0) ? true:false ;
+        }
 
         //查
         public static List<Goods> SelectFuzzy(string info)
@@ -70,10 +78,10 @@ namespace SuperMarketManager.Controllers
                 + "WHERE `G_ID` LIKE '%" + info + "%'"
                 + "OR `G_Name` LIKE '%" + info + "%'"
                 + "OR `G_Class` LIKE '%" + info + "%'"
-                + "OR `Unit` LIKE '%" + info + "%'"
-                + "OR `ExpirationDate` LIKE '%" + info + "%'"
-                + "OR `Price` LIKE '%" + info + "%'"
-                + "OR `Store` LIKE '%" + info + "%'";
+                + "OR `G_Unit` LIKE '%" + info + "%'"
+                + "OR `G_ExpirationDate` LIKE '%" + info + "%'"
+                + "OR `G_Price` LIKE '%" + info + "%'"
+                + "OR `G_Store` LIKE '%" + info + "%'";
             OdbcCommand odbcCommand = new OdbcCommand(sql, odbcConnection);
             OdbcDataReader odbcDataReader = odbcCommand.ExecuteReader(CommandBehavior.CloseConnection);
 

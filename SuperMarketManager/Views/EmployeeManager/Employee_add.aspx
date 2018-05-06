@@ -141,13 +141,13 @@
                 <div id="title-breadcrumb-option-demo" class="page-title-breadcrumb">
                     <div class="page-header pull-left">
                         <div class="page-title">
-                            员工管理-添加员工
+                            添加员工信息
                         </div>
                     </div>
                     <ol class="breadcrumb page-breadcrumb pull-right">
                         <li><i class="fa fa-home"></i>&nbsp;<a href="../../Views/Index/Manager_Index.aspx">Home</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
-                        <li class="hidden"><a href="#">员工管理-添加员工</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
-                        <li class="active">员工管理-添加员工</li>
+                        <li class="hidden"><a href="#">员工管理-添加员工信息</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
+                        <li class="active">员工管理-添加员工信息</li>
                     </ol>
                     <div class="clearfix">
                     </div>
@@ -169,7 +169,8 @@
                                     <div class="col-lg-10">
                                        <form action="#" class="form-horizontal" runat="server">
 
-                                           <h3>员工基本信息</h3>
+                                           <h3>
+                                               <asp:Label ID="basic" runat="server" Text="员工基本信息" class="label label-success" Font-Size="18px"></asp:Label></h3>
 
                                             <div class="form-group"><label class="col-sm-3 control-label">工号</label>
 
@@ -214,7 +215,7 @@
                                                 </div>
                                             </div>
                                             <hr/>
-                                            <h3>联系方式</h3>
+                                            <h3><asp:Label ID="connect" runat="server" Text="员工联系方式" class="label label-warning" Font-Size="18px"/></h3>
 
                                             <div class="form-group"><label class="col-sm-3 control-label">邮箱</label>
 
@@ -233,7 +234,7 @@
                                                 </div>
                                             </div>                                                                                                                                         
                                             <hr/>
-                                            <h3>工作情况</h3>
+                                            <h3><asp:Label ID="working" runat="server" Text="员工工作情况" class="label label-info" Font-Size="18px"/></h3>
                                             <div class="form-group"><label class="col-sm-3 control-label">职位</label>
 
                                                 <div class="col-sm-9 controls">
@@ -258,9 +259,12 @@
                                                 </div>
                                             </div>
                                             <hr/>
-                                           <asp:Button ID="add" runat="server" Text="添加" class="btn-green" BorderStyle="Dashed"  Height="30px" Width="90px" OnClick="Add_Click" />
-                                           <asp:Button ID="back" runat="server" Text="返回" class="btn-green" BorderStyle="Dashed" Height="30px" Width="90px" OnClick="Back_Click" />
-                                        </form>
+                                           <asp:Label runat="server" ID="zero1" Width="200px" />
+                                           <asp:Button ID="add" runat="server" Text="添加" class="btn-green" BorderStyle="Dashed"  Height="30px" Width="150px" OnClick="Add_Click" />
+                                           <asp:Label runat="server" ID="zero2" Width="50px" />
+                                           <asp:Button ID="back" runat="server" Text="返回" class="btn-green" BorderStyle="Dashed" Height="30px" Width="150px" OnClick="Back_Click" />
+                                           <asp:Label runat="server" ID="zero3" Width="200px" />
+                                       </form>
 
                                     </div>
                                 </div>

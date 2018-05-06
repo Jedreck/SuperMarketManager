@@ -10,7 +10,7 @@
 namespace SuperMarketManager.Views.EmployeeManager {
     
     
-    public partial class Employee_add {
+    public partial class Employee_update {
         
         /// <summary>
         /// basic 控件。
@@ -31,13 +31,13 @@ namespace SuperMarketManager.Views.EmployeeManager {
         protected global::System.Web.UI.HtmlControls.HtmlInputText id;
         
         /// <summary>
-        /// name 控件。
+        /// up_name 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText name;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText up_name;
         
         /// <summary>
         /// sex_male 控件。
@@ -139,13 +139,13 @@ namespace SuperMarketManager.Views.EmployeeManager {
         protected global::System.Web.UI.WebControls.Label zero1;
         
         /// <summary>
-        /// add 控件。
+        /// update 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button add;
+        protected global::System.Web.UI.WebControls.Button update;
         
         /// <summary>
         /// zero2 控件。
