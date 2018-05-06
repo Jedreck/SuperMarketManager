@@ -37,16 +37,16 @@ namespace SuperMarketManager.Views.EmployeeManager
             {
                 pos = 1;
             }
-            Employee employee = Employee_C.AddEmployee(up_name.Value.ToString(), sex, phone.Value.ToString(), birth.Value.ToString()
-            , pos, bankaccount.Value.ToString(), email.Value.ToString());
-            if (employee == null)
-            {
-                Response.Write("<script language=javascript>window.alert('修改失败，请重新检查输入信息是否正确！');</script>");
-            }
-            else
+            bool up_result = Employee_C.AlterByID(new Employee(up_name.Value.ToString(), sex, phone.Value.ToString(), birth.Value.ToString(),
+                pos, bankaccount.Value.ToString(), email.Value.ToString()));                      
+            if (up_result)
             {
                 Response.Write("<script language=javascript>window.alert('修改成功！');</script>");
                 Response.Redirect("/Views/EmployeeManager/EmployeeManager.aspx");
+            }
+            else
+            {
+                Response.Write("<script language=javascript>window.alert('修改失败，请重新检查输入信息是否正确！');</script>");
             }
         }
     }

@@ -8,13 +8,13 @@ namespace SuperMarketManager.Models
 {
     public class Supplier_List_Goods
     {
-        string S_ID { get; set; }
-        string S_Name { get; set; }
-        string G_ID { get; set; }
-        string G_Name { get; set; }
-        double SL_Price { get; set; }
-        double G_Price { get; set; }
-        double G_Store { get; set; }
+        public string S_ID { get; set; }
+        public string S_Name { get; set; }
+        public string G_ID { get; set; }
+        public string G_Name { get; set; }
+        public double SL_Price { get; set; }
+        public double G_Price { get; set; }
+        public double G_Store { get; set; }
 
         public static List<Supplier_List_Goods> GetSupplierAndLists(OdbcDataReader reader)
         {
