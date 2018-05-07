@@ -100,7 +100,7 @@
                         </i><span class="menu-title">供应商管理</span></a>
 
                         </li>
-                        <li><a href="Forms.html"><i class="fa fa-edit fa-fw">
+                        <li><a href="../../Views/GoodsSell/GoodsSell.aspx"><i class="fa fa-edit fa-fw">
                             <div class="icon-bg bg-violet"></div>
                         </i><span class="menu-title">商品销售</span></a>
 

@@ -102,7 +102,7 @@
                         </i><span class="menu-title">供应商管理</span></a>
 
                         </li>
-                        <li><a href="Forms.html"><i class="fa fa-edit fa-fw">
+                        <li><a href="../../Views/GoodsSell/GoodsSell.aspx"><i class="fa fa-edit fa-fw">
                             <div class="icon-bg bg-violet"></div>
                         </i><span class="menu-title">商品销售</span></a>
 
@@ -117,7 +117,7 @@
                         </i><span class="menu-title">折扣管理</span></a>
 
                         </li>
-                        <li><a href="Pages.html"><i class="fa fa-file-o fa-fw">
+                        <li><a href="../../Views/Businessstatistics/Businessstatistics.aspx"><i class="fa fa-file-o fa-fw">
                             <div class="icon-bg bg-yellow"></div>
                         </i><span class="menu-title">营业统计</span></a>
 
@@ -153,6 +153,7 @@
                 </div>
                 <!--END TITLE & BREADCRUMB PAGE-->
                 <!--BEGIN CONTENT-->
+                <form runat="server">
                 <div class="page-content">
                     <div id="tab-general">
                         <div class="row mbl">
@@ -195,7 +196,7 @@
                                                             <div class="text-filter-box">
                                                                 <div class="input-group">
                                                                     <span class="input-group-addon"><i class="fa fa-search"></i></span>
-                                                                    <input data-path=".title" type="text" runat="server" id="search_content" value="" placeholder="Filter by Title" data-control-type="textbox" data-control-name="title-filter" data-control-action="filter" class="form-control" />
+                                                                    <input data-path=".title" type="text" runat="server" id="search_content" value="" placeholder="供应商名称" data-control-type="textbox" data-control-name="title-filter" data-control-action="filter" class="form-control" />
                                                                 </div>
                                                             </div>                                                          
                                                             <div data-type="Page {current} of {pages}" data-control-type="pagination-info" data-control-name="paging" data-control-action="paging" class="jplist-label btn btn-default"></div>
@@ -206,19 +207,20 @@
                                                              <%if (supplierlist!= null)
                                                              { %>
                                                                 <%for (int i = 0; i <supplierlist.Count; i++)
-                                                                { %>
-                                                                <!--<item>1</item>-->
-                                                                <tr class="tbl-item">
+                                                                    {
+                                                                     %>                                                                   
+                                                                    <!--<item>1</item>-->
+                                                                    <tr class="tbl-item">
                                                                     <!--<img/>-->
                                                                     
                                                                     <!--<data></data>-->
-                                                                    <td class="td-block">                                                                  
+                                                                    <td class="td-block">
                                                                         <p class="title"><a href="/Views/SupplierManager/Supplier_detail.aspx"><%=supplierlist[i].S_Name%></a></p>
 
-                                                                        <p class="desc">供应商信息：供应商id:<%=supplierlist[i].S_ID %>&nbsp&nbsp&nbsp供应商名称：<%=supplierlist[i].S_Name %><br />
-                                                                                        商品信息：商品id：<%=supplierlist[i].G_ID %>&nbsp&nbsp&nbsp商品名称：<%=supplierlist[i].G_Name %>
+                                                                        <p class="desc">供应商信息：供应商id:<%=supplierlist[i].S_ID %>&nbsp&nbsp&nbsp 供应商名称：<%=supplierlist[i].S_Name %><br />                                                                                   
+                                                                                        商品信息：商品id：<%=supplierlist[i].G_ID %>&nbsp&nbsp&nbsp 商品名称：<%=supplierlist[i].G_Name %>
                                                                         </p>
-                                                                        <p class="like">供应商报价：<%=supplierlist[i].SL_Price %></p> 
+                                                                        <p class="like">供应商报价：<%=supplierlist[i].SL_Price %></p>                                                                       
                                                                     </td>
                                                                 </tr>
                                                                 <%} %>
@@ -249,6 +251,9 @@
                                                             </div>
                                                             <div data-type="{start} - {end} of {all}" data-control-type="pagination-info" data-control-name="paging" data-control-action="paging" class="jplist-label btn btn-default"></div>
                                                             <div data-control-type="pagination" data-control-name="paging" data-control-action="paging" data-control-animate-to-top="true" class="jplist-pagination"></div>
+                                                            <div>
+                                                                 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                <asp:Button ID="s_manage" runat="server" Width="100px" Height="55px" BorderStyle="Dashed" ForeColor="#ffffff" BackColor=" #488c6c" BorderColor="#458567" Font-Size="12px" Text="管理供应商信息" OnClick="Manage_Click" />
                                                         </div>
                                                     </div>
                                                 </div>
@@ -262,6 +267,7 @@
                         </div>
                     </div>
                 </div>
+                </form>
                 <!--END CONTENT-->
             </div>
             <!--END PAGE WRAPPER-->
@@ -304,7 +310,8 @@
     <script src="../../Scripts/modernizr.min.js"></script>
     <script src="../../Scripts/jplist.min.js"></script>
     <script src="../../Scripts/jplist.js"></script>-->
-
+    <script>
+</script>
     <!--CORE JAVASCRIPT-->
     <script src="../../Scripts/main.js"></script>
 
