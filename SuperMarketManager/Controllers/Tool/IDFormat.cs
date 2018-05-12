@@ -12,5 +12,16 @@ namespace SuperMarketManager.Controllers
         {
             return new Random().Next(11111111, 99999999).ToString();
         }
+
+        public static string getID_Date16()
+        {
+            string id = DateTime.Now.Year.ToString() +
+                DateTime.Now.Month.ToString()+
+                DateTime.Now.Day.ToString() +
+                DateTime.Now.Hour.ToString()+
+                DateTime.Now.Minute.ToString()+
+                DateTime.Now.Second.ToString();
+            return id;
+        }
     }
 }
