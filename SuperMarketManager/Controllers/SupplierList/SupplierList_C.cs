@@ -91,5 +91,13 @@ namespace SuperMarketManager.Controllers
             string sql = "INSERT INTO `supplylist`(`S_ID`,`G_ID`,`SL_Price`) VALUES(" + sl.S_ID + ",'" + sl.G_ID + "','" + sl.SL_Price + "')";
             return ExecuteSQL.ExecuteNonQuerySQL_GetBool(sql);
         }
+
+        public static bool UpdateSupplylist(Supplylist sl)
+        {
+            string sql = "update `marketmanage`.`supplylist` " +
+                "set `SL_Price`='"+sl.SL_Price+ "' " +
+                "where `S_ID`='" + sl.S_ID + "' and `G_ID`='" + sl.G_ID + "'";
+            return ExecuteSQL.ExecuteNonQuerySQL_GetBool(sql);
+        }
     }
 }
