@@ -82,7 +82,7 @@
                     <ul id="side-menu" class="nav">
 
                         <div class="clearfix"></div>
-                        <li class="active"><a href="../../Views/Index/Manager_Index.aspx"><i class="fa fa-tachometer fa-fw">
+                        <li ><a href="../../Views/Index/Manager_Index.aspx"><i class="fa fa-tachometer fa-fw">
                             <div class="icon-bg bg-orange"></div>
                         </i><span class="menu-title">首页</span></a></li>
 
@@ -101,7 +101,7 @@
                         </i><span class="menu-title">库存管理</span></a>
 
                         </li>
-                        <li><i class="fa fa-th-list fa-fw">
+                        <li class="active"><a href="../../Views/GoodsInManage/GoodsInManage.aspx"><i class="fa fa-th-list fa-fw">
                             <div class="icon-bg bg-blue"></div>
                         </i><span class="menu-title">入库管理</span></a>
 
@@ -118,99 +118,102 @@
                 <div id="title-breadcrumb-option-demo" class="page-title-breadcrumb">
                     <div class="page-header pull-left">
                         <div class="page-title">
-                            Forms</div>
+                            入库管理</div>
                     </div>
                     <ol class="breadcrumb page-breadcrumb pull-right">
                         <li><i class="fa fa-home"></i>&nbsp;<a href="dashboard.html">Home</a>&nbsp;&nbsp;<i
                             class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
-                        <li class="hidden"><a href="#">Forms</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
-                        <li class="active">Forms</li>
+                        <li class="hidden"><a href="#">入库管理</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
+                        <li class="active">入库管理</li>
                     </ol>
                     <div class="clearfix">
                     </div>
                 </div>
                 <!--END TITLE & BREADCRUMB PAGE-->
                 <!--BEGIN CONTENT-->
-                <div class="page-content">
+               <div class="page-content">
                     <div id="tab-general">
                         <div class="row mbl">
                             <div class="col-lg-12">
-                                <div class="col-md-12">
-                                    <div id="area-chart-spline" style="width: 100%; height: 300px; display: none;">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-12">
-                                <div class="row">
-                                    <div class="col-lg-4">
-                                        <div class="panel panel-orange">
-                                            <div class="panel-heading">
-                                                Registration form</div>
-                                            <div class="panel-body pan">
-                                                <form action="#">
-                                                <div class="form-body pal">
-                                                    <div class="form-group">
-                                                        <div class="input-icon right">
-                                                            <i class="fa fa-user"></i>
-                                                            <input id="inputName" type="text" placeholder="Username" class="form-control" /></div>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <div class="input-icon right">
-                                                            <i class="fa fa-envelope"></i>
-                                                            <input id="inputEmail" type="text" placeholder="Email address" class="form-control" /></div>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <div class="input-icon right">
-                                                            <i class="fa fa-lock"></i>
-                                                            <input id="inputPassword" type="password" placeholder="Password" class="form-control" /></div>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <div class="input-icon right">
-                                                            <i class="fa fa-lock"></i>
-                                                            <input id="inputConfirmPassword" type="password" placeholder="Confirm Password" class="form-control" /></div>
-                                                    </div>
-                                                    <hr />
-                                                    <div class="row">
-                                                        <div class="col-md-6">
-                                                            <div class="form-group">
-                                                                <input id="inputFirstName" type="text" placeholder="First Name" class="form-control" /></div>
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            <div class="form-group">
-                                                                <input id="inputLastName" type="text" placeholder="Last Name" class="form-control" /></div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <select class="form-control">
-                                                            <option>Gender</option>
-                                                            <option value="0">Male</option>
-                                                            <option value="1">Female</option>
-                                                            <option value="2">Other</option>
-                                                        </select></div>
-                                                    <div class="form-group">
-                                                        <div class="checkbox">
-                                                            <label>
-                                                                <input tabindex="5" type="checkbox" />&nbsp; I want to receive news and special
-                                                                offers</label></div>
-                                                    </div>
-                                                    <div class="form-group mbn">
-                                                        <div class="checkbox">
-                                                            <label>
-                                                                <input tabindex="5" type="checkbox" />&nbsp; I agree with the Terms and Conditions</label></div>
-                                                    </div>
+                                
+                                            <div class="col-md-12">
+                                                <div id="area-chart-spline" style="width: 100%; height: 300px; display: none;">
                                                 </div>
-                                                <div class="form-actions text-right pal">
-                                                    <button type="submit" class="btn btn-primary">
-                                                        Submit</button>
-                                                </div>
-                                                </form>
                                             </div>
-                                        </div>
-                                        
+                                
+                            </div>
+
+                             <div class="col-lg-12">
+                                <div class="row">
+                                    <div class="col-lg-10">
+                                       <form action="#" class="form-horizontal" runat="server">
+
+                                           <h3>
+                                               <asp:Label ID="basic" runat="server" Text="入库管理" class="label label-success" Font-Size="18px"></asp:Label></h3>
+
+                                            <div class="form-group"><label class="col-sm-3 control-label">商品编号</label>
+
+                                                <div class="col-sm-9 controls">
+                                                    <div class="row">
+                                                          <div class="col-xs-9">
+                                                              <input id="gid" runat="server" type="text" class="form-control"/>
+
+                                                          </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group"><label class="col-sm-3 control-label">供销商编号</label>
+
+                                                <div class="col-sm-9 controls">
+                                                    <div class="row">
+                                                        <div class="col-xs-9"><input id="sid" runat="server" type="text" class="form-control"/></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group"><label class="col-sm-3 control-label">单价</label>
+                                                <div class="col-sm-9 controls">
+                                                    <div class="row">
+                                                         <div class="col-xs-9"><input id="gprice" runat="server" type="text" class="form-control"/></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group"><label class="col-sm-3 control-label">数量</label>
+
+                                                <div class="col-sm-9 controls">
+                                                    <div class="row">
+                                                         <div class="col-xs-9"><input id="gnum" runat="server" type="text" class="form-control"/></div>
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                            <div class="form-group"><label class="col-sm-3 control-label">产地</label>
+
+                                                <div class="col-sm-9 controls">
+                                                    <div class="row">
+                                                         <div class="col-xs-9"><input id="gplace" runat="server" type="text" class="form-control"/></div>
+                                                    </div>
+                                                </div>
+                                            </div>     
+                                           <div class="form-group"><label class="col-sm-3 control-label">生产日期</label>
+
+                                                <div class="col-sm-9 controls">
+                                                    <div class="row">
+                                                         <div class="col-xs-9"><input id="gdate" runat="server" type="text" class="form-control"/></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr/>   
+                                           <div style="text-align:center">
+                                               <asp:Button ID="Button1" runat="server" Text="入库" OnClick="Button1_Click" />
+                                               </div>
+                                       </form>
+
                                     </div>
-                                    
                                 </div>
                             </div>
+                            
+
+                            </div>
+                            
                         </div>
                     </div>
                 </div>

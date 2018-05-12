@@ -178,7 +178,10 @@
 
                                                 <div class="col-sm-9 controls">
                                                     <div class="row">
-                                                          <div class="col-xs-9"><input id="gid" runat="server" type="text" class="form-control"/></div>
+                                                          <div class="col-xs-9">
+                                                              <input id="gid" runat="server" type="text" class="form-control"/>
+
+                                                          </div>
                                                     </div>
                                                 </div>
                                             </div>

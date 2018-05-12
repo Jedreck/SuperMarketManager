@@ -27,12 +27,13 @@ namespace SuperMarketManager.Models
                 s.GI_ID = reader.GetString(1);
                 s.Num = reader.GetDouble(2);
                 s.ProducedDate = reader.GetDate(3);
-                string sql = "select G_Store from goods where G_Store="+s.G_ID;
+                string sql = "select G_Store from goods where G_ID='"+s.G_ID+"'";
                 OdbcConnection odbcConnection = DBManager.GetOdbcConnection();
                 odbcConnection.Open();
                 OdbcCommand odbcCommand = new OdbcCommand(sql, odbcConnection);
                 OdbcDataReader odbcDataReader = odbcCommand.ExecuteReader(CommandBehavior.CloseConnection);
-                s.G_Store = reader.GetInt32(0);
+                odbcDataReader.Read();
+                s.G_Store = odbcDataReader.GetInt32(0);
                 list.Add(s);
             }
             return list;

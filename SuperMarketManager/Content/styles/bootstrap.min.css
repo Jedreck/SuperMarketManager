@@ -87,7 +87,7 @@ code, kbd, pre, samp {
 }
 button, input, optgroup, select, textarea {
 	color: inherit;
-	margin: 0 0 0 507px
+	margin: 0 1px 0 507px
 }
 button {
 	overflow: visible
@@ -611,8 +611,9 @@ pre code {
 	min-height: 1px;
 	padding-left: 15px;
 	padding-right: 15px;
-    top: -2px;
+    top: -551px;
     left: 38px;
+    height: 567px;
 }
 .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
 	float: left

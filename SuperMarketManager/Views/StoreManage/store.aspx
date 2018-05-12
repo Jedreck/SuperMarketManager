@@ -101,7 +101,7 @@
                     <ul id="side-menu" class="nav">
 
                         <div class="clearfix"></div>
-                        <li><a href="../../Views/Index/Manager_Index.aspx"><i class="fa fa-tachometer fa-fw">
+                        <li><a href="../../Views/Index/inventory_manager_index.aspx"><i class="fa fa-tachometer fa-fw">
                             <div class="icon-bg bg-orange"></div>
                         </i><span class="menu-title">首页</span></a></li>
 
@@ -120,7 +120,7 @@
                         </i><span class="menu-title">库存管理</span></a>
 
                         </li>
-                        <li><i class="fa fa-th-list fa-fw">
+                        <li><a href="../../Views/GoodsInManage/GoodsInManage.aspx"><i class="fa fa-th-list fa-fw">
                             <div class="icon-bg bg-blue"></div>
                         </i><span class="menu-title">入库管理</span></a>
 
@@ -174,8 +174,9 @@
                                                         <tr>
                                                             <th>商品ID</th>
                                                             <th>流水号</th>
-                                                            <th>库存</th>
+                                                            <th>入库数</th>
                                                             <th>生产日期</th>
+                                                            <th>总库存</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
@@ -188,6 +189,7 @@
                                                             <td><%=storelist1[i].GI_ID %></td>
                                                             <td><%=storelist1[i].Num %></td>
                                                             <td><%=storelist1[i].ProducedDate %></td>
+                                                            <td><%=storelist1[i].G_Store %></td>
 
                                                         </tr>
                                                         <% } %>

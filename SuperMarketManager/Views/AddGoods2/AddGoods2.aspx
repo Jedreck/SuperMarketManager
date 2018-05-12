@@ -88,7 +88,7 @@
                     <ul id="side-menu" class="nav">
 
                         <div class="clearfix"></div>
-                        <li><a href="../../Views/Index/Manager_Index.aspx"><i class="fa fa-tachometer fa-fw">
+                        <li><a href="../../Views/Index/inventory_manager_index.aspx"><i class="fa fa-tachometer fa-fw">
                             <div class="icon-bg bg-orange"></div>
                         </i><span class="menu-title">首页</span></a></li>
 
@@ -107,7 +107,7 @@
                         </i><span class="menu-title">库存管理</span></a>
 
                         </li>
-                        <li><i class="fa fa-th-list fa-fw">
+                        <li><a href="../../Views/GoodsInManage/GoodsInManage.aspx"><i class="fa fa-th-list fa-fw">
                             <div class="icon-bg bg-blue"></div>
                         </i><span class="menu-title">入库管理</span></a>
 
