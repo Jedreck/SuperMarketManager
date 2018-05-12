@@ -15,7 +15,7 @@ namespace SuperMarketManager.Controllers.StoreList
         {
             OdbcConnection odbcConnection = DBManager.GetOdbcConnection();
             odbcConnection.Open();
-            string sql = "SELECT * FROM goodsin "
+            string sql = "SELECT * FROM storelist "
                 + "WHERE `G_ID` LIKE '%" + info + "%'";
             OdbcCommand odbcCommand = new OdbcCommand(sql, odbcConnection);
             OdbcDataReader odbcDataReader = odbcCommand.ExecuteReader(CommandBehavior.CloseConnection);
@@ -30,5 +30,5 @@ namespace SuperMarketManager.Controllers.StoreList
                 odbcConnection.Close();
             return null;
         }
-}
+    }
 }

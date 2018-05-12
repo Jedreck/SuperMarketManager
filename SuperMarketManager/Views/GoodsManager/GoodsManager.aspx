@@ -227,8 +227,10 @@
                                 <div class="row">
                                     <div class="col-sm-9 col-md-10">
                                         <form runat="server">
-                                        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                                            <input type="text" id="goodsId" class="text" runat="server" placeholder="请输入商品Id">
                                         <asp:Button ID="Button1" runat="server" Text="查找商品" OnClick="Button1_Click" />
+                                            <input type="text" id="price" class="text" runat="server" placeholder="请输入修改后单价">
+                                            <asp:Button ID="Button2" runat="server" Text="修改单价" OnClick="Button2_Click" />
                                         <div class="tab-content">
                                             <div id="home" class="tab-pane fade in active">
                                                 <div class="list-group mail-box">
@@ -252,7 +254,6 @@
                                                             <span style="width: 100px; display: inline-block;" class="name"><%=goods[i].ExpirationDate %></span>
                                                             <span style="width: 100px; display: inline-block;" class="name"><%=goods[i].Price %></span>
                                                              <span style="width: 100px; display: inline-block;" class="name"><%=goods[i].Store %></span>
-                                                            <asp:Button ID="Button2" runat="server" Text="修改单价" OnClick="Button2_Click"/>
                                                             </a>
                                                         <%} %>  
                                                 </div>

@@ -283,6 +283,7 @@
     <Content Include="Views\Login\Login.aspx" />
     <Content Include="Views\Statistic\StatisticDay.aspx" />
     <Content Include="Views\Statistic\StatisticGoods.aspx" />
+    <Content Include="Views\StoreManage\store.aspx" />
     <Content Include="Views\SupplierManager\SupplierManager.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -383,6 +384,13 @@
     </Compile>
     <Compile Include="Views\Statistic\StatisticGoods.aspx.designer.cs">
       <DependentUpon>StatisticGoods.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StoreManage\store.aspx.cs">
+      <DependentUpon>store.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\StoreManage\store.aspx.designer.cs">
+      <DependentUpon>store.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\SupplierManager\SupplierManager.aspx.cs">
       <DependentUpon>SupplierManager.aspx</DependentUpon>

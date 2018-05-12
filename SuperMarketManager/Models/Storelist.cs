@@ -12,6 +12,7 @@ namespace SuperMarketManager.Models
         public string GI_ID { set; get; }
         public double Num { set; get; }
         public DateTime ProducedDate { set; get; }
+      // public String ProducedDate { set; get; }
 
         public static List<Storelist> getList(OdbcDataReader reader)
         {
