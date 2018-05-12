@@ -11,10 +11,9 @@ namespace SuperMarketManager.Controllers.OrderList
         ////ADD
         //public static bool AddOrder(Orderlist ol)
         //{
-        //    ol.ID = IDFormat.getID_Date16();
-        //    string sql = "INSERT INTO `marketmanage`.`order` (`O_ID`, `O_Price`, `O_time`, `E_ID`) " +
-        //        "VALUES" +
-        //        " ('" + order.ID + "', '" + order.Price + "', '" + order.Time.ToString("yyyy-MM-dd HH:mm:ss") + "', '" + order.E_ID + "')";
+        //    string sql = "INSERT INTO `marketmanage`.`orderlist` (`O_ID`, `G_ID`, `OL_Price`, `OL_Num`, `OL_Discount`)" +
+        //        " VALUES " +
+        //        "('"+ol.O_ID+"', '"+ol.G_ID+"', '"+ol.Price+"', '"+ol.Num+"', '"+ol.Discount+"')";
         //    return ExecuteSQL.ExecuteNonQuerySQL_GetBool(sql);
         //}
 

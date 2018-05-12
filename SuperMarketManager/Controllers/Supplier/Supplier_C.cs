@@ -47,10 +47,13 @@ namespace SuperMarketManager.Controllers
             return ExecuteSQL.ExecuteNonQuerySQL_GetBool(sql);
         }
 
-        ////改
-        //public static bool AlterByID(string info)
-        //{
-
-        //}
+        //改
+        public static bool AlterByID(Supplier s)
+        {
+            string sql = "UPDATE `marketmanage`.`supplier` " +
+                "SET `S_Name`='"+s.Name+"',`S_Phone`='"+s.Phone+ "',`S_Region`='" + s.Rigion + "' " +
+                "WHERE `S_ID`='" + s.ID + "'";
+            return ExecuteSQL.ExecuteNonQuerySQL_GetBool(sql);
+        }
     }
 }

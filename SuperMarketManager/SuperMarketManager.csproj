@@ -290,6 +290,7 @@
     <Content Include="Views\StoreManage\store.aspx" />
     <Content Include="Views\SupplierManager\SupplierManager.aspx" />
     <Content Include="Views\SupplierManager\Supplier_detail.aspx" />
+    <Content Include="Views\SupplierManager\Supplier_Goods_detail.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -438,6 +439,13 @@
     </Compile>
     <Compile Include="Views\SupplierManager\Supplier_detail.aspx.designer.cs">
       <DependentUpon>Supplier_detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SupplierManager\Supplier_Goods_detail.aspx.cs">
+      <DependentUpon>Supplier_Goods_detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\SupplierManager\Supplier_Goods_detail.aspx.designer.cs">
+      <DependentUpon>Supplier_Goods_detail.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

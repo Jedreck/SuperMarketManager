@@ -38,7 +38,7 @@ namespace SuperMarketManager.Controllers
         }
 
         //Select
-        public static List<Discount> SelectDiscountByG_ID(string G_ID)
+        public static List<Discount> SelectByG_ID(string G_ID)
         {
             string sql = "SELECT * FROM `discount` WHERE `G_ID` LIKE '" + G_ID + "'";
             return getList(sql);
@@ -61,6 +61,12 @@ namespace SuperMarketManager.Controllers
                 sql = "SELECT* FROM `discount` WHERE `D_Start`= '" + startDate + "'";
             else
                 sql = "SELECT * FROM `discount` WHERE `D_Start`='" + startDate + "' AND `D_End`='" + endDate + "'";
+            return getList(sql);
+        }
+
+        public static List<Discount> SelectByIDAndDate(string G_ID,string date)
+        {
+            string sql = "SELECT * FROM `discount` WHERE `G_ID`='"+G_ID+"' AND '"+date+"' BETWEEN `D_Start` AND `D_End`";
             return getList(sql);
         }
 

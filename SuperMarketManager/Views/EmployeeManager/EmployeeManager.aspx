@@ -221,7 +221,7 @@
                                                             <td><%=employees[i].Birth %></td>
                                                             <td><%=employees[i].BankAccount %></td>
                                                             <td><%=employees[i].Email %></td>
-                                                            <td><%=employees[i].Position %></td>
+                                                            <td><%=employees[i].Position %></td>                                                          
                                                         </tr>
                                                         <%} %>
                                                         <%} %>
@@ -274,6 +274,6 @@
         <script src="../../Scripts/charts-highchart-more.js"></script>
         <!--CORE JAVASCRIPT-->
         <script src="../../Scripts/main.js"></script>
-</body>
+        </body>
 </html>
 
