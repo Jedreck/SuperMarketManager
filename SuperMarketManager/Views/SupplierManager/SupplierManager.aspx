@@ -117,12 +117,12 @@
                         </i><span class="menu-title">折扣管理</span></a>
 
                         </li>
-                        <li><a href="../../Views/Businessstatistics/Businessstatistics.aspx"><i class="fa fa-file-o fa-fw">
+                        <li class="active"><a href="../../Views/Businessstatistics/Businessstatistics.aspx"><i class="fa fa-file-o fa-fw">
                             <div class="icon-bg bg-yellow"></div>
                         </i><span class="menu-title">营业统计</span></a>
 
                         </li>
-                        <li><a href="Extras.html"><i class="fa fa-gift fa-fw">
+                        <li><a href="../../Views/PSInfo/PSInfo.aspx"><i class="fa fa-gift fa-fw">
                             <div class="icon-bg bg-grey"></div>
                         </i><span class="menu-title">个人信息</span></a>
 

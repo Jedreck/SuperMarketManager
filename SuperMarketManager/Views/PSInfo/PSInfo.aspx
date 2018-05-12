@@ -1,9 +1,9 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="EmployeeManager.aspx.cs" Inherits="SuperMarketManager.Views.EmployeeManager.EmployeeManager" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="PSInfo.aspx.cs" Inherits="SuperMarketManager.Views.PSInfo.PSInfo" %>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>超市管理系统 | 员工管理</title>
+    <title>超市管理系统 | 个人信息管理</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,6 +24,7 @@
     <link type="text/css" rel="stylesheet" href="../../Content/styles/zabuto_calendar.min.css">
     <link type="text/css" rel="stylesheet" href="../../Content/styles/pace.css">
     <link type="text/css" rel="stylesheet" href="../../Content/styles/jquery.news-ticker.css">
+    <link type="text/css" rel="stylesheet" href="../../Content/styles/jplist-custom.css">
 </head>
 <body>
     <div>
@@ -86,14 +87,12 @@
                 <div class="sidebar-collapse menu-scroll">
                     <ul id="side-menu" class="nav">
 
-
                         <div class="clearfix"></div>
                         <li><a href="../../Views/Index/Manager_Index.aspx"><i class="fa fa-tachometer fa-fw">
                             <div class="icon-bg bg-orange"></div>
                         </i><span class="menu-title">首页</span></a></li>
 
-                        <li>
-                        <li class="active"><a href="../../Views/EmployeeManager/EmployeeManager.aspx"><i class="fa fa-desktop fa-fw">
+                        <li><a href="../../Views/EmployeeManager/EmployeeManager.aspx"><i class="fa fa-desktop fa-fw">
                             <div class="icon-bg bg-pink"></div>
                         </i><span class="menu-title">员工管理</span></a>
 
@@ -123,7 +122,7 @@
                         </i><span class="menu-title">营业统计</span></a>
 
                         </li>
-                        <li><a href="../../Views/PSInfo/PSInfo.aspx"><i class="fa fa-gift fa-fw">
+                        <li class="active"><a href="../../Views/PSInfo/PSInfo.aspx"><i class="fa fa-gift fa-fw">
                             <div class="icon-bg bg-grey"></div>
                         </i><span class="menu-title">个人信息</span></a>
 
@@ -141,139 +140,132 @@
                 <div id="title-breadcrumb-option-demo" class="page-title-breadcrumb">
                     <div class="page-header pull-left">
                         <div class="page-title">
-                            员工管理
+                           个人信息管理
                         </div>
                     </div>
                     <ol class="breadcrumb page-breadcrumb pull-right">
                         <li><i class="fa fa-home"></i>&nbsp;<a href="../../Views/Index/Manager_Index.aspx">Home</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
-                        <li class="hidden"><a href="#">员工管理</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
-                        <li class="active">员工管理</li>
+                        <li class="hidden"><a href="#">个人信息管理</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
+                        <li class="active">个人信息管理</li>
                     </ol>
                     <div class="clearfix">
                     </div>
                 </div>
                 <!--END TITLE & BREADCRUMB PAGE-->
                 <!--BEGIN CONTENT-->
-                <div class="page-content">
+                <form runat="server">
+                     <div class="page-content">
                     <div id="tab-general">
                         <div class="row mbl">
                             <div class="col-lg-12">
-
-                                <div class="col-md-12">
-                                    <div id="area-chart-spline" style="width: 100%; height: 300px; display: none;">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-12">
-                                <div class="row">
-                                    <div class="col-lg-12">
-
-                                        <nav role="navigation" class="navbar navbar-default">
-                                            <div class="container-fluid">
-                                                <div class="navbar-header">
-                                                    <button type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-                                                    <a href="#" class="navbar-brand">超库</a>
-                                                </div>
-                                                <div id="bs-example-navbar-collapse-2" class="collapse navbar-collapse">
-                                                    <form role="search" class="navbar-form navbar-left" runat="server">
-                                                        <div class="form-group">
-                                                            <input type="text" id="search_content" placeholder="search" class="form-control" runat="server" /></div>
-                                                        &nbsp;
-                                                       
-                                                            <asp:Button ID="search" runat="server" Width="42" Height="30" BorderStyle="Dashed" ForeColor="#ffffff" BackColor=" #488c6c" BorderColor="#458567" Font-Size="12px" Text="查询" OnClick="Search_Click" />
-                                                            <asp:Button ID="delete" runat="server" Width="42" Height="30" BorderStyle="Dashed" ForeColor="#ffffff" BackColor=" #488c6c" BorderColor="#458567" Font-Size="12px" Text="删除" OnClick="Delete_Click" />
-                                                            <asp:Button ID="add" runat="server" Width="42" Height="30" BorderStyle="Dashed" ForeColor="#ffffff" BackColor=" #488c6c" BorderColor="#458567" Font-Size="12px" Text="增加" OnClick="Addto_Click" />
-                                                            <asp:Button ID="update" runat="server" Width="42" Height="30" BorderStyle="Dashed" ForeColor="#ffffff" BackColor=" #488c6c" BorderColor="#458567" Font-Size="12px" Text="修改" OnClick="Updateto_Click" />
-
-                                                    </form>
+                                
+                                            <div class="col-md-12">
+                                                <div id="area-chart-spline" style="width: 100%; height: 300px; display: none;">
                                                 </div>
                                             </div>
-                                        </nav>
+                                
+                            </div>
 
-                                        <div class="panel panel-yellow">
-                                            <div class="panel-heading">员工信息表</div>
-                                            <div class="panel-body">
-                                                <table class="table table-hover">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>#</th>
-                                                            <th>工 号  </th>
-                                                            <th>姓 名  </th>
-                                                            <th>性 别  </th>
-                                                            <th>联 系 方 式  </th>
-                                                            <th>出 生 年 月  </th>
-                                                            <th>银 行 卡 号  </th>
-                                                            <th>邮 箱   </th>
-                                                            <th>位 置   </th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <%if (employees!=null)
-                                                            { %>
-                                                        <%for (int i = 0; i < employees.Count; i++)
-                                                            { %>
-                                                        <tr>
-                                                            <td><%=i + 1 %></td>
-                                                            <td><%=employees[i].ID %></td>
-                                                            <td><%=employees[i].Name %></td>
-                                                            <td><%=employees[i].Sex %></td>
-                                                            <td><%=employees[i].Phone %></td>
-                                                            <td><%=employees[i].Birth %></td>
-                                                            <td><%=employees[i].BankAccount %></td>
-                                                            <td><%=employees[i].Email %></td>
-                                                            <td><%=employees[i].Position %></td>
-                                                        </tr>
-                                                        <%} %>
-                                                        <%} %>
-                                                    </tbody>
-                                                </table>
+                            <div class="col-lg-12">
+                            <div class="col-lg-12">
+                             
+                            <div id="generalTabContent" class="tab-content responsive">
+                            <div id="alert-tab" class="tab-pane fade in active">
+                                <div class="row">
+                                    <div class="col-lg-6"><h3>个人信息管理</h3>
+                                        <div class="alert alert-success"><strong>工号：</strong> 
+                                            <asp:TextBox ID="id" runat="server"></asp:TextBox>
+                                        </div>
+                                        <div class="alert alert-info"><strong>姓名：</strong> 
+                                            <asp:TextBox ID="name" runat="server"></asp:TextBox>
+                                        </div>
+                                        <div class="alert alert-warning"><strong>性别：</strong>
+                                            <asp:RadioButtonList ID="sex" runat="server" RepeatDirection="Horizontal" BackColor="White">
+                                                <asp:ListItem Text="男" Value="male" Selected="False"></asp:ListItem>
+                                                <asp:ListItem Text="女" Value="female" Selected="True"></asp:ListItem>
+                                            </asp:RadioButtonList>
+                                        </div>
+                                        <div class="alert alert-danger"><strong>联系方式：</strong>
+                                            <asp:TextBox ID="phone" runat="server"></asp:TextBox>
+                                        </div>
+										<div class="alert alert-success"><strong>出生年月：</strong>
+                                            <asp:TextBox ID="birth" runat="server"></asp:TextBox>
+										</div>
+                                        <div class="alert alert-info"><strong>银行卡号：</strong> 
+                                            <asp:TextBox ID="bankaccount" runat="server"></asp:TextBox>
+                                        </div>
+                                        <div class="alert alert-warning"><strong>邮箱：</strong>
+                                            <asp:TextBox ID="email" runat="server"></asp:TextBox>
+                                        </div>
+                                        <div class="alert alert-danger"><strong>位置：</strong>
+                                            <asp:TextBox ID="position" runat="server"></asp:TextBox>
+                                        </div>
+                                        <div>
+                                             <span class="btn n-btn">
+                            <button type="submit" id="Save_Click">确定</button>
+                        </span>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                </div>
+                                </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+           
+            
+            
+               
+                </form>
+                <!--END CONTENT-->
             </div>
+            <!--END PAGE WRAPPER-->
         </div>
-        <script src="../../Scripts/jquery-1.10.2.min.js"></script>
-        <script src="../../Scripts/jquery-migrate-1.2.1.min.js"></script>
-        <script src="../../Scripts/jquery-ui.js"></script>
-        <script src="../../Scripts/bootstrap.min.js"></script>
-        <script src="../../Scripts/bootstrap-hover-dropdown.js"></script>
-        <script src="../../Scripts/html5shiv.js"></script>
-        <script src="../../Scripts/respond.min.js"></script>
-        <script src="../../Scripts/jquery.metisMenu.js"></script>
-        <script src="../../Scripts/jquery.slimscroll.js"></script>
-        <script src="../../Scripts/jquery.cookie.js"></script>
-        <script src="../../Scripts/icheck.min.js"></script>
-        <script src="../../Scripts/custom.min.js"></script>
-        <script src="../../Scripts/jquery.news-ticker.js"></script>
-        <script src="../../Scripts/jquery.menu.js"></script>
-        <script src="../../Scripts/pace.min.js"></script>
-        <script src="../../Scripts/holder.js"></script>
-        <script src="../../Scripts/responsive-tabs.js"></script>
-        <script src="../../Scripts/jquery.flot.js"></script>
-        <script src="../../Scripts/jquery.flot.categories.js"></script>
-        <script src="../../Scripts/jquery.flot.pie.js"></script>
-        <script src="../../Scripts/jquery.flot.tooltip.js"></script>
-        <script src="../../Scripts/jquery.flot.resize.js"></script>
-        <script src="../../Scripts/jquery.flot.fillbetween.js"></script>
-        <script src="../../Scripts/jquery.flot.stack.js"></script>
-        <script src="../../Scripts/jquery.flot.spline.js"></script>
-        <script src="../../Scripts/zabuto_calendar.min.js"></script>
-        <script src="../../Scripts/index.js"></script>
-        <!--LOADING SCRIPTS FOR CHARTS-->
-        <script src="../../Scripts/highcharts.js"></script>
-        <script src="../../Scripts/data.js"></script>
-        <script src="../../Scripts/drilldown.js"></script>
-        <script src="../../Scripts/exporting.js"></script>
-        <script src="../../Scripts/highcharts-more.js"></script>
-        <script src="../../Scripts/charts-highchart-pie.js"></script>
-        <script src="../../Scripts/charts-highchart-more.js"></script>
-        <!--CORE JAVASCRIPT-->
-        <script src="../../Scripts/main.js"></script>
+    
+    <script src="../../Scripts/jquery-1.10.2.min.js"></script>
+    <script src="../../Scripts/jquery-migrate-1.2.1.min.js"></script>
+    <script src="../../Scripts/jquery-ui.js"></script>
+    <script src="../../Scripts/bootstrap.min.js"></script>
+    <script src="../../Scripts/bootstrap-hover-dropdown.js"></script>
+    <script src="../../Scripts/html5shiv.js"></script>
+    <script src="../../Scripts/respond.min.js"></script>
+    <script src="../../Scripts/jquery.metisMenu.js"></script>
+    <script src="../../Scripts/jquery.slimscroll.js"></script>
+    <script src="../../Scripts/jquery.cookie.js"></script>
+    <script src="../../Scripts/icheck.min.js"></script>
+    <script src="../../Scripts/custom.min.js"></script>
+    <script src="../../Scripts/jquery.news-ticker.js"></script>
+    <script src="../../Scripts/jquery.menu.js"></script>
+    <script src="../../Scripts/pace.min.js"></script>
+    <script src="../../Scripts/holder.js"></script>
+    <script src="../../Scripts/responsive-tabs.js"></script>
+    <script src="../../Scripts/jquery.flot.js"></script>
+    <script src="../../Scripts/jquery.flot.categories.js"></script>
+    <script src="../../Scripts/jquery.flot.pie.js"></script>
+    <script src="../../Scripts/jquery.flot.tooltip.js"></script>
+    <script src="../../Scripts/jquery.flot.resize.js"></script>
+    <script src="../../Scripts/jquery.flot.fillbetween.js"></script>
+    <script src="../../Scripts/jquery.flot.stack.js"></script>
+    <script src="../../Scripts/jquery.flot.spline.js"></script>
+    <script src="../../Scripts/zabuto_calendar.min.js"></script>
+    <script src="../../Scripts/index.js"></script>
+    <script src="../../Scripts/highcharts.js"></script>
+    <script src="../../Scripts/data.js"></script>
+    <script src="../../Scripts/drilldown.js"></script>
+    <script src="../../Scripts/exporting.js"></script>
+    <script src="../../Scripts/highcharts-more.js"></script>
+    <script src="../../Scripts/charts-highchart-pie.js"></script>
+    <script src="../../Scripts/charts-highchart-more.js"></script>
+    <script src="../../Scripts/modernizr.min.js"></script>
+    <script src="../../Scripts/jplist.min.js"></script>
+    <script src="../../Scripts/jplist.js"></script>-->
+    <script>
+</script>
+    <!--CORE JAVASCRIPT-->
+    <script src="../../Scripts/main.js"></script>
+        </div>
 </body>
 </html>
 

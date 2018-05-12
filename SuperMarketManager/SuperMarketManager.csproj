@@ -283,12 +283,14 @@
     <Content Include="Views\Index\Index.aspx" />
     <Content Include="Views\Index\Manager_Index.aspx" />
     <Content Include="Views\Login\Login.aspx" />
-    <Content Include="Views\PersonalInformation\PersonalInformation.aspx" />
+    <Content Include="Views\PSInfo\PSInfo.aspx" />
     <Content Include="Views\Statistic\StatisticDay.aspx" />
     <Content Include="Views\Statistic\StatisticGoods.aspx" />
     <Content Include="Views\SupplierManager\SupplierManager.aspx" />
     <Content Include="Views\SupplierManager\Supplier_detail.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\DBManager\DBManager.cs" />
@@ -388,12 +390,12 @@
     <Compile Include="Views\Login\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Views\PersonalInformation\PersonalInformation.aspx.cs">
-      <DependentUpon>PersonalInformation.aspx</DependentUpon>
+    <Compile Include="Views\PSInfo\PSInfo.aspx.cs">
+      <DependentUpon>PSInfo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Views\PersonalInformation\PersonalInformation.aspx.designer.cs">
-      <DependentUpon>PersonalInformation.aspx</DependentUpon>
+    <Compile Include="Views\PSInfo\PSInfo.aspx.designer.cs">
+      <DependentUpon>PSInfo.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Statistic\StatisticDay.aspx.cs">
       <DependentUpon>StatisticDay.aspx</DependentUpon>
