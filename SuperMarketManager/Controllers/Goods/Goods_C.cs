@@ -17,30 +17,10 @@ namespace SuperMarketManager.Controllers
         }
         public static bool AddGoods(Goods goods)
         {
-            /*OdbcConnection odbcConnection = DBManager.GetOdbcConnection();
-            odbcConnection.Open();
-            OdbcCommand odbcCommand = new OdbcCommand();
-            OdbcDataReader odbcDataReader = null;
-            odbcCommand.Connection = odbcConnection;
-            //检查商品ID是否已存在
-            string selectSql = "select * from goods where G_ID='" + goods.ID+"'";
-            odbcCommand.CommandText = selectSql;
-            odbcDataReader = odbcCommand.ExecuteReader(CommandBehavior.CloseConnection);
-            if (odbcDataReader.HasRows)//结果集不为空返回true,提示用户该商品ID已存在
-            {
-                return null;
-            }
-            odbcDataReader.Close();
-            odbcConnection.Close();
-            odbcConnection.Open();*/
             String sql = String.Format("insert into `marketmanage`.`goods`  (`G_ID`, `G_Name`,`G_Class`,`G_Unit`,`G_ExpirationDate`,`G_Price`,`G_Store`) " +
                 "values ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}')"
                 , goods.ID,goods.Name,goods.Category,goods.Unit,goods.ExpirationDate,goods.Price,goods.Store);
             return ExecuteSQL.ExecuteNonQuerySQL_GetBool(sql);
-            /*odbcCommand.CommandText = insertSql;
-            int i = odbcCommand.ExecuteNonQuery();
-            odbcConnection.Close();
-            return (i > 0) ? goods : null;//插入成功返回goods，失败返回null*/
         }
 
         //删
@@ -95,6 +75,12 @@ namespace SuperMarketManager.Controllers
             else
                 odbcConnection.Close();
             return null;
+        }
+        //商品是否存在
+        public static int isExit(string id)
+        {
+            string sql = "select * from goods where G_ID='"+id+"'";
+            return ExecuteSQL.ExecuteNonQuerySQL_GetResult(sql);
         }
     }
 }
