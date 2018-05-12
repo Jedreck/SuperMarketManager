@@ -13,6 +13,17 @@ namespace SuperMarketManager.Controllers
         //入库（手动输入生产日期）
         public static GoodsIn AddGoods(GoodsIn goodsin,DateTime producedate)
         {
+            //判断商品ID是否存在
+            string sql = "select * from goods where G_ID='" + goodsin.G_ID+"'";
+            OdbcConnection odbcConnection = DBManager.GetOdbcConnection();
+            odbcConnection.Open();
+            OdbcCommand odbcCommand = new OdbcCommand(sql, odbcConnection);
+            OdbcDataReader odbcDataReader = odbcCommand.ExecuteReader(CommandBehavior.CloseConnection);
+            if (!odbcDataReader.HasRows)//商品ID不存在 返回空
+            {
+                return null;
+            }
+            //商品ID存在 插入
             bool flag;
             String insertSql = String.Format("insert into `marketmanage`.`goodsin`  (`GI_ID`, `G_ID`,`S_ID`,`GI_PriceIn`,`GI_Num`,`GI_Date`,`GI_OriginPrice`) " +
                 "values ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}')"

@@ -8,8 +8,8 @@ namespace SuperMarketManager.Controllers.OrderList
 {
     public class OrderList_C
     {
-        ////ADD
-        //public static bool AddOrder(Orderlist ol)
+        //////ADD
+        //public static bool addorder(orderlist ol)
         //{
         //    string sql = "INSERT INTO `marketmanage`.`orderlist` (`O_ID`, `G_ID`, `OL_Price`, `OL_Num`, `OL_Discount`)" +
         //        " VALUES " +
