@@ -93,7 +93,6 @@ namespace SuperMarketManager.Controllers
             connection.Close();
             return (i > 0) ? true : false;
         }
-
         //查
         public static List<Employee> SelectFuzzy(string info)
         {
