@@ -35,32 +35,25 @@ namespace SuperMarketManager.Controllers
         //增
         public static bool Insert(string name, string phone, string region)
         {
-            OdbcConnection odbcConnection = DBManager.GetOdbcConnection();
-            odbcConnection.Open();
             string sql = "insert into `marketmanage`.`supplier` (`S_Name`, `S_Phone`, `S_Region`) " +
                 "values('" + name + "', '" + phone + "', '" + region + "')";
-            OdbcCommand odbcCommand = new OdbcCommand(sql, odbcConnection);
-            int i = odbcCommand.ExecuteNonQuery();
-            odbcConnection.Close();
-            return (i > 0) ? true : false;
+            return ExecuteSQL.ExecuteNonQuerySQL_GetBool(sql);
         }
 
         //删
         public static bool DeleteByID(string id)
         {
-            OdbcConnection odbcConnection = DBManager.GetOdbcConnection();
-            odbcConnection.Open();
             string sql = "DELETE FROM `marketmanage`.`supplier` WHERE S_ID=" + id;
-            OdbcCommand odbcCommand = new OdbcCommand(sql, odbcConnection);
-            int i = odbcCommand.ExecuteNonQuery();
-            odbcConnection.Close();
-            return (i > 0) ? true : false;
+            return ExecuteSQL.ExecuteNonQuerySQL_GetBool(sql);
         }
 
-        ////改
-        //public static bool AlterByID(string info)
-        //{
-
-        //}
+        //改
+        public static bool AlterByID(Supplier s)
+        {
+            string sql = "UPDATE `marketmanage`.`supplier` " +
+                "SET `S_Name`='"+s.Name+"',`S_Phone`='"+s.Phone+ "',`S_Region`='" + s.Rigion + "' " +
+                "WHERE `S_ID`='" + s.ID + "'";
+            return ExecuteSQL.ExecuteNonQuerySQL_GetBool(sql);
+        }
     }
 }
