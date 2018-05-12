@@ -59,6 +59,11 @@ namespace SuperMarketManager.Controllers
             return (i > 0) ? employee : null;
         }
 
+        internal static bool AlterByID(Employee employee)
+        {
+            throw new NotImplementedException();
+        }
+
         //删
         public static bool DeleteByID(string id)
         {
