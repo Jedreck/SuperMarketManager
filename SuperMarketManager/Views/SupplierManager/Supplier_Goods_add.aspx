@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Supplier_detail.aspx.cs" Inherits="SuperMarketManager.Views.SupplierManager.Supplier_detail" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Supplier_Goods_add.aspx.cs" Inherits="SuperMarketManager.Views.SupplierManager.Supplier_Goods_add" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -140,13 +140,13 @@
                 <div id="title-breadcrumb-option-demo" class="page-title-breadcrumb">
                     <div class="page-header pull-left">
                         <div class="page-title">
-                            供应商详情
+                           增加供应商品报价
                         </div>
                     </div>
                     <ol class="breadcrumb page-breadcrumb pull-right">
                         <li><i class="fa fa-home"></i>&nbsp;<a href="../../Views/Index/Manager_Index.aspx">Home</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
-                        <li class="hidden"><a href="#">供应商详情</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
-                        <li class="active">供应商详情</li>
+                        <li class="hidden"><a href="#">增加供应商品报价</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
+                        <li class="active"> 增加供应商品报价</li>
                     </ol>
                     <div class="clearfix">
                     </div>
@@ -168,7 +168,7 @@
 
                              <div class="col-lg-12">
                                 <div class="row">
-                                    <div class="col-lg-10 note note-success">
+                                    <div class="col-lg-10">
                                        <form action="#" class="form-horizontal" runat="server">
 
                                            <h3>
@@ -178,7 +178,7 @@
 
                                                 <div class="col-sm-9 controls">
                                                     <div class="row">
-                                                          <div class="col-xs-9"><input id="spid" runat="server" type="text" value="123" class="form-control"/></div>
+                                                          <div class="col-xs-9"><input id="ssid" runat="server" type="text" class="form-control"/></div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -186,31 +186,37 @@
 
                                                 <div class="col-sm-9 controls">
                                                     <div class="row">
-                                                        <div class="col-xs-9"><input id="spname" runat="server" type="text" class="form-control"/></div>
+                                                        <div class="col-xs-9"><input id="ssname" runat="server" type="text" class="form-control"/></div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="form-group"><label class="col-sm-3 control-label">供应商电话</label>
+                                            <div class="form-group"><label class="col-sm-3 control-label">供应商品编号</label>
                                                 <div class="col-sm-9 controls">
                                                     <div class="row">
-                                                         <div class="col-xs-9"><input id="spphone" runat="server" type="text" class="form-control"/></div>
+                                                         <div class="col-xs-9"><input id="ggid" runat="server" type="text" class="form-control"/></div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="form-group"><label class="col-sm-3 control-label">供应商地址</label>
+                                            <div class="form-group"><label class="col-sm-3 control-label">供应商品名称</label>
 
                                                 <div class="col-sm-9 controls">
                                                     <div class="row">
-                                                         <div class="col-xs-9"><input id="spregion" runat="server" type="text" class="form-control"/></div>
+                                                         <div class="col-xs-9"><input id="ggname" runat="server" type="text" class="form-control"/></div>
                                                     </div>
                                                 </div>
-                                            </div>                                        
+                                            </div> 
+                                            <div class="form-group"><label class="col-sm-3 control-label">商品报价</label>
+
+                                                <div class="col-sm-9 controls">
+                                                    <div class="row">
+                                                         <div class="col-xs-9"><input id="gsprice" runat="server" type="text" class="form-control"/></div>
+                                                    </div>
+                                                </div>
+                                            </div>          
                                             <hr/>                                            
-                                           <asp:Label runat="server" ID="zero1" Width="100px" />
-                                           <asp:Button ID="Button1" runat="server" Text="修改" class="btn-green" BorderStyle="Dashed"  Height="30px" Width="150px" OnClick="Update_Click" />
-                                           <asp:Label runat="server" ID="Label1" Width="50px" />
+                                           <asp:Label runat="server" ID="zero1" Width="200px" />
                                            <asp:Button ID="add" runat="server" Text="添加" class="btn-green" BorderStyle="Dashed"  Height="30px" Width="150px" OnClick="Add_Click" />
-                                           <asp:Label runat="server" ID="zero2" Width="50px" />
+                                           <asp:Label runat="server" ID="zero2" Width="50px" />                                          
                                            <asp:Button ID="back" runat="server" Text="返回" class="btn-green" BorderStyle="Dashed" Height="30px" Width="150px" OnClick="Back_Click" />
                                            <asp:Label runat="server" ID="zero3" Width="200px" />
                                        </form>
@@ -274,6 +280,7 @@
 
 </body>
 </html>
+
 
 
 
