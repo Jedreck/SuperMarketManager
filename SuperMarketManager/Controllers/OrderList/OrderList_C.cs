@@ -8,14 +8,14 @@ namespace SuperMarketManager.Controllers.OrderList
 {
     public class OrderList_C
     {
-        ////ADD
-        //public static bool AddOrder(Orderlist ol)
+        //////ADD
+        //public static bool addorder(orderlist ol)
         //{
-        //    ol.ID = IDFormat.getID_Date16();
-        //    string sql = "INSERT INTO `marketmanage`.`order` (`O_ID`, `O_Price`, `O_time`, `E_ID`) " +
-        //        "VALUES" +
-        //        " ('" + order.ID + "', '" + order.Price + "', '" + order.Time.ToString("yyyy-MM-dd HH:mm:ss") + "', '" + order.E_ID + "')";
-        //    return ExecuteSQL.ExecuteNonQuerySQL_GetBool(sql);
+        //    ol.id = IDFormat.getID_Date16(); 
+        //    string sql = "insert into `marketmanage`.`order` (`o_id`, `o_price`, `o_time`, `e_id`) " +
+        //        "values" +
+        //        " ('" + order.id + "', '" + order.price + "', '" + order.time.tostring("yyyy-mm-dd hh:mm:ss") + "', '" + order.e_id + "')";
+        //    return executesql.executenonquerysql_getbool(sql);
         //}
 
 
