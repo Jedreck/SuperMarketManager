@@ -10,20 +10,28 @@ namespace SuperMarketManager.Controllers
 {
     public class GoodsIn_C
     {
-        //入库
-        public static GoodsIn AddGoods(GoodsIn goodsin)
+        //入库（手动输入生产日期）
+        public static GoodsIn AddGoods(GoodsIn goodsin,DateTime producedate)
         {
             bool flag;
             String insertSql = String.Format("insert into `marketmanage`.`goodsin`  (`GI_ID`, `G_ID`,`S_ID`,`GI_PriceIn`,`GI_Num`,`GI_Date`,`GI_OriginPrice`) " +
                 "values ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}')"
                 , goodsin.GI_ID, goodsin.G_ID, goodsin.S_ID, goodsin.PriceIn, goodsin.Num, goodsin.Date, goodsin.OriginPlace);
             flag=ExecuteSQL.ExecuteNonQuerySQL_GetBool(insertSql);
-            String sql = "update Goods set G_Store=G_Store+"+goodsin.Num+"where G_ID='"+goodsin.G_ID+"'";
-            ExecuteSQL.ExecuteNonQuerySQL_GetBool(sql);
+            
+            //更新库存表
+            string update_storelist = String.Format("insert into `marketmanage`.`storelist` (`G_ID`,`GI_ID`,`SL_Num`,`SL_ProduceDate`) values ('{0}','{1}','{2}','{3}')"
+                ,goodsin.G_ID, goodsin.GI_ID, goodsin.Num, producedate);
+            ExecuteSQL.ExecuteNonQuerySQL_GetBool(update_storelist);
+
+            //更新商品表（库存数量）
+            String update_goods = "update Goods set G_Store=G_Store+"+goodsin.Num+"where G_ID='"+goodsin.G_ID+"'";
+            ExecuteSQL.ExecuteNonQuerySQL_GetBool(update_goods);
+
             return flag? goodsin : null;            
         }
 
-        //全部入库信息
+        //详细入库信息
         public static List<GoodsIn> GetGoodsIn_ListsByG_ID(string G_ID = "")
         {
             string sql = "select `googsin`.`GI_ID`,`goodsin`.`G_ID`,`goodsin`.`S_ID`,`goodsin`.`GI_PriceIn`,`goodsin`.`GI_Num`,`goodsin`.`GI_Date`,`goodsin`.`GI_OriginPrice` "
