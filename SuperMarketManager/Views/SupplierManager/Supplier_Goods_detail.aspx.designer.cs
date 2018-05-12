@@ -10,7 +10,7 @@
 namespace SuperMarketManager.Views.SupplierManager {
     
     
-    public partial class Supplier_detail {
+    public partial class Supplier_Goods_detail {
         
         /// <summary>
         /// basic 控件。
@@ -22,40 +22,49 @@ namespace SuperMarketManager.Views.SupplierManager {
         protected global::System.Web.UI.WebControls.Label basic;
         
         /// <summary>
-        /// spid 控件。
+        /// ssid 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText spid;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText ssid;
         
         /// <summary>
-        /// spname 控件。
+        /// ssname 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText spname;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText ssname;
         
         /// <summary>
-        /// spphone 控件。
+        /// ggid 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText spphone;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText ggid;
         
         /// <summary>
-        /// spregion 控件。
+        /// ggname 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText spregion;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText ggname;
+        
+        /// <summary>
+        /// gsprice 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText gsprice;
         
         /// <summary>
         /// zero1 控件。
@@ -65,24 +74,6 @@ namespace SuperMarketManager.Views.SupplierManager {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label zero1;
-        
-        /// <summary>
-        /// Button1 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
-        
-        /// <summary>
-        /// Label1 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
         /// add 控件。
@@ -101,6 +92,24 @@ namespace SuperMarketManager.Views.SupplierManager {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label zero2;
+        
+        /// <summary>
+        /// Button1 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button1;
+        
+        /// <summary>
+        /// Label1 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
         /// back 控件。

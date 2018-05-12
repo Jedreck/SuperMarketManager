@@ -13,6 +13,14 @@ namespace SuperMarketManager.Models
         public string Phone { get; set; }
         public string Rigion { get; set; }
 
+        public Supplier() { }
+        public Supplier(int id,string name,string phone,string rigion)
+        {
+            this.ID = id;
+            this.Name = name;
+            this.Phone = phone;
+            this.Rigion = rigion;
+        }
         public static List<Supplier> getList(OdbcDataReader reader)
         {
             List<Supplier> list = new List<Supplier>();

@@ -11,11 +11,10 @@ namespace SuperMarketManager.Controllers.OrderList
         //////ADD
         //public static bool addorder(orderlist ol)
         //{
-        //    ol.id = IDFormat.getID_Date16(); 
-        //    string sql = "insert into `marketmanage`.`order` (`o_id`, `o_price`, `o_time`, `e_id`) " +
-        //        "values" +
-        //        " ('" + order.id + "', '" + order.price + "', '" + order.time.tostring("yyyy-mm-dd hh:mm:ss") + "', '" + order.e_id + "')";
-        //    return executesql.executenonquerysql_getbool(sql);
+        //    string sql = "INSERT INTO `marketmanage`.`orderlist` (`O_ID`, `G_ID`, `OL_Price`, `OL_Num`, `OL_Discount`)" +
+        //        " VALUES " +
+        //        "('"+ol.O_ID+"', '"+ol.G_ID+"', '"+ol.Price+"', '"+ol.Num+"', '"+ol.Discount+"')";
+        //    return ExecuteSQL.ExecuteNonQuerySQL_GetBool(sql);
         //}
 
 
