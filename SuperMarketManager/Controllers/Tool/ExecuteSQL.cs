@@ -27,5 +27,14 @@ namespace SuperMarketManager.Controllers
             connection.Close();
             return i;
         }
+        public static int ExecuteNonQuerySQL_GetResult(string sql)
+        {
+            OdbcConnection connection = DBManager.GetOdbcConnection();
+            connection.Open();
+            OdbcCommand command = new OdbcCommand(sql, connection);
+            Object obj=command.ExecuteScalar();
+            connection.Close();
+            return (obj==null)?0:1;
+        }
     }
 }

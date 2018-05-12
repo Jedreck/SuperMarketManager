@@ -89,12 +89,7 @@ namespace SuperMarketManager.Controllers
         public static bool AddSupplylist(Supplylist sl)
         {
             string sql = "INSERT INTO `supplylist`(`S_ID`,`G_ID`,`SL_Price`) VALUES(" + sl.S_ID + ",'" + sl.G_ID + "','" + sl.SL_Price + "')";
-            OdbcConnection odbcConnection = DBManager.GetOdbcConnection();
-            odbcConnection.Open();
-            OdbcCommand odbcCommand = new OdbcCommand(sql,odbcConnection);
-            int i = odbcCommand.ExecuteNonQuery();
-            odbcConnection.Close();
-            return (i > 0) ? true : false;
+            return ExecuteSQL.ExecuteNonQuerySQL_GetBool(sql);
         }
     }
 }

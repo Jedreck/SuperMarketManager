@@ -103,7 +103,7 @@
                         </i><span class="menu-title">供应商管理</span></a>
 
                         </li>
-                        <li><a href="Forms.html"><i class="fa fa-edit fa-fw">
+                        <li><a href="../../Views/GoodsSell/GoodsSell.aspx"><i class="fa fa-edit fa-fw">
                             <div class="icon-bg bg-violet"></div>
                         </i><span class="menu-title">商品销售</span></a>
 
@@ -118,7 +118,7 @@
                         </i><span class="menu-title">折扣管理</span></a>
 
                         </li>
-                        <li><a href="Pages.html"><i class="fa fa-file-o fa-fw">
+                        <li><a href="../../Views/Businessstatistics/Businessstatistics.aspx"><i class="fa fa-file-o fa-fw">
                             <div class="icon-bg bg-yellow"></div>
                         </i><span class="menu-title">营业统计</span></a>
 
@@ -192,8 +192,8 @@
                                                 <div class="col-sm-9 controls">
                                                     <div class="row">
                                                         <div class="col-xs-9">
-                                                            <asp:RadioButton ID="sex_male" runat="server" Text="男"  />
-                                                            <asp:RadioButton ID="sex_female" runat="server" Text="女"  />                                                      
+                                                            <asp:RadioButton ID="sex_male"  groupname="sex" runat="server" Text="男"  />
+                                                            <asp:RadioButton ID="sex_female" groupname="sex" runat="server" Text="女"  />                                                      
                                                         </div>
                                                     </div>
                                                 </div>
