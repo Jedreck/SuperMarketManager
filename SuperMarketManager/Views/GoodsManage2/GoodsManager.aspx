@@ -167,6 +167,8 @@
                                         <asp:Button ID="Button1" runat="server" Text="查找商品" OnClick="Button1_Click" />
                                             <input type="text" id="price" class="text" runat="server" placeholder="请输入修改后单价">
                                             <asp:Button ID="Button2" runat="server" Text="修改单价" OnClick="Button2_Click" />
+                                            <asp:Button ID="Button3" runat="server" Text="添加商品" OnClick="Button3_Click" />
+                                            <asp:Button ID="Button4" runat="server" Text="删除商品" OnClick="Button4_Click" />
                                         <div class="tab-content">
                                             <div id="home" class="tab-pane fade in active">
                                                 <div class="list-group mail-box">

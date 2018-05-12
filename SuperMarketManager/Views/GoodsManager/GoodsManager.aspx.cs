@@ -37,5 +37,23 @@ namespace SuperMarketManager.Views
                 Response.Write("<script language=javascript>window.alert('修改失败');</script>");
                 goods = Goods_C.SelectFuzzy(s);
         }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("../../Views/AddGoods/AddGoods.aspx");
+        }
+
+        protected void Button4_Click(object sender, EventArgs e)
+        {
+            String s = goodsId.Value.ToString();
+            bool a = Goods_C.DeleteByID(s);
+            if (a == true)
+            {
+                Response.Write("<script language=javascript>window.alert('删除成功');</script>");
+            }
+            else
+                Response.Write("<script language=javascript>window.alert('删除失败');</script>");
+            goods = Goods_C.SelectFuzzy(s);
+        }
     }
 }

@@ -11,14 +11,14 @@ namespace SuperMarketManager.Controllers
     public class Goods_C
     {
         public static bool AddGoods(string id, string name, int category, string unit, int expirationdate,
-            double price, int store)
+            double price)
         {
-            return AddGoods(new Goods(id, name, category, unit, expirationdate, price, store));
+            return AddGoods(new Goods(id, name, category, unit, expirationdate, price,0));
         }
         public static bool AddGoods(Goods goods)
         {
             String sql = String.Format("insert into `marketmanage`.`goods`  (`G_ID`, `G_Name`,`G_Class`,`G_Unit`,`G_ExpirationDate`,`G_Price`,`G_Store`) " +
-                "values ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}')"
+                "values ('{0}', '{1}', '{2}', '{3}', {4}, {5}, {6})"
                 , goods.ID,goods.Name,goods.Category,goods.Unit,goods.ExpirationDate,goods.Price,goods.Store);
             return ExecuteSQL.ExecuteNonQuerySQL_GetBool(sql);
         }
