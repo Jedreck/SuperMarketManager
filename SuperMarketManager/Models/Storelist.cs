@@ -1,5 +1,7 @@
-﻿using System;
+﻿using SuperMarketManager.Controllers;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.Odbc;
 using System.Linq;
 using System.Web;
@@ -12,7 +14,7 @@ namespace SuperMarketManager.Models
         public string GI_ID { set; get; }
         public double Num { set; get; }
         public DateTime ProducedDate { set; get; }
-      // public String ProducedDate { set; get; }
+        public int G_Store { set; get; }
 
         public static List<Storelist> getList(OdbcDataReader reader)
         {
@@ -25,6 +27,12 @@ namespace SuperMarketManager.Models
                 s.GI_ID = reader.GetString(1);
                 s.Num = reader.GetDouble(2);
                 s.ProducedDate = reader.GetDate(3);
+                string sql = "select G_Store from goods where G_Store="+s.G_ID;
+                OdbcConnection odbcConnection = DBManager.GetOdbcConnection();
+                odbcConnection.Open();
+                OdbcCommand odbcCommand = new OdbcCommand(sql, odbcConnection);
+                OdbcDataReader odbcDataReader = odbcCommand.ExecuteReader(CommandBehavior.CloseConnection);
+                s.G_Store = reader.GetInt32(0);
                 list.Add(s);
             }
             return list;

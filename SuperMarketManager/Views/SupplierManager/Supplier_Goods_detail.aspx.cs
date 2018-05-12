@@ -40,6 +40,7 @@ namespace SuperMarketManager.Views.SupplierManager
             if (result)
             {
                 Response.Write("<script language=javascript>window.alert('添加成功');</script>");
+                Response.Redirect("/Views/SupplierManager/SupplierManager.aspx");
             }
             else
             {
@@ -48,11 +49,20 @@ namespace SuperMarketManager.Views.SupplierManager
         }
         protected void Back_Click(object sender, EventArgs e)
         {
-            Response.Redirect("/Views/EmployeeManager/Supplier.aspx");
+            Response.Redirect("/Views/SupplierManager/SupplierManager.aspx");
         }
         protected void Delete_Click(object sender, EventArgs e)
         {
+            Response.Write("<script language=javascript>window.alert('"+ ssid.Value + "--"+ ggid.Value + "');</script>");
             bool result = SupplierList_C.DeleteSupplylist(ssid.Value,ggid.Value);
+            if (result)
+            {
+                Response.Write("<script language=javascript>window.alert('添加成功');</script>");
+            }
+            else
+            {
+                Response.Write("<script language=javascript>window.alert('添加失败');</script>");
+            }       
         }
     }
 }

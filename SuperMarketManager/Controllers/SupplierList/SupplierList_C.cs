@@ -66,9 +66,10 @@ namespace SuperMarketManager.Controllers
             else if (S_ID == "" && G_ID != "")//只有S_ID为空
                 sql = "DELETE FROM `marketmanage`.`supplylist` WHERE `G_ID`='"+G_ID+"'";
             else if (G_ID == "" && S_ID != "")//只有G_ID为空
-                sql = "DELETE FROM `marketmanage`.`supplylist` WHERE `S_ID`=" + S_ID;
+                sql = "DELETE FROM `marketmanage`.`supplylist` WHERE `S_ID`='" + S_ID + "'";
             else
-                sql = "DELETE FROM `marketmanage`.`supplylist` WHERE `G_ID`='" + G_ID+" AND `S_ID`="+S_ID;
+                sql = "DELETE FROM `marketmanage`.`supplylist` WHERE `G_ID`='" + G_ID+"' AND `S_ID`='"+S_ID+"'";
+            Console.WriteLine("sql:"+sql);
             OdbcConnection odbcConnection = DBManager.GetOdbcConnection();
             odbcConnection.Open();
             OdbcCommand odbcCommand = new OdbcCommand(sql, odbcConnection);
@@ -89,6 +90,14 @@ namespace SuperMarketManager.Controllers
         public static bool AddSupplylist(Supplylist sl)
         {
             string sql = "INSERT INTO `supplylist`(`S_ID`,`G_ID`,`SL_Price`) VALUES(" + sl.S_ID + ",'" + sl.G_ID + "','" + sl.SL_Price + "')";
+            return ExecuteSQL.ExecuteNonQuerySQL_GetBool(sql);
+        }
+
+        public static bool UpdateSupplylist(Supplylist sl)
+        {
+            string sql = "update `marketmanage`.`supplylist` " +
+                "set `SL_Price`='"+sl.SL_Price+ "' " +
+                "where `S_ID`='" + sl.S_ID + "' and `G_ID`='" + sl.G_ID + "'";
             return ExecuteSQL.ExecuteNonQuerySQL_GetBool(sql);
         }
     }
