@@ -276,6 +276,7 @@
     <Content Include="Scripts\zabuto_calendar.min.js" />
     <Content Include="Views\Businessstatistics\Businessstatistics.aspx" />
     <Content Include="Views\DiscountManage\DiscountManager.aspx" />
+    <Content Include="Views\DiscountManage\Discount_delete.aspx" />
     <Content Include="Views\EmployeeManager\EmployeeManager.aspx" />
     <Content Include="Views\EmployeeManager\Employee_add.aspx" />
     <Content Include="Views\GoodsManager\GoodsManager.aspx" />
@@ -342,6 +343,13 @@
     </Compile>
     <Compile Include="Views\DiscountManage\DiscountManager.aspx.designer.cs">
       <DependentUpon>DiscountManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DiscountManage\Discount_delete.aspx.cs">
+      <DependentUpon>Discount_delete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\DiscountManage\Discount_delete.aspx.designer.cs">
+      <DependentUpon>Discount_delete.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\EmployeeManager\EmployeeManager.aspx.cs">
       <DependentUpon>EmployeeManager.aspx</DependentUpon>
