@@ -6,8 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using SuperMarketManager.Controllers;
 using SuperMarketManager.Models;
-
-namespace SuperMarketManager.Views
+namespace SuperMarketManager.Views.GoodsManage2
 {
     public partial class GoodsManager : System.Web.UI.Page
     {
@@ -29,18 +28,18 @@ namespace SuperMarketManager.Views
             String s = goodsId.Value.ToString();
             String p = price.Value.ToString();
             bool a = Goods_C.AlterByID(s, p);
-            if(a==true)
+            if (a == true)
             {
                 Response.Write("<script language=javascript>window.alert('修改成功');</script>");
             }
             else
                 Response.Write("<script language=javascript>window.alert('修改失败');</script>");
-                goods = Goods_C.SelectFuzzy(s);
+            goods = Goods_C.SelectFuzzy(s);
         }
 
         protected void Button3_Click(object sender, EventArgs e)
         {
-            Response.Redirect("../../Views/AddGoods/AddGoods.aspx");
+            Response.Redirect("../../Views/AddGoods2/AddGoods2.aspx");
         }
 
         protected void Button4_Click(object sender, EventArgs e)
@@ -53,7 +52,7 @@ namespace SuperMarketManager.Views
             }
             else
                 Response.Write("<script language=javascript>window.alert('删除失败');</script>");
-            goods = Goods_C.SelectFuzzy(s);
+                goods = Goods_C.SelectFuzzy(s);
         }
     }
 }

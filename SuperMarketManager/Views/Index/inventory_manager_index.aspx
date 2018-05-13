@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Manager_Index.aspx.cs" Inherits="SuperMarketManager.Views.Index.Manager_Index" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="inventory_manager_index.aspx.cs" Inherits="SuperMarketManager.Views.Index.inventory_manager_index" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -86,46 +86,31 @@
                     <ul id="side-menu" class="nav">
 
                         <div class="clearfix"></div>
-                        <li class="active"><a href="../../Views/Index/Manager_Index.aspx"><i class="fa fa-tachometer fa-fw">
+                        <li class="active"><a href="../../Views/Index/inventory_manager_index.aspx"><i class="fa fa-tachometer fa-fw">
                             <div class="icon-bg bg-orange"></div>
                         </i><span class="menu-title">首页</span></a></li>
 
-                        <li><a href="../../Views/EmployeeManager/EmployeeManager.aspx"><i class="fa fa-desktop fa-fw">
+                        <li><i class="fa fa-desktop fa-fw">
                             <div class="icon-bg bg-pink"></div>
-                        </i><span class="menu-title">员工管理</span></a>
-
-                        </li>
-                        <li><a href="../../Views/SupplierManager/SupplierManager.aspx"><i class="fa fa-send-o fa-fw">
-                            <div class="icon-bg bg-green"></div>
-                        </i><span class="menu-title">供应商管理</span></a>
-
-                        </li>
-                        <li><a href="../../Views/GoodsSell/GoodsSell.aspx"><i class="fa fa-edit fa-fw">
-                            <div class="icon-bg bg-violet"></div>
-                        </i><span class="menu-title">商品销售</span></a>
-
-                        </li>
-                        <li><a href="../../Views/GoodsManager/GoodsManager.aspx"><i class="fa fa-th-list fa-fw">
-                            <div class="icon-bg bg-blue"></div>
-                        </i><span class="menu-title">商品信息与库存</span></a>
-
-                        </li>
-                        <li><a href="DataGrid.html"><i class="fa fa-database fa-fw">
-                            <div class="icon-bg bg-red"></div>
-                        </i><span class="menu-title">折扣管理</span></a>
-
-                        </li>
-                        <li><a href="Pages.html"><i class="fa fa-file-o fa-fw">
-                            <div class="icon-bg bg-yellow"></div>
-                        </i><span class="menu-title">营业统计</span></a>
-
-                        </li>
-                        <li><a href="../../Views/PSInfo/PSInfo.aspx"><i class="fa fa-gift fa-fw">
-                            <div class="icon-bg bg-grey"></div>
                         </i><span class="menu-title">个人信息</span></a>
 
                         </li>
-                        <li><a href="../../Views/Login/Manager_Index.aspx"><i class="fa fa-sitemap fa-fw">
+                        <li><a href="../../Views/GoodsManage2/GoodsManager.aspx"><i class="fa fa-send-o fa-fw">
+                            <div class="icon-bg bg-green"></div>
+                        </i><span class="menu-title">商品信息</span></a>
+
+                        </li>
+                        <li><a href="../../Views/StoreManage/store.aspx"><i class="fa fa-edit fa-fw">
+                            <div class="icon-bg bg-violet"></div>
+                        </i><span class="menu-title">库存管理</span></a>
+
+                        </li>
+                        <li ><a href="../../Views/GoodsInManage2/GoodsInManage2.aspx"><i class="fa fa-th-list fa-fw">
+                            <div class="icon-bg bg-blue"></div>
+                        </i><span class="menu-title">入库管理</span></a>
+
+                        </li>
+                        <li><a href="../../Views/Index/inventory_manager_index.aspx"><i class="fa fa-sitemap fa-fw">
                             <div class="icon-bg bg-dark"></div>
                         </i><span class="menu-title">退出</span></a>
                     </ul>
@@ -720,4 +705,3 @@
                 <script src="../../Scripts/main.js"></script>
 </body>
 </html>
-

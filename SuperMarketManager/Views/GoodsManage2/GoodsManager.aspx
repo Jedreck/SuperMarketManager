@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="GoodsManager.aspx.cs" Inherits="SuperMarketManager.Views.GoodsManager" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="GoodsManager.aspx.cs" Inherits="SuperMarketManager.Views.GoodsManage2.GoodsManager" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -99,46 +99,31 @@
                     <ul id="side-menu" class="nav">
 
                         <div class="clearfix"></div>
-                        <li><a href="../../Views/Index/Manager_Index.aspx"><i class="fa fa-tachometer fa-fw">
+                        <li><a href="../../Views/Index/inventory_manager_index.aspx"><i class="fa fa-tachometer fa-fw">
                             <div class="icon-bg bg-orange"></div>
                         </i><span class="menu-title">首页</span></a></li>
 
-                        <li><a href="../../Views/EmployeeManager/EmployeeManager.aspx"><i class="fa fa-desktop fa-fw">
+                        <li><i class="fa fa-desktop fa-fw">
                             <div class="icon-bg bg-pink"></div>
-                        </i><span class="menu-title">员工管理</span></a>
-
-                        </li>
-                        <li><a href="../../Views/SupplierManager/SupplierManager.aspx"><i class="fa fa-send-o fa-fw">
-                            <div class="icon-bg bg-green"></div>
-                        </i><span class="menu-title">供应商管理</span></a>
-
-                        </li>
-                        <li><a href="../../Views/GoodsSell/GoodsSell.aspx"><i class="fa fa-edit fa-fw">
-                            <div class="icon-bg bg-violet"></div>
-                        </i><span class="menu-title">商品销售</span></a>
-
-                        </li>
-                        <li class="active"><a href="../../Views/GoodsManager/GoodsManager.aspx"><i class="fa fa-th-list fa-fw">
-                            <div class="icon-bg bg-blue"></div>
-                        </i><span class="menu-title">商品信息与库存</span></a>
-
-                        </li>
-                        <li><a href="DataGrid.html"><i class="fa fa-database fa-fw">
-                            <div class="icon-bg bg-red"></div>
-                        </i><span class="menu-title">折扣管理</span></a>
-
-                        </li>
-                        <li><a href="../../Views/Businessstatistics/Businessstatistics.aspx"><i class="fa fa-file-o fa-fw">
-                            <div class="icon-bg bg-yellow"></div>
-                        </i><span class="menu-title">营业统计</span></a>
-
-                        </li>
-                        <li><a href="Extras.html"><i class="fa fa-gift fa-fw">
-                            <div class="icon-bg bg-grey"></div>
                         </i><span class="menu-title">个人信息</span></a>
 
                         </li>
-                        <li><a href="../../Views/Login/Login.aspx"><i class="fa fa-sitemap fa-fw">
+                        <li class="active"><a href="../../Views/GoodsManager/GoodsManager.aspx"><i class="fa fa-send-o fa-fw">
+                            <div class="icon-bg bg-green"></div>
+                        </i><span class="menu-title">商品信息</span></a>
+
+                        </li>
+                        <li><a href="../../Views/StoreManage/store.aspx"><i class="fa fa-edit fa-fw">
+                            <div class="icon-bg bg-violet"></div>
+                        </i><span class="menu-title">库存管理</span></a>
+
+                        </li>
+                        <li><a href="../../Views/GoodsInManage2/GoodsInManage2.aspx"><i class="fa fa-th-list fa-fw">
+                            <div class="icon-bg bg-blue"></div>
+                        </i><span class="menu-title">入库管理</span></a>
+
+                        </li>
+                        <li><a href="../../Views/Index/inventory_manager_index.aspx"><i class="fa fa-sitemap fa-fw">
                             <div class="icon-bg bg-dark"></div>
                         </i><span class="menu-title">退出</span></a>
                     </ul>
@@ -182,7 +167,7 @@
                                         <asp:Button ID="Button1" runat="server" Text="查找商品" OnClick="Button1_Click" />
                                             <input type="text" id="price" class="text" runat="server" placeholder="请输入修改后单价">
                                             <asp:Button ID="Button2" runat="server" Text="修改单价" OnClick="Button2_Click" />
-                                            <asp:Button ID="Button3" runat="server" Text="添加商品" OnClick="Button3_Click"/>
+                                            <asp:Button ID="Button3" runat="server" Text="添加商品" OnClick="Button3_Click" />
                                             <asp:Button ID="Button4" runat="server" Text="删除商品" OnClick="Button4_Click" />
                                         <div class="tab-content">
                                             <div id="home" class="tab-pane fade in active">
@@ -287,4 +272,3 @@
 
 </body>
 </html>
-

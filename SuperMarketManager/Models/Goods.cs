@@ -10,7 +10,7 @@ namespace SuperMarketManager.Models
 {
     public class Goods
     {
-        public string ID { set; get ; }
+        public string ID { set; get; }
         public string Name { set; get; }
         public int Category { set; get; }
         public string GC_Name { set; get; }
@@ -19,7 +19,7 @@ namespace SuperMarketManager.Models
         public double Price { set; get; }
         public int Store { set; get; }
         public Goods() { }
-        public Goods(string id,string name, int category,string unit,int expirationdate,double price,int store)
+        public Goods(string id, string name, int category, string unit, int expirationdate, double price, int store)
         {
             this.ID = id;
             this.Name = name;
@@ -40,7 +40,7 @@ namespace SuperMarketManager.Models
                 s.Name = reader.GetString(1);
                 s.Category = reader.GetInt32(2);
                 s.GC_Name = goodsclass_name(s.Category);
-                s.Unit = reader.GetString(3);
+        s.Unit = reader.GetString(3);
                 s.ExpirationDate = reader.GetInt32(4);
                 s.Price = reader.GetDouble(5);
                 s.Store = reader.GetInt32(6);
@@ -48,21 +48,21 @@ namespace SuperMarketManager.Models
             }
             return list;
         }
-        public static string goodsclass_name(int category)
-        {
-            string sql = "select * from goodsclass where GC_ID=" + category;
-            OdbcConnection odbcConnection = DBManager.GetOdbcConnection();
-            odbcConnection.Open();
-            OdbcCommand odbcCommand = new OdbcCommand(sql, odbcConnection);
-            odbcCommand.ExecuteNonQuery();
-            OdbcDataReader odbcDataReader = odbcCommand.ExecuteReader(CommandBehavior.CloseConnection);
+public static string goodsclass_name(int category)
+{
+    string sql = "select * from goodsclass where GC_ID=" + category;
+    OdbcConnection odbcConnection = DBManager.GetOdbcConnection();
+    odbcConnection.Open();
+    OdbcCommand odbcCommand = new OdbcCommand(sql, odbcConnection);
+    odbcCommand.ExecuteNonQuery();
+    OdbcDataReader odbcDataReader = odbcCommand.ExecuteReader(CommandBehavior.CloseConnection);
 
-            if (odbcDataReader.HasRows)
-            {
-                odbcDataReader.Read();
-                return Convert.ToString(odbcDataReader[1]);
-            }
-            return null;
-        }
+    if (odbcDataReader.HasRows)
+    {
+        odbcDataReader.Read();
+        return Convert.ToString(odbcDataReader[1]);
+    }
+    return null;
+}
     }
 }

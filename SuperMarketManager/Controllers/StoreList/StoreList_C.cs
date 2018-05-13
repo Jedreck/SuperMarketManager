@@ -30,5 +30,5 @@ namespace SuperMarketManager.Controllers.StoreList
                 odbcConnection.Close();
             return null;
         }
-}
+    }
 }

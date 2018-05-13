@@ -1,9 +1,9 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="GoodsManager.aspx.cs" Inherits="SuperMarketManager.Views.GoodsManager" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="GoodsInManage2.aspx.cs" Inherits="SuperMarketManager.Views.GoodsInManage2.GoodsInManage2" %>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>超市管理系统 | 商品信息</title>
+    <title>超市管理系统|入库管理</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,24 +27,8 @@
 </head>
 <body>
     <div>
-        <!--BEGIN THEME SETTING-->
-        <div id="theme-setting">
-            <a href="#" data-toggle="dropdown" data-step="1" data-intro="&lt;b&gt;Many styles&lt;/b&gt; and &lt;b&gt;colors&lt;/b&gt; be created for you. Let choose one and enjoy it!"
-                data-position="left" class="btn-theme-setting"><i class="fa fa-cog"></i></a>
-            <div class="content-theme-setting">
-                <select id="list-style" class="form-control">
-                    <option value="style1">Flat Squared style</option>
-                    <option value="style2">Flat Rounded style</option>
-                    <option value="style3" selected="selected">Flat Border style</option>
-                </select>
-            </div>
-        </div>
-        <!--END THEME SETTING-->
-        <!--BEGIN BACK TO TOP-->
-        <a id="totop" href="#"><i class="fa fa-angle-up"></i></a>
-        <!--END BACK TO TOP-->
-        <!--BEGIN TOPBAR-->
-        <div id="header-topbar-option-demo" class="page-header-topbar">
+    <div>
+       <div id="header-topbar-option-demo" class="page-header-topbar">
             <nav id="topbar" role="navigation" style="margin-bottom: 0;" data-step="3" class="navbar navbar-default navbar-static-top">
                 <div class="navbar-header">
                     <button type="button" data-toggle="collapse" data-target=".sidebar-collapse" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
@@ -99,65 +83,49 @@
                     <ul id="side-menu" class="nav">
 
                         <div class="clearfix"></div>
-                        <li><a href="../../Views/Index/Manager_Index.aspx"><i class="fa fa-tachometer fa-fw">
+                        <li ><a href="../../Views/Index/Manager_Index.aspx"><i class="fa fa-tachometer fa-fw">
                             <div class="icon-bg bg-orange"></div>
                         </i><span class="menu-title">首页</span></a></li>
 
-                        <li><a href="../../Views/EmployeeManager/EmployeeManager.aspx"><i class="fa fa-desktop fa-fw">
+                        <li><i class="fa fa-desktop fa-fw">
                             <div class="icon-bg bg-pink"></div>
-                        </i><span class="menu-title">员工管理</span></a>
-
-                        </li>
-                        <li><a href="../../Views/SupplierManager/SupplierManager.aspx"><i class="fa fa-send-o fa-fw">
-                            <div class="icon-bg bg-green"></div>
-                        </i><span class="menu-title">供应商管理</span></a>
-
-                        </li>
-                        <li><a href="../../Views/GoodsSell/GoodsSell.aspx"><i class="fa fa-edit fa-fw">
-                            <div class="icon-bg bg-violet"></div>
-                        </i><span class="menu-title">商品销售</span></a>
-
-                        </li>
-                        <li class="active"><a href="../../Views/GoodsManager/GoodsManager.aspx"><i class="fa fa-th-list fa-fw">
-                            <div class="icon-bg bg-blue"></div>
-                        </i><span class="menu-title">商品信息与库存</span></a>
-
-                        </li>
-                        <li><a href="DataGrid.html"><i class="fa fa-database fa-fw">
-                            <div class="icon-bg bg-red"></div>
-                        </i><span class="menu-title">折扣管理</span></a>
-
-                        </li>
-                        <li><a href="../../Views/Businessstatistics/Businessstatistics.aspx"><i class="fa fa-file-o fa-fw">
-                            <div class="icon-bg bg-yellow"></div>
-                        </i><span class="menu-title">营业统计</span></a>
-
-                        </li>
-                        <li><a href="Extras.html"><i class="fa fa-gift fa-fw">
-                            <div class="icon-bg bg-grey"></div>
                         </i><span class="menu-title">个人信息</span></a>
 
                         </li>
-                        <li><a href="../../Views/Login/Login.aspx"><i class="fa fa-sitemap fa-fw">
+                        <li><a href="../../Views/GoodsManage2/GoodsManager.aspx"><i class="fa fa-send-o fa-fw">
+                            <div class="icon-bg bg-green"></div>
+                        </i><span class="menu-title">商品信息</span></a>
+
+                        </li>
+                        <li><a href="../../Views/StoreManage/store.aspx"><i class="fa fa-edit fa-fw">
+                            <div class="icon-bg bg-violet"></div>
+                        </i><span class="menu-title">库存管理</span></a>
+
+                        </li>
+                        <li class="active"><a href="../../Views/GoodsInManage2/GoodsInManage2.aspx"><i class="fa fa-th-list fa-fw">
+                            <div class="icon-bg bg-blue"></div>
+                        </i><span class="menu-title">入库管理</span></a>
+
+                        </li>
+                        <li><a href="../../Views/Index/inventory_manager_index.aspx"><i class="fa fa-sitemap fa-fw">
                             <div class="icon-bg bg-dark"></div>
                         </i><span class="menu-title">退出</span></a>
                     </ul>
                 </div>
             </nav>
-
-
+            <!--END SIDEBAR MENU-->
             <div id="page-wrapper">
                 <!--BEGIN TITLE & BREADCRUMB PAGE-->
                 <div id="title-breadcrumb-option-demo" class="page-title-breadcrumb">
                     <div class="page-header pull-left">
                         <div class="page-title">
-                            商品信息
-                        </div>
+                            入库管理</div>
                     </div>
                     <ol class="breadcrumb page-breadcrumb pull-right">
-                        <li><i class="fa fa-home"></i>&nbsp;<a href="dashboard.html">Home</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
-                        <li class="hidden"><a href="#">Extras</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
-                        <li class="active">Extras</li>
+                        <li><i class="fa fa-home"></i>&nbsp;<a href="dashboard.html">Home</a>&nbsp;&nbsp;<i
+                            class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
+                        <li class="hidden"><a href="#">入库管理</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
+                        <li class="active">入库管理</li>
                     </ol>
                     <div class="clearfix">
                     </div>
@@ -168,69 +136,90 @@
                     <div id="tab-general">
                         <div class="row mbl">
                             <div class="col-lg-12">
-                                <div class="col-md-12">
-                                    <div id="area-chart-spline" style="width: 100%; height: 300px; display: none;">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-12">
-                                <div class="mtl mbl"></div>
-                                <div class="row">
-                                    <div class="col-sm-9 col-md-10">
-                                        <form runat="server">
-                                            <input type="text" id="goodsId" class="text" runat="server" placeholder="请输入商品Id">
-                                        <asp:Button ID="Button1" runat="server" Text="查找商品" OnClick="Button1_Click" />
-                                            <input type="text" id="price" class="text" runat="server" placeholder="请输入修改后单价">
-                                            <asp:Button ID="Button2" runat="server" Text="修改单价" OnClick="Button2_Click" />
-                                            <asp:Button ID="Button3" runat="server" Text="添加商品" OnClick="Button3_Click"/>
-                                            <asp:Button ID="Button4" runat="server" Text="删除商品" OnClick="Button4_Click" />
-                                        <div class="tab-content">
-                                            <div id="home" class="tab-pane fade in active">
-                                                <div class="list-group mail-box">
-                                                      <a href="#" class="list-group-item">
-                                                        <span style="width: 100px; display: inline-block;" class="name">商品ID</span>
-                                                        <span style="width: 100px; display: inline-block;" class="name">商品名称</span>
-                                                        <span style="width: 100px; display: inline-block;" class="name">商品类别</span>
-                                                        <span style="width: 100px; display: inline-block;" class="name">商品单位</span>
-                                                        <span style="width: 100px; display: inline-block;" class="name">保质期</span>
-                                                        <span style="width: 100px; display: inline-block;" class="name">单价</span>
-                                                         <span style="width: 100px; display: inline-block;" class="name">库存</span>
-                                                            </a>
-                                                        
-                                                        <%for ( i = 0; i < goods.Count ; i++)
-                                                            { %>
-                                                        <a href="#" class="list-group-item">
-                                                        <span style="width: 100px; display: inline-block;" class="name" ><%=goods[i].ID %></span>
-                                                        <span style="width: 100px; display: inline-block;" class="name"><%=goods[i].Name %></span>
-                                                        <span style="width: 100px; display: inline-block;" class="name"><%=goods[i].GC_Name %></span>
-                                                            <span style="width: 100px; display: inline-block;" class="name"><%=goods[i].Unit %></span>
-                                                            <span style="width: 100px; display: inline-block;" class="name"><%=goods[i].ExpirationDate %></span>
-                                                            <span style="width: 100px; display: inline-block;" class="name"><%=goods[i].Price %></span>
-                                                             <span style="width: 100px; display: inline-block;" class="name"><%=goods[i].Store %></span>
-                                                            </a>
-                                                        <%} %>  
+                                
+                                            <div class="col-md-12">
+                                                <div id="area-chart-spline" style="width: 100%; height: 300px; display: none;">
                                                 </div>
                                             </div>
-                                        </div>
-                                        </form>
-                                    </div>
-                                    <div class="common-modal modal fade" id="common-Modal1" tabindex="-1" role="dialog" aria-hidden="true">
-                                        <div class="modal-content">
-                                            <ul class="list-inline item-details">
-                                                <li><a href="#">Admin templates</a></li>
-                                                <li><a href="http://themescloud.org">Bootstrap themes</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-
+                                
                             </div>
 
+                             <div class="col-lg-12">
+                                <div class="row">
+                                    <div class="col-lg-10">
+                                       <form action="#" class="form-horizontal" runat="server">
 
+                                           <h3>
+                                               <asp:Label ID="basic" runat="server" Text="添加商品" class="label label-success" Font-Size="18px"></asp:Label></h3>
 
+                                            <div class="form-group"><label class="col-sm-3 control-label">商品编号</label>
 
+                                                <div class="col-sm-9 controls">
+                                                    <div class="row">
+                                                          <div class="col-xs-9"><input id="gid" runat="server" type="text" class="form-control"/></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group"><label class="col-sm-3 control-label">供销商编号</label>
+
+                                                <div class="col-sm-9 controls">
+                                                    <div class="row">
+                                                        <div class="col-xs-9"><input id="sid" runat="server" type="text" class="form-control"/></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group"><label class="col-sm-3 control-label">单价</label>
+                                                <div class="col-sm-9 controls">
+                                                    <div class="row">
+                                                         <div class="col-xs-9"><input id="gprice" runat="server" type="text" class="form-control"/></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group"><label class="col-sm-3 control-label">商品单位</label>
+
+                                                <div class="col-sm-9 controls">
+                                                    <div class="row">
+                                                         <div class="col-xs-9"><input id="gunit" runat="server" type="text" class="form-control"/></div>
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                            <div class="form-group"><label class="col-sm-3 control-label">数量</label>
+
+                                                <div class="col-sm-9 controls">
+                                                    <div class="row">
+                                                         <div class="col-xs-9"><input id="gnum" runat="server" type="text" class="form-control"/></div>
+                                                    </div>
+                                                </div>
+                                            </div>     
+                                           <div class="form-group"><label class="col-sm-3 control-label">产地</label>
+
+                                                <div class="col-sm-9 controls">
+                                                    <div class="row">
+                                                         <div class="col-xs-9"><input id="gplace" runat="server" type="text" class="form-control"/></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group"><label class="col-sm-3 control-label">生产日期</label>
+
+                                                <div class="col-sm-9 controls">
+                                                    <div class="row">
+                                                         <div class="col-xs-9"><input id="gdate" runat="server" type="text" class="form-control"/></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr/>   
+                                           <div style="text-align:center">
+                                           <asp:Button ID="Button1" runat="server" Text="入库"  class="btn-green" BorderStyle="Dashed" Height="30px" Width="185px" OnClick="Button1_Click"/>
+                                               </div>
+                                       </form>
+
+                                    </div>
+                                </div>
+                            </div>
+                            
+
+                            </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -238,8 +227,7 @@
                 <!--BEGIN FOOTER-->
                 <div id="footer">
                     <div class="copyright">
-                        <a href="#">2014 © KAdmin Responsive Multi-Purpose Template</a>
-                    </div>
+                        <a href="#">2014 © KAdmin Responsive Multi-Purpose Template</a></div>
                 </div>
                 <!--END FOOTER-->
             </div>
@@ -262,7 +250,7 @@
     <script src="../../Script/jquery.menu.js"></script>
     <script src="../../Script/pace.min.js"></script>
     <script src="../../Script/holder.js"></script>
-    <script src="../../Script/responsive-tabs.js"></script>
+    <script src="../../Script/Script/responsive-tabs.js"></script>
     <script src="../../Script/jquery.flot.js"></script>
     <script src="../../Script/jquery.flot.categories.js"></script>
     <script src="../../Script/jquery.flot.pie.js"></script>
@@ -272,19 +260,18 @@
     <script src="../../Script/jquery.flot.stack.js"></script>
     <script src="../../Script/jquery.flot.spline.js"></script>
     <script src="../../Script/zabuto_calendar.min.js"></script>
-
-    <script src="script/index.js"></script>
+    <script src="../../Script/index.js"></script>
     <!--LOADING SCRIPTS FOR CHARTS-->
-    <script src="script/highcharts.js"></script>
-    <script src="script/data.js"></script>
-    <script src="script/drilldown.js"></script>
-    <script src="script/exporting.js"></script>
-    <script src="script/highcharts-more.js"></script>
-    <script src="script/charts-highchart-pie.js"></script>
-    <script src="script/charts-highchart-more.js"></script>
+    <script src="../../Script/highcharts.js"></script>
+    <script src="../../Script/data.js"></script>
+    <script src="../../Script/drilldown.js"></script>
+    <script src="../../Script/exporting.js"></script>
+    <script src="../../Script/highcharts-more.js"></script>
+    <script src="../../Script/charts-highchart-pie.js"></script>
+    <script src="../../Script/charts-highchart-more.js"></script>
     <!--CORE JAVASCRIPT-->
-    <script src="script/main.js"></script>
-
+    <script src="../../Script/main.js"></script>
+    
 </body>
 </html>
 

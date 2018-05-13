@@ -1,9 +1,9 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SupplierManager.aspx.cs" Inherits="SuperMarketManager.Views.SupplierManager.SupplierManager" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AddGoods.aspx.cs" Inherits="SuperMarketManager.Views.AddGoods.AddGoods" %>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>超市管理系统 | 供应商管理</title>
+    <title>超市管理系统 | 添加商品</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -82,7 +82,7 @@
         <!--END TOPBAR-->
         <div id="wrapper">
             <!--BEGIN SIDEBAR MENU-->
-            <nav id="sidebar" role="navigation" data-step="2" data-intro="Template has &lt;b&gt;many navigation styles&lt;/b&gt;"
+             <nav id="sidebar" role="navigation" data-step="2" data-intro="Template has &lt;b&gt;many navigation styles&lt;/b&gt;"
                 data-position="right" class="navbar-default navbar-static-side">
                 <div class="sidebar-collapse menu-scroll">
                     <ul id="side-menu" class="nav">
@@ -97,7 +97,7 @@
                         </i><span class="menu-title">员工管理</span></a>
 
                         </li>
-                        <li class="active"><a href="../../Views/SupplierManager/SupplierManager.aspx"><i class="fa fa-send-o fa-fw">
+                        <li><a href="../../Views/SupplierManager/SupplierManager.aspx"><i class="fa fa-send-o fa-fw">
                             <div class="icon-bg bg-green"></div>
                         </i><span class="menu-title">供应商管理</span></a>
 
@@ -107,7 +107,7 @@
                         </i><span class="menu-title">商品销售</span></a>
 
                         </li>
-                        <li><a href="../../Views/GoodsManager/GoodsManager.aspx"><i class="fa fa-th-list fa-fw">
+                        <li class="active"><a href="../../Views/GoodsManager/GoodsManager.aspx"><i class="fa fa-th-list fa-fw">
                             <div class="icon-bg bg-blue"></div>
                         </i><span class="menu-title">商品信息与库存</span></a>
 
@@ -117,12 +117,12 @@
                         </i><span class="menu-title">折扣管理</span></a>
 
                         </li>
-                        <li class="active"><a href="../../Views/Businessstatistics/Businessstatistics.aspx"><i class="fa fa-file-o fa-fw">
+                        <li><a href="../../Views/Businessstatistics/Businessstatistics.aspx"><i class="fa fa-file-o fa-fw">
                             <div class="icon-bg bg-yellow"></div>
                         </i><span class="menu-title">营业统计</span></a>
 
                         </li>
-                        <li><a href="../../Views/PSInfo/PSInfo.aspx"><i class="fa fa-gift fa-fw">
+                        <li><a href="Extras.html"><i class="fa fa-gift fa-fw">
                             <div class="icon-bg bg-grey"></div>
                         </i><span class="menu-title">个人信息</span></a>
 
@@ -140,133 +140,110 @@
                 <div id="title-breadcrumb-option-demo" class="page-title-breadcrumb">
                     <div class="page-header pull-left">
                         <div class="page-title">
-                            供应商管理
+                           添加商品
                         </div>
                     </div>
                     <ol class="breadcrumb page-breadcrumb pull-right">
                         <li><i class="fa fa-home"></i>&nbsp;<a href="../../Views/Index/Manager_Index.aspx">Home</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
-                        <li class="hidden"><a href="#">供应商管理</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
-                        <li class="active">供应商管理</li>
+                        <li class="hidden"><a href="#">添加商品</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
+                        <li class="active">添加商品</li>
                     </ol>
                     <div class="clearfix">
                     </div>
                 </div>
                 <!--END TITLE & BREADCRUMB PAGE-->
-                <!--BEGIN CONTENT-->
-                <form runat="server">
+
+                <!--BEGIN CONTENT-->                
                 <div class="page-content">
                     <div id="tab-general">
                         <div class="row mbl">
                             <div class="col-lg-12">
-
-                                <div class="col-md-12">
-                                    <div id="area-chart-spline" style="width: 100%; height: 300px; display: none;">
-                                    </div>
-                                </div>
-
+                                
+                                            <div class="col-md-12">
+                                                <div id="area-chart-spline" style="width: 100%; height: 300px; display: none;">
+                                                </div>
+                                            </div>
+                                
                             </div>
 
-                            <div class="col-lg-12">
-                                <div class="page-content">
-                                    <div class="row">
-                                        <div class="col-lg-12">
-                                            <div class="panel">
-                                                <div class="panel-body">
-                                                    <div id="grid-layout-table-1" class="box jplist">
-                                                        <div class="jplist-ios-button"><i class="fa fa-sort"></i>jPList Actions</div>
-                                                        <div class="jplist-panel box panel-top">
-                                                            <button type="button" style="height:35px;" data-control-type="reset" data-control-name="reset" data-control-action="reset" class="jplist-reset-btn btn btn-default">重置<i class="fa fa-share mls"></i></button>
-                                                            <div data-control-type="drop-down" data-control-name="paging" data-control-action="paging" class="jplist-drop-down form-control">
-                                                                <ul class="dropdown-menu">
-                                                                    <li><span data-number="3">3 per page</span></li>
-                                                                    <li><span data-number="5">5 per page</span></li>
-                                                                    <li><span data-number="10" data-default="true">10 per page</span></li>
-                                                                    <li><span data-number="all">view all</span></li>
-                                                                </ul>
-                                                            </div>
-                                                            <div data-control-type="drop-down" data-control-name="sort" data-control-action="sort" data-datetime-format="{month}/{day}/{year}" class="jplist-drop-down form-control">
-                                                                <ul class="dropdown-menu">
-                                                                    <li><span data-path=".title" data-order="asc" data-type="text">供应商 A-Z</span></li>
-                                                                    <li><span data-path=".title" data-order="desc" data-type="text">供应商 Z-A</span></li>                                                               
-                                                                    <li><span data-path=".like" data-order="asc" data-type="number" data-default="true">报价升序</span></li>
-                                                                    <li><span data-path=".like" data-order="desc" data-type="number">报价降序</span></li>
-                                                                </ul>
-                                                            </div>
-                                                            <div class="text-filter-box">
-                                                                <div class="input-group">
-                                                                    <span class="input-group-addon"><i class="fa fa-search"></i></span>
-                                                                    <input data-path=".title" type="text" runat="server" id="search_content" value="" placeholder="供应商名称" data-control-type="textbox" data-control-name="title-filter" data-control-action="filter" class="form-control" />
-                                                                </div>
-                                                            </div>                                                          
-                                                            <div data-type="Page {current} of {pages}" data-control-type="pagination-info" data-control-name="paging" data-control-action="paging" class="jplist-label btn btn-default"></div>
-                                                            <div data-control-type="pagination" data-control-name="paging" data-control-action="paging" class="jplist-pagination"></div>
-                                                        </div>
-                                                        <div class="box text-shadow">
-                                                            <table class="demo-tbl" id="tab">
-                                                             <%if (supplierlist!= null)
-                                                             { %>
-                                                                <%for (int i = 0; i <supplierlist.Count; i++)
-                                                                    {
-                                                                     %>                                                                   
-                                                                    <!--<item>1</item>-->
-                                                                    <tr class="tbl-item">
-                                                                    <!--<img/>-->
-                                                                    
-                                                                    <!--<data></data>-->
-                                                                    <td class="td-block">
-                                                                        <p class="title" ><a href="/Views/SupplierManager/Supplier_detail.aspx?id=<%=supplierlist[i].S_Name %>"><%=supplierlist[i].S_Name%></a></p>
-                                                                       
-                                                                        <p class="desc">供应商信息：供应商id:<%=supplierlist[i].S_ID %>&nbsp&nbsp&nbsp 供应商名称：<%=supplierlist[i].S_Name %><br />                                                                                   
-                                                                                        商品信息：商品id：<%=supplierlist[i].G_ID %>&nbsp&nbsp&nbsp 商品名称：<%=supplierlist[i].G_Name %>
-                                                                        </p>
-                                                                        <p class="like"><a href="/Views/SupplierManager/Supplier_Goods_detail.aspx?sname=<%=supplierlist[i].S_Name %>&gname=<%=supplierlist[i].G_Name %>">供应商报价：<%=supplierlist[i].SL_Price %></a></p>
-                                                                    </td>
-                                                                    </tr>
-                                                                <%} %>
-                                                            <%} %>
-                                                            </table>                                                          
-                                                        </div>
-                                                        <div class="box jplist-no-results text-shadow align-center">
-                                                            <p>No results found</p>
-                                                        </div>
-                                                        <div class="jplist-ios-button"><i class="fa fa-sort"></i>jPList Actions</div>
-                                                        <div class="jplist-panel box panel-bottom">
-                                                            <div data-control-type="drop-down" data-control-name="paging" data-control-action="paging" data-control-animate-to-top="true" class="jplist-drop-down form-control">
-                                                                <ul class="dropdown-menu">
-                                                                    <li><span data-number="3">3 per page</span></li>
-                                                                    <li><span data-number="5">5 per page</span></li>
-                                                                    <li><span data-number="10" data-default="true">10 per page</span></li>
-                                                                    <li><span data-number="all">view all</span></li>
-                                                                </ul>
-                                                            </div>
-                                                            <div data-control-type="drop-down" data-control-name="sort" data-control-action="sort" data-control-animate-to-top="true" data-datetime-format="{month}/{day}/{year}" class="jplist-drop-down form-control">
-                                                                <ul class="dropdown-menu">
-                                                                    <li><span data-path="default">默认排序</span></li>
-                                                                    <li><span data-path=".title" data-order="asc" data-type="text">供应商 A-Z</span></li>
-                                                                    <li><span data-path=".title" data-order="desc" data-type="text">供应商 Z-A</span></li>                                                               
-                                                                    <li><span data-path=".like" data-order="asc" data-type="number" data-default="true">报价升序</span></li>
-                                                                    <li><span data-path=".like" data-order="desc" data-type="number">报价降序</span></li>
-                                                                </ul>
-                                                            </div>
-                                                            <div data-type="{start} - {end} of {all}" data-control-type="pagination-info" data-control-name="paging" data-control-action="paging" class="jplist-label btn btn-default"></div>
-                                                            <div data-control-type="pagination" data-control-name="paging" data-control-action="paging" data-control-animate-to-top="true" class="jplist-pagination"></div>                                                           
+                             <div class="col-lg-12">
+                                <div class="row">
+                                    <div class="col-lg-10">
+                                       <form action="#" class="form-horizontal" runat="server">
+
+                                           <h3>
+                                               <asp:Label ID="basic" runat="server" Text="添加商品" class="label label-success" Font-Size="18px"></asp:Label></h3>
+
+                                            <div class="form-group"><label class="col-sm-3 control-label">商品编号</label>
+
+                                                <div class="col-sm-9 controls">
+                                                    <div class="row">
+                                                          <div class="col-xs-9">
+                                                              <input id="gid" runat="server" type="text" class="form-control"/>
+
+                                                          </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                            <div class="form-group"><label class="col-sm-3 control-label">商品名称</label>
+
+                                                <div class="col-sm-9 controls">
+                                                    <div class="row">
+                                                        <div class="col-xs-9"><input id="gname" runat="server" type="text" class="form-control"/></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group"><label class="col-sm-3 control-label">类别编号</label>
+                                                <div class="col-sm-9 controls">
+                                                    <div class="row">
+                                                         <div class="col-xs-9"><input id="gcategory" runat="server" type="text" class="form-control"/></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group"><label class="col-sm-3 control-label">商品单位</label>
+
+                                                <div class="col-sm-9 controls">
+                                                    <div class="row">
+                                                         <div class="col-xs-9"><input id="gunit" runat="server" type="text" class="form-control"/></div>
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                            <div class="form-group"><label class="col-sm-3 control-label">保质期</label>
+
+                                                <div class="col-sm-9 controls">
+                                                    <div class="row">
+                                                         <div class="col-xs-9"><input id="gexpirationdate" runat="server" type="text" class="form-control"/></div>
+                                                    </div>
+                                                </div>
+                                            </div>     
+                                           <div class="form-group"><label class="col-sm-3 control-label">单价</label>
+
+                                                <div class="col-sm-9 controls">
+                                                    <div class="row">
+                                                         <div class="col-xs-9"><input id="price" runat="server" type="text" class="form-control"/></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr/>   
+                                           <div style="text-align:center">
+                                           <asp:Button ID="Button1" runat="server" Text="添加"  class="btn-green" BorderStyle="Dashed" Height="30px" Width="185px" OnClick="Button1_Click"/>
+                                               </div>
+                                       </form>
+
                                     </div>
                                 </div>
+                            </div>
+                            
 
                             </div>
-
+                            
                         </div>
                     </div>
                 </div>
-                </form>
+                
                 <!--END CONTENT-->
             </div>
             <!--END PAGE WRAPPER-->
-        </div>
     </div>
     <script src="../../Scripts/jquery-1.10.2.min.js"></script>
     <script src="../../Scripts/jquery-migrate-1.2.1.min.js"></script>
@@ -312,4 +289,3 @@
 
 </body>
 </html>
-

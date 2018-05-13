@@ -7,7 +7,7 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace SuperMarketManager.Views {
+namespace SuperMarketManager.Views.GoodsManage2 {
     
     
     public partial class GoodsManager {
