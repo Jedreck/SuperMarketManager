@@ -288,7 +288,9 @@
     <Content Include="Views\Index\Index.aspx" />
     <Content Include="Views\Index\inventory_manager_index.aspx" />
     <Content Include="Views\Index\Manager_Index.aspx" />
+    <Content Include="Views\Index\salesclerk_index.aspx" />
     <Content Include="Views\Login\Login.aspx" />
+    <Content Include="Views\PSInfo3\PSInfo3.aspx" />
     <Content Include="Views\PSInfo\PSInfo.aspx" />
     <Content Include="Views\Orders\Orders.aspx" />
     <Content Include="Views\Statistic\StatisticDay.aspx" />
@@ -435,12 +437,26 @@
     <Compile Include="Views\Index\Manager_Index.aspx.designer.cs">
       <DependentUpon>Manager_Index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Views\Index\salesclerk_index.aspx.cs">
+      <DependentUpon>salesclerk_index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Index\salesclerk_index.aspx.designer.cs">
+      <DependentUpon>salesclerk_index.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\Login\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Views\Login\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PSInfo3\PSInfo3.aspx.cs">
+      <DependentUpon>PSInfo3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\PSInfo3\PSInfo3.aspx.designer.cs">
+      <DependentUpon>PSInfo3.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\PSInfo\PSInfo.aspx.cs">
       <DependentUpon>PSInfo.aspx</DependentUpon>
@@ -522,6 +538,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\NewFolder1\" />
     <Folder Include="Views\NewFolder2\" />
   </ItemGroup>
   <PropertyGroup>
