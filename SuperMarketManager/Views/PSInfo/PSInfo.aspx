@@ -174,22 +174,22 @@
                                 <div class="row">
                                     <div class="col-lg-6"><h3>个人信息管理</h3>
                                         <div class="alert alert-success"><strong>工号：</strong> 
-                                            <asp:TextBox ID="id" runat="server"></asp:TextBox>
+                                            <asp:TextBox ID="id" runat="server" ReadOnly="True"></asp:TextBox>
                                         </div>
                                         <div class="alert alert-info"><strong>姓名：</strong> 
                                             <asp:TextBox ID="name" runat="server"></asp:TextBox>
                                         </div>
                                         <div class="alert alert-warning"><strong>性别：</strong>
                                             <asp:RadioButtonList ID="sex" runat="server" RepeatDirection="Horizontal" BackColor="White">
-                                                <asp:ListItem Text="男" Value="male" Selected="False"></asp:ListItem>
-                                                <asp:ListItem Text="女" Value="female" Selected="True"></asp:ListItem>
+                                                <asp:ListItem Text="男" Value="男" ></asp:ListItem>
+                                                <asp:ListItem Text="女" Value="女" ></asp:ListItem>
                                             </asp:RadioButtonList>
                                         </div>
                                         <div class="alert alert-danger"><strong>联系方式：</strong>
                                             <asp:TextBox ID="phone" runat="server"></asp:TextBox>
                                         </div>
 										<div class="alert alert-success"><strong>出生年月：</strong>
-                                            <asp:TextBox ID="birth" runat="server"></asp:TextBox>
+                                            <asp:TextBox ID="birth" runat="server" TextMode="Date"></asp:TextBox>
 										</div>
                                         <div class="alert alert-info"><strong>银行卡号：</strong> 
                                             <asp:TextBox ID="bankaccount" runat="server"></asp:TextBox>
@@ -201,7 +201,7 @@
                                             <asp:TextBox ID="position" runat="server"></asp:TextBox>
                                         </div>
                                         <div class="alert alert-danger"><strong>密码：</strong>
-                                            <asp:TextBox ID="password" runat="server"></asp:TextBox>
+                                            <asp:TextBox ID="password" runat="server" TextMode="Password"></asp:TextBox>
                                         </div>
 
                                         <div>
