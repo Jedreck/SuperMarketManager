@@ -7,63 +7,90 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace SuperMarketManager.Views.GoodsSell {
+namespace SuperMarketManager.Views {
     
     
-    public partial class GoodsSell {
+    public partial class DiscountManager {
         
         /// <summary>
-        /// search_id 控件。
+        /// dgoodsid 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText search_id;
+        protected global::System.Web.UI.WebControls.TextBox dgoodsid;
         
         /// <summary>
-        /// search_start 控件。
+        /// disstart 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText search_start;
+        protected global::System.Web.UI.WebControls.TextBox disstart;
         
         /// <summary>
-        /// zero 控件。
+        /// disend 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label zero;
+        protected global::System.Web.UI.WebControls.TextBox disend;
         
         /// <summary>
-        /// search_end 控件。
+        /// searchbutton 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText search_end;
+        protected global::System.Web.UI.WebControls.Button searchbutton;
         
         /// <summary>
-        /// search_date 控件。
+        /// sdgoodsid 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText search_date;
+        protected global::System.Web.UI.WebControls.TextBox sdgoodsid;
         
         /// <summary>
-        /// search 控件。
+        /// sdisstart 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button search;
+        protected global::System.Web.UI.WebControls.TextBox sdisstart;
+        
+        /// <summary>
+        /// sdisend 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox sdisend;
+        
+        /// <summary>
+        /// disprice 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox disprice;
+        
+        /// <summary>
+        /// addbutton 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button addbutton;
     }
 }

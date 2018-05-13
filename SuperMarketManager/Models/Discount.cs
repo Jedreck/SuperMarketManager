@@ -14,6 +14,16 @@ namespace SuperMarketManager.Models
         public DateTime Start { set; get; }
         public DateTime End { set; get; }
 
+        public Discount() { }
+
+        public Discount(string id,string gid,double ddiscount,DateTime start,DateTime end) {
+            id = ID;
+            gid = G_ID;
+            ddiscount = DDiscount;
+            start = Start;
+            end = End;
+        }
+
         public static List<Discount> getList(OdbcDataReader reader)
         {
             List<Discount> list = new List<Discount>();
