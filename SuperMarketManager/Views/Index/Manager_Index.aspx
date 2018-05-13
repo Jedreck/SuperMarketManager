@@ -67,7 +67,7 @@
                         <li class="dropdown topbar-user"><a data-hover="dropdown" href="#" class="dropdown-toggle">
                             <img src="../../Content/images/avatar/48.jpg" alt="" class="img-responsive img-circle" />&nbsp;<span class="hidden-xs">Manager</span>&nbsp;<span class="caret"></span></a>
                             <ul class="dropdown-menu dropdown-user pull-right">
-                                <li><a href="#"><i class="fa fa-user"></i>个人信息</a></li>
+                                <li><a href="../../Views/PSInfo1/PSInfo1.aspx"><i class="fa fa-user"></i>个人信息</a></li>
                                 <li><a href="#"><i class="fa fa-tasks"></i>我的任务<span class="badge badge-success">7</span></a></li>
                                 <li class="divider"></li>
                                 <li><a href="../../Views/Login/Login.aspx"><i class="fa fa-key"></i>退出</a></li>
@@ -127,7 +127,7 @@
                         </i><span class="menu-title">个人信息</span></a>
 
                         </li>
-                        <li><a href="../../Views/Login/.aspx"><i class="fa fa-sitemap fa-fw">
+                        <li><a href="../../Views/Login/Login.aspx"><i class="fa fa-sitemap fa-fw">
                             <div class="icon-bg bg-dark"></div>
                         </i><span class="menu-title">退出</span></a>
                     </ul>
@@ -162,9 +162,9 @@
                                             <i class="icon fa fa-shopping-cart"></i>
                                         </p>
                                         <h4 class="value">
-                                            <span data-counter="" data-start="10" data-end="50" data-step="1" data-duration="0"></span><span>$</span></h4>
+                                            <span>160</span><span>$</span></h4>
                                         <p class="description">
-                                            营业统计
+                                            <a href="../../Views/Businessstatistics/Businessstatistics.aspx">营业统计</a>
                                         </p>
                                         <div class="progress progress-sm mbn">
                                             <div role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
@@ -184,7 +184,7 @@
                                         <h4 class="value">
                                             <span>215</span><span>$</span></h4>
                                         <p class="description">
-                                            销售情况
+                                            <a href="../../Views/GoodsSell/GoodsSell.aspx">销售情况</a>
                                         </p>
                                         <div class="progress progress-sm mbn">
                                             <div role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
@@ -204,7 +204,7 @@
                                         <h4 class="value">
                                             <span>215</span></h4>
                                         <p class="description">
-                                            任务进度
+                                            <a href="#">任务进度</a>
                                         </p>
                                         <div class="progress progress-sm mbn">
                                             <div role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
@@ -224,7 +224,7 @@
                                         <h4 class="value">
                                             <span>128</span></h4>
                                         <p class="description">
-                                            员工管理
+                                            <a href="../../Views/EmployeeManager/EmployeeManager.aspx">员工管理</a>
                                         </p>
                                         <div class="progress progress-sm mbn">
                                             <div role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"
@@ -243,7 +243,7 @@
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <h4 class="mbm">各类商品销售情况</h4>
-                                                <span class="task-item">CPU Usage (25 - 32 cpus)<small class="pull-right text-muted">40</small><div
+                                                <span class="task-item">酒水饮料<small class="pull-right text-muted">40</small><div
                                                     class="progress progress-sm">
                                                     <div role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"
                                                         style="width: 40%;" class="progress-bar progress-bar-orange">
@@ -294,7 +294,7 @@
                                 <div class="portlet box">
                                     <div class="portlet-header">
                                         <div class="caption">
-                                            Todo List
+                                            任务清单
                                         </div>
                                     </div>
                                     <div style="overflow: hidden;" class="portlet-body">
@@ -407,7 +407,7 @@
                                             <div class="timeline-icon bg-orange"><i class="fa fa-paper-plane"></i></div>
                                             <div class="timeline-label bg-orange">
                                                 <h4 class="timeline-title">年初招聘</h4>
-                                                <p class="timeline-img pull-left">
+                                                <p>
                                                     招聘收银员收银员3名，售货员5名
                                                 </p>
                                             </div>

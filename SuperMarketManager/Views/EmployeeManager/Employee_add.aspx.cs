@@ -32,10 +32,19 @@ namespace SuperMarketManager.Views.EmployeeManager
             {
                 sex = "女";
             }
-            if(position.Value.ToString()== "Manager")
+            if(position.Value.ToString()== "管理员")
             {
                 pos = 1;
             }
+            else if (position.Value.ToString() == "仓库管理员")
+            {
+                pos = 2;
+            }
+            if (position.Value.ToString() == "销售员")
+            {
+                pos = 1;
+            }
+
             Employee employee = Employee_C.AddEmployee(name.Value.ToString(), sex, phone.Value.ToString(), birth.Value.ToString()
             , pos, bankaccount.Value.ToString(), email.Value.ToString());
             if (employee == null)

@@ -31,8 +31,7 @@ namespace SuperMarketManager.Views
                 }
             }          
             else if (disstart.Text.ToString() != "" && disend.Text.ToString() != "")
-            {
-                System.Diagnostics.Debug.WriteLine("执行到这里了");
+            {              
                 discountslist = Discount_C.SelectDiscountByDate(disstart.Text.ToString(),disend.Text.ToString());
             }
             else

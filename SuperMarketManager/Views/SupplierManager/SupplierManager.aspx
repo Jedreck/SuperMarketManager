@@ -65,7 +65,7 @@
 
                         </li>
                         <li class="dropdown topbar-user"><a data-hover="dropdown" href="#" class="dropdown-toggle">
-                            <img src="../../Content/images/avatar/48.jpg" alt="" class="img-responsive img-circle" />&nbsp;<span class="hidden-xs">Robert John</span>&nbsp;<span class="caret"></span></a>
+                            <img src="../../Content/images/avatar/48.jpg" alt="" class="img-responsive img-circle" />&nbsp;<span class="hidden-xs">Manager</span>&nbsp;<span class="caret"></span></a>
                             <ul class="dropdown-menu dropdown-user pull-right">
                                 <
                                 <li><a href="#"><i class="fa fa-user"></i>个人信息</a></li>
@@ -87,8 +87,9 @@
                 <div class="sidebar-collapse menu-scroll">
                     <ul id="side-menu" class="nav">
 
+                       
                         <div class="clearfix"></div>
-                        <li><a href="../../Views/Index/Manager_Index.aspx"><i class="fa fa-tachometer fa-fw">
+                        <li ><a href="../../Views/Index/Manager_Index.aspx"><i class="fa fa-tachometer fa-fw">
                             <div class="icon-bg bg-orange"></div>
                         </i><span class="menu-title">首页</span></a></li>
 
@@ -112,17 +113,17 @@
                         </i><span class="menu-title">商品信息与库存</span></a>
 
                         </li>
-                        <li><a href="DataGrid.html"><i class="fa fa-database fa-fw">
+                        <li><a href="../../Views/DiscountManage/DiscountManager.aspx"><i class="fa fa-database fa-fw">
                             <div class="icon-bg bg-red"></div>
                         </i><span class="menu-title">折扣管理</span></a>
 
                         </li>
-                        <li class="active"><a href="../../Views/Businessstatistics/Businessstatistics.aspx"><i class="fa fa-file-o fa-fw">
+                        <li><a href="../../Views/Businessstatistics/Businessstatistics.aspx"><i class="fa fa-file-o fa-fw">
                             <div class="icon-bg bg-yellow"></div>
                         </i><span class="menu-title">营业统计</span></a>
 
                         </li>
-                        <li><a href="../../Views/PSInfo/PSInfo.aspx"><i class="fa fa-gift fa-fw">
+                        <li><a href="../../Views/PSInfo1/PSInfo1.aspx"><i class="fa fa-gift fa-fw">
                             <div class="icon-bg bg-grey"></div>
                         </i><span class="menu-title">个人信息</span></a>
 
@@ -214,7 +215,7 @@
                                                                     
                                                                     <!--<data></data>-->
                                                                     <td class="td-block">
-                                                                        <p class="title" ><a href="/Views/SupplierManager/Supplier_detail.aspx?id=<%=supplierlist[i].S_Name %>"><%=supplierlist[i].S_Name%></a></p>
+                                                                        <p class="title"><a href="/Views/SupplierManager/Supplier_detail.aspx?id=<%=supplierlist[i].S_Name %>"><%=supplierlist[i].S_Name%></a></p>
                                                                        
                                                                         <p class="desc">供应商信息：供应商id:<%=supplierlist[i].S_ID %>&nbsp&nbsp&nbsp 供应商名称：<%=supplierlist[i].S_Name %><br />                                                                                   
                                                                                         商品信息：商品id：<%=supplierlist[i].G_ID %>&nbsp&nbsp&nbsp 商品名称：<%=supplierlist[i].G_Name %>
@@ -240,8 +241,7 @@
                                                                 </ul>
                                                             </div>
                                                             <div data-control-type="drop-down" data-control-name="sort" data-control-action="sort" data-control-animate-to-top="true" data-datetime-format="{month}/{day}/{year}" class="jplist-drop-down form-control">
-                                                                <ul class="dropdown-menu">
-                                                                    <li><span data-path="default">默认排序</span></li>
+                                                                <ul class="dropdown-menu">          
                                                                     <li><span data-path=".title" data-order="asc" data-type="text">供应商 A-Z</span></li>
                                                                     <li><span data-path=".title" data-order="desc" data-type="text">供应商 Z-A</span></li>                                                               
                                                                     <li><span data-path=".like" data-order="asc" data-type="number" data-default="true">报价升序</span></li>

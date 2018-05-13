@@ -87,12 +87,11 @@
                     <ul id="side-menu" class="nav">
 
 
-                        <div class="clearfix"></div>
-                        <li><a href="../../Views/Index/Manager_Index.aspx"><i class="fa fa-tachometer fa-fw">
+                         <div class="clearfix"></div>
+                        <li ><a href="../../Views/Index/Manager_Index.aspx"><i class="fa fa-tachometer fa-fw">
                             <div class="icon-bg bg-orange"></div>
                         </i><span class="menu-title">首页</span></a></li>
 
-                        <li>
                         <li class="active"><a href="../../Views/EmployeeManager/EmployeeManager.aspx"><i class="fa fa-desktop fa-fw">
                             <div class="icon-bg bg-pink"></div>
                         </i><span class="menu-title">员工管理</span></a>
@@ -108,12 +107,12 @@
                         </i><span class="menu-title">商品销售</span></a>
 
                         </li>
-                        <li><a href="Tables.html"><i class="fa fa-th-list fa-fw">
+                        <li><a href="../../Views/GoodsManager/GoodsManager.aspx"><i class="fa fa-th-list fa-fw">
                             <div class="icon-bg bg-blue"></div>
                         </i><span class="menu-title">商品信息与库存</span></a>
 
                         </li>
-                        <li><a href="DataGrid.html"><i class="fa fa-database fa-fw">
+                        <li><a href="../../Views/DiscountManage/DiscountManager.aspx"><i class="fa fa-database fa-fw">
                             <div class="icon-bg bg-red"></div>
                         </i><span class="menu-title">折扣管理</span></a>
 
@@ -123,7 +122,7 @@
                         </i><span class="menu-title">营业统计</span></a>
 
                         </li>
-                        <li><a href="Extras.html"><i class="fa fa-gift fa-fw">
+                        <li><a href="../../Views/PSInfo1/PSInfo1.aspx"><i class="fa fa-gift fa-fw">
                             <div class="icon-bg bg-grey"></div>
                         </i><span class="menu-title">个人信息</span></a>
 
@@ -192,8 +191,8 @@
                                                 <div class="col-sm-9 controls">
                                                     <div class="row">
                                                         <div class="col-xs-9">
-                                                            <asp:RadioButton ID="sex_male" runat="server" Text="男"  />
-                                                            <asp:RadioButton ID="sex_female" runat="server" Text="女"  />                                                      
+                                                            <asp:RadioButton ID="sex_male" groupname="sex"  runat="server" Text="男"  />
+                                                            <asp:RadioButton ID="sex_female" groupname="sex" runat="server" Text="女"  />                                                      
                                                         </div>
                                                     </div>
                                                 </div>
@@ -202,7 +201,7 @@
 
                                                 <div class="col-sm-9 controls">
                                                     <div class="row">
-                                                        <div class="col-xs-4"><input type="password"  runat="server" id="birth" placeholder="年月日分秒" class="form-control"/></div>
+                                                        <div class="col-xs-4"><input type="date"  runat="server" id="births" placeholder="年月日分秒" class="form-control"/></div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -241,11 +240,9 @@
                                                     <div class="row">
 
                                                         <div class="col-xs-4"><select class="form-control" runat="server" id="position">
-                                                            <option>CEO</option>
-                                                            <option>Director</option>
-                                                            <option>Manager</option>
-                                                            <option>Staff</option>
-                                                            <option>Office Boy</option>
+                                                            <option>管理员</option>
+                                                            <option>仓库管理员</option>
+                                                            <option>销售员</option>                                                            
                                                         </select></div>
                                                     </div>
                                                 </div>
