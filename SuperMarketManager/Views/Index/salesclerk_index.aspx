@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="inventory_manager_index.aspx.cs" Inherits="SuperMarketManager.Views.Index.inventory_manager_index" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="salesclerk_index.aspx.cs" Inherits="SuperMarketManager.Views.Index.salesclerk_index" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -86,28 +86,23 @@
                     <ul id="side-menu" class="nav">
 
                         <div class="clearfix"></div>
-                        <li class="active"><a href="../../Views/Index/inventory_manager_index.aspx"><i class="fa fa-tachometer fa-fw">
+                        <li class="active"><a href="../../Views/Index/salesclerk_index.aspx"><i class="fa fa-tachometer fa-fw">
                             <div class="icon-bg bg-orange"></div>
                         </i><span class="menu-title">首页</span></a></li>
 
-                        <li><a href="../../Views/PSInfo/PSInfo.aspx"><i class="fa fa-desktop fa-fw">
+                        <li><a href="../../Views/PSInfo3/PSInfo3.aspx"><i class="fa fa-desktop fa-fw">
                             <div class="icon-bg bg-pink"></div>
                         </i><span class="menu-title">个人信息</span></a>
 
                         </li>
-                        <li><a href="../../Views/GoodsManage2/GoodsManager.aspx"><i class="fa fa-send-o fa-fw">
+                        <li><a href="../../Views/GoodsManager3/GoodsManager3.aspx"><i class="fa fa-send-o fa-fw">
                             <div class="icon-bg bg-green"></div>
                         </i><span class="menu-title">商品信息</span></a>
 
                         </li>
-                        <li><a href="../../Views/StoreManage/store.aspx"><i class="fa fa-edit fa-fw">
-                            <div class="icon-bg bg-violet"></div>
-                        </i><span class="menu-title">库存管理</span></a>
-
-                        </li>
-                        <li ><a href="../../Views/GoodsInManage2/GoodsInManage2.aspx"><i class="fa fa-th-list fa-fw">
+                        <li ><a href="../../Views/Orders/Orders.aspx"><i class="fa fa-th-list fa-fw">
                             <div class="icon-bg bg-blue"></div>
-                        </i><span class="menu-title">入库管理</span></a>
+                        </i><span class="menu-title">出库管理</span></a>
 
                         </li>
                         <li><a href="../../Views/Login/Login.aspx"><i class="fa fa-sitemap fa-fw">

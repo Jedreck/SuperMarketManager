@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Orders.aspx.cs" Inherits="SuperMarketManager.Views.Orders.Orders" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="GoodsManager3.aspx.cs" Inherits="SuperMarketManager.Views.GoodsManager3.GoodsManager3" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -93,34 +93,29 @@
         <!--END TOPBAR-->
         <div id="wrapper">
             <!--BEGIN SIDEBAR MENU-->
-            <nav id="sidebar" role="navigation" data-step="2" data-intro="Template has &lt;b&gt;many navigation styles&lt;/b&gt;"
+             <nav id="sidebar" role="navigation" data-step="2" data-intro="Template has &lt;b&gt;many navigation styles&lt;/b&gt;"
                 data-position="right" class="navbar-default navbar-static-side">
                 <div class="sidebar-collapse menu-scroll">
                     <ul id="side-menu" class="nav">
 
                         <div class="clearfix"></div>
-                        <li><a href="../../Views/Index/inventory_manager_index.aspx"><i class="fa fa-tachometer fa-fw">
+                        <li><a href="../../Views/Index/salesclerk_index.aspx"><i class="fa fa-tachometer fa-fw">
                             <div class="icon-bg bg-orange"></div>
                         </i><span class="menu-title">首页</span></a></li>
 
-                        <li><a href="../../Views/PSInfo/PSInfo.aspx"><i class="fa fa-desktop fa-fw">
+                        <li><a href="../../Views/PSInfo3/PSInfo3.aspx"><i class="fa fa-desktop fa-fw">
                             <div class="icon-bg bg-pink"></div>
                         </i><span class="menu-title">个人信息</span></a>
 
                         </li>
-                        <li><a href="../../Views/GoodsManage2/GoodsManager.aspx"><i class="fa fa-send-o fa-fw">
+                        <li  class="active"><a href="../../Views/GoodsManager3/GoodsManager3.aspx"><i class="fa fa-send-o fa-fw">
                             <div class="icon-bg bg-green"></div>
                         </i><span class="menu-title">商品信息</span></a>
 
                         </li>
-                        <li><a href="../../Views/StoreManage/store.aspx"><i class="fa fa-edit fa-fw">
-                            <div class="icon-bg bg-violet"></div>
-                        </i><span class="menu-title">库存管理</span></a>
-
-                        </li>
-                        <li class="active"><a href="../../Views/GoodsInManage2/GoodsInManage2.aspx"><i class="fa fa-th-list fa-fw">
+                        <li ><a href="../../Views/Orders/Orders.aspx"><i class="fa fa-th-list fa-fw">
                             <div class="icon-bg bg-blue"></div>
-                        </i><span class="menu-title">入库管理</span></a>
+                        </i><span class="menu-title">出库管理</span></a>
 
                         </li>
                         <li><a href="../../Views/Login/Login.aspx"><i class="fa fa-sitemap fa-fw">
@@ -130,19 +125,18 @@
                 </div>
             </nav>
 
-
             <div id="page-wrapper">
                 <!--BEGIN TITLE & BREADCRUMB PAGE-->
                 <div id="title-breadcrumb-option-demo" class="page-title-breadcrumb">
                     <div class="page-header pull-left">
                         <div class="page-title">
-                           出库管理
+                            商品信息
                         </div>
                     </div>
                     <ol class="breadcrumb page-breadcrumb pull-right">
                         <li><i class="fa fa-home"></i>&nbsp;<a href="dashboard.html">Home</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
-                        <li class="hidden"><a href="#">出库管理</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
-                        <li class="active">出库管理</li>
+                        <li class="hidden"><a href="#">商品信息</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
+                        <li class="active">商品信息</li>
                     </ol>
                     <div class="clearfix">
                     </div>
@@ -164,28 +158,39 @@
                                     <div class="col-sm-9 col-md-10">
                                         <form runat="server">
                                             <input type="text" id="goodsId" class="text" runat="server" placeholder="请输入商品Id">
-                                            <input id="goodsnum" type="text" class="text" runat="server" placeholder="请输入商品数量"/>
-                                            <asp:Button ID="add" runat="server" Text="添加" OnClick="add_Click"/>
+                                        <asp:Button ID="Button1" runat="server" Text="查找商品" OnClick="Button1_Click" />
+                                            <input type="text" id="price" class="text" runat="server" placeholder="请输入修改后单价">
+                                            <asp:Button ID="Button2" runat="server" Text="修改单价" OnClick="Button2_Click" />
+                                            <asp:Button ID="Button3" runat="server" Text="添加商品" OnClick="Button3_Click" />
+                                            <asp:Button ID="Button4" runat="server" Text="删除商品" OnClick="Button4_Click" />
                                         <div class="tab-content">
                                             <div id="home" class="tab-pane fade in active">
                                                 <div class="list-group mail-box">
                                                       <a href="#" class="list-group-item">
                                                         <span style="width: 100px; display: inline-block;" class="name">商品ID</span>
-                                                        <span style="width: 100px; display: inline-block;" class="name">商品数目</span>
-                                                         </a>
+                                                        <span style="width: 100px; display: inline-block;" class="name">商品名称</span>
+                                                        <span style="width: 100px; display: inline-block;" class="name">商品类别</span>
+                                                        <span style="width: 100px; display: inline-block;" class="name">商品单位</span>
+                                                        <span style="width: 100px; display: inline-block;" class="name">保质期</span>
+                                                        <span style="width: 100px; display: inline-block;" class="name">单价</span>
+                                                         <span style="width: 100px; display: inline-block;" class="name">库存</span>
+                                                            </a>
                                                         
-                                                        <%for ( int i = 0; i < list.Count ; i++)
+                                                        <%for ( i = 0; i < goods.Count ; i++)
                                                             { %>
                                                         <a href="#" class="list-group-item">
-                                                        <span style="width: 100px; display: inline-block;" class="name" ><%=list[i].G_ID %></span>
-                                                        <span style="width: 100px; display: inline-block;" class="name"><%=list[i].Num %></span>
-                                                        </a>
+                                                        <span style="width: 100px; display: inline-block;" class="name" ><%=goods[i].ID %></span>
+                                                        <span style="width: 100px; display: inline-block;" class="name"><%=goods[i].Name %></span>
+                                                        <span style="width: 100px; display: inline-block;" class="name"><%=goods[i].GC_Name %></span>
+                                                            <span style="width: 100px; display: inline-block;" class="name"><%=goods[i].Unit %></span>
+                                                            <span style="width: 100px; display: inline-block;" class="name"><%=goods[i].ExpirationDate %></span>
+                                                            <span style="width: 100px; display: inline-block;" class="name"><%=goods[i].Price %></span>
+                                                             <span style="width: 100px; display: inline-block;" class="name"><%=goods[i].Store %></span>
+                                                            </a>
                                                         <%} %>  
                                                 </div>
                                             </div>
                                         </div>
-                                            <input id="eid" type="text" runat="server" class="text" placeholder="请输入工号" />
-                                            <asp:Button ID="Button1" runat="server" Text="出库" OnClick="Button1_Click" />
                                         </form>
                                     </div>
                                     <div class="common-modal modal fade" id="common-Modal1" tabindex="-1" role="dialog" aria-hidden="true">

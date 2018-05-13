@@ -2,20 +2,24 @@
 using SuperMarketManager.Models;
 using System;
 using System.Data.Odbc;
-namespace SuperMarketManager.Views.PSInfo
 
+namespace SuperMarketManager.Views.PSInfo1
 {
-    public partial class PSInfo : System.Web.UI.Page
+    public partial class PSInfo1 : System.Web.UI.Page
     {
         Employee em;
         protected void Page_Load(object sender, EventArgs e)
         {
             massage();
         }
+        protected void Back_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("/Views/PSInfo/PSInfo.aspx");
+        }
         protected void massage()
         {
             em = (Employee)Session["employee"];
-            if(em==null)
+            if (em == null)
             {
                 Response.Write("<script language=javascript>window.alert('请登录！！');window.location.href('/Views/Login/Login.aspx');</script>");
                 return;
@@ -34,12 +38,6 @@ namespace SuperMarketManager.Views.PSInfo
             password.Text = em.PassWord;
 
         }
-
-        protected void Back_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("/Views/PSInfo/PSInfo.aspx");
-        }
-
         protected void Button1_Click(object sender, EventArgs e)
         {
             em.Name = Request.Form["name"];
@@ -63,8 +61,6 @@ namespace SuperMarketManager.Views.PSInfo
             {
                 Response.Write("<script language=javascript>window.alert('修改失败，请重新检查输入信息是否正确！');</script>");
             }
-
         }
     }
-
 }
