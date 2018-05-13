@@ -16,7 +16,8 @@ namespace SuperMarketManager.Models
 
         public Discount() { }
 
-        public Discount(string gid,string ddiscount,string start,string end) {
+        public Discount(string id,string gid,string ddiscount,string start,string end) {
+            ID = id;
             G_ID = gid;
             DDiscount = Double.Parse(ddiscount);
             Start = DateTime.Parse(start);

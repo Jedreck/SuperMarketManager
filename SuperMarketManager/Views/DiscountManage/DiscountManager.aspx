@@ -173,10 +173,11 @@
                                                     <ul style="background: #fff" class="nav nav-pills nav-stacked">
                                                         <li class="active"><a href="#">折扣查询</a></li>
                                                         <li><label style="height:1px;"/></li>
-                                                        <li><i class="fa fa-fw mrs"></i>商品编号：<asp:TextBox ID="dgoodsid" runat="server" Width="40px" Height="20px"></asp:TextBox></li>                                      
-                                                        <li><i class="fa fa-fw mrs"></i>起始时间：<asp:TextBox ID="disstart" runat="server"  Width="40px" Height="20px"></asp:TextBox></li>
-                                                        <li><i class="fa fa-fw mrs"></i>结束时间：<asp:TextBox ID="disend" runat="server"  Width="40px" Height="20px"></asp:TextBox></li>
-                                                         <li><label style="height:1px;"/></li>
+                                                        <li><i class="fa fa-fw mrs"></i>商品编号：</li><li>&nbsp&nbsp<asp:TextBox ID="dgoodsid" runat="server" Width="120px" Height="20px"></asp:TextBox></li>
+                                                        <li><i class="fa fa-fw mrs"></i>打折日期：</li><li>&nbsp&nbsp<asp:TextBox ID="disdate" runat="server" Width="120px" Height="20px" TextMode="Date"></asp:TextBox></li>
+                                                        <li><i class="fa fa-fw mrs"></i>起始时间：</li><li>&nbsp&nbsp<asp:TextBox ID="disstart" runat="server"  Width="120px" Height="20px" TextMode="Date"></asp:TextBox></li>
+                                                        <li><i class="fa fa-fw mrs"></i>结束时间：</li><li>&nbsp&nbsp<asp:TextBox ID="disend" runat="server"  Width="120px" Height="20px" TextMode="Date"></asp:TextBox></li>
+                                                        <li><label style="height:1px;"/></li>
                                                         <li><i class="fa fa-fw mrs"></i>&nbsp&nbsp<asp:Button ID="searchbutton" runat="server" OnClick="searchbutton_Click" ForeColor="White"  BackColor="#dc6767" BorderStyle="None" Width="60px" Height="20px" Text="查询"></asp:Button>&nbsp&nbsp</li>
                                                         <li><label style="height:1px;"/></li>
                                                     </ul>
@@ -188,10 +189,11 @@
                                                     <ul style="background: #fff" class="nav nav-pills nav-stacked">
                                                         <li class="active"><a href="#">增加折扣</a></li>
                                                         <li><label style="height:1px;"/></li>
-                                                        <li><i class="fa fa-fw mrs"></i>商品编号：<asp:TextBox ID="sdgoodsid" runat="server"  Width="40px" Height="20px"></asp:TextBox></li>
-                                                        <li><i class="fa fa-fw mrs"></i>起始时间：<asp:TextBox ID="sdisstart" runat="server" Width="40px" Height="20px"></asp:TextBox></li>
-                                                        <li><i class="fa fa-fw mrs"></i>结束时间：<asp:TextBox ID="sdisend" runat="server" Width="40px" Height="20px"></asp:TextBox></li>
-                                                        <li><i class="fa fa-fw mrs"></i>折扣力度：<asp:TextBox ID="disprice" runat="server"  Width="40px" Height="20px"></asp:TextBox></li>
+                                                        <li><i class="fa fa-fw mrs"></i>商品编号：</li><li>&nbsp&nbsp<asp:TextBox ID="sdgoodsid" runat="server" Width="120px" Height="20px"></asp:TextBox></li>
+                                                        <li><i class="fa fa-fw mrs"></i>起始时间：</li><li>&nbsp&nbsp<asp:TextBox ID="sdisstart" runat="server" Width="120px" Height="20px" TextMode="Date"></asp:TextBox></li>
+                                                        <li><i class="fa fa-fw mrs"></i>结束时间：</li><li>&nbsp&nbsp<asp:TextBox ID="sdisend" runat="server"  Width="120px" Height="20px" TextMode="Date"></asp:TextBox></li>
+                                                        <li><i class="fa fa-fw mrs"></i>折扣力度：</li><li>&nbsp&nbsp<asp:TextBox ID="disprice" runat="server"  Width="120px" Height="20px" TextMode="Date"></asp:TextBox></li>
+
                                                         <li><label style="height:1px;"/></li>
                                                         <li><i class="fa fa-fw mrs"></i>&nbsp&nbsp<asp:Button ID="addbutton" runat="server" ForeColor="White" BackColor="#dc6767" BorderStyle="None" Width="60px" Height="20px" Text="增加" OnClick="addbutton_Click"></asp:Button>&nbsp&nbsp</li>
                                                         <li><label style="height:1px;"/></li>

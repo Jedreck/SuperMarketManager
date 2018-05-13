@@ -20,21 +20,34 @@ namespace SuperMarketManager.Views
         protected void searchbutton_Click(object sender, EventArgs e)
         {
             if (dgoodsid.Text.ToString() !="")
-            {            
-                    discountslist = Discount_C.SelectByG_ID(dgoodsid.Text.ToString());            
-            }
+            {    
+                if(disdate.Text.ToString() == "")
+                {
+                    discountslist = Discount_C.SelectByG_ID(dgoodsid.Text.ToString());
+                }
+                else
+                {
+                    discountslist = Discount_C.SelectByIDAndDate(dgoodsid.Text.ToString(),disdate.Text.ToString());
+                }
+            }          
             else if (disstart.Text.ToString() != "" && disend.Text.ToString() != "")
             {
+                System.Diagnostics.Debug.WriteLine("执行到这里了");
                 discountslist = Discount_C.SelectDiscountByDate(disstart.Text.ToString(),disend.Text.ToString());
+            }
+            else
+            {
+                Response.Write("<script language=javascript>window.alert('请至少输入id或date和id或起止日期！');</script>");
             }
         }
 
         protected void addbutton_Click(object sender, EventArgs e)
         {
-            bool result = Discount_C.AddDiscount(new Discount(sdgoodsid.Text.ToString(),disprice.Text.ToString(),sdisstart.Text.ToString(),sdisend.Text.ToString()));
+            bool result = Discount_C.AddDiscount(new Discount("",sdgoodsid.Text.ToString(),disprice.Text.ToString(),sdisstart.Text.ToString(),sdisend.Text.ToString()));
             if (result)
             {
                 Response.Write("<script language=javascript>window.alert('插入成功！');</script>");
+                Response.Redirect("../../Views/DiscountManage/DiscountManager.aspx");
             }
            else
            {

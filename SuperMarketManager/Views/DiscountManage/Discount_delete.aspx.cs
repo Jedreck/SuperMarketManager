@@ -16,8 +16,8 @@ namespace SuperMarketManager.Views.DiscountManage
         {
             
             string discountid = Request.QueryString["id"];
-            if (discountid !=null) { 
-                discountslist = Discount_C.SelectByD_ID(discountid);
+            discountslist = Discount_C.SelectByD_ID(discountid);
+            if (discountslist != null) { 
                 disid.Value = discountslist[0].ID;
                 dgoodsid.Value = discountslist[0].G_ID;
                 discount.Value = discountslist[0].DDiscount.ToString();
@@ -31,11 +31,25 @@ namespace SuperMarketManager.Views.DiscountManage
             if (result)
             {
                 Response.Write("<script language=javascript>window.alert('删除成功！');</script>");
-                //Response.Redirect("../../Views/DiscountManage/DiscountManager.aspx");
+                Response.Redirect("../../Views/DiscountManage/DiscountManager.aspx");
             }
             else
             {
                 Response.Write("<script language=javascript>window.alert('删除失败！');</script>");
+            }
+        }
+        protected void Update_Click(object sender, EventArgs e)
+        {
+            
+            bool result = Discount_C.AlterByD_ID(new Discount(Request.Form["disid"], Request.Form["dgoodsid"], Request.Form["discount"], Request.Form["disstart"], Request.Form["disend"]));
+            if (result)
+            {
+                Response.Write("<script language=javascript>window.alert('修改成功！');</script>");
+                Response.Redirect("../../Views/DiscountManage/DiscountManager.aspx");
+            }
+            else
+            {
+                Response.Write("<script language=javascript>window.alert('修改失败！');</script>");
             }
         }
         protected void Back_Click(object sender, EventArgs e)

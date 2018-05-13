@@ -215,6 +215,8 @@
                                            <asp:Label runat="server" ID="zero1" Width="150px" />
                                            <asp:Button ID="delete" runat="server" Text="删除" class="btn-green" BorderStyle="Dashed"  Height="30px" Width="150px" OnClick="Delete_Click" />
                                            <asp:Label runat="server" ID="Label1" Width="50px" />
+                                           <asp:Button ID="update" runat="server" Text="修改"  class="btn-green" BorderStyle="Dashed"  Height="30px" Width="150px" OnClick="Update_Click" />
+                                           <asp:Label runat="server" ID="Label2" Width="50px" />
                                            <asp:Button ID="back" runat="server" Text="返回" class="btn-green" BorderStyle="Dashed" Height="30px" Width="150px" OnClick="Back_Click" />
                                            <asp:Label runat="server" ID="zero3" Width="200px" />
                                        </form>
