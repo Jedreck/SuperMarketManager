@@ -289,6 +289,7 @@
     <Content Include="Views\Index\inventory_manager_index.aspx" />
     <Content Include="Views\Index\Manager_Index.aspx" />
     <Content Include="Views\Login\Login.aspx" />
+    <Content Include="Views\PSInfo\PSInfo.aspx" />
     <Content Include="Views\Orders\Orders.aspx" />
     <Content Include="Views\Statistic\StatisticDay.aspx" />
     <Content Include="Views\Statistic\StatisticGoods.aspx" />
@@ -440,6 +441,13 @@
     </Compile>
     <Compile Include="Views\Login\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PSInfo\PSInfo.aspx.cs">
+      <DependentUpon>PSInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\PSInfo\PSInfo.aspx.designer.cs">
+      <DependentUpon>PSInfo.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Orders\Orders.aspx.cs">
       <DependentUpon>Orders.aspx</DependentUpon>

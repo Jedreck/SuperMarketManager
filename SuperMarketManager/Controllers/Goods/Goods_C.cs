@@ -13,13 +13,13 @@ namespace SuperMarketManager.Controllers
         public static bool AddGoods(string id, string name, int category, string unit, int expirationdate,
             double price)
         {
-            return AddGoods(new Goods(id, name, category, unit, expirationdate, price,0));
+            return AddGoods(new Goods(id, name, category, unit, expirationdate, price, 0));
         }
         public static bool AddGoods(Goods goods)
         {
             String sql = String.Format("insert into `marketmanage`.`goods`  (`G_ID`, `G_Name`,`G_Class`,`G_Unit`,`G_ExpirationDate`,`G_Price`,`G_Store`) " +
                 "values ('{0}', '{1}', '{2}', '{3}', {4}, {5}, {6})"
-                , goods.ID,goods.Name,goods.Category,goods.Unit,goods.ExpirationDate,goods.Price,goods.Store);
+                ,goods.ID,goods.Name, goods.Category, goods.Unit, goods.ExpirationDate, goods.Price, goods.Store);
             return ExecuteSQL.ExecuteNonQuerySQL_GetBool(sql);
         }
 
@@ -31,11 +31,11 @@ namespace SuperMarketManager.Controllers
         }
 
         //改
-        public static bool AlterByID(string id,string price)
+        public static bool AlterByID(string id, string price)
         {
             double Price = Convert.ToDouble(price);
-            string sql = "update goods set G_Price="+Price+" where G_ID='"+id+"'";
-            return ExecuteSQL.ExecuteNonQuerySQL_GetBool(sql) ;
+            string sql = "update goods set G_Price=" + Price + " where G_ID='" + id + "'";
+            return ExecuteSQL.ExecuteNonQuerySQL_GetBool(sql);
         }
 
         //查
@@ -67,13 +67,13 @@ namespace SuperMarketManager.Controllers
         //商品是否存在
         public static int isExit(string id)
         {
-            string sql = "select * from goods where G_ID='"+id+"'";
+            string sql = "select * from goods where G_ID='" + id + "'";
             return ExecuteSQL.ExecuteNonQuerySQL_GetResult(sql);
         }
         //根据商品ID查找商品信息
         public static List<Goods> SeekByid(string id)
         {
-            string sql = "select * from goods where G_ID='"+id+"'";
+            string sql = "select * from goods where G_ID='" + id + "'";
             OdbcConnection odbcConnection = DBManager.GetOdbcConnection();
             odbcConnection.Open();
             OdbcCommand odbcCommand = new OdbcCommand(sql, odbcConnection);

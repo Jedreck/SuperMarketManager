@@ -19,6 +19,7 @@ namespace SuperMarketManager.Views.Login
         protected void login_button_Click(object sender, EventArgs e)
         {
             string id = userid.Value.ToString();
+            Session["E_ID"] = id;
             string pwd = password.Value.ToString();
             Session.Add("id", id);
             Session.Add("pwd", pwd);
