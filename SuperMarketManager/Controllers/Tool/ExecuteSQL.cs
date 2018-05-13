@@ -10,9 +10,12 @@ namespace SuperMarketManager.Controllers
     {
         public static bool ExecuteNonQuerySQL_GetBool(string sql)
         {
+            System.Diagnostics.Debug.WriteLine("sql:"+sql);
             OdbcConnection connection = DBManager.GetOdbcConnection();
             connection.Open();
             OdbcCommand command = new OdbcCommand(sql, connection);
+
+
             int i = command.ExecuteNonQuery();
             connection.Close();
             return (i > 0) ? true : false;

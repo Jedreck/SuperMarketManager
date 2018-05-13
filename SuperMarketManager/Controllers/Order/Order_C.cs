@@ -16,15 +16,16 @@ namespace SuperMarketManager.Controllers
             //系统自动生成订单号
             order.ID = IDFormat.getID_Date16();
             double o_price=0;
-            //DateTime dt = DateTime.Now;
-            //string date = dt.ToShortDateString().ToString();//获取当前日期
-            //string time = dt.ToLongTimeString().ToString();//获取当前时间
-            order.Time = DateTime.Now;
+            order.Time = DateTime.Now.Date;
+            //先行插入order
+            string sqlorder = String.Format("insert into `marketmanage`.`order` (`O_ID`, `O_Price`, `O_time`, `E_ID`) " +
+                "values ('{0}','{1}','{2}','{3}')", order.ID, o_price, order.Time, order.E_ID);
+            ExecuteSQL.ExecuteNonQuerySQL_GetBool(sqlorder);
             //插入订单列表
-            foreach(Orderlist orderlist in ol)
+            foreach (Orderlist orderlist in ol)
             {
                 //根据ID查询商品价格
-                string sql1 = "select G_Price from Goods where G_ID='"+orderlist+"'";
+                string sql1 = "select G_Price from Goods where G_ID='"+orderlist.G_ID+"'";
                 OdbcConnection odbcConnection = DBManager.GetOdbcConnection();
                 odbcConnection.Open();
                 OdbcCommand odbcCommand = new OdbcCommand(sql1, odbcConnection);
@@ -41,28 +42,27 @@ namespace SuperMarketManager.Controllers
                 string sql_goods = "update goods set G_Store=G_Store-" +orderlist.Num+" where G_ID='"+orderlist.G_ID+"'";
                 ExecuteSQL.ExecuteNonQuerySQL_GetBool(sql_goods);
                 //更新库存表
-                string sql_store = "select * from storelist where G_ID='"+orderlist.G_ID+"' order by SL_ProduceDate desc";//升序输出结果集
+                string sql_store = "select * from storelist where G_ID='" + orderlist.G_ID + "'";// order by SL_ProduceDate desc";//升序输出结果集
                 odbcConnection = DBManager.GetOdbcConnection();
                 odbcConnection.Open();
                 odbcCommand = new OdbcCommand(sql_store, odbcConnection);
                 odbcDataReader = odbcCommand.ExecuteReader();
+                odbcDataReader.Read();
                 string gi_id = odbcDataReader.GetString(1);
                 string sql_storee = "update storelist set SL_Num=SL_Num-"+orderlist.Num+" where G_ID='"+orderlist.G_ID+"' and GI_ID='"+gi_id+"'";
                 odbcCommand = new OdbcCommand(sql_storee, odbcConnection);
                 odbcConnection.Close();
                 //更新商品统计表
-                string sql_statistic = String.Format("insert statistic values('{0}','{1}','{2}','{3}')", orderlist.G_ID, order.Time, orderlist.Price, orderlist.Num);
-                ExecuteSQL.ExecuteNonQuerySQL_GetBool(sql_statistic);
+                StatisticGoods_C.AddData(orderlist.G_ID, orderlist.Num, orderlist.Price);
                 //订单金额
                 o_price += orderlist.Price;
             }
             //更新销售统计表
-            string sql_day = "update statisticday set SD_Price=SD_Price+" + order.Price + " where Datediff(d, SD_Date, " + order.Time + ") = 0";
-            ExecuteSQL.ExecuteNonQuerySQL_GetBool(sql_day);
-            //插入订单（whole）
-            string sqlorder = String.Format("insert into `marketmanage`.`order` (`O_ID`, `O_Price`, `O_time`, `E_ID`) "+
-                "values ('{0}','{1}','{2}','{3}')", order.ID, o_price, order.Time, order.E_ID);
-            return ExecuteSQL.ExecuteNonQuerySQL_GetBool(sqlorder);
+  
+            StatisticDay_C.AddData(o_price);
+            //更新订单价格（whole）
+            string sqlorder_p = "update `marketmanage`.`order` set `O_Price`="+o_price+" where O_ID='"+order.ID+"'";
+            return ExecuteSQL.ExecuteNonQuerySQL_GetBool(sqlorder_p);
         }
 
 
