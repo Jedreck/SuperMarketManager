@@ -289,6 +289,7 @@
     <Content Include="Views\Index\inventory_manager_index.aspx" />
     <Content Include="Views\Index\Manager_Index.aspx" />
     <Content Include="Views\Login\Login.aspx" />
+    <Content Include="Views\Orders\Orders.aspx" />
     <Content Include="Views\Statistic\StatisticDay.aspx" />
     <Content Include="Views\Statistic\StatisticGoods.aspx" />
     <Content Include="Views\StoreManage\store.aspx" />
@@ -314,7 +315,7 @@
     <Compile Include="Controllers\Statistic\StatisticGoods_C.cs" />
     <Compile Include="Controllers\StoreList\StoreList_C.cs" />
     <Compile Include="Controllers\SupplierList\SupplierList_C.cs" />
-    <Compile Include="Controllers\Supplier\Supplier_C.cs" />
+    <Compile Include="Controllers\SupplierList\Supplier\Supplier_C.cs" />
     <Compile Include="Controllers\Tool\ExecuteSQL.cs" />
     <Compile Include="Controllers\Tool\IDFormat.cs" />
     <Compile Include="Global.asax.cs">
@@ -439,6 +440,13 @@
     </Compile>
     <Compile Include="Views\Login\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Orders\Orders.aspx.cs">
+      <DependentUpon>Orders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Orders\Orders.aspx.designer.cs">
+      <DependentUpon>Orders.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Statistic\StatisticDay.aspx.cs">
       <DependentUpon>StatisticDay.aspx</DependentUpon>
