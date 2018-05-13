@@ -22,7 +22,6 @@ namespace SuperMarketManager.Views.PSInfo
             }
             id.Text = em.ID;
             name.Text = em.Name;
-            System.Diagnostics.Debug.WriteLine(em.Sex);
             if (em.Sex == "男")
                 this.sex.SelectedIndex = 0;
             else
@@ -44,7 +43,8 @@ namespace SuperMarketManager.Views.PSInfo
         protected void Button1_Click(object sender, EventArgs e)
         {
             em.Name = Request.Form["name"];
-            em.Sex = sex.SelectedItem.ToString();
+            System.Diagnostics.Debug.WriteLine(Request.Form["sex"]);
+            em.Sex = Request.Form["sex"];
             em.Phone = Request.Form["phone"];
             em.Birth = Convert.ToDateTime(Request.Form["birth"]);
             em.BankAccount = Request.Form["bankaccount"];
