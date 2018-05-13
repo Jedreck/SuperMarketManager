@@ -275,6 +275,7 @@
     <Content Include="Script\ui-nestable-list.js" />
     <Content Include="Script\zabuto_calendar.min.js" />
     <Content Include="Views\AddGoods2\AddGoods2.aspx" />
+    <Content Include="Views\AddGoods3\AddGoods3.aspx" />
     <Content Include="Views\AddGoods\AddGoods.aspx" />
     <Content Include="Views\Businessstatistics\Businessstatistics.aspx" />
     <Content Include="Views\DiscountManage\DiscountManager.aspx" />
@@ -346,6 +347,13 @@
     </Compile>
     <Compile Include="Views\AddGoods2\AddGoods2.aspx.designer.cs">
       <DependentUpon>AddGoods2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddGoods3\AddGoods3.aspx.cs">
+      <DependentUpon>AddGoods3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\AddGoods3\AddGoods3.aspx.designer.cs">
+      <DependentUpon>AddGoods3.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\AddGoods\AddGoods.aspx.cs">
       <DependentUpon>AddGoods.aspx</DependentUpon>
