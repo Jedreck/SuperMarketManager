@@ -275,6 +275,7 @@
     <Content Include="Scripts\ui-nestable-list.js" />
     <Content Include="Scripts\zabuto_calendar.min.js" />
     <Content Include="Views\Businessstatistics\Businessstatistics.aspx" />
+    <Content Include="Views\DiscountManage\DiscountManager.aspx" />
     <Content Include="Views\EmployeeManager\EmployeeManager.aspx" />
     <Content Include="Views\EmployeeManager\Employee_add.aspx" />
     <Content Include="Views\GoodsManager\GoodsManager.aspx" />
@@ -334,6 +335,13 @@
     </Compile>
     <Compile Include="Views\Businessstatistics\Businessstatistics.aspx.designer.cs">
       <DependentUpon>Businessstatistics.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DiscountManage\DiscountManager.aspx.cs">
+      <DependentUpon>DiscountManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\DiscountManage\DiscountManager.aspx.designer.cs">
+      <DependentUpon>DiscountManager.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\EmployeeManager\EmployeeManager.aspx.cs">
       <DependentUpon>EmployeeManager.aspx</DependentUpon>
@@ -450,6 +458,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\NewFolder2\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
