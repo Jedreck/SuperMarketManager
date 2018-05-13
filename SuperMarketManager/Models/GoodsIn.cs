@@ -16,6 +16,20 @@ namespace SuperMarketManager.Models
         public DateTime Date { set; get; }
         public string OriginPlace { set; get; }
 
+        public GoodsIn(string GI_ID, string G_ID, int S_ID, double PriceIn, double Num, DateTime Date, string OriginPlace)
+            {
+            this.GI_ID = GI_ID;
+            this.G_ID = G_ID;
+            this.S_ID = S_ID;
+            this.PriceIn = PriceIn;
+            this.Num = Num;
+            this.Date = Date;
+            this.OriginPlace = OriginPlace;
+            }
+        public GoodsIn()
+        {
+
+        }
         public static List<GoodsIn> getList(OdbcDataReader reader)
         {
             List<GoodsIn> list = new List<GoodsIn>();

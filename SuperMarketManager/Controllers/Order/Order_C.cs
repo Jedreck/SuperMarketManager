@@ -1,6 +1,7 @@
 ﻿using SuperMarketManager.Models;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.Odbc;
 using System.Linq;
 using System.Web;
@@ -22,6 +23,16 @@ namespace SuperMarketManager.Controllers
             //插入订单列表
             foreach(Orderlist orderlist in ol)
             {
+                //根据ID查询商品价格
+                string sql1 = "select G_Price from Goods where G_ID='"+orderlist+"'";
+                OdbcConnection odbcConnection = DBManager.GetOdbcConnection();
+                odbcConnection.Open();
+                OdbcCommand odbcCommand = new OdbcCommand(sql1, odbcConnection);
+                OdbcDataReader odbcDataReader = odbcCommand.ExecuteReader(CommandBehavior.CloseConnection);
+                odbcDataReader.Read();
+                orderlist.Price = odbcDataReader.GetDouble(0);
+                odbcConnection.Close();
+                //orderlist
                 string sql = "INSERT INTO `marketmanage`.`orderlist` (`O_ID`, `G_ID`, `OL_Price`, `OL_Num`, `OL_Discount`) " +
                 "VALUES" +
                 " ('" + order.ID + "', '" + orderlist.G_ID+ "','"+ orderlist.Price + "', '" + orderlist.Num + "', '" + orderlist.Discount + "')";
@@ -31,10 +42,10 @@ namespace SuperMarketManager.Controllers
                 ExecuteSQL.ExecuteNonQuerySQL_GetBool(sql_goods);
                 //更新库存表
                 string sql_store = "select * from storelist where G_ID='"+orderlist.G_ID+"' order by SL_ProduceDate desc";//升序输出结果集
-                OdbcConnection odbcConnection = DBManager.GetOdbcConnection();
+                odbcConnection = DBManager.GetOdbcConnection();
                 odbcConnection.Open();
-                OdbcCommand odbcCommand = new OdbcCommand(sql_store, odbcConnection);
-                OdbcDataReader odbcDataReader = odbcCommand.ExecuteReader();
+                odbcCommand = new OdbcCommand(sql_store, odbcConnection);
+                odbcDataReader = odbcCommand.ExecuteReader();
                 string gi_id = odbcDataReader.GetString(1);
                 string sql_storee = "update storelist set SL_Num=SL_Num-"+orderlist.Num+" where G_ID='"+orderlist.G_ID+"' and GI_ID='"+gi_id+"'";
                 odbcCommand = new OdbcCommand(sql_storee, odbcConnection);

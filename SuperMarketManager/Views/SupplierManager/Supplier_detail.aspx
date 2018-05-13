@@ -178,7 +178,7 @@
 
                                                 <div class="col-sm-9 controls">
                                                     <div class="row">
-                                                          <div class="col-xs-9"><input id="spid" runat="server" type="text" class="form-control"/></div>
+                                                          <div class="col-xs-9"><input id="spid" runat="server" type="text" value="123" class="form-control"/></div>
                                                     </div>
                                                 </div>
                                             </div>
