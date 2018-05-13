@@ -30,6 +30,7 @@
         <!--BEGIN BACK TO TOP-->
         <a id="totop" href="#"><i class="fa fa-angle-up"></i></a>
         <!--END BACK TO TOP-->
+
         <!--BEGIN TOPBAR-->
         <div id="header-topbar-option-demo" class="page-header-topbar">
             <nav id="topbar" role="navigation" style="margin-bottom: 0;" data-step="3" class="navbar navbar-default navbar-static-top">
@@ -64,7 +65,7 @@
 
                         </li>
                         <li class="dropdown topbar-user"><a data-hover="dropdown" href="#" class="dropdown-toggle">
-                            <img src="../../Content/images/avatar/48.jpg" alt="" class="img-responsive img-circle" />&nbsp;<span class="hidden-xs">Robert John</span>&nbsp;<span class="caret"></span></a>
+                            <img src="../../Content/images/avatar/48.jpg" alt="" class="img-responsive img-circle" />&nbsp;<span class="hidden-xs">Manager</span>&nbsp;<span class="caret"></span></a>
                             <ul class="dropdown-menu dropdown-user pull-right">
                                 <li><a href="#"><i class="fa fa-user"></i>个人信息</a></li>
                                 <li><a href="#"><i class="fa fa-tasks"></i>我的任务<span class="badge badge-success">7</span></a></li>
@@ -78,6 +79,7 @@
             </nav>
         </div>
         <!--END TOPBAR-->
+
         <div id="wrapper">
             <!--BEGIN SIDEBAR MENU-->
             <nav id="sidebar" role="navigation" data-step="2" data-intro="Template has &lt;b&gt;many navigation styles&lt;/b&gt;"
@@ -110,12 +112,12 @@
                         </i><span class="menu-title">商品信息与库存</span></a>
 
                         </li>
-                        <li><a href="DataGrid.html"><i class="fa fa-database fa-fw">
+                        <li><a href="../../Views/DiscountManage/DiscountManager.aspx"><i class="fa fa-database fa-fw">
                             <div class="icon-bg bg-red"></div>
                         </i><span class="menu-title">折扣管理</span></a>
 
                         </li>
-                        <li><a href="Pages.html"><i class="fa fa-file-o fa-fw">
+                        <li><a href="../../Views/Businessstatistics/Businessstatistics.aspx"><i class="fa fa-file-o fa-fw">
                             <div class="icon-bg bg-yellow"></div>
                         </i><span class="menu-title">营业统计</span></a>
 
@@ -125,72 +127,13 @@
                         </i><span class="menu-title">个人信息</span></a>
 
                         </li>
-                        <li><a href="../../Views/Login/Manager_Index.aspx"><i class="fa fa-sitemap fa-fw">
+                        <li><a href="../../Views/Login/.aspx"><i class="fa fa-sitemap fa-fw">
                             <div class="icon-bg bg-dark"></div>
                         </i><span class="menu-title">退出</span></a>
                     </ul>
                 </div>
             </nav>
             <!--END SIDEBAR MENU-->
-            <!--BEGIN CHAT FORM-->
-            <div id="chat-form" class="fixed">
-                <div class="chat-inner">
-                    <h2 class="chat-header">
-                        <a href="javascript:;" class="chat-form-close pull-right"><i class="glyphicon glyphicon-remove"></i></a><i class="fa fa-user"></i>&nbsp; Chat &nbsp;<span class="badge badge-info">3</span></h2>
-                    <div id="group-1" class="chat-group">
-                        <strong>Favorites</strong><a href="#"><span class="user-status is-online"></span> <small>Verna Morton</small> <span class="badge badge-info">2</span></a><a href="#"><span
-                            class="user-status is-online"></span> <small>Delores Blake</small> <span class="badge badge-info is-hidden">0</span></a><a href="#"><span class="user-status is-busy"></span> <small>Nathaniel Morris</small>
-                                <span class="badge badge-info is-hidden">0</span></a><a href="#"><span class="user-status is-idle"></span>
-                                    <small>Boyd Bridges</small> <span class="badge badge-info is-hidden">0</span></a><a
-                                        href="#"><span class="user-status is-offline"></span> <small>Meredith Houston</small>
-                                        <span class="badge badge-info is-hidden">0</span></a>
-                    </div>
-                    <div id="group-2" class="chat-group">
-                        <strong>Office</strong><a href="#"><span class="user-status is-busy"></span> <small>Ann Scott</small> <span class="badge badge-info is-hidden">0</span></a><a href="#"><span
-                            class="user-status is-offline"></span> <small>Sherman Stokes</small> <span class="badge badge-info is-hidden">0</span></a><a href="#"><span class="user-status is-offline"></span> <small>Florence
-                                        Pierce</small> <span class="badge badge-info">1</span></a>
-                    </div>
-                    <div id="group-3" class="chat-group">
-                        <strong>Friends</strong><a href="#"><span class="user-status is-online"></span> <small>Willard Mckenzie</small> <span class="badge badge-info is-hidden">0</span></a><a
-                            href="#"><span class="user-status is-busy"></span> <small>Jenny Frazier</small>
-                            <span class="badge badge-info is-hidden">0</span></a><a href="#"><span class="user-status is-offline"></span>
-                                <small>Chris Stewart</small> <span class="badge badge-info is-hidden">0</span></a><a
-                                    href="#"><span class="user-status is-offline"></span> <small>Olivia Green</small>
-                                    <span class="badge badge-info is-hidden">0</span></a>
-                    </div>
-                </div>
-                <div id="chat-box" style="top: 400px">
-                    <div class="chat-box-header">
-                        <a href="#" class="chat-box-close pull-right"><i class="glyphicon glyphicon-remove"></i></a><span class="user-status is-online"></span><span class="display-name">Willard
-                            Mckenzie</span> <small>Online</small>
-                    </div>
-                    <div class="chat-content">
-                        <ul class="chat-box-body">
-                            <li>
-                                <p>
-                                    <img src="../../Content/images/avatar/128.jpg" class="avt" /><span class="user">John Doe</span><span
-                                        class="time">09:33</span>
-                                </p>
-                                <p>
-                                    Hi Swlabs, we have some comments for you.
-                                </p>
-                            </li>
-                            <li class="odd">
-                                <p>
-                                    <img src="../../Content/images/avatar/48.jpg" class="avt" /><span class="user">Swlabs</span><span
-                                        class="time">09:33</span>
-                                </p>
-                                <p>
-                                    Hi, we're listening you...
-                                </p>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="chat-textarea">
-                        <input placeholder="Type your message" class="form-control" />
-                    </div>
-                </div>
-            </div>
             <div id="page-wrapper">
                 <!--BEGIN TITLE & BREADCRUMB PAGE-->
                 <div id="title-breadcrumb-option-demo" class="page-title-breadcrumb">
@@ -221,7 +164,7 @@
                                         <h4 class="value">
                                             <span data-counter="" data-start="10" data-end="50" data-step="1" data-duration="0"></span><span>$</span></h4>
                                         <p class="description">
-                                            Profit description
+                                            营业统计
                                         </p>
                                         <div class="progress progress-sm mbn">
                                             <div role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
@@ -241,7 +184,7 @@
                                         <h4 class="value">
                                             <span>215</span><span>$</span></h4>
                                         <p class="description">
-                                            Income detail
+                                            销售情况
                                         </p>
                                         <div class="progress progress-sm mbn">
                                             <div role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
@@ -261,7 +204,7 @@
                                         <h4 class="value">
                                             <span>215</span></h4>
                                         <p class="description">
-                                            Task completed
+                                            任务进度
                                         </p>
                                         <div class="progress progress-sm mbn">
                                             <div role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
@@ -281,7 +224,7 @@
                                         <h4 class="value">
                                             <span>128</span></h4>
                                         <p class="description">
-                                            Visitor description
+                                            员工管理
                                         </p>
                                         <div class="progress progress-sm mbn">
                                             <div role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"
@@ -294,214 +237,60 @@
                             </div>
                         </div>
                         <div class="row mbl">
-                            <div class="col-lg-8">
+                            <div class="col-lg-6">
                                 <div class="panel">
                                     <div class="panel-body">
                                         <div class="row">
-                                            <div class="col-md-8">
-                                                <h4 class="mbs">Network Performance</h4>
-                                                <p class="help-block">
-                                                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem...
-                                                </p>
-                                                <div id="area-chart-spline" style="width: 100%; height: 300px">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <h4 class="mbm">Server Status</h4>
-                                                <span class="task-item">CPU Usage (25 - 32 cpus)<small class="pull-right text-muted">40%</small><div
+                                            <div class="col-md-6">
+                                                <h4 class="mbm">各类商品销售情况</h4>
+                                                <span class="task-item">CPU Usage (25 - 32 cpus)<small class="pull-right text-muted">40</small><div
                                                     class="progress progress-sm">
                                                     <div role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"
                                                         style="width: 40%;" class="progress-bar progress-bar-orange">
                                                         <span class="sr-only">40% Complete (success)</span>
                                                     </div>
                                                 </div>
-                                                </span><span>Memory Usage (2.5GB)<small class="pull-right text-muted">60%</small><div
-                                                    class="progress progress-sm">
-                                                    <div role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
-                                                        style="width: 60%;" class="progress-bar progress-bar-blue">
-                                                        <span class="sr-only">60% Complete (success)</span>
+                                                </span><span>蔬果<small class="pull-right text-muted">60</small>
+                                                    <div class="progress progress-sm">
+                                                        <div role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+                                                            style="width: 60%;" class="progress-bar progress-bar-blue">
+                                                            <span class="sr-only">60% Complete (success)</span>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                </span><span>Disk Usage (C:\ 120GB , D:\ 430GB)<small class="pull-right text-muted">55%</small><div
+                                                </span><span>化妆品<small class="pull-right text-muted">55</small><div
                                                     class="progress progress-sm">
                                                     <div role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"
                                                         style="width: 55%;" class="progress-bar progress-bar-green">
                                                         <span class="sr-only">55% Complete (success)</span>
                                                     </div>
                                                 </div>
-                                                </span><span>Domain (2/5)<small class="pull-right text-muted">66%</small><div class="progress progress-sm">
+                                                </span><span>电器<small class="pull-right text-muted">66</small><div class="progress progress-sm">
                                                     <div role="progressbar" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"
                                                         style="width: 66%;" class="progress-bar progress-bar-yellow">
                                                         <span class="sr-only">66% Complete (success)</span>
                                                     </div>
                                                 </div>
-                                                </span><span>Database (90/100)<small class="pull-right text-muted">90%</small><div
+                                                </span><span>生活用品<small class="pull-right text-muted">90</small><div
                                                     class="progress progress-sm">
                                                     <div role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"
                                                         style="width: 90%;" class="progress-bar progress-bar-pink">
                                                         <span class="sr-only">90% Complete (success)</span>
                                                     </div>
                                                 </div>
-                                                </span><span>Email Account (25/50)<small class="pull-right text-muted">50%</small><div
-                                                    class="progress progress-sm">
-                                                    <div role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
-                                                        style="width: 50%;" class="progress-bar progress-bar-violet">
-                                                        <span class="sr-only">50% Complete (success)</span>
+                                                </span><span>干果<small class="pull-right text-muted">50</small>
+                                                    <div class="progress progress-sm">
+                                                        <div role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
+                                                            style="width: 50%;" class="progress-bar progress-bar-violet">
+                                                            <span class="sr-only">50% Complete (success)</span>
+                                                        </div>
                                                     </div>
-                                                </div>
                                                 </span>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-4">
-                                <div class="portlet box">
-                                    <div class="portlet-header">
-                                        <div class="caption">
-                                            Chats
-                                        </div>
-                                    </div>
-                                    <div class="portlet-body">
-                                        <div class="chat-scroller">
-                                            <ul class="chats">
-                                                <li class="in">
-                                                    <img src="../../Content/images/avatar/48.jpg" class="avatar img-responsive" />
-                                                    <div class="message">
-                                                        <span class="chat-arrow"></span><a href="#" class="chat-name">Admin</a>&nbsp;<span
-                                                            class="chat-datetime">at July 06, 2014 17:06</span><span class="chat-body">Lorem ipsum
-                                                                dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
-                                                                ut laoreet dolore magna aliquam erat volutpat.</span>
-                                                    </div>
-                                                </li>
-                                                <li class="out">
-                                                    <img src="../../Content/images/avatar/48.jpg" class="avatar img-responsive" />
-                                                    <div class="message">
-                                                        <span class="chat-arrow"></span><a href="#" class="chat-name">Admin</a>&nbsp;<span
-                                                            class="chat-datetime">at July 06, 2014 18:06</span><span class="chat-body">Lorem ipsum
-                                                                dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
-                                                                ut laoreet dolore magna aliquam erat volutpat.</span>
-                                                    </div>
-                                                </li>
-                                                <li class="in">
-                                                    <img src="../../Content/images/avatar/48.jpg" class="avatar img-responsive" />
-                                                    <div class="message">
-                                                        <span class="chat-arrow"></span><a href="#" class="chat-name">Admin</a>&nbsp;<span
-                                                            class="chat-datetime">at July 06, 2014 17:06</span><span class="chat-body">Lorem ipsum
-                                                                dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
-                                                                ut laoreet dolore magna aliquam erat volutpat.</span>
-                                                    </div>
-                                                </li>
-                                                <li class="out">
-                                                    <img src="../../Content/images/avatar/48.jpg" class="avatar img-responsive" />
-                                                    <div class="message">
-                                                        <span class="chat-arrow"></span><a href="#" class="chat-name">Admin</a>&nbsp;<span
-                                                            class="chat-datetime">at July 06, 2014 18:06</span><span class="chat-body">Lorem ipsum
-                                                                dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
-                                                                ut laoreet dolore magna aliquam erat volutpat.</span>
-                                                    </div>
-                                                </li>
-                                                <li class="in">
-                                                    <img src="../../Content/images/avatar/48.jpg" class="avatar img-responsive" />
-                                                    <div class="message">
-                                                        <span class="chat-arrow"></span><a href="#" class="chat-name">Admin</a>&nbsp;<span
-                                                            class="chat-datetime">at July 06, 2014 17:06</span><span class="chat-body">Lorem ipsum
-                                                                dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
-                                                                ut laoreet dolore magna aliquam erat volutpat.</span>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="chat-form">
-                                            <div class="input-group">
-                                                <input id="input-chat" type="text" placeholder="Type a message here..." class="form-control" /><span
-                                                    id="btn-chat" class="input-group-btn">
-                                                    <button type="button" class="btn btn-green">
-                                                        <i class="fa fa-check"></i>
-                                                    </button>
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row mbl">
-                            <div class="col-lg-4">
-                                <div class="panel">
-                                    <div class="panel-body">
-                                        <div class="profile">
-                                            <div style="margin-bottom: 15px" class="row">
-                                                <div class="col-xs-12 col-sm-8">
-                                                    <h2>John Doe</h2>
-                                                    <p>
-                                                        <strong>About:</strong> Web Designer / UI.
-                                                    </p>
-                                                    <p>
-                                                        <strong>Hobbies:</strong> Read, out with friends, listen to music, draw and learn
-                                                        new things.
-                                                    </p>
-                                                    <p>
-                                                        <strong class="mrs">Skills:</strong><span class="label label-green mrs">html5</span><span
-                                                            class="label label-green mrs">css3</span><span class="label label-green mrs">jquery</span>
-                                                    </p>
-                                                </div>
-                                                <div class="col-xs-12 col-sm-4 text-center">
-                                                    <figure>
-                                                        <img src="../../Content/images/avatar/128.jpg" alt="" style="display: inline-block" class="img-responsive img-circle" />
-                                                        <figcaption class="ratings">
-                                                            <p><a href="#"><span class="fa fa-star"></span></a><a href="#"><span class="fa fa-star"></span></a><a href="#"><span class="fa fa-star"></span></a><a href="#"><span class="fa fa-star"></span></a><a href="#"><span class="fa fa-star-o"></span></a></p>
-                                                        </figcaption>
-                                                    </figure>
-                                                </div>
-                                            </div>
-                                            <div class="row text-center divider">
-                                                <div class="col-xs-12 col-sm-4 emphasis">
-                                                    <h2>
-                                                        <strong>20,7K</strong></h2>
-                                                    <p>
-                                                        <small>Followers</small>
-                                                    </p>
-                                                    <button class="btn btn-yellow btn-block">
-                                                        <span class="fa fa-plus-circle"></span>&nbsp; Follow
-                                                    </button>
-                                                </div>
-                                                <div class="col-xs-12 col-sm-4 emphasis">
-                                                    <h2>
-                                                        <strong>245</strong></h2>
-                                                    <p>
-                                                        <small>Following</small>
-                                                    </p>
-                                                    <button class="btn btn-blue btn-block">
-                                                        <span class="fa fa-user"></span>&nbsp; Profile
-                                                    </button>
-                                                </div>
-                                                <div class="col-xs-12 col-sm-4 emphasis">
-                                                    <h2>
-                                                        <strong>43</strong></h2>
-                                                    <p>
-                                                        <small>Snippets</small>
-                                                    </p>
-                                                    <div class="btn-group dropup">
-                                                        <button type="button" data-toggle="dropdown" class="btn btn-orange dropdown-toggle">
-                                                            <span class="fa fa-gear"></span>&nbsp; Options
-                                                        </button>
-                                                        <ul role="menu" class="dropdown-menu pull-right text-left">
-                                                            <li><a href="#"><span class="fa fa-envelope"></span>&nbsp; Send an email</a></li>
-                                                            <li><a href="#"><span class="fa fa-list"></span>&nbsp; Add or remove from a list</a></li>
-                                                            <li class="divider"></li>
-                                                            <li><a href="#"><span class="fa fa-warning"></span>&nbsp; Report this user for spam</a></li>
-                                                            <li class="divider"></li>
-                                                            <li><a href="#" role="button" class="btn disabled">Unfollow</a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-8">
+                            <div class="col-lg-6">
                                 <div class="portlet box">
                                     <div class="portlet-header">
                                         <div class="caption">
@@ -515,7 +304,7 @@
                                                     <input type="checkbox" value="" />
                                                 </div>
                                                 <div class="todo-title">
-                                                    Sed ut perspiciatis unde omnis iste
+                                                    五一促销即将开始，准备相关活动，干果类，酒水饮料打折
                                                 </div>
                                                 <div class="todo-actions pull-right clearfix">
                                                     <a href="#" class="todo-complete"><i class="fa fa-check"></i></a><a href="#" class="todo-edit">
@@ -527,7 +316,7 @@
                                                     <input type="checkbox" value="" />
                                                 </div>
                                                 <div class="todo-title">
-                                                    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+                                                    月末统计
                                                 </div>
                                                 <div class="todo-actions pull-right clearfix">
                                                     <a href="#" class="todo-complete"><i class="fa fa-check"></i></a><a href="#" class="todo-edit">
@@ -539,8 +328,7 @@
                                                     <input type="checkbox" value="" />
                                                 </div>
                                                 <div class="todo-title">
-                                                    Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo
-                                                    minus id
+                                                    员工旅游
                                                 </div>
                                                 <div class="todo-actions pull-right clearfix">
                                                     <a href="#" class="todo-complete"><i class="fa fa-check"></i></a><a href="#" class="todo-edit">
@@ -552,7 +340,7 @@
                                                     <input type="checkbox" value="" />
                                                 </div>
                                                 <div class="todo-title">
-                                                    Et harum quidem rerum facilis est
+                                                    火龙果缺货，进购火龙果。
                                                 </div>
                                                 <div class="todo-actions pull-right clearfix">
                                                     <a href="#" class="todo-complete"><i class="fa fa-check"></i></a><a href="#" class="todo-edit">
@@ -564,7 +352,7 @@
                                                     <input type="checkbox" value="" />
                                                 </div>
                                                 <div class="todo-title">
-                                                    Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet
+                                                    “御泥坊”商家合作，促销活动
                                                 </div>
                                                 <div class="todo-actions pull-right clearfix">
                                                     <a href="#" class="todo-complete"><i class="fa fa-check"></i></a><a href="#" class="todo-edit">
@@ -576,7 +364,7 @@
                                                     <input type="checkbox" value="" />
                                                 </div>
                                                 <div class="todo-title">
-                                                    Excepteur sint occaecat cupidatat non proident
+                                                    招聘收银员3名
                                                 </div>
                                                 <div class="todo-actions pull-right clearfix">
                                                     <a href="#" class="todo-complete"><i class="fa fa-check"></i></a><a href="#" class="todo-edit">
@@ -593,35 +381,34 @@
                                 <div class="timeline-centered timeline-sm">
                                     <article class="timeline-entry">
                                         <div class="timeline-entry-inner">
-                                            <time datetime="2014-01-10T03:45" class="timeline-time"><span>12:45 AM</span><span>Today</span></time>
+                                            <time datetime="2014-01-10T03:45" class="timeline-time"><span>2018年1月</span></time>
                                             <div class="timeline-icon bg-violet"><i class="fa fa-exclamation"></i></div>
                                             <div class="timeline-label">
-                                                <h4 class="timeline-title">New Project</h4>
+                                                <h4 class="timeline-title">年末统计</h4>
 
-                                                <p>Tolerably earnestly middleton extremely distrusts she boy now not. Add and offered prepare how cordial.</p>
+                                                <p>盈利增长10%，发放员工福利</p>
                                             </div>
                                         </div>
                                     </article>
                                     <article class="timeline-entry left-aligned">
                                         <div class="timeline-entry-inner">
-                                            <time datetime="2014-01-10T03:45" class="timeline-time"><span>9:15 AM</span><span>Today</span></time>
+                                            <time datetime="2014-01-10T03:45" class="timeline-time"><span>2018年2月</span></time>
                                             <div class="timeline-icon bg-green"><i class="fa fa-group"></i></div>
                                             <div class="timeline-label bg-green">
-                                                <h4 class="timeline-title">Job Meeting</h4>
+                                                <h4 class="timeline-title">年货促销</h4>
 
-                                                <p>Caulie dandelion maize lentil collard greens radish arugula sweet pepper water spinach kombu courgette.</p>
+                                                <p>盈利10万</p>
                                             </div>
                                         </div>
                                     </article>
                                     <article class="timeline-entry">
                                         <div class="timeline-entry-inner">
-                                            <time datetime="2014-01-09T13:22" class="timeline-time"><span>8:20 PM</span><span>04/03/2013</span></time>
+                                            <time datetime="2014-01-09T13:22" class="timeline-time"><span>2018年3月</span></time>
                                             <div class="timeline-icon bg-orange"><i class="fa fa-paper-plane"></i></div>
                                             <div class="timeline-label bg-orange">
-                                                <h4 class="timeline-title">Daily Feeds</h4>
-
-                                                <p>
-                                                    <img src="http://lorempixel.com/45/45/nature/3/" alt="" class="timeline-img pull-left" />Parsley amaranth tigernut silver beet maize fennel spinach ricebean black-eyed. Tolerably earnestly middleton extremely distrusts she boy now not. Add and offered prepare how cordial.
+                                                <h4 class="timeline-title">年初招聘</h4>
+                                                <p class="timeline-img pull-left">
+                                                    招聘收银员收银员3名，售货员5名
                                                 </p>
                                             </div>
                                         </div>
@@ -631,93 +418,51 @@
                                     </article>
                                 </div>
                             </div>
-                            <!--<div class="col-lg-4">
-                            <div id="my-calendar"></div>
-                        </div>-->
-                            <div class="col-lg-4">
-                                <div class="page-content">
-                                    <div class="row">
-                                        <div class="col-lg-12">
-                                            <div class="portlet box">
-                                                <div class="portlet-header">
-                                                    <div class="caption">
-                                                        Pie with gradient fill
-                                                    </div>
-                                                    <div class="tools">
-                                                        <i class="fa fa-chevron-up"></i><i data-toggle="modal" data-target="#modal-config"
-                                                            class="fa fa-cog"></i><i class="fa fa-refresh"></i><i class="fa fa-times"></i>
-                                                    </div>
-                                                </div>
-                                                <div class="portlet-body">
-                                                    <div id="pie-with-gradient-fill">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-12">
-                                <div class="portlet box">
-                                    <div class="portlet-header">
-                                        <div class="caption">
-                                            Scatter plot
-                                        </div>
-                                        <div class="tools">
-                                            <i class="fa fa-chevron-up"></i><i data-toggle="modal" data-target="#modal-config"
-                                                class="fa fa-cog"></i><i class="fa fa-refresh"></i><i class="fa fa-times"></i>
-                                        </div>
-                                    </div>
-                                    <div class="portlet-body">
-                                        <div id="angular-gauge">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
                 <!--END CONTENT-->
-                <!--BEGIN FOOTER-->
-                <!--END FOOTER-->
-                <!--END PAGE WRAPPER-->
-                <script src="../../Scripts/jquery-1.10.2.min.js"></script>
-                <script src="../../Scripts/jquery-migrate-1.2.1.min.js"></script>
-                <script src="../../Scripts/jquery-ui.js"></script>
-                <script src="../../Scripts/bootstrap.min.js"></script>
-                <script src="../../Scripts/bootstrap-hover-dropdown.js"></script>
-                <script src="../../Scripts/html5shiv.js"></script>
-                <script src="../../Scripts/respond.min.js"></script>
-                <script src="../../Scripts/jquery.metisMenu.js"></script>
-                <script src="../../Scripts/jquery.slimscroll.js"></script>
-                <script src="../../Scripts/jquery.cookie.js"></script>
-                <script src="../../Scripts/icheck.min.js"></script>
-                <script src="../../Scripts/custom.min.js"></script>
-                <script src="../../Scripts/jquery.news-ticker.js"></script>
-                <script src="../../Scripts/jquery.menu.js"></script>
-                <script src="../../Scripts/pace.min.js"></script>
-                <script src="../../Scripts/holder.js"></script>
-                <script src="../../Scripts/responsive-tabs.js"></script>
-                <script src="../../Scripts/jquery.flot.js"></script>
-                <script src="../../Scripts/jquery.flot.categories.js"></script>
-                <script src="../../Scripts/jquery.flot.pie.js"></script>
-                <script src="../../Scripts/jquery.flot.tooltip.js"></script>
-                <script src="../../Scripts/jquery.flot.resize.js"></script>
-                <script src="../../Scripts/jquery.flot.fillbetween.js"></script>
-                <script src="../../Scripts/jquery.flot.stack.js"></script>
-                <script src="../../Scripts/jquery.flot.spline.js"></script>
-                <script src="../../Scripts/zabuto_calendar.min.js"></script>
-                <script src="../../Scripts/index.js"></script>
-                <!--LOADING SCRIPTS FOR CHARTS-->
-                <script src="../../Scripts/highcharts.js"></script>
-                <script src="../../Scripts/data.js"></script>
-                <script src="../../Scripts/drilldown.js"></script>
-                <script src="../../Scripts/exporting.js"></script>
-                <script src="../../Scripts/highcharts-more.js"></script>
-                <script src="../../Scripts/charts-highchart-pie.js"></script>
-                <script src="../../Scripts/charts-highchart-more.js"></script>
-                <!--CORE JAVASCRIPT-->
-                <script src="../../Scripts/main.js"></script>
+                </div>
+            <!--END PAGE WRAPPER-->
+        </div>
+    </div>
+    <script src="../../Scripts/jquery-1.10.2.min.js"></script>
+    <script src="../../Scripts/jquery-migrate-1.2.1.min.js"></script>
+    <script src="../../Scripts/jquery-ui.js"></script>
+    <script src="../../Scripts/bootstrap.min.js"></script>
+    <script src="../../Scripts/bootstrap-hover-dropdown.js"></script>
+    <script src="../../Scripts/html5shiv.js"></script>
+    <script src="../../Scripts/respond.min.js"></script>
+    <script src="../../Scripts/jquery.metisMenu.js"></script>
+    <script src="../../Scripts/jquery.slimscroll.js"></script>
+    <script src="../../Scripts/jquery.cookie.js"></script>
+    <script src="../../Scripts/icheck.min.js"></script>
+    <script src="../../Scripts/custom.min.js"></script>
+    <script src="../../Scripts/jquery.news-ticker.js"></script>
+    <script src="../../Scripts/jquery.menu.js"></script>
+    <script src="../../Scripts/pace.min.js"></script>
+    <script src="../../Scripts/holder.js"></script>
+    <script src="../../Scripts/responsive-tabs.js"></script>
+    <script src="../../Scripts/jquery.flot.js"></script>
+    <script src="../../Scripts/jquery.flot.categories.js"></script>
+    <script src="../../Scripts/jquery.flot.pie.js"></script>
+    <script src="../../Scripts/jquery.flot.tooltip.js"></script>
+    <script src="../../Scripts/jquery.flot.resize.js"></script>
+    <script src="../../Scripts/jquery.flot.fillbetween.js"></script>
+    <script src="../../Scripts/jquery.flot.stack.js"></script>
+    <script src="../../Scripts/jquery.flot.spline.js"></script>
+    <script src="../../Scripts/zabuto_calendar.min.js"></script>
+    <script src="../../Scripts/index.js"></script>
+    <!--LOADING SCRIPTS FOR CHARTS-->
+    <script src="../../Scripts/highcharts.js"></script>
+    <script src="../../Scripts/data.js"></script>
+    <script src="../../Scripts/drilldown.js"></script>
+    <script src="../../Scripts/exporting.js"></script>
+    <script src="../../Scripts/highcharts-more.js"></script>
+    <script src="../../Scripts/charts-highchart-pie.js"></script>
+    <script src="../../Scripts/charts-highchart-more.js"></script>
+    <!--CORE JAVASCRIPT-->
+    <script src="../../Scripts/main.js"></script>
 </body>
 </html>
 
