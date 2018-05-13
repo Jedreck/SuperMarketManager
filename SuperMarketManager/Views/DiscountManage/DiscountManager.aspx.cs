@@ -12,7 +12,6 @@ namespace SuperMarketManager.Views
     public partial class DiscountManager : System.Web.UI.Page
     {
         protected List<Discount> discountslist = null;
-        int disid = 0;
         protected void Page_Load(object sender, EventArgs e)
         {
             discountslist = Discount_C.SelectAll();
@@ -21,30 +20,39 @@ namespace SuperMarketManager.Views
         protected void searchbutton_Click(object sender, EventArgs e)
         {
             if (dgoodsid.Text.ToString() !="")
-            {            
-                    discountslist = Discount_C.SelectByG_ID(dgoodsid.Text.ToString());            
-            }
+            {    
+                if(disdate.Text.ToString() == "")
+                {
+                    discountslist = Discount_C.SelectByG_ID(dgoodsid.Text.ToString());
+                }
+                else
+                {
+                    discountslist = Discount_C.SelectByIDAndDate(dgoodsid.Text.ToString(),disdate.Text.ToString());
+                }
+            }          
             else if (disstart.Text.ToString() != "" && disend.Text.ToString() != "")
             {
+                System.Diagnostics.Debug.WriteLine("执行到这里了");
                 discountslist = Discount_C.SelectDiscountByDate(disstart.Text.ToString(),disend.Text.ToString());
+            }
+            else
+            {
+                Response.Write("<script language=javascript>window.alert('请至少输入id或date和id或起止日期！');</script>");
             }
         }
 
         protected void addbutton_Click(object sender, EventArgs e)
         {
-            //disid++;
-            //bool result = Discount_C.AlterByD_ID(new Discount("123", "1000", 0.2, DateTime.Parse("2018/5/2 00:00:00"), DateTime.Parse("2018/5/3 00:00:00")));
-            //bool result = Discount_C.AlterByD_ID(new Discount("123", sdgoodsid.Text.ToString(),
-            // double.Parse(disprice.Text.ToString()), DateTime.Parse(sdisstart.Text.ToString()), 
-            // DateTime.Parse(sdisend.Text.ToString())));
-            //if (result)
-            //{
-                //Response.Write("<script language=javascript>window.alert('插入成功！');</script>");
-           // }
-           // else
-           // {
-               // Response.Write("<script language=javascript>window.alert('插入失败！');</script>");
-           // }
+            bool result = Discount_C.AddDiscount(new Discount("",sdgoodsid.Text.ToString(),disprice.Text.ToString(),sdisstart.Text.ToString(),sdisend.Text.ToString()));
+            if (result)
+            {
+                Response.Write("<script language=javascript>window.alert('插入成功！');</script>");
+                Response.Redirect("../../Views/DiscountManage/DiscountManager.aspx");
+            }
+           else
+           {
+               Response.Write("<script language=javascript>window.alert('插入失败！');</script>");
+           }
         }
     }
 }

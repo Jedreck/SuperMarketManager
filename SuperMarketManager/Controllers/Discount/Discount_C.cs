@@ -14,7 +14,7 @@ namespace SuperMarketManager.Controllers
         {
             dis.ID = IDFormat.getID_Date16();
             string sql = "INSERT INTO `discount`(`D_ID`,`G_ID`,`D_Discount`,`D_Start`,`D_End`)" +
-                " VALUES('" + dis.ID + "','" + dis.G_ID + "'," + dis.DDiscount + ",'" + dis.Start + "','" + dis.End + "')";
+                " VALUES('" + dis.ID + "','" + dis.G_ID + "','" + dis.DDiscount + "','" + dis.Start + "','" + dis.End + "')";
             return ExecuteSQL.ExecuteNonQuerySQL_GetBool(sql);
         }
         //Delete
@@ -38,6 +38,11 @@ namespace SuperMarketManager.Controllers
         }
 
         //Select
+        public static List<Discount> SelectByD_ID(string D_ID)
+        {
+            string sql = "SELECT * FROM `discount` WHERE `D_ID` LIKE '"+D_ID + "'";
+            return getList(sql);
+        }
         public static List<Discount> SelectByG_ID(string G_ID)
         {
             string sql = "SELECT * FROM `discount` WHERE `G_ID` LIKE '" + G_ID + "'";

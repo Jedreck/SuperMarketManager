@@ -1,9 +1,9 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DiscountManager.aspx.cs" Inherits="SuperMarketManager.Views.DiscountManager" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Discount_delete.aspx.cs" Inherits="SuperMarketManager.Views.DiscountManage.Discount_delete" %>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>超市管理系统 |折扣管理</title>
+    <title>超市管理系统 | 折扣管理</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,10 +22,10 @@
     <link type="text/css" rel="stylesheet" href="../../Content/styles/zabuto_calendar.min.css">
     <link type="text/css" rel="stylesheet" href="../../Content/styles/pace.css">
     <link type="text/css" rel="stylesheet" href="../../Content/styles/jquery.news-ticker.css">
+    <link type="text/css" rel="stylesheet" href="../../Content/styles/jplist-custom.css">
 </head>
 <body>
     <div>
-
         <!--BEGIN BACK TO TOP-->
         <a id="totop" href="#"><i class="fa fa-angle-up"></i></a>
         <!--END BACK TO TOP-->
@@ -34,7 +34,7 @@
             <nav id="topbar" role="navigation" style="margin-bottom: 0;" data-step="3" class="navbar navbar-default navbar-static-top">
                 <div class="navbar-header">
                     <button type="button" data-toggle="collapse" data-target=".sidebar-collapse" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-                    <a id="logo" href="index.html" class="navbar-brand"><span class="fa fa-rocket"></span><span class="logo-text">KAdmin</span><span style="display: none" class="logo-text-icon">µ</span></a>
+                    <a id="logo" href="index.html" class="navbar-brand"><span class="fa fa-rocket"></span><span class="logo-text">Supermarket</span><span style="display: none" class="logo-text-icon">µ</span></a>
                 </div>
                 <div class="topbar-main">
                     <a id="menu-toggle" href="#" class="hidden-xs"><i class="fa fa-bars"></i></a>
@@ -65,6 +65,7 @@
                         <li class="dropdown topbar-user"><a data-hover="dropdown" href="#" class="dropdown-toggle">
                             <img src="../../Content/images/avatar/48.jpg" alt="" class="img-responsive img-circle" />&nbsp;<span class="hidden-xs">Robert John</span>&nbsp;<span class="caret"></span></a>
                             <ul class="dropdown-menu dropdown-user pull-right">
+                                <
                                 <li><a href="#"><i class="fa fa-user"></i>个人信息</a></li>
                                 <li><a href="#"><i class="fa fa-tasks"></i>我的任务<span class="badge badge-success">7</span></a></li>
                                 <li class="divider"></li>
@@ -89,13 +90,12 @@
                             <div class="icon-bg bg-orange"></div>
                         </i><span class="menu-title">首页</span></a></li>
 
-                        <li>
                         <li><a href="../../Views/EmployeeManager/EmployeeManager.aspx"><i class="fa fa-desktop fa-fw">
                             <div class="icon-bg bg-pink"></div>
                         </i><span class="menu-title">员工管理</span></a>
 
                         </li>
-                        <li><a href="../../Views/SupplierManager/SupplierManager.aspx"><i class="fa fa-send-o fa-fw">
+                        <li ><a href="../../Views/SupplierManager/SupplierManager.aspx"><i class="fa fa-send-o fa-fw">
                             <div class="icon-bg bg-green"></div>
                         </i><span class="menu-title">供应商管理</span></a>
 
@@ -110,7 +110,7 @@
                         </i><span class="menu-title">商品信息与库存</span></a>
 
                         </li>
-                        <li class="active"><a href="../../Views/DiscountManage/DiscountManager.aspx"><i class="fa fa-database fa-fw">
+                        <li class="active"><a href="DataGrid.html"><i class="fa fa-database fa-fw">
                             <div class="icon-bg bg-red"></div>
                         </i><span class="menu-title">折扣管理</span></a>
 
@@ -138,112 +138,105 @@
                 <div id="title-breadcrumb-option-demo" class="page-title-breadcrumb">
                     <div class="page-header pull-left">
                         <div class="page-title">
-                            折扣管理
+                            折扣信息
                         </div>
                     </div>
                     <ol class="breadcrumb page-breadcrumb pull-right">
-                        <li><i class="fa fa-home"></i>&nbsp;<a href="dashboard.html">Home</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
-                        <li class="hidden"><a href="#">折扣管理</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
-                        <li class="active">折扣管理</li>
+                        <li><i class="fa fa-home"></i>&nbsp;<a href="../../Views/Index/Manager_Index.aspx">Home</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
+                        <li class="hidden"><a href="#">折扣信息</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
+                        <li class="active">折扣信息</li>
                     </ol>
                     <div class="clearfix">
                     </div>
                 </div>
                 <!--END TITLE & BREADCRUMB PAGE-->
-                <!--BEGIN CONTENT-->
+
+                <!--BEGIN CONTENT-->                
                 <div class="page-content">
-                    <form runat="server">
-                        <div id="tab-general">
-                            <div class="row mbl">
-                                <div class="col-lg-12">
-
-                                    <div class="col-md-12">
-                                        <div id="area-chart-spline" style="width: 100%; height: 300px; display: none;">
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div class="col-lg-12">
-                                    <div class="row">
-                                        <div class="col-sm-3 col-md-2">
-                                            <a href="#" role="button" class="btn btn-danger btn-sm btn-block">折扣管理</a>
-                                            <div class="mtm mbm"></div>
-                                            <div class="panel">
-                                                <div class="panel-body pan">
-                                                    <ul style="background: #fff" class="nav nav-pills nav-stacked">
-                                                        <li class="active"><a href="#">折扣查询</a></li>
-                                                        <li><label style="height:1px;"/></li>
-                                                        <li><i class="fa fa-fw mrs"></i>商品编号：</li><li>&nbsp&nbsp<asp:TextBox ID="dgoodsid" runat="server" Width="120px" Height="20px"></asp:TextBox></li>
-                                                        <li><i class="fa fa-fw mrs"></i>打折日期：</li><li>&nbsp&nbsp<asp:TextBox ID="disdate" runat="server" Width="120px" Height="20px" TextMode="Date"></asp:TextBox></li>
-                                                        <li><i class="fa fa-fw mrs"></i>起始时间：</li><li>&nbsp&nbsp<asp:TextBox ID="disstart" runat="server"  Width="120px" Height="20px" TextMode="Date"></asp:TextBox></li>
-                                                        <li><i class="fa fa-fw mrs"></i>结束时间：</li><li>&nbsp&nbsp<asp:TextBox ID="disend" runat="server"  Width="120px" Height="20px" TextMode="Date"></asp:TextBox></li>
-                                                        <li><label style="height:1px;"/></li>
-                                                        <li><i class="fa fa-fw mrs"></i>&nbsp&nbsp<asp:Button ID="searchbutton" runat="server" OnClick="searchbutton_Click" ForeColor="White"  BackColor="#dc6767" BorderStyle="None" Width="60px" Height="20px" Text="查询"></asp:Button>&nbsp&nbsp</li>
-                                                        <li><label style="height:1px;"/></li>
-                                                    </ul>
+                    <div id="tab-general">
+                        <div class="row mbl">
+                            <div class="col-lg-12">
+                                
+                                            <div class="col-md-12">
+                                                <div id="area-chart-spline" style="width: 100%; height: 300px; display: none;">
                                                 </div>
                                             </div>
-                                            <hr />
-                                            <div class="panel">
-                                                <div class="panel-body pan">
-                                                    <ul style="background: #fff" class="nav nav-pills nav-stacked">
-                                                        <li class="active"><a href="#">增加折扣</a></li>
-                                                        <li><label style="height:1px;"/></li>
-                                                        <li><i class="fa fa-fw mrs"></i>商品编号：</li><li>&nbsp&nbsp<asp:TextBox ID="sdgoodsid" runat="server" Width="120px" Height="20px"></asp:TextBox></li>
-                                                        <li><i class="fa fa-fw mrs"></i>起始时间：</li><li>&nbsp&nbsp<asp:TextBox ID="sdisstart" runat="server" Width="120px" Height="20px" TextMode="Date"></asp:TextBox></li>
-                                                        <li><i class="fa fa-fw mrs"></i>结束时间：</li><li>&nbsp&nbsp<asp:TextBox ID="sdisend" runat="server"  Width="120px" Height="20px" TextMode="Date"></asp:TextBox></li>
-                                                        <li><i class="fa fa-fw mrs"></i>折扣力度：</li><li>&nbsp&nbsp<asp:TextBox ID="disprice" runat="server"  Width="120px" Height="20px" TextMode="Date"></asp:TextBox></li>
+                                
+                            </div>
 
-                                                        <li><label style="height:1px;"/></li>
-                                                        <li><i class="fa fa-fw mrs"></i>&nbsp&nbsp<asp:Button ID="addbutton" runat="server" ForeColor="White" BackColor="#dc6767" BorderStyle="None" Width="60px" Height="20px" Text="增加" OnClick="addbutton_Click"></asp:Button>&nbsp&nbsp</li>
-                                                        <li><label style="height:1px;"/></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-9 col-md-10">
-                                            <ul class="nav nav-tabs">
-                                                <li class="active"><a href="#home" data-toggle="tab"><span class="fa fa-inbox"></span>&nbsp;折扣查询结果</a></li>
-                                            </ul>
-                                            <div class="tab-content">
-                                                <div id="home" class="tab-pane fade in active">
-                                                    <div class="list-group mail-box">
-                                                        <div class="list-group-item">
-                                                                  <input type="checkbox" /><span class="fa mrm mlm"></span>
-                                                                  <span style="min-width: 120px; display: inline-block;" class="name"><strong>折扣编号 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 折扣物品 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 
-                                                                      折扣开始 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 折扣结束 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 折扣力度</strong></span>
-                                                                  <span class="pull-right mrl"></span></div>
-                                                        <%if (discountslist != null)
-                                                                { %>
-                                                            <%for (int i = 0; i < discountslist.Count; i++)
-                                                                { %>
-                                                                  <div class="list-group-item">
-                                                                  <span class="fa fa-star-o mrm mlm"></span>
-                                                                  <span style="min-width: 120px; display: inline-block;" class="name"><a href="../../Views/DiscountManage/Discount_delete.aspx?id=<%=discountslist[i].ID  %>"><%=discountslist[i].ID %></a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                                                                      <%=discountslist[i].G_ID %>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<%=discountslist[i].Start %>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                                                                      <%=discountslist[i].End %>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<%=discountslist[i].DDiscount %></span>
-                                                                  <span class="pull-right mrl"></span>
-                                                                  </div>
-                                                            <%} %>
-                                                        <%} %>
-                                                        
+                             <div class="col-lg-12">
+                                <div class="row">
+                                    <div class="col-lg-10 note note-success">
+                                       <form action="#" class="form-horizontal" runat="server">
+
+                                           <h3>
+                                               <asp:Label ID="basic" runat="server" Text="供应商信息" class="label label-success" Font-Size="18px"></asp:Label></h3>
+
+                                            <div class="form-group"><label class="col-sm-3 control-label">折扣编号</label>
+
+                                                <div class="col-sm-9 controls">
+                                                    <div class="row">
+                                                          <div class="col-xs-9">
+                                                             <input id="disid" runat="server" type="text" class="form-control" /></div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                            <div class="form-group"><label class="col-sm-3 control-label">商品编号</label>
+
+                                                <div class="col-sm-9 controls">
+                                                    <div class="row">
+                                                        <div class="col-xs-9"><input id="dgoodsid"  runat="server" type="text" class="form-control"/></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group"><label class="col-sm-3 control-label">折扣数额</label>
+                                                <div class="col-sm-9 controls">
+                                                    <div class="row">
+                                                         <div class="col-xs-9"><input id="discount" runat="server" type="text" class="form-control"/></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group"><label class="col-sm-3 control-label">折扣开始时间</label>
+
+                                                <div class="col-sm-9 controls">
+                                                    <div class="row">
+                                                         <div class="col-xs-9"><input id="disstart" runat="server" type="text" class="form-control"/></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                           <div class="form-group"><label class="col-sm-3 control-label">折扣结束时间</label>
+                                                <div class="col-sm-9 controls">
+                                                    <div class="row">
+                                                         <div class="col-xs-9"><input id="disend" runat="server" type="text" class="form-control"/></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr/>                                            
+                                           <asp:Label runat="server" ID="zero1" Width="150px" />
+                                           <asp:Button ID="delete" runat="server" Text="删除" class="btn-green" BorderStyle="Dashed"  Height="30px" Width="150px" OnClick="Delete_Click" />
+                                           <asp:Label runat="server" ID="Label1" Width="50px" />
+                                           <asp:Button ID="update" runat="server" Text="修改"  class="btn-green" BorderStyle="Dashed"  Height="30px" Width="150px" OnClick="Update_Click" />
+                                           <asp:Label runat="server" ID="Label2" Width="50px" />
+                                           <asp:Button ID="back" runat="server" Text="返回" class="btn-green" BorderStyle="Dashed" Height="30px" Width="150px" OnClick="Back_Click" />
+                                           <asp:Label runat="server" ID="zero3" Width="200px" />
+                                       </form>
+
                                     </div>
                                 </div>
                             </div>
+                            
+
+                            </div>
+                            
                         </div>
-                    </form>
+                    </div>
                 </div>
+                
+                <!--END CONTENT-->
             </div>
-            <!--END CONTENT-->
-        </div>
-        <!--END PAGE WRAPPER-->
+            <!--END PAGE WRAPPER-->
     </div>
-    </div>
-        <script src="../../Scripts/jquery-1.10.2.min.js"></script>
+    <script src="../../Scripts/jquery-1.10.2.min.js"></script>
     <script src="../../Scripts/jquery-migrate-1.2.1.min.js"></script>
     <script src="../../Scripts/jquery-ui.js"></script>
     <script src="../../Scripts/bootstrap.min.js"></script>
@@ -269,9 +262,7 @@
     <script src="../../Scripts/jquery.flot.stack.js"></script>
     <script src="../../Scripts/jquery.flot.spline.js"></script>
     <script src="../../Scripts/zabuto_calendar.min.js"></script>
-
     <script src="../../Scripts/index.js"></script>
-    <!--LOADING SCRIPTS FOR CHARTS-->
     <script src="../../Scripts/highcharts.js"></script>
     <script src="../../Scripts/data.js"></script>
     <script src="../../Scripts/drilldown.js"></script>
@@ -279,9 +270,18 @@
     <script src="../../Scripts/highcharts-more.js"></script>
     <script src="../../Scripts/charts-highchart-pie.js"></script>
     <script src="../../Scripts/charts-highchart-more.js"></script>
+    <script src="../../Scripts/modernizr.min.js"></script>
+    <script src="../../Scripts/jplist.min.js"></script>
+    <script src="../../Scripts/jplist.js"></script>-->
+    <script>
+</script>
     <!--CORE JAVASCRIPT-->
     <script src="../../Scripts/main.js"></script>
+
 </body>
 </html>
+
+
+
 
 

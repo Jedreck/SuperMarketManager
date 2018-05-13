@@ -7,10 +7,28 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace SuperMarketManager.Views {
+namespace SuperMarketManager.Views.DiscountManage {
     
     
-    public partial class DiscountManager {
+    public partial class Discount_delete {
+        
+        /// <summary>
+        /// basic 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label basic;
+        
+        /// <summary>
+        /// disid 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText disid;
         
         /// <summary>
         /// dgoodsid 控件。
@@ -19,16 +37,16 @@ namespace SuperMarketManager.Views {
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox dgoodsid;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText dgoodsid;
         
         /// <summary>
-        /// disdate 控件。
+        /// discount 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox disdate;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText discount;
         
         /// <summary>
         /// disstart 控件。
@@ -37,7 +55,7 @@ namespace SuperMarketManager.Views {
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox disstart;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText disstart;
         
         /// <summary>
         /// disend 控件。
@@ -46,60 +64,69 @@ namespace SuperMarketManager.Views {
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox disend;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText disend;
         
         /// <summary>
-        /// searchbutton 控件。
+        /// zero1 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button searchbutton;
+        protected global::System.Web.UI.WebControls.Label zero1;
         
         /// <summary>
-        /// sdgoodsid 控件。
+        /// delete 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox sdgoodsid;
+        protected global::System.Web.UI.WebControls.Button delete;
         
         /// <summary>
-        /// sdisstart 控件。
+        /// Label1 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox sdisstart;
+        protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// sdisend 控件。
+        /// update 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox sdisend;
+        protected global::System.Web.UI.WebControls.Button update;
         
         /// <summary>
-        /// disprice 控件。
+        /// Label2 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox disprice;
+        protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
-        /// addbutton 控件。
+        /// back 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button addbutton;
+        protected global::System.Web.UI.WebControls.Button back;
+        
+        /// <summary>
+        /// zero3 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label zero3;
     }
 }
