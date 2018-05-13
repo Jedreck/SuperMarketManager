@@ -181,8 +181,8 @@
                                         </div>
                                         <div class="alert alert-warning"><strong>性别：</strong>
                                             <asp:RadioButtonList ID="sex" runat="server" RepeatDirection="Horizontal" BackColor="White">
-                                                <asp:ListItem Text="男" Value="male" Selected="False"></asp:ListItem>
-                                                <asp:ListItem Text="女" Value="female" Selected="True"></asp:ListItem>
+                                                <asp:ListItem Text="男" Value="男" ></asp:ListItem>
+                                                <asp:ListItem Text="女" Value="女" ></asp:ListItem>
                                             </asp:RadioButtonList>
                                         </div>
                                         <div class="alert alert-danger"><strong>联系方式：</strong>

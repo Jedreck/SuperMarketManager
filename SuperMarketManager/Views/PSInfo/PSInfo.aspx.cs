@@ -7,7 +7,7 @@ namespace SuperMarketManager.Views.PSInfo
 {
     public partial class PSInfo : System.Web.UI.Page
     {
-        Employee em = new Employee();
+        Employee em;
         protected void Page_Load(object sender, EventArgs e)
         {
             massage();
@@ -15,36 +15,24 @@ namespace SuperMarketManager.Views.PSInfo
         protected void massage()
         {
             em = (Employee)Session["employee"];
+            if(em==null)
+            {
+                Response.Write("<script language=javascript>window.alert('请登录！！');window.location.href('/Views/Login/Login.aspx');</script>");
+                return;
+            }
             id.Text = em.ID;
             name.Text = em.Name;
-            sex.Text = em.Sex;
+            System.Diagnostics.Debug.WriteLine(em.Sex);
+            if (em.Sex == "男")
+                this.sex.SelectedIndex = 0;
+            else
+                this.sex.SelectedIndex = 1;
             phone.Text = em.Phone;
             birth.Text = em.Birth.ToString("yyyy-MM-dd");
             bankaccount.Text = em.BankAccount;
             email.Text = em.Email;
             position.Text = em.Position.ToString();
             password.Text = em.PassWord;
-            //id.Text = Session["employee"].ToString();
-            //OdbcConnection odbcConnection = DBManager.GetOdbcConnection();
-            //odbcConnection.Open();
-            ////从员工表中提取和登录号一致的员工信息
-            //OdbcCommand cmd = new OdbcCommand("select * from employee where E_ID='" + id.Text + "'", odbcConnection);
-            //OdbcDataReader dr = cmd.ExecuteReader();
-            //while (dr.Read())
-            //{
-
-            //    name.Text = dr["E_Name"].ToString();
-            //    sex.Text = dr["E_Sex"].ToString();
-            //    phone.Text = dr["E_Phone"].ToString();
-            //    birth.Text = dr["E_Birth"].ToString();
-            //    bankaccount.Text = dr["E_BankAccount"].ToString();
-            //    email.Text = dr["E_Email"].ToString();
-            //    position.Text = dr["E_Position"].ToString();
-            //    password.Text = dr["E_Password"].ToString();
-
-            //}
-            //dr.Close();
-            //dr.Close();
 
         }
 
