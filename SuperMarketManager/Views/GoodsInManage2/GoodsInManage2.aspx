@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="GoodsInManage.aspx.cs" Inherits="SuperMarketManager.Views.GoodsInManage.GoodsInManage" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="GoodsInManage2.aspx.cs" Inherits="SuperMarketManager.Views.GoodsInManage2.GoodsInManage2" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -26,6 +26,7 @@
     <link type="text/css" rel="stylesheet" href="../../Content/styles/jquery.news-ticker.css">
 </head>
 <body>
+    <div>
     <div>
        <div id="header-topbar-option-demo" class="page-header-topbar">
             <nav id="topbar" role="navigation" style="margin-bottom: 0;" data-step="3" class="navbar navbar-default navbar-static-top">
@@ -101,7 +102,7 @@
                         </i><span class="menu-title">库存管理</span></a>
 
                         </li>
-                        <li class="active"><a href="../../Views/GoodsInManage/GoodsInManage.aspx"><i class="fa fa-th-list fa-fw">
+                        <li class="active"><a href="../../Views/GoodsInManage2/GoodsInManage2.aspx"><i class="fa fa-th-list fa-fw">
                             <div class="icon-bg bg-blue"></div>
                         </i><span class="menu-title">入库管理</span></a>
 
@@ -131,7 +132,7 @@
                 </div>
                 <!--END TITLE & BREADCRUMB PAGE-->
                 <!--BEGIN CONTENT-->
-               <div class="page-content">
+                <div class="page-content">
                     <div id="tab-general">
                         <div class="row mbl">
                             <div class="col-lg-12">
@@ -149,16 +150,13 @@
                                        <form action="#" class="form-horizontal" runat="server">
 
                                            <h3>
-                                               <asp:Label ID="basic" runat="server" Text="入库管理" class="label label-success" Font-Size="18px"></asp:Label></h3>
+                                               <asp:Label ID="basic" runat="server" Text="添加商品" class="label label-success" Font-Size="18px"></asp:Label></h3>
 
                                             <div class="form-group"><label class="col-sm-3 control-label">商品编号</label>
 
                                                 <div class="col-sm-9 controls">
                                                     <div class="row">
-                                                          <div class="col-xs-9">
-                                                              <input id="gid" runat="server" type="text" class="form-control"/>
-
-                                                          </div>
+                                                          <div class="col-xs-9"><input id="gid" runat="server" type="text" class="form-control"/></div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -177,6 +175,14 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                            <div class="form-group"><label class="col-sm-3 control-label">商品单位</label>
+
+                                                <div class="col-sm-9 controls">
+                                                    <div class="row">
+                                                         <div class="col-xs-9"><input id="gunit" runat="server" type="text" class="form-control"/></div>
+                                                    </div>
+                                                </div>
+                                            </div> 
                                             <div class="form-group"><label class="col-sm-3 control-label">数量</label>
 
                                                 <div class="col-sm-9 controls">
@@ -184,16 +190,16 @@
                                                          <div class="col-xs-9"><input id="gnum" runat="server" type="text" class="form-control"/></div>
                                                     </div>
                                                 </div>
-                                            </div> 
-                                            <div class="form-group"><label class="col-sm-3 control-label">产地</label>
+                                            </div>     
+                                           <div class="form-group"><label class="col-sm-3 control-label">产地</label>
 
                                                 <div class="col-sm-9 controls">
                                                     <div class="row">
                                                          <div class="col-xs-9"><input id="gplace" runat="server" type="text" class="form-control"/></div>
                                                     </div>
                                                 </div>
-                                            </div>     
-                                           <div class="form-group"><label class="col-sm-3 control-label">生产日期</label>
+                                            </div>
+                                            <div class="form-group"><label class="col-sm-3 control-label">生产日期</label>
 
                                                 <div class="col-sm-9 controls">
                                                     <div class="row">
@@ -203,7 +209,7 @@
                                             </div>
                                             <hr/>   
                                            <div style="text-align:center">
-                                               <asp:Button ID="Button1" runat="server" Text="入库" OnClick="Button1_Click" />
+                                           <asp:Button ID="Button1" runat="server" Text="入库"  class="btn-green" BorderStyle="Dashed" Height="30px" Width="185px" OnClick="Button1_Click"/>
                                                </div>
                                        </form>
 
@@ -244,7 +250,7 @@
     <script src="../../Script/jquery.menu.js"></script>
     <script src="../../Script/pace.min.js"></script>
     <script src="../../Script/holder.js"></script>
-    <script src="../../Script/responsive-tabs.js"></script>
+    <script src="../../Script/Script/responsive-tabs.js"></script>
     <script src="../../Script/jquery.flot.js"></script>
     <script src="../../Script/jquery.flot.categories.js"></script>
     <script src="../../Script/jquery.flot.pie.js"></script>
@@ -268,3 +274,4 @@
     
 </body>
 </html>
+

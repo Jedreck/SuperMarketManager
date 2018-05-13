@@ -118,7 +118,7 @@
                         </i><span class="menu-title">库存管理</span></a>
 
                         </li>
-                        <li><a href="../../Views/GoodsInManage/GoodsInManage.aspx"><i class="fa fa-th-list fa-fw">
+                        <li><a href="../../Views/GoodsInManage2/GoodsInManage2.aspx"><i class="fa fa-th-list fa-fw">
                             <div class="icon-bg bg-blue"></div>
                         </i><span class="menu-title">入库管理</span></a>
 

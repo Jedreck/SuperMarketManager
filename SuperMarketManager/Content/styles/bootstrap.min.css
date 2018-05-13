@@ -87,7 +87,8 @@ code, kbd, pre, samp {
 }
 button, input, optgroup, select, textarea {
 	color: inherit;
-	margin: 0 1px 0 507px
+	font: inherit;
+	margin: 0
 }
 button {
 	overflow: visible
@@ -97,8 +98,8 @@ button, select {
 }
 button, html input[type=button], input[type=reset], input[type=submit] {
 	-webkit-appearance: button;
-	cursor: pointer;
-    }
+	cursor: pointer
+}
 button[disabled], html input[disabled] {
 	cursor: default
 }
@@ -610,10 +611,7 @@ pre code {
 	position: relative;
 	min-height: 1px;
 	padding-left: 15px;
-	padding-right: 15px;
-    top: -551px;
-    left: 38px;
-    height: 567px;
+	padding-right: 15px
 }
 .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
 	float: left
@@ -646,8 +644,7 @@ pre code {
 	width: 33.33333333%
 }
 .col-xs-3 {
-	width: 25%;
-    margin-top: 9px;
+	width: 25%
 }
 .col-xs-2 {
 	width: 16.66666667%

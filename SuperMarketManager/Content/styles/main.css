@@ -1575,25 +1575,25 @@ ul.chats li.out .message a.chat-datetime {
   text-decoration: underline;
 }
 #signin-page {
-  background: url('../../Content/images/bg/1.jpg') center center fixed;
+  background: url('http://swlabs.co/madmin/code/style2/images/bg/1.jpg') center center fixed;
   -moz-background-size: cover;
   -webkit-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
 #signup-page {
-  background: url('../../Content/images/bg/2.jpg') center center fixed;
+  background: url('http://swlabs.co/madmin/code/style2/images/bg/2.jpg') center center fixed;
   -moz-background-size: cover;
   -webkit-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
 #lock-screen-page {
-    background: url('../../Content/images/bg/3.jpg') center center fixed;
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+  background: url('http://swlabs.co/madmin/code/style2/images/bg/3.jpg') center center fixed;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 #lock-screen-page .page-form {
   background-color: rgba(0, 0, 0, 0.2);

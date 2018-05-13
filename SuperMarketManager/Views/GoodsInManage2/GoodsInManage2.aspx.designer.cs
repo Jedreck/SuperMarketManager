@@ -7,10 +7,10 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace SuperMarketManager.Views.GoodsInManage {
+namespace SuperMarketManager.Views.GoodsInManage2 {
     
     
-    public partial class GoodsInManage {
+    public partial class GoodsInManage2 {
         
         /// <summary>
         /// basic 控件。
@@ -47,6 +47,15 @@ namespace SuperMarketManager.Views.GoodsInManage {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText gprice;
+        
+        /// <summary>
+        /// gunit 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText gunit;
         
         /// <summary>
         /// gnum 控件。
