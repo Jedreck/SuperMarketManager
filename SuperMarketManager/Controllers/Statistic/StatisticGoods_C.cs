@@ -33,11 +33,23 @@ namespace SuperMarketManager.Controllers
                 "WHERE `G_ID`='"+G_ID+ "' AND `SG_Date` BETWEEN '" + startDay + "' AND '" + endDay + "'";
             return getList(sql);
         }
+        public static List<StaticGoods> GetDays(string startDay, string endDay)
+        {
+            string sql = "SELECT * FROM `marketmanage`.`statisticgoods` " +
+                "WHERE `SG_Date` BETWEEN '" + startDay + "' AND '" + endDay + "'";
+            return getList(sql);
+        }
 
-        public static List<StaticGoods> getDaysData(string G_ID, string date)
+        public static List<StaticGoods> GetDaysData(string G_ID, string date)
         {
             string sql = "SELECT * FROM `marketmanage`.`statisticgoods` " +
                 "WHERE `G_ID`='"+G_ID+"' AND `SG_Date`='" + date + "'";
+            return getList(sql);
+        }
+        public static List<StaticGoods> GetDays(string date)
+        {
+            string sql = "SELECT * FROM `marketmanage`.`statisticgoods` " +
+                "WHERE `SG_Date`='" + date + "'";
             return getList(sql);
         }
 
