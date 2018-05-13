@@ -87,7 +87,8 @@ code, kbd, pre, samp {
 }
 button, input, optgroup, select, textarea {
 	color: inherit;
-	margin: 0 0 0 0px
+	font: inherit;
+	margin: 0
 }
 button {
 	overflow: visible
@@ -97,8 +98,7 @@ button, select {
 }
 button, html input[type=button], input[type=reset], input[type=submit] {
 	-webkit-appearance: button;
-	cursor: pointer;
-    height: 21px;
+	cursor: pointer
 }
 button[disabled], html input[disabled] {
 	cursor: default

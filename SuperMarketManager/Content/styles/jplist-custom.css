@@ -131,8 +131,6 @@
 .jplist-label {
     float: left;
     margin: 10px 10px 0 0;
-    height: 30px;
-    width: 100px;
 }
 
 .jplist-selected {
@@ -278,7 +276,6 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    height:35px;
 }
 
 .jplist-panel .jplist-pagination .jplist-current {

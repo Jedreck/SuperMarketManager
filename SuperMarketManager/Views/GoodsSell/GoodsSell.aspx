@@ -99,7 +99,7 @@
                     </i><span class="menu-title">商品销售</span></a>
                       
                     </li>
-                    <li><a href="Tables.html"><i class="fa fa-th-list fa-fw">
+                    <li><a href="../../Views/GoodsManager/GoodsManager.aspx"><i class="fa fa-th-list fa-fw">
                         <div class="icon-bg bg-blue"></div>
                     </i><span class="menu-title">商品信息与库存</span></a>
                           
@@ -159,222 +159,55 @@
                             <div class="col-lg-12">
                             <div class="col-lg-12">
                         <ul id="generalTab" class="nav nav-tabs responsive">
-                            <li class="active"><a href="#alert-tab" data-toggle="tab">蔬菜水果</a></li>
-                            <li><a href="#note-tab" data-toggle="tab">生鲜</a></li>
-                            <li><a href="#label-badge-tab" data-toggle="tab">膨化食品</a></li>
-                            <li><a href="#pagination-tab" data-toggle="tab">酒水饮料</a></li>
-                            <li><a href="#input-group-tab" data-toggle="tab">日用品</a></li>
-                            <li><a href="#list-group-tab" data-toggle="tab">化妆品</a></li>
-                            <li><a href="#navbar-tab" data-toggle="tab">家用电器</a></li>
-                            <li><a href="#thumbnail-tab" data-toggle="tab">销量统计</a></li>
-                            <li><a href="#other-tab" data-toggle="tab">Others</a></li>
+                            <li class="active"><a href="#alert-tab" data-toggle="tab">商品销售情况</a></li>
                         </ul>
                         <div id="generalTabContent" class="tab-content responsive">
+                            <form runat="server">
                             <div id="alert-tab" class="tab-pane fade in active">
                                 <div class="row">
-                                    <div class="col-lg-6"><h3>蔬果类销售情况</h3>
+                                    <div class="col-lg-9"><h3>商品销售情况&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </h3>
+                                        <div>
+                                            <input type="text" id="search_id" style="width:70px" placeholder="商品id" runat="server" />
+                                            <input type="text" id="search_start" placeholder="起始日期" runat="server" />
+                                            <asp:Label ID="zero" Height="18px" Text="——" runat="server"></asp:Label>
+                                            <input type="text" id="search_end" placeholder="结束日期" runat="server" />
+                                            <input type="text" id="search_date" placeholder="某一天" runat="server" />
+                                            &nbsp;&nbsp;&nbsp;
+                                            <asp:Button ID="search" runat="server" Width="60px" Height="30px" BorderStyle="Dashed" ForeColor="#ffffff" BackColor=" #488c6c" BorderColor="#458567" Font-Size="12px" Text="查询" OnClick="Search_Click" />
+                                             <div class="mbxl"></div> 
 
-                                        <div class="alert alert-success"><strong>西葫</strong> 2018.3.3 售出333</div>
-                                        <div class="alert alert-info"><strong>鸭梨</strong> 2018.4.5 售出343</div>
-                                        <div class="alert alert-warning"><strong>西瓜</strong>2018.2.1 售出6</div>
-                                        <div class="alert alert-danger"><strong>白菜</strong> 2018.5.3 售出20</div>
-										<div class="alert alert-success"><strong>西葫</strong> 2018.3.3 售出333</div>
-                                        <div class="alert alert-info"><strong>鸭梨</strong> 2018.4.5 售出343</div>
-                                        <div class="alert alert-warning"><strong>西瓜</strong>2018.2.1 售出6</div>
-                                        <div class="alert alert-danger"><strong>白菜</strong> 2018.5.3 售出20</div>
-                                        <div class="alert alert-success"><strong>西葫</strong> 2018.3.3 售出333</div>
-                                        <div class="alert alert-info"><strong>鸭梨</strong> 2018.4.5 售出343</div>
-                                        <div class="alert alert-warning"><strong>西瓜</strong>2018.2.1 售出6</div>
-                                        <div class="alert alert-danger"><strong>白菜</strong> 2018.5.3 售出20</div>
-                                        <div class="mbxl"></div> 
+                                        </div>
+                                        <% if (staticgoodslist != null)
+                                        {%>
+                                            <% if (staticgoodslist.Count>=4)
+                                            {%>
+                                                 <%for (int i = 0; i < staticgoodslist.Count; i=i+4)
+                                                 {  %>
+
+                                                    <div class="alert alert-success">商品id:<%=staticgoodslist[i].G_ID %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;销售时间：<%=staticgoodslist[i].Date%>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;销量:<%=staticgoodslist[i].Num%></div>     
+                                                    <div class="alert alert-info">商品id:<%=staticgoodslist[i+1].G_ID %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;销售时间：<%=staticgoodslist[i+1].Date%>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;销量:<%=staticgoodslist[i+1].Num%></div>                             
+                                                    <div class="alert alert-warning">商品id:<%=staticgoodslist[i+2].G_ID %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;销售时间：<%=staticgoodslist[i+2].Date%>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;销量:<%=staticgoodslist[i+2].Num%></div>    
+                                                    <div class="alert alert-danger">商品id:<%=staticgoodslist[i+3].G_ID %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;销售时间：<%=staticgoodslist[i+3].Date%>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;销量:<%=staticgoodslist[i+3].Num%></div>    
+                                                    <div class="mbxl"></div> 
+                                                 <%} %>
+                                            <%} %>
+                                            <%else{ %>
+                                                  <%for (int i = 0; i < staticgoodslist.Count; i++)
+                                                 {  %>
+
+                                                    <div class="alert alert-info">商品id:<%=staticgoodslist[i].G_ID %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;销售时间：<%=staticgoodslist[i].Date%>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;销量:<%=staticgoodslist[i].Num%></div>     
+                                                    <div class="mbxl"></div> 
+                                                 <%} %>
+                                             <%} %>
+                                        <%} %>
 										
                                     </div>
                                 </div>
-                            </div>
-                            <div id="note-tab" class="tab-pane fade">
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <div class="note note-success"><h4 class="box-heading">螃蟹 xxxxxxx</h4></div>
-                                        <div class="note note-info"><h4 class="box-heading">虾 xxxxxxx</h4></div>
-										<div class="note note-warning"><h4 class="box-heading">鱼 xxxxx</h4></div>
-                                        <div class="note note-danger"><h4 class="box-heading">金枪鱼 xxxxxx</h4></div>
-										<div class="note note-success"><h4 class="box-heading">螃蟹 xxxxxxx</h4></div>
-                                        <div class="note note-info"><h4 class="box-heading">虾 xxxxxxx</h4></div>
-										<div class="note note-warning"><h4 class="box-heading">鱼 xxxxx</h4></div>
-                                        <div class="note note-danger"><h4 class="box-heading">金枪鱼 xxxxxx</h4></div>
-										
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="note note-warning"><h4 class="box-heading">鱼 xxxxx</h4></div>
-                                        <div class="note note-danger"><h4 class="box-heading">金枪鱼 xxxxxx</h4></div>
-										<div class="note note-success"><h4 class="box-heading">虾 xxxxxxx</h4></div>
-                                        <div class="note note-info"><h4 class="box-heading">螃蟹 xxxxxxx</h4></div>
-										<div class="note note-warning"><h4 class="box-heading">鱼 xxxxx</h4></div>
-                                        <div class="note note-danger"><h4 class="box-heading">金枪鱼 xxxxxx</h4></div>
-										<div class="note note-success"><h4 class="box-heading">虾 xxxxxxx</h4></div>
-                                        <div class="note note-info"><h4 class="box-heading">螃蟹 xxxxxxx</h4></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="label-badge-tab" class="tab-pane fade">
-                                <div class="row">
-								
-								 <div class="col-lg-6"><h3>膨化食品类销售情况</h3>
-
-                                        <div class="alert alert-success"><strong>西葫</strong> 2018.3.3 售出333</div>
-                                        <div class="alert alert-info"><strong>鸭梨</strong> 2018.4.5 售出343</div>
-                                        <div class="alert alert-warning"><strong>西瓜</strong>2018.2.1 售出6</div>
-                                        <div class="alert alert-danger"><strong>白菜</strong> 2018.5.3 售出20</div>
-										<div class="alert alert-success"><strong>西葫</strong> 2018.3.3 售出333</div>
-                                        <div class="alert alert-info"><strong>鸭梨</strong> 2018.4.5 售出343</div>
-                                        <div class="alert alert-warning"><strong>西瓜</strong>2018.2.1 售出6</div>
-                                        <div class="alert alert-danger"><strong>白菜</strong> 2018.5.3 售出20</div>
-                                        <div class="alert alert-success"><strong>西葫</strong> 2018.3.3 售出333</div>
-                                        <div class="alert alert-info"><strong>鸭梨</strong> 2018.4.5 售出343</div>
-                                        <div class="alert alert-warning"><strong>西瓜</strong>2018.2.1 售出6</div>
-                                        <div class="alert alert-danger"><strong>白菜</strong> 2018.5.3 售出20</div>
-                                        <div class="mbxl"></div> 
-										
-                                    </div>
-								   
-								   
-								   
-                                </div>
-                            </div>
-							
-                            <div id="pagination-tab" class="tab-pane fade">							
-                                <div class="row">
-								
-                                   <div class="col-lg-6">
-                                        <div class="note note-success"><h4 class="box-heading">螃蟹 xxxxxxx</h4></div>
-                                        <div class="note note-info"><h4 class="box-heading">虾 xxxxxxx</h4></div>
-										<div class="note note-warning"><h4 class="box-heading">鱼 xxxxx</h4></div>
-                                        <div class="note note-danger"><h4 class="box-heading">金枪鱼 xxxxxx</h4></div>
-										<div class="note note-success"><h4 class="box-heading">螃蟹 xxxxxxx</h4></div>
-                                        <div class="note note-info"><h4 class="box-heading">虾 xxxxxxx</h4></div>
-										<div class="note note-warning"><h4 class="box-heading">鱼 xxxxx</h4></div>
-                                        <div class="note note-danger"><h4 class="box-heading">金枪鱼 xxxxxx</h4></div>
-										
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="note note-warning"><h4 class="box-heading">鱼 xxxxx</h4></div>
-                                        <div class="note note-danger"><h4 class="box-heading">金枪鱼 xxxxxx</h4></div>
-										<div class="note note-success"><h4 class="box-heading">虾 xxxxxxx</h4></div>
-                                        <div class="note note-info"><h4 class="box-heading">螃蟹 xxxxxxx</h4></div>
-										<div class="note note-warning"><h4 class="box-heading">鱼 xxxxx</h4></div>
-                                        <div class="note note-danger"><h4 class="box-heading">金枪鱼 xxxxxx</h4></div>
-										<div class="note note-success"><h4 class="box-heading">虾 xxxxxxx</h4></div>
-                                        <div class="note note-info"><h4 class="box-heading">螃蟹 xxxxxxx</h4></div>
-                                    </div>
-                                  
-                                </div>
-                                <hr/>
-                                <div class="row">
-                                   
-                                  
-                                </div>
-                            </div>
-							<!--日用品-->
-                            <div id="input-group-tab" class="tab-pane fade">
-                                <div class="row">
-                                  
-								  <div class="col-lg-6"><h3>膨化食品类销售情况</h3>
-
-                                        <div class="alert alert-success"><strong>西葫</strong> 2018.3.3 售出333</div>
-                                        <div class="alert alert-info"><strong>鸭梨</strong> 2018.4.5 售出343</div>
-                                        <div class="alert alert-warning"><strong>西瓜</strong>2018.2.1 售出6</div>
-                                        <div class="alert alert-danger"><strong>白菜</strong> 2018.5.3 售出20</div>
-										<div class="alert alert-success"><strong>西葫</strong> 2018.3.3 售出333</div>
-                                        <div class="alert alert-info"><strong>鸭梨</strong> 2018.4.5 售出343</div>
-                                        <div class="alert alert-warning"><strong>西瓜</strong>2018.2.1 售出6</div>
-                                        <div class="alert alert-danger"><strong>白菜</strong> 2018.5.3 售出20</div>
-                                        <div class="alert alert-success"><strong>西葫</strong> 2018.3.3 售出333</div>
-                                        <div class="alert alert-info"><strong>鸭梨</strong> 2018.4.5 售出343</div>
-                                        <div class="alert alert-warning"><strong>西瓜</strong>2018.2.1 售出6</div>
-                                        <div class="alert alert-danger"><strong>白菜</strong> 2018.5.3 售出20</div>
-                                        <div class="mbxl"></div> 
-										
-                                    </div>
-                                   
-                                </div>
-                                <hr/>
-                                <div class="row">
-								
-								
-								</div>                                   
-                            </div>
-							<!-- 化妆品模块-->
-                            <div id="list-group-tab" class="tab-pane fade">
-                                <div class="row">
-                                                                                                   
-									
-                                </div>
-                            </div>
-							
-							<!--家用电器模块-->
-                            <div id="navbar-tab" class="tab-pane fade">
-                                <div class="row">
-                                    
-									
-                                </div>
-                                <div class="row">
-                                    
-									
-                                </div>
-                                <div class="row">
-                                    
-									
-                                </div>
-                                <div class="row">
-                                    
-									
-                                </div>
-                                <div class="row">
-                                    
-                                </div>
-                                <div class="row">
-                                    
-									
-                                </div>
-                            </div>
-							<!--销量统计模块-->
-                            <div id="thumbnail-tab" class="tab-pane fade">
-
-                                <div class="row">
-                                    
-									 <div class="col-lg-4"><h4 class="box-heading">销量统计</h4>
-
-                                        <div class="list-group"><a href="#" class="list-group-item active">Cras justo odio<span class="badge badge-info pull-right">4</span></a><a href="#" class="list-group-item">Dapibus ac facilisis in<span class="badge badge-warning pull-right">2</span></a><a href="#" class="list-group-item">Morbi leo risus<span
-                                                class="badge badge-danger pull-right">3</span></a><a href="#" class="list-group-item">Porta ac consectetur ac<span class="badge badge-info pull-right">8</span></a><a href="#" class="list-group-item">Vestibulum at eros<span class="badge badge-success pull-right">1</span></a><a href="#" class="list-group-item">Morbi leo risus<span
-                                                class="badge badge-danger pull-right">5</span></a></div>
-                                        <div class="mbxl"></div>
-
-                                    </div>
-									
-                                </div>
-
-                                <div class="row">
-                                   
-                                    
-                                </div>
-                            </div>
-							<!--其他-->
-                            <div id="other-tab" class="tab-pane fade">
-                                <div class="row">
-                                   
-                                   
-                                </div>
-                                <div class="mbxl"></div>
-                                <div class="row">
-                                                                                                   
-                                </div>
-                                <div class="mbxl"></div>
-                                <div class="row">
-                                                                    
-                                </div>
-                            </div>
+                            </div>                         
+                            </form>
                         </div>
                     </div>
+                                
                             
                             
                             </div>

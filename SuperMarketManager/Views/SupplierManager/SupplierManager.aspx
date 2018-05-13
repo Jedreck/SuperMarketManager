@@ -107,7 +107,7 @@
                         </i><span class="menu-title">商品销售</span></a>
 
                         </li>
-                        <li><a href="Tables.html"><i class="fa fa-th-list fa-fw">
+                        <li><a href="../../Views/GoodsManager/GoodsManager.aspx"><i class="fa fa-th-list fa-fw">
                             <div class="icon-bg bg-blue"></div>
                         </i><span class="menu-title">商品信息与库存</span></a>
 
@@ -167,7 +167,6 @@
                             </div>
 
                             <div class="col-lg-12">
-
                                 <div class="page-content">
                                     <div class="row">
                                         <div class="col-lg-12">
@@ -203,7 +202,7 @@
                                                             <div data-control-type="pagination" data-control-name="paging" data-control-action="paging" class="jplist-pagination"></div>
                                                         </div>
                                                         <div class="box text-shadow">
-                                                            <table class="demo-tbl">
+                                                            <table class="demo-tbl" id="tab">
                                                              <%if (supplierlist!= null)
                                                              { %>
                                                                 <%for (int i = 0; i <supplierlist.Count; i++)
@@ -215,17 +214,17 @@
                                                                     
                                                                     <!--<data></data>-->
                                                                     <td class="td-block">
-                                                                        <p class="title"><a href="/Views/SupplierManager/Supplier_detail.aspx"><%=supplierlist[i].S_Name%></a></p>
-
+                                                                        <p class="title" ><a href="/Views/SupplierManager/Supplier_detail.aspx?id=<%=supplierlist[i].S_Name %>"><%=supplierlist[i].S_Name%></a></p>
+                                                                       
                                                                         <p class="desc">供应商信息：供应商id:<%=supplierlist[i].S_ID %>&nbsp&nbsp&nbsp 供应商名称：<%=supplierlist[i].S_Name %><br />                                                                                   
                                                                                         商品信息：商品id：<%=supplierlist[i].G_ID %>&nbsp&nbsp&nbsp 商品名称：<%=supplierlist[i].G_Name %>
                                                                         </p>
-                                                                        <p class="like">供应商报价：<%=supplierlist[i].SL_Price %></p>                                                                       
+                                                                        <p class="like"><a href="/Views/SupplierManager/Supplier_Goods_detail.aspx?sname=<%=supplierlist[i].S_Name %>&gname=<%=supplierlist[i].G_Name %>">供应商报价：<%=supplierlist[i].SL_Price %></a></p>
                                                                     </td>
-                                                                </tr>
+                                                                    </tr>
                                                                 <%} %>
                                                             <%} %>
-                                                            </table>
+                                                            </table>                                                          
                                                         </div>
                                                         <div class="box jplist-no-results text-shadow align-center">
                                                             <p>No results found</p>
@@ -250,11 +249,7 @@
                                                                 </ul>
                                                             </div>
                                                             <div data-type="{start} - {end} of {all}" data-control-type="pagination-info" data-control-name="paging" data-control-action="paging" class="jplist-label btn btn-default"></div>
-                                                            <div data-control-type="pagination" data-control-name="paging" data-control-action="paging" data-control-animate-to-top="true" class="jplist-pagination"></div>
-                                                            <div>
-                                                                 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                                <asp:Button ID="s_manage" runat="server" Width="100px" Height="55px" BorderStyle="Dashed" ForeColor="#ffffff" BackColor=" #488c6c" BorderColor="#458567" Font-Size="12px" Text="管理供应商信息" OnClick="Manage_Click" />
-                                                        </div>
+                                                            <div data-control-type="pagination" data-control-name="paging" data-control-action="paging" data-control-animate-to-top="true" class="jplist-pagination"></div>                                                           
                                                     </div>
                                                 </div>
                                             </div>

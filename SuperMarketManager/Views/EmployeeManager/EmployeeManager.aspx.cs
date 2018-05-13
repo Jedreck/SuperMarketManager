@@ -11,7 +11,8 @@ namespace SuperMarketManager.Views.EmployeeManager
 {   
     public partial class EmployeeManager : System.Web.UI.Page
     {
-        protected List<Employee> employees=null; 
+        protected List<Employee> employees=null;
+        String content = null;
         protected void Page_Load(object sender, EventArgs e)
         {
             employees = Employee_C.SelectFuzzy("");
@@ -19,12 +20,12 @@ namespace SuperMarketManager.Views.EmployeeManager
 
         protected void Search_Click(object sender, EventArgs e)
         {
-            String content = search_content.Value.ToString();
+            content = search_content.Value.ToString();
             employees = Employee_C.SelectFuzzy(content);
         }
         protected void Delete_Click(object sender, EventArgs e)
         {
-            String content = search_content.Value.ToString();
+            content = search_content.Value.ToString();
             if (content.Length != 8)
             {
                 Response.Write("<script language=javascript>window.alert('请输入完整工号！');</script>");
@@ -49,6 +50,11 @@ namespace SuperMarketManager.Views.EmployeeManager
         protected void Updateto_Click(object sender, EventArgs e)
         {
             Response.Redirect("/Views/EmployeeManager/Employee_update.aspx");
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
