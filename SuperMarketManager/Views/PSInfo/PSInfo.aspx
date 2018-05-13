@@ -200,10 +200,11 @@
                                         <div class="alert alert-danger"><strong>位置：</strong>
                                             <asp:TextBox ID="position" runat="server"></asp:TextBox>
                                         </div>
+                                        <div class="alert alert-danger"><strong>密码：</strong>
+                                            <asp:TextBox ID="password" runat="server"></asp:TextBox>
+                                        </div>
                                         <div>
-                                             <span class="btn n-btn">
-                            <button type="submit" id="Save_Click">确定</button>
-                        </span>
+                                        <asp:Button ID="Button1" runat="server" Text="确定" OnClick="Button1_Click" />
                                             </div>
                                         </div>
                                     </div>

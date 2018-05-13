@@ -82,14 +82,15 @@ namespace SuperMarketManager.Controllers
                 + " `E_Name`= '" + employee.Name + "'"
                 + " ,`E_Sex`= '" + employee.Sex + "'"
                 + " ,`E_Phone`= '" + employee.Phone + "'"
-                + " ,`E_Birth`= '" + employee.Birth + "'"
+                + " ,`E_Birth`= '" + employee.Birth.ToString("yyyy-MM-dd") + "'"
                 + " ,`E_BankAccount`= '" + employee.BankAccount + "'"
                 + " ,`E_Position`=" + employee.Position
                 + " ,`E_Password`= '" + employee.PassWord + "'"
                 + "WHERE"
-                +"`D_ID`= '"+employee.ID+"'";
+                +"`E_ID`= '"+employee.ID+"'";
             OdbcConnection connection = DBManager.GetOdbcConnection();
             connection.Open();
+            System.Diagnostics.Debug.WriteLine("sql:"+sql);
             OdbcCommand cammand = new OdbcCommand(sql, connection);
             int i = cammand.ExecuteNonQuery();
             connection.Close();
