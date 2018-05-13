@@ -84,6 +84,7 @@ namespace SuperMarketManager.Controllers
                 + " ,`E_Phone`= '" + employee.Phone + "'"
                 + " ,`E_Birth`= '" + employee.Birth.ToString("yyyy-MM-dd") + "'"
                 + " ,`E_BankAccount`= '" + employee.BankAccount + "'"
+                + " ,`E_Email`= '" + employee.Email + "'"
                 + " ,`E_Position`=" + employee.Position
                 + " ,`E_Password`= '" + employee.PassWord + "'"
                 + "WHERE"
