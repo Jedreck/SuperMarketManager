@@ -277,7 +277,6 @@
     <Content Include="Views\Businessstatistics\Businessstatistics.aspx" />
     <Content Include="Views\EmployeeManager\EmployeeManager.aspx" />
     <Content Include="Views\EmployeeManager\Employee_add.aspx" />
-    <Content Include="Views\GoodsManager\GoodsManager.aspx" />
     <Content Include="Views\EmployeeManager\Employee_update.aspx" />
     <Content Include="Views\GoodsSell\GoodsSell.aspx" />
     <Content Include="Views\Index\Index.aspx" />
@@ -346,13 +345,6 @@
     </Compile>
     <Compile Include="Views\EmployeeManager\Employee_add.aspx.designer.cs">
       <DependentUpon>Employee_add.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\GoodsManager\GoodsManager.aspx.cs">
-      <DependentUpon>GoodsManager.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\GoodsManager\GoodsManager.aspx.designer.cs">
-      <DependentUpon>GoodsManager.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\EmployeeManager\Employee_update.aspx.cs">
       <DependentUpon>Employee_update.aspx</DependentUpon>
