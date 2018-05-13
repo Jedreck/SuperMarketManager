@@ -50,7 +50,7 @@ namespace SuperMarketManager.Views.PSInfo
         {
             Employee em = new Employee();
             em.Name = name.Text;
-            em.Sex = sex.SelectedValue.ToString();
+            em.Sex = sex.SelectedItem.ToString();
             em.Phone = phone.Text;
             em.Birth = Convert.ToDateTime(birth.Text);
             em.BankAccount = bankaccount.Text;

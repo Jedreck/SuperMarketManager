@@ -203,6 +203,7 @@
                                         <div class="alert alert-danger"><strong>密码：</strong>
                                             <asp:TextBox ID="password" runat="server"></asp:TextBox>
                                         </div>
+
                                         <div>
                                         <asp:Button ID="Button1" runat="server" Text="确定" OnClick="Button1_Click" />
                                             </div>
