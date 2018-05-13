@@ -93,7 +93,7 @@
         <!--END TOPBAR-->
         <div id="wrapper">
             <!--BEGIN SIDEBAR MENU-->
-            <nav id="sidebar" role="navigation" data-step="2" data-intro="Template has &lt;b&gt;many navigation styles&lt;/b&gt;"
+             <nav id="sidebar" role="navigation" data-step="2" data-intro="Template has &lt;b&gt;many navigation styles&lt;/b&gt;"
                 data-position="right" class="navbar-default navbar-static-side">
                 <div class="sidebar-collapse menu-scroll">
                     <ul id="side-menu" class="nav">
@@ -108,7 +108,7 @@
                         </i><span class="menu-title">个人信息</span></a>
 
                         </li>
-                        <li class="active"><a href="../../Views/GoodsManager/GoodsManager.aspx"><i class="fa fa-send-o fa-fw">
+                        <li class="active"><a href="../../Views/GoodsManage2/GoodsManager.aspx"><i class="fa fa-send-o fa-fw">
                             <div class="icon-bg bg-green"></div>
                         </i><span class="menu-title">商品信息</span></a>
 
@@ -118,7 +118,7 @@
                         </i><span class="menu-title">库存管理</span></a>
 
                         </li>
-                        <li><a href="../../Views/GoodsInManage2/GoodsInManage2.aspx"><i class="fa fa-th-list fa-fw">
+                        <li ><a href="../../Views/GoodsInManage2/GoodsInManage2.aspx"><i class="fa fa-th-list fa-fw">
                             <div class="icon-bg bg-blue"></div>
                         </i><span class="menu-title">入库管理</span></a>
 
@@ -141,8 +141,8 @@
                     </div>
                     <ol class="breadcrumb page-breadcrumb pull-right">
                         <li><i class="fa fa-home"></i>&nbsp;<a href="dashboard.html">Home</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
-                        <li class="hidden"><a href="#">Extras</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
-                        <li class="active">Extras</li>
+                        <li class="hidden"><a href="#">商品信息</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
+                        <li class="active">商品信息</li>
                     </ol>
                     <div class="clearfix">
                     </div>

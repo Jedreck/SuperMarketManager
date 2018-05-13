@@ -3,10 +3,9 @@ using SuperMarketManager.Models;
 using System;
 using System.Data.Odbc;
 
-
-namespace SuperMarketManager.Views.PSInfo3
+namespace SuperMarketManager.Views.PSInfo1
 {
-    public partial class PSInfo3 : System.Web.UI.Page
+    public partial class PSInfo1 : System.Web.UI.Page
     {
         Employee em;
         protected void Page_Load(object sender, EventArgs e)

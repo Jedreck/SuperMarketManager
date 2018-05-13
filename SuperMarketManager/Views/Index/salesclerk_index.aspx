@@ -86,16 +86,16 @@
                     <ul id="side-menu" class="nav">
 
                         <div class="clearfix"></div>
-                        <li class="active"><a href="../../Views/Index/salasclerk_index.aspx"><i class="fa fa-tachometer fa-fw">
+                        <li class="active"><a href="../../Views/Index/salesclerk_index.aspx"><i class="fa fa-tachometer fa-fw">
                             <div class="icon-bg bg-orange"></div>
                         </i><span class="menu-title">首页</span></a></li>
 
-                        <li><a href="../../Views/PSInfo/PSInfo.aspx"><i class="fa fa-desktop fa-fw">
+                        <li><a href="../../Views/PSInfo3/PSInfo3.aspx"><i class="fa fa-desktop fa-fw">
                             <div class="icon-bg bg-pink"></div>
                         </i><span class="menu-title">个人信息</span></a>
 
                         </li>
-                        <li><a href="../../Views/GoodsManage2/GoodsManager.aspx"><i class="fa fa-send-o fa-fw">
+                        <li><a href="../../Views/GoodsManager3/GoodsManager3.aspx"><i class="fa fa-send-o fa-fw">
                             <div class="icon-bg bg-green"></div>
                         </i><span class="menu-title">商品信息</span></a>
 

@@ -7,10 +7,10 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace SuperMarketManager.Views.PSInfo3 {
+namespace SuperMarketManager.Views.PSInfo1 {
     
     
-    public partial class PSInfo3 {
+    public partial class PSInfo1 {
         
         /// <summary>
         /// id 控件。

@@ -120,7 +120,7 @@
                         </i><span class="menu-title">营业统计</span></a>
 
                         </li>
-                        <li><a href="../../Views/PSInfo/PSInfo.aspx"><i class="fa fa-gift fa-fw">
+                        <li><a href="../../Views/PSInfo1/PSInfo1.aspx"><i class="fa fa-gift fa-fw">
                             <div class="icon-bg bg-grey"></div>
                         </i><span class="menu-title">个人信息</span></a>
 
