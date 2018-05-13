@@ -19,6 +19,7 @@ namespace SuperMarketManager.Views.Login
         protected void login_button_Click(object sender, EventArgs e)
         {
             string id = userid.Value.ToString();
+            Session["E_ID"] = id;
             string pwd = password.Value.ToString();
             Session.Add("id", id);
             Session.Add("pwd", pwd);
@@ -29,7 +30,7 @@ namespace SuperMarketManager.Views.Login
                 if (employee.Position == 1)//管理员跳转的网页
                     Response.Redirect("/Views/Index/Manager_Index.aspx");
                 else if (employee.Position == 2)//
-                    Response.Redirect("/Views/Index/Index.aspx");
+                    Response.Redirect("/Views/Index/inventory_manager_index.aspx");
             }
             else
                 Response.Write("<script language=javascript>window.alert('账号或密码错误，请重新输入！');</script>");

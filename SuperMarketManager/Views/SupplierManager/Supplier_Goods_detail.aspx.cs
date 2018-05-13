@@ -35,17 +35,7 @@ namespace SuperMarketManager.Views.SupplierManager
         }
         protected void Add_Click(object sender, EventArgs e)
         {
-            bool result = SupplierList_C.AddSupplylist(ssid.Value, ggid.Value, gsprice.Value);
-
-            if (result)
-            {
-                Response.Write("<script language=javascript>window.alert('添加成功');</script>");
-                Response.Redirect("/Views/SupplierManager/SupplierManager.aspx");
-            }
-            else
-            {
-                Response.Write("<script language=javascript>window.alert('添加失败！');</script>");
-            }
+            Response.Redirect("/Views/SupplierManager/Supplier_Goods_add.aspx");          
         }
         protected void Back_Click(object sender, EventArgs e)
         {
@@ -57,11 +47,12 @@ namespace SuperMarketManager.Views.SupplierManager
             bool result = SupplierList_C.DeleteSupplylist(ssid.Value,ggid.Value);
             if (result)
             {
-                Response.Write("<script language=javascript>window.alert('添加成功');</script>");
+                Response.Write("<script language=javascript>window.alert('删除成功');</script>");
+                Response.Redirect("/Views/SupplierManager/SupplierManager.aspx");
             }
             else
             {
-                Response.Write("<script language=javascript>window.alert('添加失败');</script>");
+                Response.Write("<script language=javascript>window.alert('删除失败');</script>");
             }       
         }
     }

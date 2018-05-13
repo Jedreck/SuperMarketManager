@@ -107,7 +107,7 @@
                         </i><span class="menu-title">商品销售</span></a>
 
                         </li>
-                        <li><a href="Tables.html"><i class="fa fa-th-list fa-fw">
+                        <li><a href="../../Views/GoodsManager/GoodsManager.aspx"><i class="fa fa-th-list fa-fw">
                             <div class="icon-bg bg-blue"></div>
                         </i><span class="menu-title">商品信息与库存</span></a>
 
@@ -117,12 +117,12 @@
                         </i><span class="menu-title">折扣管理</span></a>
 
                         </li>
-                        <li><a href="../../Views/Businessstatistics/Businessstatistics.aspx"><i class="fa fa-file-o fa-fw">
+                        <li class="active"><a href="../../Views/Businessstatistics/Businessstatistics.aspx"><i class="fa fa-file-o fa-fw">
                             <div class="icon-bg bg-yellow"></div>
                         </i><span class="menu-title">营业统计</span></a>
 
                         </li>
-                        <li><a href="Extras.html"><i class="fa fa-gift fa-fw">
+                        <li><a href="../../Views/PSInfo/PSInfo.aspx"><i class="fa fa-gift fa-fw">
                             <div class="icon-bg bg-grey"></div>
                         </i><span class="menu-title">个人信息</span></a>
 
@@ -167,7 +167,6 @@
                             </div>
 
                             <div class="col-lg-12">
-
                                 <div class="page-content">
                                     <div class="row">
                                         <div class="col-lg-12">

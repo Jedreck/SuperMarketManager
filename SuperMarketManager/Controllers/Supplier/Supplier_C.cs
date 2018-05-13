@@ -51,7 +51,7 @@ namespace SuperMarketManager.Controllers
             string sql = "UPDATE `marketmanage`.`supplier` " +
                 "SET `S_Name`='"+s.Name+"',`S_Phone`='"+s.Phone+ "',`S_Region`='" + s.Rigion + "' " +
                 "WHERE `S_ID`='" + s.ID + "'";
-            Console.WriteLine("sql:" + sql);
+           // Console.WriteLine("sql:" + sql);
             return ExecuteSQL.ExecuteNonQuerySQL_GetBool(sql);
         }
     }

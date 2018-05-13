@@ -223,71 +223,81 @@
     <Content Include="Controllers\DBManager\这里写自己连接数据库的ODBC.txt" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Scripts\animation.js" />
-    <Content Include="Scripts\bootstrap-hover-dropdown.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Scripts\charts-chartjs.js" />
-    <Content Include="Scripts\charts-flotchart.js" />
-    <Content Include="Scripts\charts-highchart-area.js" />
-    <Content Include="Scripts\charts-highchart-column-bar.js" />
-    <Content Include="Scripts\charts-highchart-combinations.js" />
-    <Content Include="Scripts\charts-highchart-dynamic.js" />
-    <Content Include="Scripts\charts-highchart-line.js" />
-    <Content Include="Scripts\charts-highchart-more.js" />
-    <Content Include="Scripts\charts-highchart-pie.js" />
-    <Content Include="Scripts\charts-highchart-scatter-bubble.js" />
-    <Content Include="Scripts\custom.min.js" />
-    <Content Include="Scripts\data.js" />
-    <Content Include="Scripts\drilldown.js" />
-    <Content Include="Scripts\exporting.js" />
-    <Content Include="Scripts\funnel.js" />
-    <Content Include="Scripts\highchart.js" />
-    <Content Include="Scripts\highcharts-more.js" />
-    <Content Include="Scripts\highcharts.js" />
-    <Content Include="Scripts\holder.js" />
-    <Content Include="Scripts\html5shiv.js" />
-    <Content Include="Scripts\icheck.min.js" />
-    <Content Include="Scripts\index.js" />
-    <Content Include="Scripts\jplist.js" />
-    <Content Include="Scripts\jplist.min.js" />
-    <Content Include="Scripts\jquery-1.10.2.min.js" />
-    <Content Include="Scripts\jquery-migrate-1.2.1.min.js" />
-    <Content Include="Scripts\jquery-ui.js" />
-    <Content Include="Scripts\jquery.cookie.js" />
-    <Content Include="Scripts\jquery.flot.categories.js" />
-    <Content Include="Scripts\jquery.flot.fillbetween.js" />
-    <Content Include="Scripts\jquery.flot.js" />
-    <Content Include="Scripts\jquery.flot.pie.js" />
-    <Content Include="Scripts\jquery.flot.resize.js" />
-    <Content Include="Scripts\jquery.flot.spline.js" />
-    <Content Include="Scripts\jquery.flot.stack.js" />
-    <Content Include="Scripts\jquery.flot.tooltip.js" />
-    <Content Include="Scripts\jquery.menu.js" />
-    <Content Include="Scripts\jquery.metisMenu.js" />
-    <Content Include="Scripts\jquery.nestable.js" />
-    <Content Include="Scripts\jquery.news-ticker.js" />
-    <Content Include="Scripts\jquery.slimscroll.js" />
-    <Content Include="Scripts\main.js" />
-    <Content Include="Scripts\modernizr.min.js" />
-    <Content Include="Scripts\pace.min.js" />
-    <Content Include="Scripts\respond.min.js" />
-    <Content Include="Scripts\responsive-tabs.js" />
-    <Content Include="Scripts\ui-nestable-list.js" />
-    <Content Include="Scripts\zabuto_calendar.min.js" />
+    <Content Include="Script\animation.js" />
+    <Content Include="Script\bootstrap-hover-dropdown.js" />
+    <Content Include="Script\bootstrap.min.js" />
+    <Content Include="Script\charts-chartjs.js" />
+    <Content Include="Script\charts-flotchart.js" />
+    <Content Include="Script\charts-highchart-area.js" />
+    <Content Include="Script\charts-highchart-column-bar.js" />
+    <Content Include="Script\charts-highchart-combinations.js" />
+    <Content Include="Script\charts-highchart-dynamic.js" />
+    <Content Include="Script\charts-highchart-line.js" />
+    <Content Include="Script\charts-highchart-more.js" />
+    <Content Include="Script\charts-highchart-pie.js" />
+    <Content Include="Script\charts-highchart-scatter-bubble.js" />
+    <Content Include="Script\custom.min.js" />
+    <Content Include="Script\data.js" />
+    <Content Include="Script\drilldown.js" />
+    <Content Include="Script\exporting.js" />
+    <Content Include="Script\funnel.js" />
+    <Content Include="Script\highchart.js" />
+    <Content Include="Script\highcharts-more.js" />
+    <Content Include="Script\highcharts.js" />
+    <Content Include="Script\holder.js" />
+    <Content Include="Script\html5shiv.js" />
+    <Content Include="Script\icheck.min.js" />
+    <Content Include="Script\index.js" />
+    <Content Include="Script\jplist.js" />
+    <Content Include="Script\jplist.min.js" />
+    <Content Include="Script\jquery-1.10.2.min.js" />
+    <Content Include="Script\jquery-migrate-1.2.1.min.js" />
+    <Content Include="Script\jquery-ui.js" />
+    <Content Include="Script\jquery.cookie.js" />
+    <Content Include="Script\jquery.flot.categories.js" />
+    <Content Include="Script\jquery.flot.fillbetween.js" />
+    <Content Include="Script\jquery.flot.js" />
+    <Content Include="Script\jquery.flot.pie.js" />
+    <Content Include="Script\jquery.flot.resize.js" />
+    <Content Include="Script\jquery.flot.spline.js" />
+    <Content Include="Script\jquery.flot.stack.js" />
+    <Content Include="Script\jquery.flot.tooltip.js" />
+    <Content Include="Script\jquery.menu.js" />
+    <Content Include="Script\jquery.metisMenu.js" />
+    <Content Include="Script\jquery.nestable.js" />
+    <Content Include="Script\jquery.news-ticker.js" />
+    <Content Include="Script\jquery.slimscroll.js" />
+    <Content Include="Script\main.js" />
+    <Content Include="Script\modernizr.min.js" />
+    <Content Include="Script\pace.min.js" />
+    <Content Include="Script\respond.min.js" />
+    <Content Include="Script\responsive-tabs.js" />
+    <Content Include="Script\ui-nestable-list.js" />
+    <Content Include="Script\zabuto_calendar.min.js" />
+    <Content Include="Views\AddGoods2\AddGoods2.aspx" />
+    <Content Include="Views\AddGoods\AddGoods.aspx" />
     <Content Include="Views\Businessstatistics\Businessstatistics.aspx" />
+    <Content Include="Views\DiscountManage\DiscountManager.aspx" />
     <Content Include="Views\EmployeeManager\EmployeeManager.aspx" />
     <Content Include="Views\EmployeeManager\Employee_add.aspx" />
+    <Content Include="Views\GoodsInManage2\GoodsInManage2.aspx" />
+    <Content Include="Views\GoodsManage2\GoodsManager.aspx" />
     <Content Include="Views\GoodsManager\GoodsManager.aspx" />
     <Content Include="Views\EmployeeManager\Employee_update.aspx" />
     <Content Include="Views\GoodsSell\GoodsSell.aspx" />
     <Content Include="Views\Index\Index.aspx" />
+    <Content Include="Views\Index\inventory_manager_index.aspx" />
     <Content Include="Views\Index\Manager_Index.aspx" />
     <Content Include="Views\Login\Login.aspx" />
+    <Content Include="Views\PSInfo\PSInfo.aspx" />
     <Content Include="Views\Statistic\StatisticDay.aspx" />
     <Content Include="Views\Statistic\StatisticGoods.aspx" />
+    <Content Include="Views\StoreManage\store.aspx" />
     <Content Include="Views\SupplierManager\SupplierManager.aspx" />
     <Content Include="Views\SupplierManager\Supplier_detail.aspx" />
     <Content Include="Views\SupplierManager\Supplier_detail_add.aspx" />
+    <Content Include="Views\SupplierManager\Supplier_detail_update.aspx" />
+    <Content Include="Views\SupplierManager\Supplier_Goods_add.aspx" />
     <Content Include="Views\SupplierManager\Supplier_Goods_detail.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -326,12 +336,33 @@
     <Compile Include="Models\Supplier_List_Goods.cs" />
     <Compile Include="Models\Supplylist.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\AddGoods2\AddGoods2.aspx.cs">
+      <DependentUpon>AddGoods2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\AddGoods2\AddGoods2.aspx.designer.cs">
+      <DependentUpon>AddGoods2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddGoods\AddGoods.aspx.cs">
+      <DependentUpon>AddGoods.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\AddGoods\AddGoods.aspx.designer.cs">
+      <DependentUpon>AddGoods.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\Businessstatistics\Businessstatistics.aspx.cs">
       <DependentUpon>Businessstatistics.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Views\Businessstatistics\Businessstatistics.aspx.designer.cs">
       <DependentUpon>Businessstatistics.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DiscountManage\DiscountManager.aspx.cs">
+      <DependentUpon>DiscountManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\DiscountManage\DiscountManager.aspx.designer.cs">
+      <DependentUpon>DiscountManager.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\EmployeeManager\EmployeeManager.aspx.cs">
       <DependentUpon>EmployeeManager.aspx</DependentUpon>
@@ -346,6 +377,20 @@
     </Compile>
     <Compile Include="Views\EmployeeManager\Employee_add.aspx.designer.cs">
       <DependentUpon>Employee_add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GoodsInManage2\GoodsInManage2.aspx.cs">
+      <DependentUpon>GoodsInManage2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\GoodsInManage2\GoodsInManage2.aspx.designer.cs">
+      <DependentUpon>GoodsInManage2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GoodsManage2\GoodsManager.aspx.cs">
+      <DependentUpon>GoodsManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\GoodsManage2\GoodsManager.aspx.designer.cs">
+      <DependentUpon>GoodsManager.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\GoodsManager\GoodsManager.aspx.cs">
       <DependentUpon>GoodsManager.aspx</DependentUpon>
@@ -375,6 +420,13 @@
     <Compile Include="Views\Index\Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Views\Index\inventory_manager_index.aspx.cs">
+      <DependentUpon>inventory_manager_index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Index\inventory_manager_index.aspx.designer.cs">
+      <DependentUpon>inventory_manager_index.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\Index\Manager_Index.aspx.cs">
       <DependentUpon>Manager_Index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -389,6 +441,13 @@
     <Compile Include="Views\Login\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Views\PSInfo\PSInfo.aspx.cs">
+      <DependentUpon>PSInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\PSInfo\PSInfo.aspx.designer.cs">
+      <DependentUpon>PSInfo.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\Statistic\StatisticDay.aspx.cs">
       <DependentUpon>StatisticDay.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -402,6 +461,13 @@
     </Compile>
     <Compile Include="Views\Statistic\StatisticGoods.aspx.designer.cs">
       <DependentUpon>StatisticGoods.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StoreManage\store.aspx.cs">
+      <DependentUpon>store.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\StoreManage\store.aspx.designer.cs">
+      <DependentUpon>store.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\SupplierManager\SupplierManager.aspx.cs">
       <DependentUpon>SupplierManager.aspx</DependentUpon>
@@ -424,6 +490,20 @@
     <Compile Include="Views\SupplierManager\Supplier_detail_add.aspx.designer.cs">
       <DependentUpon>Supplier_detail_add.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Views\SupplierManager\Supplier_detail_update.aspx.cs">
+      <DependentUpon>Supplier_detail_update.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\SupplierManager\Supplier_detail_update.aspx.designer.cs">
+      <DependentUpon>Supplier_detail_update.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SupplierManager\Supplier_Goods_add.aspx.cs">
+      <DependentUpon>Supplier_Goods_add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\SupplierManager\Supplier_Goods_add.aspx.designer.cs">
+      <DependentUpon>Supplier_Goods_add.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\SupplierManager\Supplier_Goods_detail.aspx.cs">
       <DependentUpon>Supplier_Goods_detail.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -434,6 +514,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\NewFolder2\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -11,24 +11,44 @@ namespace SuperMarketManager.Controllers
     public class GoodsIn_C
     {
         //入库（手动输入生产日期）
-        public static GoodsIn AddGoods(GoodsIn goodsin,DateTime producedate)
+        public static bool AddGoods(GoodsIn goodsin,DateTime producedate)
         {
+            //判断商品ID是否存在
+            string sql = "select * from goods where G_ID='" + goodsin.G_ID+"'";
+            OdbcConnection odbcConnection = DBManager.GetOdbcConnection();
+            odbcConnection.Open();
+            OdbcCommand odbcCommand = new OdbcCommand(sql, odbcConnection);
+            OdbcDataReader odbcDataReader = odbcCommand.ExecuteReader(CommandBehavior.CloseConnection);
+            if (!odbcDataReader.HasRows)//商品ID不存在 返回空
+            {
+                return false;
+            }
+            //商品ID存在 插入
             bool flag;
-            String insertSql = String.Format("insert into `marketmanage`.`goodsin`  (`GI_ID`, `G_ID`,`S_ID`,`GI_PriceIn`,`GI_Num`,`GI_Date`,`GI_OriginPrice`) " +
-                "values ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}')"
+            goodsin.GI_ID = IDFormat.getID_8();
+            String insertSql = String.Format("insert into `marketmanage`.`goodsin`  (`GI_ID`, `G_ID`,`S_ID`,`GI_PriceIn`,`GI_Num`,`GI_Date`,`GI_OriginPlace`) " +
+                "values ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}')"
                 , goodsin.GI_ID, goodsin.G_ID, goodsin.S_ID, goodsin.PriceIn, goodsin.Num, goodsin.Date, goodsin.OriginPlace);
             flag=ExecuteSQL.ExecuteNonQuerySQL_GetBool(insertSql);
-            
+
             //更新库存表
-            string update_storelist = String.Format("insert into `marketmanage`.`storelist` (`G_ID`,`GI_ID`,`SL_Num`,`SL_ProduceDate`) values ('{0}','{1}','{2}','{3}')"
-                ,goodsin.G_ID, goodsin.GI_ID, goodsin.Num, producedate);
-            ExecuteSQL.ExecuteNonQuerySQL_GetBool(update_storelist);
+            if (!flag)
+            {
+                return false;
+            }
+            string update_storelist = String.Format("insert into `marketmanage`.`storelist` (`G_ID`,`GI_ID`,`SL_Num`,`SL_ProducedDate`) values ('{0}','{1}','{2}','{3}')"
+                , goodsin.G_ID, goodsin.GI_ID, goodsin.Num, producedate);
+            flag = ExecuteSQL.ExecuteNonQuerySQL_GetBool(update_storelist);
 
             //更新商品表（库存数量）
-            String update_goods = "update Goods set G_Store=G_Store+"+goodsin.Num+"where G_ID='"+goodsin.G_ID+"'";
-            ExecuteSQL.ExecuteNonQuerySQL_GetBool(update_goods);
+            if (!flag)
+            {
+                return false;
+            }
+            String update_goods = "update Goods set G_Store=G_Store+" + goodsin.Num + " where G_ID='" + goodsin.G_ID + "'";
+            flag = ExecuteSQL.ExecuteNonQuerySQL_GetBool(update_goods);
 
-            return flag? goodsin : null;            
+            return flag? true : false;            
         }
 
         //详细入库信息
