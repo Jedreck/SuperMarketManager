@@ -179,8 +179,7 @@
                                                             <button type="button" style="height:35px;" data-control-type="reset" data-control-name="reset" data-control-action="reset" class="jplist-reset-btn btn btn-default">重置<i class="fa fa-share mls"></i></button>
                                                             <div data-control-type="drop-down" data-control-name="paging" data-control-action="paging" class="jplist-drop-down form-control">
                                                                 <ul class="dropdown-menu">
-                                                                    <li><span data-number="3">3 per page</span></li>
-                                                                    <li><span data-number="5">5 per page</span></li>
+                                                                    
                                                                     <li><span data-number="10" data-default="true">10 per page</span></li>
                                                                     <li><span data-number="all">view all</span></li>
                                                                 </ul>
@@ -227,15 +226,11 @@
                                                             <%} %>
                                                             </table>                                                          
                                                         </div>
-                                                        <div class="box jplist-no-results text-shadow align-center">
-                                                            <p>No results found</p>
-                                                        </div>
                                                         <div class="jplist-ios-button"><i class="fa fa-sort"></i>jPList Actions</div>
                                                         <div class="jplist-panel box panel-bottom">
                                                             <div data-control-type="drop-down" data-control-name="paging" data-control-action="paging" data-control-animate-to-top="true" class="jplist-drop-down form-control">
                                                                 <ul class="dropdown-menu">
-                                                                    <li><span data-number="3">3 per page</span></li>
-                                                                    <li><span data-number="5">5 per page</span></li>
+                                                                   
                                                                     <li><span data-number="10" data-default="true">10 per page</span></li>
                                                                     <li><span data-number="all">view all</span></li>
                                                                 </ul>
