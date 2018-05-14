@@ -12,7 +12,8 @@ namespace SuperMarketManager.Controllers
             string sql_CheckDate = "SELECT * FROM `marketmanage`.`statisticgoods` " +
                 "WHERE `SG_Date`='"+DateTime.Now.ToString("yyyy-MM-dd")+"' AND `G_ID`='"+G_ID+"'";
 
-            string sql_Insert = "INSERT INTO `marketmanage`.`statisticgoods` (`G_ID`,`SG_Date`,`SG_Price`,`SG_Num`) VALUES ('','','','')";
+            string sql_Insert = "INSERT INTO `marketmanage`.`statisticgoods` (`G_ID`,`SG_Date`,`SG_Price`,`SG_Num`) "+
+                "VALUES ('"+G_ID+"','"+DateTime.Now.ToString("yyyy-MM-dd") + "','"+price+"','"+num+"')";
 
             string sql_Update = "UPDATE `marketmanage`.`statisticgoods` " +
                 "SET `SG_Price`='" + price + "', `SG_Num`='" + num + "' " +
