@@ -32,11 +32,11 @@ namespace SuperMarketManager.Views.SupplierManager
         }
         protected void Update_Click(object sender, EventArgs e)
         {
-            Supplier s = new Supplier(int.Parse(Request.Form["spid.Value"]), Request.Form["spname.Value"], Request.Form["spphone.Value"] , Request.Form["spregion.Value"]);
+            Supplier s = new Supplier(int.Parse(Request.Form["spid"]), Request.Form["spname"], Request.Form["spphone"] , Request.Form["spregion"]);
             bool result = Supplier_C.AlterByID(s);
             if (result)
             {
-                Response.Write("<script language=javascript>window.alert('修改成功');</script>");
+                Response.Write("<script language=javascript>window.alert('修改成功');</script>");                
             }
             else
             {
