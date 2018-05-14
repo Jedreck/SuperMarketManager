@@ -77,7 +77,7 @@
 
                         </li>
                         <li class="dropdown topbar-user"><a data-hover="dropdown" href="#" class="dropdown-toggle">
-                            <img src="../../Content/images/avatar/48.jpg" alt="" class="img-responsive img-circle" />&nbsp;<span class="hidden-xs">Robert John</span>&nbsp;<span class="caret"></span></a>
+                            <img src="../../Content/images/avatar/48.jpg" alt="" class="img-responsive img-circle" />&nbsp;<span class="hidden-xs">销售员</span>&nbsp;<span class="caret"></span></a>
                             <ul class="dropdown-menu dropdown-user pull-right">
                                 <li><a href="#"><i class="fa fa-user"></i>个人信息</a></li>
                                 <li><a href="#"><i class="fa fa-tasks"></i>我的任务<span class="badge badge-success">7</span></a></li>
@@ -99,28 +99,23 @@
                     <ul id="side-menu" class="nav">
 
                         <div class="clearfix"></div>
-                        <li><a href="../../Views/Index/inventory_manager_index.aspx"><i class="fa fa-tachometer fa-fw">
+                        <li><a href="../../Views/Index/salesclerk_index.aspx"><i class="fa fa-tachometer fa-fw">
                             <div class="icon-bg bg-orange"></div>
                         </i><span class="menu-title">首页</span></a></li>
 
-                        <li><a href="../../Views/PSInfo/PSInfo.aspx"><i class="fa fa-desktop fa-fw">
+                        <li><a href="../../Views/PSInfo3/PSInfo3.aspx"><i class="fa fa-desktop fa-fw">
                             <div class="icon-bg bg-pink"></div>
                         </i><span class="menu-title">个人信息</span></a>
 
                         </li>
-                        <li><a href="../../Views/GoodsManage2/GoodsManager.aspx"><i class="fa fa-send-o fa-fw">
+                        <li><a href="../../Views/GoodsManager3/GoodsManager3.aspx"><i class="fa fa-send-o fa-fw">
                             <div class="icon-bg bg-green"></div>
                         </i><span class="menu-title">商品信息</span></a>
 
                         </li>
-                        <li><a href="../../Views/StoreManage/store.aspx"><i class="fa fa-edit fa-fw">
-                            <div class="icon-bg bg-violet"></div>
-                        </i><span class="menu-title">库存管理</span></a>
-
-                        </li>
-                        <li class="active"><a href="../../Views/GoodsInManage2/GoodsInManage2.aspx"><i class="fa fa-th-list fa-fw">
+                        <li class="active"><a href="../../Views/Orders/Orders.aspx"><i class="fa fa-th-list fa-fw">
                             <div class="icon-bg bg-blue"></div>
-                        </i><span class="menu-title">入库管理</span></a>
+                        </i><span class="menu-title">出库管理</span></a>
 
                         </li>
                         <li><a href="../../Views/Login/Login.aspx"><i class="fa fa-sitemap fa-fw">
@@ -129,7 +124,6 @@
                     </ul>
                 </div>
             </nav>
-
 
             <div id="page-wrapper">
                 <!--BEGIN TITLE & BREADCRUMB PAGE-->
