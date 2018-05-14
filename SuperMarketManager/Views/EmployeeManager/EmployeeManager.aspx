@@ -87,12 +87,11 @@
                     <ul id="side-menu" class="nav">
 
 
-                        <div class="clearfix"></div>
-                        <li><a href="../../Views/Index/Manager_Index.aspx"><i class="fa fa-tachometer fa-fw">
+                       <div class="clearfix"></div>
+                        <li ><a href="../../Views/Index/Manager_Index.aspx"><i class="fa fa-tachometer fa-fw">
                             <div class="icon-bg bg-orange"></div>
                         </i><span class="menu-title">首页</span></a></li>
 
-                        <li>
                         <li class="active"><a href="../../Views/EmployeeManager/EmployeeManager.aspx"><i class="fa fa-desktop fa-fw">
                             <div class="icon-bg bg-pink"></div>
                         </i><span class="menu-title">员工管理</span></a>
@@ -113,7 +112,7 @@
                         </i><span class="menu-title">商品信息与库存</span></a>
 
                         </li>
-                        <li><a href="DataGrid.html"><i class="fa fa-database fa-fw">
+                        <li><a href="../../Views/DiscountManage/DiscountManager.aspx"><i class="fa fa-database fa-fw">
                             <div class="icon-bg bg-red"></div>
                         </i><span class="menu-title">折扣管理</span></a>
 
@@ -123,7 +122,7 @@
                         </i><span class="menu-title">营业统计</span></a>
 
                         </li>
-                        <li><a href="../../Views/PSInfo/PSInfo.aspx"><i class="fa fa-gift fa-fw">
+                        <li><a href="../../Views/PSInfo1/PSInfo1.aspx"><i class="fa fa-gift fa-fw">
                             <div class="icon-bg bg-grey"></div>
                         </i><span class="menu-title">个人信息</span></a>
 
@@ -204,7 +203,7 @@
                                                             <th>出 生 年 月  </th>
                                                             <th>银 行 卡 号  </th>
                                                             <th>邮 箱   </th>
-                                                            <th>位 置   </th>
+                                                            <th>职 位   </th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>

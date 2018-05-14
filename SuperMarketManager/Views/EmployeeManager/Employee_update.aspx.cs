@@ -33,11 +33,19 @@ namespace SuperMarketManager.Views.EmployeeManager
             {
                 sex = "女";
             }
-            if (position.Value.ToString() == "Manager")
+            if (position.Value.ToString() == "管理员")
             {
                 pos = 1;
             }
-            bool up_result = Employee_C.AlterByID(new Employee(up_name.Value.ToString(), sex, phone.Value.ToString(), birth.Value.ToString(),
+            else if (position.Value.ToString() == "仓库管理员")
+            {
+                pos = 2;
+            }
+            if (position.Value.ToString() == "销售员")
+            {
+                pos = 1;
+            }
+            bool up_result = Employee_C.AlterByID(new Employee(up_name.Value.ToString(), sex, phone.Value.ToString(), births.Value.ToString(),
                 pos, bankaccount.Value.ToString(), email.Value.ToString()));                      
             if (up_result)
             {

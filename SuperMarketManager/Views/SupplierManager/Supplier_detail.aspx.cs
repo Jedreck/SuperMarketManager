@@ -32,8 +32,16 @@ namespace SuperMarketManager.Views.SupplierManager
         }
         protected void Update_Click(object sender, EventArgs e)
         {
-            Session["update_id"] = spid.Value;
-            Response.Redirect("/Views/SupplierManager/Supplier_detail_update.aspx");
+            Supplier s = new Supplier(int.Parse(Request.Form["spid"]), Request.Form["spname"], Request.Form["spphone"] , Request.Form["spregion"]);
+            bool result = Supplier_C.AlterByID(s);
+            if (result)
+            {
+                Response.Write("<script language=javascript>window.alert('修改成功');</script>");                
+            }
+            else
+            {
+                Response.Write("<script language=javascript>window.alert('修改失败！请检查是否与之前信息不同！');</script>");
+            }
 
         }      
     }
