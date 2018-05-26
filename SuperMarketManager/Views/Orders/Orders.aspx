@@ -7,10 +7,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="images/icons/favicon.ico">
-    <link rel="apple-touch-icon" href="images/icons/favicon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="images/icons/favicon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="images/icons/favicon-114x114.png">
+    <link rel="shortcut icon" href="../../Content/images/icons/favicon.ico">
+    <link rel="apple-touch-icon" href="../../Content/images/icons/favicon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../../Content/images/icons/favicon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../../Content/images/icons/favicon-114x114.png">
     <!--Loading bootstrap css-->
     <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700">
     <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oswald:400,700,300">
@@ -220,44 +220,44 @@
             <!--END PAGE WRAPPER-->
         </div>
     </div>
-    <script src="../../Script/jquery-1.10.2.min.js"></script>
-    <script src="../../Script/jquery-migrate-1.2.1.min.js"></script>
-    <script src="../../Script/jquery-ui.js"></script>
-    <script src="../../Script/bootstrap.min.js"></script>
-    <script src="../../Script/bootstrap-hover-dropdown.js"></script>
-    <script src="../../Script/html5shiv.js"></script>
-    <script src="../../Script/respond.min.js"></script>
-    <script src="../../Script/jquery.metisMenu.js"></script>
-    <script src="../../Script/jquery.slimscroll.js"></script>
-    <script src="../../Script/jquery.cookie.js"></script>
-    <script src="../../Script/icheck.min.js"></script>
-    <script src="../../Script/custom.min.js"></script>
-    <script src="../../Script/jquery.news-ticker.js"></script>
-    <script src="../../Script/jquery.menu.js"></script>
-    <script src="../../Script/pace.min.js"></script>
-    <script src="../../Script/holder.js"></script>
-    <script src="../../Script/responsive-tabs.js"></script>
-    <script src="../../Script/jquery.flot.js"></script>
-    <script src="../../Script/jquery.flot.categories.js"></script>
-    <script src="../../Script/jquery.flot.pie.js"></script>
-    <script src="../../Script/jquery.flot.tooltip.js"></script>
-    <script src="../../Script/jquery.flot.resize.js"></script>
-    <script src="../../Script/jquery.flot.fillbetween.js"></script>
-    <script src="../../Script/jquery.flot.stack.js"></script>
-    <script src="../../Script/jquery.flot.spline.js"></script>
-    <script src="../../Script/zabuto_calendar.min.js"></script>
+    <script src="../../Scripts/jquery-1.10.2.min.js"></script>
+    <script src="../../Scripts/jquery-migrate-1.2.1.min.js"></script>
+    <script src="../../Scripts/jquery-ui.js"></script>
+    <script src="../../Scripts/bootstrap.min.js"></script>
+    <script src="../../Scripts/bootstrap-hover-dropdown.js"></script>
+    <script src="../../Scripts/html5shiv.js"></script>
+    <script src="../../Scripts/respond.min.js"></script>
+    <script src="../../Scripts/jquery.metisMenu.js"></script>
+    <script src="../../Scripts/jquery.slimscroll.js"></script>
+    <script src="../../Scripts/jquery.cookie.js"></script>
+    <script src="../../Scripts/icheck.min.js"></script>
+    <script src="../../Scripts/custom.min.js"></script>
+    <script src="../../Scripts/jquery.news-ticker.js"></script>
+    <script src="../../Scripts/jquery.menu.js"></script>
+    <script src="../../Scripts/pace.min.js"></script>
+    <script src="../../Scripts/holder.js"></script>
+    <script src="../../Scripts/responsive-tabs.js"></script>
+    <script src="../../Scripts/jquery.flot.js"></script>
+    <script src="../../Scripts/jquery.flot.categories.js"></script>
+    <script src="../../Scripts/jquery.flot.pie.js"></script>
+    <script src="../../Scripts/jquery.flot.tooltip.js"></script>
+    <script src="../../Scripts/jquery.flot.resize.js"></script>
+    <script src="../../Scripts/jquery.flot.fillbetween.js"></script>
+    <script src="../../Scripts/jquery.flot.stack.js"></script>
+    <script src="../../Scripts/jquery.flot.spline.js"></script>
+    <script src="../../Scripts/zabuto_calendar.min.js"></script>
 
-    <script src="script/index.js"></script>
+    <script src="../../Scripts/index.js"></script>
     <!--LOADING SCRIPTS FOR CHARTS-->
-    <script src="script/highcharts.js"></script>
-    <script src="script/data.js"></script>
-    <script src="script/drilldown.js"></script>
-    <script src="script/exporting.js"></script>
-    <script src="script/highcharts-more.js"></script>
-    <script src="script/charts-highchart-pie.js"></script>
-    <script src="script/charts-highchart-more.js"></script>
+    <script src="../../Scripts/highcharts.js"></script>
+    <script src="../../Scripts/data.js"></script>
+    <script src="../../Scripts/drilldown.js"></script>
+    <script src="../../Scripts/exporting.js"></script>
+    <script src="../../Scripts/highcharts-more.js"></script>
+    <script src="../../Scripts/charts-highchart-pie.js"></script>
+    <script src="../../Scripts/charts-highchart-more.js"></script>
     <!--CORE JAVASCRIPT-->
-    <script src="script/main.js"></script>
+    <script src="../../Scripts/main.js"></script>
 
 </body>
 </html>

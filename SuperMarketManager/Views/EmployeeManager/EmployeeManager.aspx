@@ -64,7 +64,7 @@
 
                         </li>
                         <li class="dropdown topbar-user"><a data-hover="dropdown" href="#" class="dropdown-toggle">
-                            <img src="../../Content/images/avatar/48.jpg" alt="" class="img-responsive img-circle" />&nbsp;<span class="hidden-xs">Robert John</span>&nbsp;<span class="caret"></span></a>
+                            <img src="../../Content/images/avatar/48.jpg" alt="" class="img-responsive img-circle" />&nbsp;<span class="hidden-xs">Manager</span>&nbsp;<span class="caret"></span></a>
                             <ul class="dropdown-menu dropdown-user pull-right">
                                 <
                                 <li><a href="#"><i class="fa fa-user"></i>个人信息</a></li>

@@ -12,6 +12,8 @@
     <link rel="apple-touch-icon" sizes="72x72" href="../../Content/images/icons/favicon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="../../Content/images/icons/favicon-114x114.png">
     <!--Loading bootstrap css-->
+    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700">
+    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oswald:400,700,300">
     <link type="text/css" rel="stylesheet" href="../../Content/styles/jquery-ui-1.10.4.custom.min.css">
     <link type="text/css" rel="stylesheet" href="../../Content/styles/font-awesome.min.css">
     <link type="text/css" rel="stylesheet" href="../../Content/styles/bootstrap.min.css">
@@ -191,7 +193,7 @@
                                                         <li><i class="fa fa-fw mrs"></i>商品编号：</li><li>&nbsp&nbsp<asp:TextBox ID="sdgoodsid" runat="server" Width="120px" Height="20px"></asp:TextBox></li>
                                                         <li><i class="fa fa-fw mrs"></i>起始时间：</li><li>&nbsp&nbsp<asp:TextBox ID="sdisstart" runat="server" Width="120px" Height="20px" TextMode="Date"></asp:TextBox></li>
                                                         <li><i class="fa fa-fw mrs"></i>结束时间：</li><li>&nbsp&nbsp<asp:TextBox ID="sdisend" runat="server"  Width="120px" Height="20px" TextMode="Date"></asp:TextBox></li>
-                                                        <li><i class="fa fa-fw mrs"></i>折扣力度：</li><li>&nbsp&nbsp<asp:TextBox ID="disprice" runat="server"  Width="120px" Height="20px" TextMode="Date"></asp:TextBox></li>
+                                                        <li><i class="fa fa-fw mrs"></i>折扣力度：</li><li>&nbsp&nbsp<asp:TextBox ID="disprice" runat="server"  Width="120px" Height="20px"></asp:TextBox></li>
 
                                                         <li><label style="height:1px;"/></li>
                                                         <li><i class="fa fa-fw mrs"></i>&nbsp&nbsp<asp:Button ID="addbutton" runat="server" ForeColor="White" BackColor="#dc6767" BorderStyle="None" Width="60px" Height="20px" Text="增加" OnClick="addbutton_Click"></asp:Button>&nbsp&nbsp</li>

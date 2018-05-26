@@ -172,7 +172,7 @@
                                        <form action="#" class="form-horizontal" runat="server">
 
                                            <h3>
-                                               <asp:Label ID="basic" runat="server" Text="供应商信息" class="label label-success" Font-Size="18px"></asp:Label></h3>
+                                               <asp:Label ID="basic" runat="server" Text="供应商报价信息" class="label label-success" Font-Size="18px"></asp:Label></h3>
 
                                             <div class="form-group"><label class="col-sm-3 control-label">供应商编号</label>
 

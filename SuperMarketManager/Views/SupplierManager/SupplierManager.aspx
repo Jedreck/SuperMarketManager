@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
     <title>超市管理系统 | 供应商管理</title>
-    <meta charset="utf-8">
+     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../../Content/images/icons/favicon.ico">
@@ -65,7 +65,7 @@
 
                         </li>
                         <li class="dropdown topbar-user"><a data-hover="dropdown" href="#" class="dropdown-toggle">
-                            <img src="../../Content/images/avatar/48.jpg" alt="" class="img-responsive img-circle" />&nbsp;<span class="hidden-xs">Manager</span>&nbsp;<span class="caret"></span></a>
+                            <img src="../../Content/../../Content/images/avatar/48.jpg" alt="" class="img-responsive img-circle" />&nbsp;<span class="hidden-xs">Manager</span>&nbsp;<span class="caret"></span></a>
                             <ul class="dropdown-menu dropdown-user pull-right">
                                 <
                                 <li><a href="#"><i class="fa fa-user"></i>个人信息</a></li>
@@ -209,19 +209,15 @@
                                                                 <%for (int i = 0; i <supplierlist.Count; i++)
                                                                     {
                                                                      %>                                                                   
-                                                                    <!--<item>1</item>-->
-                                                                    <tr class="tbl-item">
-                                                                    <!--<img/>-->
-                                                                    
-                                                                    <!--<data></data>-->
-                                                                    <td class="td-block">
-                                                                        <p class="title"><a href="/Views/SupplierManager/Supplier_detail.aspx?id=<%=supplierlist[i].S_Name %>"><%=supplierlist[i].S_Name%></a></p>
+                                                                    <tr class="tbl-item">                                                               
+                                                                     <td class="td-block">
+                                                                        <p class="title"><a href="/../../Views/SupplierManager/Supplier_detail.aspx?id=<%=supplierlist[i].S_Name %>"><%=supplierlist[i].S_Name%></a></p>
                                                                        
                                                                         <p class="desc">供应商信息：供应商id:<%=supplierlist[i].S_ID %>&nbsp&nbsp&nbsp 供应商名称：<%=supplierlist[i].S_Name %><br />                                                                                   
                                                                                         商品信息：商品id：<%=supplierlist[i].G_ID %>&nbsp&nbsp&nbsp 商品名称：<%=supplierlist[i].G_Name %>
                                                                         </p>
-                                                                        <p class="like"><a href="/Views/SupplierManager/Supplier_Goods_detail.aspx?sname=<%=supplierlist[i].S_Name %>&gname=<%=supplierlist[i].G_Name %>">供应商报价：<%=supplierlist[i].SL_Price %></a></p>
-                                                                    </td>
+                                                                        <p class="like"><a href="/../../Views/SupplierManager/Supplier_Goods_detail.aspx?sname=<%=supplierlist[i].S_Name %>&gname=<%=supplierlist[i].G_Name %>">供应商报价：<%=supplierlist[i].SL_Price %></a></p>
+                                                                     </td>
                                                                     </tr>
                                                                 <%} %>
                                                             <%} %>
@@ -304,12 +300,9 @@
     <script src="../../Scripts/charts-highchart-more.js"></script>
     <script src="../../Scripts/modernizr.min.js"></script>
     <script src="../../Scripts/jplist.min.js"></script>
-    <script src="../../Scripts/jplist.js"></script>-->
-    <script>
-</script>
+    <script src="../../Scripts/jplist.js"></script>
     <!--CORE JAVASCRIPT-->
     <script src="../../Scripts/main.js"></script>
-
 </body>
 </html>
 

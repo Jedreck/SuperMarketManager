@@ -88,7 +88,7 @@
                     <ul id="side-menu" class="nav">
 
                         <div class="clearfix"></div>
-                        <li ><a href="../../Views/Index/Manager_Index.aspx"><i class="fa fa-tachometer fa-fw">
+                        <li class="active"><a href="../../Views/Index/Manager_Index.aspx"><i class="fa fa-tachometer fa-fw">
                             <div class="icon-bg bg-orange"></div>
                         </i><span class="menu-title">首页</span></a></li>
 
@@ -122,7 +122,7 @@
                         </i><span class="menu-title">营业统计</span></a>
 
                         </li>
-                        <li class="active"><a href="../../Views/PSInfo1/PSInfo1.aspx"><i class="fa fa-gift fa-fw">
+                        <li><a href="../../Views/PSInfo1/PSInfo1.aspx"><i class="fa fa-gift fa-fw">
                             <div class="icon-bg bg-grey"></div>
                         </i><span class="menu-title">个人信息</span></a>
 
@@ -426,7 +426,7 @@
             <!--END PAGE WRAPPER-->
         </div>
     </div>
-    <script src="../../Scripts/jquery-1.10.2.min.js"></script>
+     <script src="../../Scripts/jquery-1.10.2.min.js"></script>
     <script src="../../Scripts/jquery-migrate-1.2.1.min.js"></script>
     <script src="../../Scripts/jquery-ui.js"></script>
     <script src="../../Scripts/bootstrap.min.js"></script>
