@@ -22,7 +22,7 @@ namespace SuperMarketManager.Views.PSInfo3
             em = (Employee)Session["employee"];
             if (em == null)
             {
-                Response.Write("<script language=javascript>window.alert('请登录！！');window.location.href('/Views/Login/Login.aspx');</script>");
+                Response.Write("<script language=javascript>window.alert('请登录！！');window.location.href('/Views/PSInfo3/PSInfo3.aspx');</script>");
                 return;
             }
             id.Text = em.ID;
