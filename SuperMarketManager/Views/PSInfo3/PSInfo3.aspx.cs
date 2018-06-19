@@ -55,7 +55,7 @@ namespace SuperMarketManager.Views.PSInfo3
             bool up_result = Employee_C.AlterByID(em);
             if (up_result)
             {
-                Response.Write("<script language=javascript>window.alert('修改成功！');window.location.href('/Views/Login/Login.aspx');</script>");
+                Response.Write("<script language=javascript>window.alert('修改成功！');window.location.href('/Views/PSInfo3/PSInfo3.aspx');</script>");
                 //Response.Redirect("/Views/PSInfo/PSInfo.aspx");
             }
             else
