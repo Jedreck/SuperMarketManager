@@ -191,7 +191,7 @@
                                                         <li><i class="fa fa-fw mrs"></i>商品编号：</li><li>&nbsp&nbsp<asp:TextBox ID="sdgoodsid" runat="server" Width="120px" Height="20px"></asp:TextBox></li>
                                                         <li><i class="fa fa-fw mrs"></i>起始时间：</li><li>&nbsp&nbsp<asp:TextBox ID="sdisstart" runat="server" Width="120px" Height="20px" TextMode="Date"></asp:TextBox></li>
                                                         <li><i class="fa fa-fw mrs"></i>结束时间：</li><li>&nbsp&nbsp<asp:TextBox ID="sdisend" runat="server"  Width="120px" Height="20px" TextMode="Date"></asp:TextBox></li>
-                                                        <li><i class="fa fa-fw mrs"></i>折扣力度：</li><li>&nbsp&nbsp<asp:TextBox ID="disprice" runat="server"  Width="120px" Height="20px" TextMode="Date"></asp:TextBox></li>
+                                                        <li><i class="fa fa-fw mrs"></i>折扣力度：</li><li>&nbsp&nbsp<asp:TextBox ID="disprice" runat="server"  Width="120px" Height="20px"></asp:TextBox></li>
 
                                                         <li><label style="height:1px;"/></li>
                                                         <li><i class="fa fa-fw mrs"></i>&nbsp&nbsp<asp:Button ID="addbutton" runat="server" ForeColor="White" BackColor="#dc6767" BorderStyle="None" Width="60px" Height="20px" Text="增加" OnClick="addbutton_Click"></asp:Button>&nbsp&nbsp</li>

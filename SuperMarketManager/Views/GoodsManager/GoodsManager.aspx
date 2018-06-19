@@ -98,8 +98,8 @@
                 <div class="sidebar-collapse menu-scroll">
                     <ul id="side-menu" class="nav">
 
-                        <div class="clearfix"></div>
-                        <li><a href="../../Views/Index/Manager_Index.aspx"><i class="fa fa-tachometer fa-fw">
+                       <div class="clearfix"></div>
+                        <li ><a href="../../Views/Index/Manager_Index.aspx"><i class="fa fa-tachometer fa-fw">
                             <div class="icon-bg bg-orange"></div>
                         </i><span class="menu-title">首页</span></a></li>
 
@@ -123,7 +123,7 @@
                         </i><span class="menu-title">商品信息与库存</span></a>
 
                         </li>
-                        <li><a href="DataGrid.html"><i class="fa fa-database fa-fw">
+                        <li><a href="../../Views/DiscountManage/DiscountManager.aspx"><i class="fa fa-database fa-fw">
                             <div class="icon-bg bg-red"></div>
                         </i><span class="menu-title">折扣管理</span></a>
 
@@ -133,7 +133,7 @@
                         </i><span class="menu-title">营业统计</span></a>
 
                         </li>
-                        <li><a href="Extras.html"><i class="fa fa-gift fa-fw">
+                        <li class="active"><a href="../../Views/PSInfo1/PSInfo1.aspx"><i class="fa fa-gift fa-fw">
                             <div class="icon-bg bg-grey"></div>
                         </i><span class="menu-title">个人信息</span></a>
 
