@@ -25,6 +25,7 @@ namespace SuperMarketManager.Controllers
             }
             else
             {
+                
                 return ExecuteSQL.ExecuteNonQuerySQL_GetBool(sql_Insert);
             }
         }
