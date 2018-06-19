@@ -206,7 +206,7 @@
                                                             <table class="demo-tbl" id="tab">
                                                              <%if (supplierlist!= null)
                                                              { %>
-                                                                <%for (int i = 0; i <supplierlist.Count; i++)
+                                                                <%for (int i = 0; i <supplierlist.Count;i++)
                                                                     {
                                                                      %>                                                                   
                                                                     <tr class="tbl-item">                                                               

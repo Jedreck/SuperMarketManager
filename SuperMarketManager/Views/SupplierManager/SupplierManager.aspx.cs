@@ -17,10 +17,10 @@ namespace SuperMarketManager.Views.SupplierManager
         {
             supplierlist = SupplierList_C.GetSupplylistsByS_Name("");
         }
-        protected void Search_Click(object sender, EventArgs e)
-        {
-            String content = search_content.Value.ToString();
-            supplierlist = SupplierList_C.GetSupplylistsByS_Name(content);
-        }
+        //protected void Search_Click(object sender, EventArgs e)
+        //{
+            //String content = search_content.Value.ToString();
+            //supplierlist = SupplierList_C.GetSupplylistsByS_Name(content);
+       // }
     }
 }

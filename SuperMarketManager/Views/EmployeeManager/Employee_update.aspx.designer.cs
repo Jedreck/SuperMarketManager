@@ -40,22 +40,13 @@ namespace SuperMarketManager.Views.EmployeeManager {
         protected global::System.Web.UI.HtmlControls.HtmlInputText up_name;
         
         /// <summary>
-        /// sex_male 控件。
+        /// sex 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton sex_male;
-        
-        /// <summary>
-        /// sex_female 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton sex_female;
+        protected global::System.Web.UI.WebControls.RadioButtonList sex;
         
         /// <summary>
         /// births 控件。
@@ -64,16 +55,16 @@ namespace SuperMarketManager.Views.EmployeeManager {
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl births;
+        protected global::System.Web.UI.WebControls.TextBox births;
         
         /// <summary>
-        /// password 控件。
+        /// passwords 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputPassword password;
+        protected global::System.Web.UI.WebControls.TextBox passwords;
         
         /// <summary>
         /// connect 控件。

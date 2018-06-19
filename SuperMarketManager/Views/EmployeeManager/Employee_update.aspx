@@ -40,7 +40,7 @@
                 <div class="topbar-main">
                     <a id="menu-toggle" href="#" class="hidden-xs"><i class="fa fa-bars"></i></a>
 
-                    <form id="topbar-search" action="" method="" class="hidden-sm hidden-xs">
+                    <form id="topbar-search" class="hidden-sm hidden-xs">
                         <div class="input-icon right text-white">
                             <a href="#"><i class="fa fa-search"></i></a>
                             <input type="text" placeholder="Search here..." class="form-control text-white" />
@@ -191,8 +191,10 @@
                                                 <div class="col-sm-9 controls">
                                                     <div class="row">
                                                         <div class="col-xs-9">
-                                                            <asp:RadioButton ID="sex_male" groupname="sex"  runat="server" Text="男"  />
-                                                            <asp:RadioButton ID="sex_female" groupname="sex" runat="server" Text="女"  />                                                      
+                                                            <asp:RadioButtonList ID="sex" runat="server" RepeatDirection="Horizontal">
+                                                                     <asp:ListItem Text="男" Value="男" ></asp:ListItem>
+                                                                     <asp:ListItem Text="女" Value="女" ></asp:ListItem>
+                                                           </asp:RadioButtonList>                                                    
                                                         </div>
                                                     </div>
                                                 </div>
@@ -201,7 +203,8 @@
 
                                                 <div class="col-sm-9 controls">
                                                     <div class="row">
-                                                        <div class="col-xs-4"><input type="date"  runat="server" id="births" placeholder="年月日分秒" class="form-control"/></div>
+                                                        <div class="col-xs-4">
+                                                            <asp:TextBox ID="births" CssClass="form-control" runat="server" TextMode="Date"></asp:TextBox></div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -209,7 +212,7 @@
 
                                                 <div class="col-sm-9 controls">
                                                     <div class="row">
-                                                        <div class="col-xs-4"><input type="password" runat="server" id="password" readonly="readonly"  placeholder="初始密码:000000" class="form-control"/></div>
+                                                        <div class="col-xs-4"> <asp:TextBox ID="passwords" runat="server"></asp:TextBox></div>
                                                     </div>
                                                 </div>
                                             </div>
