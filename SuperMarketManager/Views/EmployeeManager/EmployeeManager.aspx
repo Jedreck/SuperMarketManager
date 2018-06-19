@@ -181,8 +181,7 @@
                                                        
                                                             <asp:Button ID="search" runat="server" Width="42" Height="30" BorderStyle="Dashed" ForeColor="#ffffff" BackColor=" #488c6c" BorderColor="#458567" Font-Size="12px" Text="查询" OnClick="Search_Click" />
                                                             <asp:Button ID="delete" runat="server" Width="42" Height="30" BorderStyle="Dashed" ForeColor="#ffffff" BackColor=" #488c6c" BorderColor="#458567" Font-Size="12px" Text="删除" OnClick="Delete_Click" />
-                                                            <asp:Button ID="add" runat="server" Width="42" Height="30" BorderStyle="Dashed" ForeColor="#ffffff" BackColor=" #488c6c" BorderColor="#458567" Font-Size="12px" Text="增加" OnClick="Addto_Click" />
-                                                            <asp:Button ID="update" runat="server" Width="42" Height="30" BorderStyle="Dashed" ForeColor="#ffffff" BackColor=" #488c6c" BorderColor="#458567" Font-Size="12px" Text="修改" OnClick="Updateto_Click" />
+                                                            <asp:Button ID="add" runat="server" Width="42" Height="30" BorderStyle="Dashed" ForeColor="#ffffff" BackColor=" #488c6c" BorderColor="#458567" Font-Size="12px" Text="增加" OnClick="Addto_Click" />                                                           
 
                                                     </form>
                                                 </div>
@@ -213,7 +212,7 @@
                                                             { %>
                                                         <tr>
                                                             <td><%=i + 1 %></td>
-                                                            <td><%=employees[i].ID %></td>
+                                                            <td><a href="/../../Views/EmployeeManager/Employee_update.aspx?id=<%=employees[i].ID %>"><%=employees[i].ID %></a></td>
                                                             <td><%=employees[i].Name %></td>
                                                             <td><%=employees[i].Sex %></td>
                                                             <td><%=employees[i].Phone %></td>

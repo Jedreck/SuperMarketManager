@@ -14,7 +14,32 @@ namespace SuperMarketManager.Views.EmployeeManager
         protected List<Employee> employees = null;
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            String eid = Request.QueryString["id"];
+            employees = Employee_C.SelectFuzzy(eid);          
+            id.Value = employees[0].ID;
+            up_name.Value = employees[0].Name;
+            if (employees[0].Sex == "男")
+                this.sex.SelectedIndex = 0;
+            else
+                this.sex.SelectedIndex = 1;
+            births.Text = employees[0].Birth.ToString("yyyy-MM-dd");
+            passwords.Text = employees[0].PassWord;
+            email.Value = employees[0].Email;
+            phone.Value = employees[0].Phone;
+
+            if (employees[0].Position ==1)
+            {
+                position.Value ="管理员";
+            }
+            else if (employees[0].Position == 2)
+            {
+                position.Value = "仓库管理员";
+            }
+            if (employees[0].Position == 3)
+            {
+                position.Value = "销售员";
+            }
+            bankaccount.Value = employees[0].BankAccount;
         }
         protected void Back_Click(object sender, EventArgs e)
         {
@@ -23,30 +48,13 @@ namespace SuperMarketManager.Views.EmployeeManager
 
         protected void Update_Click(object sender, EventArgs e)
         {           
-            String sex = null;
-            int pos = 0;
-            if (sex_male.Checked)
-            {
-                sex = "男";
-            }
-            else if (sex_female.Checked)
-            {
-                sex = "女";
-            }
-            if (position.Value.ToString() == "管理员")
-            {
-                pos = 1;
-            }
-            else if (position.Value.ToString() == "仓库管理员")
-            {
-                pos = 2;
-            }
-            if (position.Value.ToString() == "销售员")
-            {
-                pos = 1;
-            }
-            bool up_result = Employee_C.AlterByID(new Employee(up_name.Value.ToString(), sex, phone.Value.ToString(), births.Value.ToString(),
-                pos, bankaccount.Value.ToString(), email.Value.ToString()));                      
+            employees[0].Name = Request.Form["up_name"];
+            employees[0].Sex = Request.Form["sex"];
+            employees[0].Phone = Request.Form["phone"];
+            employees[0].Birth = Convert.ToDateTime(Request.Form["births"]);
+            employees[0].BankAccount = Request.Form["bankaccount"];
+            employees[0].Email = Request.Form["email"];
+            bool up_result = Employee_C.AlterByID(employees[0]);                      
             if (up_result)
             {
                 Response.Write("<script language=javascript>window.alert('修改成功！');</script>");

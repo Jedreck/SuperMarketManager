@@ -47,14 +47,5 @@ namespace SuperMarketManager.Views.EmployeeManager
         {
             Response.Redirect("/Views/EmployeeManager/Employee_add.aspx");
         }
-        protected void Updateto_Click(object sender, EventArgs e)
-        {            
-            Response.Redirect("/Views/EmployeeManager/Employee_update.aspx");
-        }
-
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
