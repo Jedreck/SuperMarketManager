@@ -186,7 +186,7 @@
                                             <asp:TextBox ID="position" runat="server"></asp:TextBox>
                                         </div>
                                         <div class="alert alert-danger"><strong>密码：</strong>
-                                            <asp:TextBox ID="password" runat="server" TextMode="Password"></asp:TextBox>
+                                            <asp:TextBox ID="password" runat="server"></asp:TextBox>
                                         </div>
 
                                         <div>
