@@ -40,7 +40,7 @@ namespace SuperMarketManager.Models
                 s.Name = reader.GetString(1);
                 s.Category = reader.GetInt32(2);
                 s.GC_Name = goodsclass_name(s.Category);
-        s.Unit = reader.GetString(3);
+                s.Unit = reader.GetString(3);
                 s.ExpirationDate = reader.GetInt32(4);
                 s.Price = reader.GetDouble(5);
                 s.Store = reader.GetInt32(6);

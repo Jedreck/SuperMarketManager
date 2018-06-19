@@ -12,6 +12,8 @@
     <link rel="apple-touch-icon" sizes="72x72" href="../../Content/images/icons/favicon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="../../Content/images/icons/favicon-114x114.png">
     <!--Loading bootstrap css-->
+    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700">
+    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oswald:400,700,300">
     <link type="text/css" rel="stylesheet" href="../../Content/styles/jquery-ui-1.10.4.custom.min.css">
     <link type="text/css" rel="stylesheet" href="../../Content/styles/font-awesome.min.css">
     <link type="text/css" rel="stylesheet" href="../../Content/styles/bootstrap.min.css">
@@ -90,7 +92,7 @@
                             <div class="icon-bg bg-orange"></div>
                         </i><span class="menu-title">首页</span></a></li>
 
-                        <li class="active"><a href="../../Views/EmployeeManager/EmployeeManager.aspx"><i class="fa fa-desktop fa-fw">
+                        <li><a href="../../Views/EmployeeManager/EmployeeManager.aspx"><i class="fa fa-desktop fa-fw">
                             <div class="icon-bg bg-pink"></div>
                         </i><span class="menu-title">员工管理</span></a>
 
@@ -170,7 +172,7 @@
                                        <form action="#" class="form-horizontal" runat="server">
 
                                            <h3>
-                                               <asp:Label ID="basic" runat="server" Text="供应商信息" class="label label-success" Font-Size="18px"></asp:Label></h3>
+                                               <asp:Label ID="basic" runat="server" Text="折扣信息" class="label label-success" Font-Size="18px"></asp:Label></h3>
 
                                             <div class="form-group"><label class="col-sm-3 control-label">折扣编号</label>
 
