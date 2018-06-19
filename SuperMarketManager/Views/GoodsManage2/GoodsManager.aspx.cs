@@ -44,15 +44,23 @@ namespace SuperMarketManager.Views.GoodsManage2
 
         protected void Button4_Click(object sender, EventArgs e)
         {
-            String s = goodsId.Value.ToString();
-            bool a = Goods_C.DeleteByID(s);
-            if (a == true)
+            try
             {
-                Response.Write("<script language=javascript>window.alert('删除成功');</script>");
-            }
-            else
-                Response.Write("<script language=javascript>window.alert('删除失败');</script>");
+                String s = goodsId.Value.ToString();
+                bool a = Goods_C.DeleteByID(s);
+                if (a == true)
+                {
+                    Response.Write("<script language=javascript>window.alert('删除成功');</script>");
+                }
+                else
+                    Response.Write("<script language=javascript>window.alert('删除失败');</script>");
                 goods = Goods_C.SelectFuzzy(s);
+            }
+            catch (Exception em)
+            {
+                Response.Write("<script language=javascript>window.alert('不含有该商品，删除失败');</script>");
+            }
+
         }
     }
 }

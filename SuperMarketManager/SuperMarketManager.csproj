@@ -333,6 +333,7 @@
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\Orderlist.cs" />
     <Compile Include="Models\Position.cs" />
+    <Compile Include="Models\StaticGoods.cs" />
     <Compile Include="Models\StatisticDay.cs" />
     <Compile Include="Models\Storelist.cs" />
     <Compile Include="Models\Supplier.cs" />

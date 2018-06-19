@@ -30,18 +30,26 @@ namespace SuperMarketManager.Views.Orders
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            Order order = new Order();
-            order.ID = "";
-            order.Price = 0;
-            order.Time = Convert.ToDateTime("2015 - 12 - 21");
-            order.E_ID = Convert.ToInt32(eid.Value);
-            bool result=Order_C.AddOrder(order,list);
-            if(result)
+            try
             {
-                Response.Write("<script language=javascript>window.alert('出库成功');</script>");
+                Order order = new Order();
+                order.ID = "";
+                order.Price = 0;
+                order.Time = Convert.ToDateTime("2015 - 12 - 21");
+                order.E_ID = Convert.ToInt32(eid.Value);
+                bool result = Order_C.AddOrder(order, list);
+                if (result)
+                {
+                    Response.Write("<script language=javascript>window.alert('出库成功');</script>");
+                }
+                else
+                    Response.Write("<script language=javascript>window.alert('出库失败');</script>");
             }
-            else
+            catch(Exception en)
+                {
                 Response.Write("<script language=javascript>window.alert('出库失败');</script>");
-        }
+            }
+            }
+            
     }
 }
